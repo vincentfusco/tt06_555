@@ -1,0 +1,15 @@
+* NGSPICE file created from inv.ext - technology: sky130A
+
+.subckt sky130_fd_pr__pfet_01v8_XGS3BL a_n73_n100# a_15_n100# w_n211_n319# a_n33_n197#
+X0 a_15_n100# a_n33_n197# a_n73_n100# w_n211_n319# sky130_fd_pr__pfet_01v8 ad=0.29 pd=2.58 as=0.29 ps=2.58 w=1 l=0.15
+.ends
+
+.subckt sky130_fd_pr__nfet_01v8_648S5X a_n73_n100# a_n33_n188# a_15_n100# a_n175_n274#
+X0 a_15_n100# a_n33_n188# a_n73_n100# a_n175_n274# sky130_fd_pr__nfet_01v8 ad=0.29 pd=2.58 as=0.29 ps=2.58 w=1 l=0.15
+.ends
+
+.subckt inv vin vout vdd vss
+XXMp vdd vout vdd vin sky130_fd_pr__pfet_01v8_XGS3BL
+Xsky130_fd_pr__nfet_01v8_648S5X_0 vss vin vout vss sky130_fd_pr__nfet_01v8_648S5X
+.ends
+

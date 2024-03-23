@@ -20,7 +20,7 @@ project:
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
   # Inputs
-  ui[0]: "pin_reset_b"
+  ui[0]: ""
   ui[1]: ""
   ui[2]: ""
   ui[3]: ""
@@ -30,7 +30,7 @@ pinout:
   ui[7]: ""
 
   # Outputs
-  uo[0]: "pin_output"
+  uo[0]: "DO_OUT"
   uo[1]: ""
   uo[2]: ""
   uo[3]: ""
@@ -50,9 +50,9 @@ pinout:
   uio[7]: ""
 
   # Analog pins - you can add more if you use them, up to 8
-  ua[0]: "pin_threshold"
-  ua[1]: "pin_trigger_b"
-  ua[3]: "pin_discharge"
+  ua[0]: "V_THRESH_I"
+  ua[1]: "V_TRIG_B_I"
+  ua[3]: "V_DISCH_O"
 
 # Do not change!
 yaml_version: 6

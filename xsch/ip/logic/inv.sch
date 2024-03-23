@@ -22,7 +22,7 @@ lab=vss}
 N 40 -120 40 -90 {
 lab=vdd}
 N 40 -60 50 -60 {
-lab=vdda}
+lab=vdd}
 N 40 60 50 60 {
 lab=vss}
 C {sky130_fd_pr/nfet_01v8.sym} 20 60 0 0 {name=Mn
@@ -40,7 +40,7 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {devices/ipin.sym} -80 0 0 0 {name=p1 lab=vin}
-C {devices/lab_pin.sym} 50 -60 2 0 {name=p4 sig_type=power lab=vdda}
+C {devices/lab_pin.sym} 50 -60 2 0 {name=p4 sig_type=power lab=vdd}
 C {devices/lab_pin.sym} 50 60 2 0 {name=p5 sig_type=power lab=vss}
 C {devices/opin.sym} 80 0 0 0 {name=p3 lab=vout}
 C {borders/border_s.sym} 370 340 0 0 {}

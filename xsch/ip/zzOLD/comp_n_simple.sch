@@ -10,7 +10,7 @@ lab=vss}
 N 0 100 10 100 {
 lab=vss}
 N 110 -110 110 -80 {
-lab=#net1}
+lab=gate}
 N -180 -50 -150 -50 {
 lab=INn}
 N 150 -50 180 -50 {
@@ -30,47 +30,49 @@ lab=vss}
 N 100 -50 110 -50 {
 lab=vss}
 N -110 -20 -110 30 {
-lab=#net2}
+lab=tail}
 N -110 30 110 30 {
-lab=#net2}
+lab=tail}
 N 110 -20 110 30 {
-lab=#net2}
+lab=tail}
 N 0 30 0 70 {
-lab=#net2}
+lab=tail}
 N 110 -220 120 -220 {
 lab=vdd}
 N 110 -190 110 -150 {
-lab=#net1}
+lab=gate}
 N 110 -270 110 -250 {
 lab=vdd}
 N -120 -220 -110 -220 {
 lab=vdd}
 N -110 -190 -110 -150 {
-lab=#net3}
+lab=mirror}
 N -110 -270 -110 -250 {
 lab=vdd}
 N -110 -150 -110 -80 {
-lab=#net3}
+lab=mirror}
 N 110 -150 110 -110 {
-lab=#net1}
+lab=gate}
 N -70 -220 70 -220 {
-lab=#net3}
-N -20 -220 -20 -140 {
-lab=#net3}
-N -110 -140 -20 -140 {
-lab=#net3}
+lab=mirror}
 N 110 -160 300 -160 {
-lab=#net1}
+lab=gate}
 N 340 -30 360 -30 {
 lab=OUT}
 N 340 130 340 170 {
 lab=vss}
 N -100 100 -40 100 {
-lab=BIAS_N}
+lab=bias_n}
 N 240 100 300 100 {
-lab=BIAS_N}
+lab=bias_n}
 N 340 -90 340 70 {
 lab=OUT}
+N -110 -130 -60 -130 {
+lab=mirror}
+N -60 -130 -40 -130 {
+lab=mirror}
+N -40 -220 -40 -130 {
+lab=mirror}
 C {sky130_fd_pr/nfet_01v8.sym} -20 100 0 0 {name=M_tail
 L=1
 W=10  
@@ -80,7 +82,8 @@ spiceprefix=X
 }
 C {devices/lab_pin.sym} 10 100 2 0 {name=p5 sig_type=power lab=vss}
 C {devices/iopin.sym} -370 -570 2 0 {name=p6 lab=vdd}
-C {borders/border_s.sym} 350 220 0 0 {}
+C {borders/border_s.sym} 350 220 0 0 {
+lab=bias_n}
 C {sky130_fd_pr/nfet_01v8.sym} 320 100 0 0 {name=M_out
 L=1
 W=10
@@ -101,7 +104,7 @@ C {devices/lab_pin.sym} 340 -210 1 0 {name=p15 sig_type=power lab=vdd}
 C {devices/opin.sym} 360 -30 0 0 {name=p18 lab=OUT}
 C {devices/iopin.sym} -370 -540 0 1 {name=p1 lab=vss}
 C {devices/lab_pin.sym} 0 170 3 0 {name=p3 sig_type=std_logic lab=vss}
-C {devices/ipin.sym} -370 -510 0 0 {name=p20 lab=BIAS_N}
+C {devices/ipin.sym} -370 -510 0 0 {name=p20 lab=bias_n}
 C {devices/ipin.sym} -180 -50 0 0 {name=p16 lab=INn}
 C {devices/ipin.sym} 180 -50 2 0 {name=p21 lab=INp}
 C {sky130_fd_pr/nfet_01v8.sym} -130 -50 0 0 {name=M_inn
@@ -139,5 +142,10 @@ spiceprefix=X
 C {devices/lab_pin.sym} -120 -220 2 1 {name=p7 sig_type=power lab=vdd}
 C {devices/lab_pin.sym} -110 -270 3 1 {name=p8 sig_type=power lab=vdd}
 C {devices/lab_pin.sym} 340 170 3 0 {name=p9 sig_type=std_logic lab=vss}
-C {devices/lab_pin.sym} -100 100 2 1 {name=p10 sig_type=in lab=BIAS_N}
-C {devices/lab_pin.sym} 240 100 2 1 {name=p11 sig_type=in lab=BIAS_N}
+C {devices/lab_pin.sym} -100 100 2 1 {name=p10 sig_type=in lab=bias_n
+
+}
+C {devices/lab_pin.sym} 240 100 2 1 {name=p11 sig_type=in lab=bias_n}
+C {devices/lab_pin.sym} 0 50 0 0 {name=p13 sig_type=std_logic lab=tail}
+C {devices/lab_pin.sym} -110 -160 0 0 {name=p19 sig_type=std_logic lab=mirror}
+C {devices/lab_pin.sym} 110 -120 0 0 {name=p23 sig_type=std_logic lab=gate}

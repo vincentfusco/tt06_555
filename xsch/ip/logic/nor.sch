@@ -58,8 +58,8 @@ spiceprefix=X
 }
 C {sky130_fd_pr/pfet_01v8.sym} -20 -370 0 0 {name=Mp_a
 L=0.15
-W=1
-nf=2 mult=1
+W=2
+nf=1 mult=1
 model=pfet_01v8
 spiceprefix=X
 }
@@ -73,8 +73,8 @@ C {borders/border_s.sym} 350 110 0 0 {
 lab=mp_connection}
 C {sky130_fd_pr/pfet_01v8.sym} 20 -270 0 1 {name=Mp_b
 L=0.15
-W=1
-nf=2 mult=1
+W=2
+nf=1 mult=1
 model=pfet_01v8
 spiceprefix=X
 }

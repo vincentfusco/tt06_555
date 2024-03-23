@@ -120,18 +120,18 @@ L 4 -180 40 -100 40 {}
 L 4 -180 -100 -100 -100 {}
 L 4 -180 100 -100 100 {}
 L 4 180 40 200 40 {}
-B 5 -2.5 -122.5 2.5 -117.5 {name=vdd dir=inout}
-B 5 197.5 -42.5 202.5 -37.5 {name=OUT_D_O_PIN sig_type=std_logic dir=out}
-B 5 -2.5 117.5 2.5 122.5 {name=vss dir=inout}
-B 5 197.5 37.5 202.5 42.5 {name=DISCH_A_O_PIN sig_type=std_logic dir=out}
-B 5 -202.5 -42.5 -197.5 -37.5 {name=THRESH_A_I_PIN sig_type=std_logic dir=in}
-B 5 -202.5 37.5 -197.5 42.5 {name=TRIGB_A_I_PIN sig_type=std_logic dir=in}
+B 5 -2.5 -122.5 2.5 -117.5 {name=VDD dir=inout}
+B 5 197.5 -42.5 202.5 -37.5 {name=DO_OUT sig_type=std_logic dir=out}
+B 5 -2.5 117.5 2.5 122.5 {name=VSS dir=inout}
+B 5 197.5 37.5 202.5 42.5 {name=V_DISCH_O sig_type=std_logic dir=out}
+B 5 -202.5 -42.5 -197.5 -37.5 {name=V_THRESH_I sig_type=std_logic dir=in}
+B 5 -202.5 37.5 -197.5 42.5 {name=V_TRIG_B_I sig_type=std_logic dir=in}
 T {@symname} 78.5 74 0 0 0.3 0.3 {}
 T {@name} 85 -92 0 0 0.2 0.2 {}
-T {THRESH_A_I_PIN} -172.5 -55 0 0 0.2 0.2 {}
-T {TRIGB_A_I_PIN} -175 25 0 0 0.2 0.2 {}
-T {OUT_D_O_PIN} 105 -55 0 0 0.2 0.2 {}
-T {DISCH_A_O_PIN} 95 25 0 0 0.2 0.2 {}
+T {V_THRESH_I} -172.5 -55 0 0 0.2 0.2 {}
+T {V_TRIG_B_I} -175 25 0 0 0.2 0.2 {}
+T {DO_OUT} 125 -55 0 0 0.2 0.2 {}
+T {V_DISCH_O} 115 25 0 0 0.2 0.2 {}
 T {VSS} 5 75 1 0 0.2 0.2 {}
 T {VDD} 5 -95 1 0 0.2 0.2 {}
 T {R} 32.5 -20 0 0 0.1 0.1 {}
