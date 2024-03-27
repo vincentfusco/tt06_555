@@ -40,7 +40,7 @@ pinout:
   uo[7]: ""
 
   # Bidirectional pins
-  uio[0]: ""
+  uio[0]: "DO_DISCH"
   uio[1]: ""
   uio[2]: ""
   uio[3]: ""
@@ -52,7 +52,7 @@ pinout:
   # Analog pins - you can add more if you use them, up to 8
   ua[0]: "V_THRESH_I"
   ua[1]: "V_TRIG_B_I"
-  ua[3]: "V_DISCH_O"
+  ua[3]: ""
 
 # Do not change!
 yaml_version: 6
