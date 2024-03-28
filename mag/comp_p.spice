@@ -1,0 +1,117 @@
+* NGSPICE file created from comp_p.ext - technology: sky130A
+
+.subckt sky130_fd_pr__nfet_01v8_lvt_MMMA4V a_n260_n698# a_100_n500# a_n158_n500# a_n100_n588#
+X0 a_100_n500# a_n100_n588# a_n158_n500# a_n260_n698# sky130_fd_pr__nfet_01v8_lvt ad=1.45 pd=10.58 as=1.45 ps=10.58 w=5 l=1
+C0 a_n158_n500# a_100_n500# 0.273876f
+C1 a_100_n500# a_n100_n588# 0.112293f
+C2 a_n158_n500# a_n100_n588# 0.112293f
+C3 a_100_n500# a_n260_n698# 0.590504f
+C4 a_n158_n500# a_n260_n698# 0.590504f
+C5 a_n100_n588# a_n260_n698# 0.718303f
+.ends
+
+.subckt sky130_fd_pr__pfet_01v8_lvt_5VNMZ8 a_n100_n897# a_100_n800# w_n296_n1019#
++ a_n158_n800# VSUBS
+X0 a_100_n800# a_n100_n897# a_n158_n800# w_n296_n1019# sky130_fd_pr__pfet_01v8_lvt ad=2.32 pd=16.58 as=2.32 ps=16.58 w=8 l=1
+C0 a_n100_n897# a_n158_n800# 0.176406f
+C1 a_100_n800# a_n158_n800# 0.437576f
+C2 a_n158_n800# w_n296_n1019# 0.512046f
+C3 a_n100_n897# a_100_n800# 0.176406f
+C4 a_n100_n897# w_n296_n1019# 0.434431f
+C5 a_100_n800# w_n296_n1019# 0.512046f
+C6 a_100_n800# VSUBS 0.413693f
+C7 a_n158_n800# VSUBS 0.413693f
+C8 a_n100_n897# VSUBS 0.364183f
+C9 w_n296_n1019# VSUBS 4.82082f
+.ends
+
+.subckt sky130_fd_pr__nfet_01v8_lvt_AHMAL2 a_n260_n574# a_100_n400# a_n158_n400# a_n100_n488#
+X0 a_100_n400# a_n100_n488# a_n158_n400# a_n260_n574# sky130_fd_pr__nfet_01v8_lvt ad=1.16 pd=8.58 as=1.16 ps=8.58 w=4 l=1
+C0 a_n158_n400# a_100_n400# 0.219309f
+C1 a_100_n400# a_n100_n488# 0.090922f
+C2 a_n158_n400# a_n100_n488# 0.090922f
+C3 a_100_n400# a_n260_n574# 0.480566f
+C4 a_n158_n400# a_n260_n574# 0.480566f
+C5 a_n100_n488# a_n260_n574# 0.74751f
+.ends
+
+.subckt sky130_fd_pr__pfet_01v8_lvt_GUWLND a_n158_n1000# a_n100_n1097# w_n296_n1219#
++ a_100_n1000# VSUBS
+X0 a_100_n1000# a_n100_n1097# a_n158_n1000# w_n296_n1219# sky130_fd_pr__pfet_01v8_lvt ad=2.9 pd=20.58 as=2.9 ps=20.58 w=10 l=1
+C0 a_n100_n1097# a_n158_n1000# 0.219148f
+C1 a_100_n1000# a_n158_n1000# 0.54671f
+C2 a_n158_n1000# w_n296_n1219# 0.633996f
+C3 a_n100_n1097# a_100_n1000# 0.219148f
+C4 a_n100_n1097# w_n296_n1219# 0.434431f
+C5 a_100_n1000# w_n296_n1219# 0.633996f
+C6 a_100_n1000# VSUBS 0.514548f
+C7 a_n158_n1000# VSUBS 0.514548f
+C8 a_n100_n1097# VSUBS 0.364183f
+C9 w_n296_n1219# VSUBS 5.72384f
+.ends
+
+.subckt comp_p vinp vout vdd vss vinn vbias_p
+XXMn_cs_left vss latch_right vss a_n2577_3134# sky130_fd_pr__nfet_01v8_lvt_MMMA4V
+XXMp_out m1_n2294_4716# vdd vdd vout vss sky130_fd_pr__pfet_01v8_lvt_5VNMZ8
+XXMn_diode_left1 vss a_n2577_3134# vss a_n2577_3134# sky130_fd_pr__nfet_01v8_lvt_AHMAL2
+XXMn_cs_right1 vss a_n2577_3134# vss latch_right sky130_fd_pr__nfet_01v8_lvt_MMMA4V
+XXMn_diode_right vss latch_right vss latch_right sky130_fd_pr__nfet_01v8_lvt_AHMAL2
+Xsky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0 m1_n2294_4716# vdd vdd m1_n2294_4716# vss sky130_fd_pr__pfet_01v8_lvt_5VNMZ8
+XXMn_out_left vss m1_n2294_4716# vss a_n2577_3134# sky130_fd_pr__nfet_01v8_lvt_MMMA4V
+XXMn_out_right vss vout vss latch_right sky130_fd_pr__nfet_01v8_lvt_MMMA4V
+XXMp_tail a_n2577_3022# vbias_p vdd vdd vss sky130_fd_pr__pfet_01v8_lvt_GUWLND
+X0 a_n2577_3022# vinn a_n2577_3134# vdd sky130_fd_pr__pfet_01v8_lvt ad=2.89855 pd=20.57 as=2.89855 ps=20.57 w=9.995 l=0.35
+X1 a_n2577_3022# vinp latch_right vdd sky130_fd_pr__pfet_01v8_lvt ad=2.89855 pd=20.57 as=2.89855 ps=20.57 w=9.995 l=0.35
+X2 a_n2577_3022# vinp latch_right vdd sky130_fd_pr__pfet_01v8_lvt ad=2.89855 pd=20.57 as=2.89855 ps=20.57 w=9.995 l=0.35
+X3 a_n2577_3022# vinp latch_right vdd sky130_fd_pr__pfet_01v8_lvt ad=2.89855 pd=20.57 as=2.89855 ps=20.57 w=9.995 l=0.35
+X4 a_n2577_3022# vinp latch_right vdd sky130_fd_pr__pfet_01v8_lvt ad=2.89855 pd=20.57 as=2.89855 ps=20.57 w=9.995 l=0.35
+X5 a_n2577_3022# vinn a_n2577_3134# vdd sky130_fd_pr__pfet_01v8_lvt ad=2.89855 pd=20.57 as=2.89855 ps=20.57 w=9.995 l=0.35
+X6 a_n2577_3022# vinn a_n2577_3134# vdd sky130_fd_pr__pfet_01v8_lvt ad=2.89855 pd=20.57 as=2.89855 ps=20.57 w=9.995 l=0.35
+X7 a_n2577_3022# vinn a_n2577_3134# vdd sky130_fd_pr__pfet_01v8_lvt ad=2.89855 pd=20.57 as=2.89855 ps=20.57 w=9.995 l=0.35
+C0 vinn m1_n2294_4716# 0.081834f
+C1 vbias_p m1_n2294_4716# 0.841523f
+C2 latch_right a_n2577_3134# 5.157924f
+C3 vout m1_n2294_4716# 0.605798f
+C4 m1_n2294_4716# vdd 2.997078f
+C5 a_n2577_3022# m1_n2294_4716# 0.006519f
+C6 vinp a_n2577_3134# 0.504304f
+C7 vinn vbias_p 0.002221f
+C8 vinn vout 0.12978f
+C9 vinp latch_right 0.513108f
+C10 vinn vdd 2.304739f
+C11 a_n2577_3022# vinn 0.826947f
+C12 vbias_p vout 0.144263f
+C13 vbias_p vdd 2.119612f
+C14 a_n2577_3022# vbias_p 0.651669f
+C15 vout vdd 1.629186f
+C16 a_n2577_3022# vout 0.008029f
+C17 a_n2577_3022# vdd 2.229149f
+C18 m1_n2294_4716# a_n2577_3134# 0.73463f
+C19 m1_n2294_4716# latch_right 0.143102f
+C20 vinn a_n2577_3134# 1.33911f
+C21 vinp m1_n2294_4716# 0.225137f
+C22 vbias_p a_n2577_3134# 0.001028f
+C23 vout a_n2577_3134# 0.140137f
+C24 vinn latch_right 3.535073f
+C25 vdd a_n2577_3134# 1.397101f
+C26 a_n2577_3022# a_n2577_3134# 8.829929f
+C27 vbias_p latch_right 0.001093f
+C28 vout latch_right 0.728353f
+C29 vdd latch_right 1.446106f
+C30 a_n2577_3022# latch_right 8.894202f
+C31 vinp vinn 1.25697f
+C32 vinp vbias_p 0.030109f
+C33 vinp vout 0.03655f
+C34 vinp vdd 4.263518f
+C35 vinp a_n2577_3022# 2.917567f
+C36 vinp vss 0.4258f
+C37 vinn vss 0.505665f
+C38 a_n2577_3022# vss 1.320391f
+C39 vbias_p vss 0.829052f
+C40 vdd vss 43.54159f
+C41 vout vss 3.238105f
+C42 latch_right vss 4.747994f
+C43 m1_n2294_4716# vss 3.384084f
+C44 a_n2577_3134# vss 5.117222f
+.ends
+

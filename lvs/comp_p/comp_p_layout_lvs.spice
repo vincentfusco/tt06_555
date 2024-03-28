@@ -1,0 +1,40 @@
+* NGSPICE file created from comp_p.ext - technology: sky130A
+
+.subckt sky130_fd_pr__nfet_01v8_lvt_MMMA4V a_n260_n698# a_100_n500# a_n158_n500# a_n100_n588#
+X0 a_100_n500# a_n100_n588# a_n158_n500# a_n260_n698# sky130_fd_pr__nfet_01v8_lvt ad=1.45 pd=10.58 as=1.45 ps=10.58 w=5 l=1
+.ends
+
+.subckt sky130_fd_pr__pfet_01v8_lvt_5VNMZ8 a_n100_n897# a_100_n800# w_n296_n1019#
++ a_n158_n800#
+X0 a_100_n800# a_n100_n897# a_n158_n800# w_n296_n1019# sky130_fd_pr__pfet_01v8_lvt ad=2.32 pd=16.58 as=2.32 ps=16.58 w=8 l=1
+.ends
+
+.subckt sky130_fd_pr__nfet_01v8_lvt_AHMAL2 a_n260_n574# a_100_n400# a_n158_n400# a_n100_n488#
+X0 a_100_n400# a_n100_n488# a_n158_n400# a_n260_n574# sky130_fd_pr__nfet_01v8_lvt ad=1.16 pd=8.58 as=1.16 ps=8.58 w=4 l=1
+.ends
+
+.subckt sky130_fd_pr__pfet_01v8_lvt_GUWLND a_n158_n1000# a_n100_n1097# w_n296_n1219#
++ a_100_n1000#
+X0 a_100_n1000# a_n100_n1097# a_n158_n1000# w_n296_n1219# sky130_fd_pr__pfet_01v8_lvt ad=2.9 pd=20.58 as=2.9 ps=20.58 w=10 l=1
+.ends
+
+.subckt comp_p vinp vout vdd vss vinn vbias_p
+XXMn_cs_left vss latch_right vss a_n2577_3134# sky130_fd_pr__nfet_01v8_lvt_MMMA4V
+XXMp_out m1_n2294_4716# vdd vdd vout sky130_fd_pr__pfet_01v8_lvt_5VNMZ8
+XXMn_diode_left1 vss a_n2577_3134# vss a_n2577_3134# sky130_fd_pr__nfet_01v8_lvt_AHMAL2
+XXMn_cs_right1 vss a_n2577_3134# vss latch_right sky130_fd_pr__nfet_01v8_lvt_MMMA4V
+XXMn_diode_right vss latch_right vss latch_right sky130_fd_pr__nfet_01v8_lvt_AHMAL2
+Xsky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0 m1_n2294_4716# vdd vdd m1_n2294_4716# sky130_fd_pr__pfet_01v8_lvt_5VNMZ8
+XXMn_out_left vss m1_n2294_4716# vss a_n2577_3134# sky130_fd_pr__nfet_01v8_lvt_MMMA4V
+XXMn_out_right vss vout vss latch_right sky130_fd_pr__nfet_01v8_lvt_MMMA4V
+XXMp_tail a_n2577_3022# vbias_p vdd vdd sky130_fd_pr__pfet_01v8_lvt_GUWLND
+X0 a_n2577_3022# vinn a_n2577_3134# vdd sky130_fd_pr__pfet_01v8_lvt ad=2.89855 pd=20.57 as=2.89855 ps=20.57 w=9.995 l=0.35
+X1 a_n2577_3022# vinp latch_right vdd sky130_fd_pr__pfet_01v8_lvt ad=2.89855 pd=20.57 as=2.89855 ps=20.57 w=9.995 l=0.35
+X2 a_n2577_3022# vinp latch_right vdd sky130_fd_pr__pfet_01v8_lvt ad=2.89855 pd=20.57 as=2.89855 ps=20.57 w=9.995 l=0.35
+X3 a_n2577_3022# vinp latch_right vdd sky130_fd_pr__pfet_01v8_lvt ad=2.89855 pd=20.57 as=2.89855 ps=20.57 w=9.995 l=0.35
+X4 a_n2577_3022# vinp latch_right vdd sky130_fd_pr__pfet_01v8_lvt ad=2.89855 pd=20.57 as=2.89855 ps=20.57 w=9.995 l=0.35
+X5 a_n2577_3022# vinn a_n2577_3134# vdd sky130_fd_pr__pfet_01v8_lvt ad=2.89855 pd=20.57 as=2.89855 ps=20.57 w=9.995 l=0.35
+X6 a_n2577_3022# vinn a_n2577_3134# vdd sky130_fd_pr__pfet_01v8_lvt ad=2.89855 pd=20.57 as=2.89855 ps=20.57 w=9.995 l=0.35
+X7 a_n2577_3022# vinn a_n2577_3134# vdd sky130_fd_pr__pfet_01v8_lvt ad=2.89855 pd=20.57 as=2.89855 ps=20.57 w=9.995 l=0.35
+.ends
+
