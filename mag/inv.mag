@@ -1,45 +1,47 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1711685005
+timestamp 1711718548
 << pwell >>
-rect 992 1027 1274 1434
+rect 978 804 1260 1436
 << viali >>
-rect 1054 1802 1212 1836
-rect 1054 1030 1212 1064
+rect 1040 1804 1198 1838
+rect 1040 810 1198 844
 << metal1 >>
-rect 1042 1836 1224 1842
-rect 1042 1802 1054 1836
-rect 1212 1802 1224 1836
-rect 1042 1796 1224 1802
-rect 1072 1560 1106 1796
-rect 1154 1546 1232 1752
-rect 1116 1390 1150 1502
-rect 992 1356 1150 1390
-rect 1198 1390 1232 1546
-rect 1198 1356 1274 1390
-rect 1198 1306 1232 1356
-rect 1072 1070 1106 1306
-rect 1160 1114 1232 1306
-rect 1042 1064 1224 1070
-rect 1042 1030 1054 1064
-rect 1212 1030 1224 1064
-rect 1042 1024 1224 1030
+rect 1028 1838 1210 1844
+rect 1028 1804 1040 1838
+rect 1198 1804 1210 1838
+rect 1028 1798 1210 1804
+rect 1058 1562 1092 1798
+rect 1140 1548 1218 1754
+rect 1102 1390 1136 1504
+rect 978 1356 1136 1390
+rect 1102 1170 1136 1356
+rect 1084 1136 1136 1170
+rect 1184 1390 1218 1548
+rect 1184 1356 1260 1390
+rect 1184 1086 1218 1356
+rect 1058 850 1092 1086
+rect 1146 894 1218 1086
+rect 1028 844 1210 850
+rect 1028 810 1040 844
+rect 1198 810 1210 844
+rect 1028 804 1210 810
 use sky130_fd_pr__pfet_01v8_7PK3FC  sky130_fd_pr__pfet_01v8_7PK3FC_0
 timestamp 1711683920
-transform 1 0 1133 0 1 1612
+transform 1 0 1119 0 1 1614
 box -141 -178 141 260
 use sky130_fd_pr__nfet_01v8_BXYDM4  XMn
-timestamp 1711684482
-transform 1 0 1133 0 1 1249
-box -103 -225 103 160
+timestamp 1711717398
+transform 1 0 1119 0 1 1029
+box -106 -220 104 174
 << labels >>
-flabel metal1 992 1356 1026 1390 3 FreeSans 320 0 0 0 vin
-port 1 e default input
-flabel metal1 1240 1356 1274 1390 7 FreeSans 320 0 0 0 vout
-port 2 w default output
-flabel metal1 1054 1802 1212 1836 0 FreeSans 320 0 0 0 vdd
-port 3 nsew default bidirectional
-flabel metal1 1054 1030 1212 1064 0 FreeSans 320 0 0 0 vss
+flabel metal1 1040 810 1198 844 0 FreeSans 320 0 0 0 vss
 port 4 nsew default bidirectional
+flabel metal1 1040 1804 1198 1838 0 FreeSans 320 0 0 0 vdd
+port 3 nsew default bidirectional
+flabel metal1 1226 1356 1260 1390 7 FreeSans 320 0 0 0 vout
+port 2 w default output
+flabel metal1 978 1356 1012 1390 3 FreeSans 320 0 0 0 vin
+port 1 e default input
 << end >>

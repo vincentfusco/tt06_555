@@ -1,0 +1,7 @@
+** sch_path: /home/vincef/projects/tt06_555/xsch/ip/logic/inv.sch
+.subckt inv vin vout vdd vss
+*.PININFO vin:I vout:O vdd:I vss:I
+XMn vout vin vss vss sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 m=1
+XMp vout vin vdd vdd sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 m=1
+.ends
+.end

@@ -1,0 +1,9 @@
+** sch_path: /home/vincef/projects/tt06_555/xsch/ip/logic/nor.sch
+.subckt nor IN_A OUT vdd vss IN_B
+*.PININFO IN_A:I OUT:O vss:B vdd:B IN_B:I
+XMn_a OUT IN_A vss vss sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 m=1
+XMp_a mpcon IN_A vdd vdd sky130_fd_pr__pfet_01v8 L=0.15 W=2 nf=1 m=1
+XMp_b OUT IN_B mpcon vdd sky130_fd_pr__pfet_01v8 L=0.15 W=2 nf=1 m=1
+XMn_b OUT IN_B vss vss sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 m=1
+.ends
+.end

@@ -1,0 +1,8 @@
+* SPICE3 file created from nor.ext - technology: sky130A
+
+.subckt nor IN_A OUT vdd vss IN_B
+X0 sky130_fd_pr__pfet_01v8_7P3MHC_1/a_15_n164# IN_B OUT vdd sky130_fd_pr__pfet_01v8 ad=0.58 pd=4.58 as=0.58 ps=4.58 w=2 l=0.15
+X1 vdd IN_A sky130_fd_pr__pfet_01v8_7P3MHC_1/a_15_n164# vdd sky130_fd_pr__pfet_01v8 ad=0.58 pd=4.58 as=0.580025 ps=4.585 w=2 l=0.15
+X2 OUT IN_B vss vss sky130_fd_pr__nfet_01v8 ad=0.29 pd=2.58 as=0.145 ps=1.29 w=1 l=0.15
+X3 vss IN_A OUT vss sky130_fd_pr__nfet_01v8 ad=0.145 pd=1.29 as=0.29 ps=2.58 w=1 l=0.15
+.ends
