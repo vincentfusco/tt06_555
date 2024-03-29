@@ -243,9 +243,9 @@ spiceprefix=X
 }
 C {sky130_fd_pr/nfet_01v8_lvt.sym} 1060 -70 0 0 {name=Mn_discharge
 L=0.35
-W=50
-nf=5
-mult=1
+W=10
+nf=1
+mult=5
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 

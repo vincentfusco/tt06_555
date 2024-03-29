@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1711745511
+timestamp 1711753048
 << metal4 >>
 rect 798 44952 858 45152
 rect 1534 44952 1594 45152
@@ -57,9 +57,9 @@ rect 22480 0 22600 200
 rect 26896 0 27016 200
 rect 31312 0 31432 200
 use timer_core  X_TIMER
-timestamp 1711745511
+timestamp 1711753048
 transform 1 0 -19416 0 1 -14810
-box 20272 15826 28623 23888
+box 20360 15831 28623 23884
 << labels >>
 flabel metal4 s 30974 44952 31034 45152 0 FreeSans 480 90 0 0 clk
 port 0 nsew signal input
