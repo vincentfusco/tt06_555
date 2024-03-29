@@ -39,10 +39,10 @@ N -140 40 -140 160 {
 lab=OUT_Q_B}
 C {devices/ipin.sym} -220 120 0 0 {name=p1 lab=IN_R}
 C {devices/opin.sym} 220 -140 0 0 {name=p3 lab=OUT_Q_B}
-C {ip/logic/nor.sym} -20 -140 0 0 {name=X_NOR_R}
+C {ip/logic/nor.sym} -20 -140 0 0 {name=X_NOR_TOP}
 C {devices/lab_pin.sym} -20 -200 1 0 {name=p4 sig_type=std_logic lab=vdd}
 C {devices/lab_pin.sym} -20 -80 3 0 {name=p5 sig_type=std_logic lab=vss}
-C {ip/logic/nor.sym} -20 140 0 0 {name=X_NOR_S1}
+C {ip/logic/nor.sym} -20 140 0 0 {name=X_NOR_BOTTOM}
 C {devices/lab_pin.sym} -20 80 1 0 {name=p7 sig_type=std_logic lab=vdd}
 C {devices/lab_pin.sym} -20 200 3 0 {name=p8 sig_type=std_logic lab=vss}
 C {devices/opin.sym} 220 140 0 0 {name=p10 lab=OUT_Q}
