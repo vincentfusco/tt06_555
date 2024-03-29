@@ -23,5 +23,5 @@ port VGND class bidirectional
 port conn n s e w
 
 # Export
-gds write ../gds/tt_um_analog_example.gds
-lef write ../lef/tt_um_analog_example.lef -pinonly
+gds write ../gds/tt_um_vaf_555_timer.gds
+lef write ../lef/tt_um_vaf_555_timer.lef -pinonly

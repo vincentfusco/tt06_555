@@ -1,0 +1,152 @@
+
+Circuit 1 cell timer_core is a black box; will not flatten Circuit 2
+Warning: Equate pins:  cell timer_core is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: timer_core                      |Circuit 2: timer_core                      
+-------------------------------------------|-------------------------------------------
+(no matching pin)                          |VDD                                        
+(no matching pin)                          |DO_OUT                                     
+(no matching pin)                          |VSS                                        
+(no matching pin)                          |V_DISCH_O                                  
+(no matching pin)                          |V_THRESH_I                                 
+(no matching pin)                          |V_TRIG_B_I                                 
+1                                          |(no matching pin)                          
+2                                          |(no matching pin)                          
+3                                          |(no matching pin)                          
+4                                          |(no matching pin)                          
+5                                          |(no matching pin)                          
+6                                          |(no matching pin)                          
+---------------------------------------------------------------------------------------
+Cell pin lists for timer_core and timer_core altered to match.
+Device classes timer_core and timer_core are equivalent.
+
+Cell tt_um_vaf_555_timer (0) disconnected node: clk
+Cell tt_um_vaf_555_timer (0) disconnected node: ena
+Cell tt_um_vaf_555_timer (0) disconnected node: rst_n
+Cell tt_um_vaf_555_timer (0) disconnected node: ua[0]
+Cell tt_um_vaf_555_timer (0) disconnected node: ua[1]
+Cell tt_um_vaf_555_timer (0) disconnected node: ua[2]
+Cell tt_um_vaf_555_timer (0) disconnected node: ua[3]
+Cell tt_um_vaf_555_timer (0) disconnected node: ua[4]
+Cell tt_um_vaf_555_timer (0) disconnected node: ui_in[0]
+Cell tt_um_vaf_555_timer (0) disconnected node: ui_in[1]
+Cell tt_um_vaf_555_timer (0) disconnected node: ui_in[2]
+Cell tt_um_vaf_555_timer (0) disconnected node: ui_in[3]
+Cell tt_um_vaf_555_timer (0) disconnected node: ui_in[4]
+Cell tt_um_vaf_555_timer (0) disconnected node: ui_in[5]
+Cell tt_um_vaf_555_timer (0) disconnected node: ui_in[6]
+Cell tt_um_vaf_555_timer (0) disconnected node: ui_in[7]
+Cell tt_um_vaf_555_timer (0) disconnected node: uio_in[0]
+Cell tt_um_vaf_555_timer (0) disconnected node: uio_in[1]
+Cell tt_um_vaf_555_timer (0) disconnected node: uio_in[2]
+Cell tt_um_vaf_555_timer (0) disconnected node: uio_in[3]
+Cell tt_um_vaf_555_timer (0) disconnected node: uio_in[4]
+Cell tt_um_vaf_555_timer (0) disconnected node: uio_in[5]
+Cell tt_um_vaf_555_timer (0) disconnected node: uio_in[6]
+Cell tt_um_vaf_555_timer (0) disconnected node: uio_in[7]
+Cell tt_um_vaf_555_timer (0) disconnected node: uio_oe[0]
+Cell tt_um_vaf_555_timer (0) disconnected node: uio_oe[1]
+Cell tt_um_vaf_555_timer (0) disconnected node: uio_oe[2]
+Cell tt_um_vaf_555_timer (0) disconnected node: uio_oe[3]
+Cell tt_um_vaf_555_timer (0) disconnected node: uio_oe[4]
+Cell tt_um_vaf_555_timer (0) disconnected node: uio_oe[5]
+Cell tt_um_vaf_555_timer (0) disconnected node: uio_oe[6]
+Cell tt_um_vaf_555_timer (0) disconnected node: uio_oe[7]
+Cell tt_um_vaf_555_timer (0) disconnected node: uio_out[0]
+Cell tt_um_vaf_555_timer (0) disconnected node: uio_out[1]
+Cell tt_um_vaf_555_timer (0) disconnected node: uio_out[2]
+Cell tt_um_vaf_555_timer (0) disconnected node: uio_out[3]
+Cell tt_um_vaf_555_timer (0) disconnected node: uio_out[4]
+Cell tt_um_vaf_555_timer (0) disconnected node: uio_out[5]
+Cell tt_um_vaf_555_timer (0) disconnected node: uio_out[6]
+Cell tt_um_vaf_555_timer (0) disconnected node: uio_out[7]
+Cell tt_um_vaf_555_timer (0) disconnected node: uo_out[1]
+Cell tt_um_vaf_555_timer (0) disconnected node: uo_out[2]
+Cell tt_um_vaf_555_timer (0) disconnected node: uo_out[3]
+Cell tt_um_vaf_555_timer (0) disconnected node: uo_out[4]
+Cell tt_um_vaf_555_timer (0) disconnected node: uo_out[5]
+Cell tt_um_vaf_555_timer (0) disconnected node: uo_out[6]
+Cell tt_um_vaf_555_timer (0) disconnected node: uo_out[7]
+Subcircuit summary:
+Circuit 1: tt_um_vaf_555_timer             |Circuit 2: tt_um_vaf_555_timer             
+-------------------------------------------|-------------------------------------------
+timer_core (1)                             |timer_core (1)                             
+Number of devices: 1                       |Number of devices: 1                       
+Number of nets: 12                         |Number of nets: 12                         
+---------------------------------------------------------------------------------------
+Netlists match uniquely with port errors.
+
+Subcircuit pins:
+Circuit 1: tt_um_vaf_555_timer             |Circuit 2: tt_um_vaf_555_timer             
+-------------------------------------------|-------------------------------------------
+ua[5]                                      |(no matching pin)                          
+ua[7]                                      |(no matching pin)                          
+uo_out[0]                                  |(no matching pin)                          
+VGND                                       |(no matching pin)                          
+VPWR                                       |(no matching pin)                          
+ua[6]                                      |(no matching pin)                          
+(no matching pin)                          |VPWR                                       
+(no matching pin)                          |VGND                                       
+(no matching pin)                          |uo[0]                                      
+(no matching pin)                          |ua[5]                                      
+(no matching pin)                          |ua[6]                                      
+(no matching pin)                          |ua[7]                                      
+clk                                        |(no matching pin)                          
+ena                                        |(no matching pin)                          
+rst_n                                      |(no matching pin)                          
+ua[0]                                      |(no matching pin)                          
+ua[1]                                      |(no matching pin)                          
+ua[2]                                      |(no matching pin)                          
+ua[3]                                      |(no matching pin)                          
+ua[4]                                      |(no matching pin)                          
+ua[5]                                      |(no matching pin)                          
+ua[6]                                      |(no matching pin)                          
+ua[7]                                      |(no matching pin)                          
+ui_in[0]                                   |(no matching pin)                          
+ui_in[1]                                   |(no matching pin)                          
+ui_in[2]                                   |(no matching pin)                          
+ui_in[3]                                   |(no matching pin)                          
+ui_in[4]                                   |(no matching pin)                          
+ui_in[5]                                   |(no matching pin)                          
+ui_in[6]                                   |(no matching pin)                          
+ui_in[7]                                   |(no matching pin)                          
+uio_in[0]                                  |(no matching pin)                          
+uio_in[1]                                  |(no matching pin)                          
+uio_in[2]                                  |(no matching pin)                          
+uio_in[3]                                  |(no matching pin)                          
+uio_in[4]                                  |(no matching pin)                          
+uio_in[5]                                  |(no matching pin)                          
+uio_in[6]                                  |(no matching pin)                          
+uio_in[7]                                  |(no matching pin)                          
+uio_oe[0]                                  |(no matching pin)                          
+uio_oe[1]                                  |(no matching pin)                          
+uio_oe[2]                                  |(no matching pin)                          
+uio_oe[3]                                  |(no matching pin)                          
+uio_oe[4]                                  |(no matching pin)                          
+uio_oe[5]                                  |(no matching pin)                          
+uio_oe[6]                                  |(no matching pin)                          
+uio_oe[7]                                  |(no matching pin)                          
+uio_out[0]                                 |(no matching pin)                          
+uio_out[1]                                 |(no matching pin)                          
+uio_out[2]                                 |(no matching pin)                          
+uio_out[3]                                 |(no matching pin)                          
+uio_out[4]                                 |(no matching pin)                          
+uio_out[5]                                 |(no matching pin)                          
+uio_out[6]                                 |(no matching pin)                          
+uio_out[7]                                 |(no matching pin)                          
+uo_out[0]                                  |(no matching pin)                          
+uo_out[1]                                  |(no matching pin)                          
+uo_out[2]                                  |(no matching pin)                          
+uo_out[3]                                  |(no matching pin)                          
+uo_out[4]                                  |(no matching pin)                          
+uo_out[5]                                  |(no matching pin)                          
+uo_out[6]                                  |(no matching pin)                          
+uo_out[7]                                  |(no matching pin)                          
+VPWR                                       |(no matching pin)                          
+VGND                                       |(no matching pin)                          
+---------------------------------------------------------------------------------------
+Cell pin lists for tt_um_vaf_555_timer and tt_um_vaf_555_timer altered to match.
+Device classes tt_um_vaf_555_timer and tt_um_vaf_555_timer are equivalent.
+
+Final result: Top level cell failed pin matching.

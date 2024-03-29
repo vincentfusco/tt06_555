@@ -2,8 +2,8 @@
 project:
   title:        "A 555-Timer Clone for Tiny Tapeout 6"      # Project title
   author:       "Vincent Fusco"      # Your name
-  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  ""      # One line description of what your project does
+  discord:      "fusco_vincent"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "Blinks an LED the hard way"      # One line description of what your project does
   language:     "Analog" # other examples include Verilog, Amaranth, VHDL, etc
   clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
 
@@ -40,7 +40,7 @@ pinout:
   uo[7]: ""
 
   # Bidirectional pins
-  uio[0]: "DO_DISCH"
+  uio[0]: ""
   uio[1]: ""
   uio[2]: ""
   uio[3]: ""
@@ -50,9 +50,14 @@ pinout:
   uio[7]: ""
 
   # Analog pins - you can add more if you use them, up to 8
-  ua[0]: "V_THRESH_I"
-  ua[1]: "V_TRIG_B_I"
+  ua[0]: ""
+  ua[1]: ""
+  ua[2]: ""
   ua[3]: ""
+  ua[4]: ""
+  ua[5]: "V_THRESH_I"
+  ua[6]: "V_TRIG_B_I"
+  ua[7]: "V_DISCH_O"
 
 # Do not change!
 yaml_version: 6
