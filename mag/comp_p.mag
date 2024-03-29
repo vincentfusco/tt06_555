@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1711658383
+timestamp 1711732688
 << nwell >>
 rect -3002 4716 2120 5166
 rect -3002 4710 -566 4716
@@ -935,39 +935,39 @@ rect 760 1864 2094 1916
 rect -216 1854 760 1864
 rect -308 1666 -256 1676
 use sky130_fd_pr__pfet_01v8_lvt_5VNMZ8  sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0
-timestamp 1711036998
+timestamp 1711732688
 transform 0 -1 -1407 1 0 4870
 box -296 -1019 296 1019
 use sky130_fd_pr__nfet_01v8_lvt_MMMA4V  XMn_cs_left
-timestamp 1711041810
+timestamp 1711732688
 transform 0 -1 -1122 1 0 2246
 box -296 -734 296 766
 use sky130_fd_pr__nfet_01v8_lvt_MMMA4V  XMn_cs_right1
-timestamp 1711041810
+timestamp 1711732688
 transform 0 -1 272 1 0 2246
 box -296 -734 296 766
 use sky130_fd_pr__nfet_01v8_lvt_AHMAL2  XMn_diode_left1
-timestamp 1711036998
+timestamp 1711732688
 transform 0 -1 -2392 1 0 2246
 box -296 -610 296 610
 use sky130_fd_pr__nfet_01v8_lvt_AHMAL2  XMn_diode_right
-timestamp 1711036998
+timestamp 1711732688
 transform 0 -1 1510 1 0 2246
 box -296 -610 296 610
 use sky130_fd_pr__nfet_01v8_lvt_MMMA4V  XMn_out_left
-timestamp 1711041810
+timestamp 1711732688
 transform 0 -1 -1122 1 0 1760
 box -296 -734 296 766
 use sky130_fd_pr__nfet_01v8_lvt_MMMA4V  XMn_out_right
-timestamp 1711041810
+timestamp 1711732688
 transform 0 -1 272 1 0 1760
 box -296 -734 296 766
 use sky130_fd_pr__pfet_01v8_lvt_5VNMZ8  XMp_out
-timestamp 1711036998
+timestamp 1711732688
 transform 0 -1 525 1 0 4870
 box -296 -1019 296 1019
 use sky130_fd_pr__pfet_01v8_lvt_GUWLND  XMp_tail
-timestamp 1711036998
+timestamp 1711732688
 transform 0 -1 -419 1 0 4296
 box -296 -1219 296 1219
 << labels >>

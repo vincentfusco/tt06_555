@@ -1,6 +1,16 @@
-* SPICE3 file created from inv.ext - technology: sky130A
+* NGSPICE file created from inv.ext - technology: sky130A
+
+.subckt sky130_fd_pr__nfet_01v8_BXYDM4 a_15_n131# a_n15_n157# a_n73_n131# VSUBS
+X0 a_15_n131# a_n15_n157# a_n73_n131# VSUBS sky130_fd_pr__nfet_01v8 ad=0.29 pd=2.58 as=0.29 ps=2.58 w=1 l=0.15
+.ends
+
+.subckt sky130_fd_pr__pfet_01v8_7PK3FC a_n73_n64# a_n33_n161# m1_n141_190# a_15_n64#
++ w_n141_n178#
+X0 a_15_n64# a_n33_n161# a_n73_n64# w_n141_n178# sky130_fd_pr__pfet_01v8 ad=0.29 pd=2.58 as=0.29 ps=2.58 w=1 l=0.15
+.ends
 
 .subckt inv vin vout vdd vss
-X0 vout vin vss vss sky130_fd_pr__nfet_01v8 ad=0.29 pd=2.58 as=0.29 ps=2.58 w=1 l=0.15
-X1 vout vin vdd vdd sky130_fd_pr__pfet_01v8 ad=0.29 pd=2.58 as=0.29 ps=2.58 w=1 l=0.15
+XXMn vout vin vss vss sky130_fd_pr__nfet_01v8_BXYDM4
+Xsky130_fd_pr__pfet_01v8_7PK3FC_0 vdd vin vdd vout vdd sky130_fd_pr__pfet_01v8_7PK3FC
 .ends
+
