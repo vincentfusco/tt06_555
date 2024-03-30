@@ -1,0 +1,16 @@
+* SPICE3 file created from inv.ext - technology: sky130A
+
+.subckt inv_pex vin vout vdd vss
+X0 vout vin vss vss sky130_fd_pr__nfet_01v8 ad=0.29 pd=2.58 as=0.29 ps=2.58 w=1 l=0.15
+X1 vout vin vdd vdd sky130_fd_pr__pfet_01v8 ad=0.29 pd=2.58 as=0.29 ps=2.58 w=1 l=0.15
+C0 vdd vout 0.273907f
+C1 vss vout 0.102869f
+C2 vdd vin 0.191064f
+C3 vss vin 0.017227f
+C4 vdd vss 0.005257f
+C5 vout vin 0.163368f
+C6 vdd 0 0.815242f
+C7 vout 0 0.442391f
+C8 vss 0 0.026556f
+C9 vin 0 0.446699f
+.ends

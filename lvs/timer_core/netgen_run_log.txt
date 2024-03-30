@@ -15,21 +15,21 @@ Creating placeholder cell definition.
 Reading netlist file timer_core_schematic_lvs.spice
 Call to undefined subcircuit sky130_fd_pr__res_xhigh_po_1p41
 Creating placeholder cell definition.
-Call to undefined subcircuit sr_latch
-Creating placeholder cell definition.
-Call to undefined subcircuit inv
-Creating placeholder cell definition.
 Call to undefined subcircuit sky130_fd_pr__nfet_01v8_lvt
 Creating placeholder cell definition.
 Call to undefined subcircuit sky130_fd_pr__pfet_01v8_lvt
 Creating placeholder cell definition.
-Call to undefined subcircuit comp_p
+Call to undefined subcircuit inv
 Creating placeholder cell definition.
-Call to undefined subcircuit nor
+Call to undefined subcircuit sr_latch
+Creating placeholder cell definition.
+Call to undefined subcircuit comp_p
 Creating placeholder cell definition.
 Call to undefined subcircuit sky130_fd_pr__nfet_01v8
 Creating placeholder cell definition.
 Call to undefined subcircuit sky130_fd_pr__pfet_01v8
+Creating placeholder cell definition.
+Call to undefined subcircuit nor
 Creating placeholder cell definition.
 
 Reading setup file /opt/pdk/share/pdk/sky130A/libs.tech/netgen/sky130A_setup.tcl

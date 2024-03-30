@@ -3,7 +3,9 @@ v {xschem version=3.4.5 file_version=1.2
 G {}
 K {type=subcircuit
 format="@name @pinlist @symname"
-template="name=X1"}
+template="name=X1"
+
+}
 V {}
 S {}
 E {}
@@ -120,12 +122,12 @@ L 4 -180 40 -100 40 {}
 L 4 -180 -100 -100 -100 {}
 L 4 -180 100 -100 100 {}
 L 4 180 40 200 40 {}
-B 5 -2.5 -122.5 2.5 -117.5 {name=VDD dir=inout}
-B 5 197.5 -42.5 202.5 -37.5 {name=DO_OUT sig_type=std_logic dir=out}
-B 5 -2.5 117.5 2.5 122.5 {name=VSS dir=inout}
-B 5 197.5 37.5 202.5 42.5 {name=V_DISCH_O sig_type=std_logic dir=out}
 B 5 -202.5 -42.5 -197.5 -37.5 {name=V_THRESH_I sig_type=std_logic dir=in}
 B 5 -202.5 37.5 -197.5 42.5 {name=V_TRIG_B_I sig_type=std_logic dir=in}
+B 5 197.5 -42.5 202.5 -37.5 {name=DO_OUT sig_type=std_logic dir=out}
+B 5 197.5 37.5 202.5 42.5 {name=V_DISCH_O sig_type=std_logic dir=out}
+B 5 -2.5 -122.5 2.5 -117.5 {name=VDD dir=inout}
+B 5 -2.5 117.5 2.5 122.5 {name=VSS dir=inout}
 T {@symname} 78.5 74 0 0 0.3 0.3 {}
 T {@name} 85 -92 0 0 0.2 0.2 {}
 T {V_THRESH_I} -172.5 -55 0 0 0.2 0.2 {}

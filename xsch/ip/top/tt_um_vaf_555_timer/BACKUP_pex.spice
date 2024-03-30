@@ -1,0 +1,697 @@
+* SPICE3 file created from tt_um_vaf_555_timer.ext - technology: sky130A
+
+.subckt sky130_fd_pr__nfet_01v8_BXYDM4 a_15_n131# a_n15_n157# a_n73_n131# VSUBS
+X0 a_15_n131# a_n15_n157# a_n73_n131# VSUBS sky130_fd_pr__nfet_01v8 ad=0.29 pd=2.58 as=0.29 ps=2.58 w=1 l=0.15
+C0 a_15_n131# a_n15_n157# 0.013387f
+C1 a_n73_n131# a_15_n131# 0.166179f
+C2 a_n73_n131# a_n15_n157# 0.005542f
+C3 a_15_n131# VSUBS 0.116709f
+C4 a_n73_n131# VSUBS 0.118252f
+C5 a_n15_n157# VSUBS 0.066041f
+.ends
+
+.subckt sky130_fd_pr__pfet_01v8_7PK3FC a_n73_n64# a_n33_n161# m1_n141_190# a_15_n64#
++ w_n141_n178# VSUBS
+X0 a_15_n64# a_n33_n161# a_n73_n64# w_n141_n178# sky130_fd_pr__pfet_01v8 ad=0.29 pd=2.58 as=0.29 ps=2.58 w=1 l=0.15
+C0 m1_n141_190# a_15_n64# 0.020547f
+C1 a_n73_n64# w_n141_n178# 0.021345f
+C2 a_n33_n161# a_n73_n64# 0.017761f
+C3 a_n33_n161# w_n141_n178# 0.084351f
+C4 a_15_n64# a_n73_n64# 0.162113f
+C5 a_15_n64# w_n141_n178# 0.021345f
+C6 m1_n141_190# a_n73_n64# 0.020547f
+C7 a_n33_n161# a_15_n64# 0.017761f
+C8 m1_n141_190# w_n141_n178# 0.046696f
+C9 a_n33_n161# m1_n141_190# 0.009013f
+C10 m1_n141_190# VSUBS 0.083142f
+C11 a_15_n64# VSUBS 0.089867f
+C12 a_n73_n64# VSUBS 0.089867f
+C13 a_n33_n161# VSUBS 0.130601f
+C14 w_n141_n178# VSUBS 0.464632f
+.ends
+
+.subckt inv vin vout vss vdd
+XXMn vout vin vss vss sky130_fd_pr__nfet_01v8_BXYDM4
+Xsky130_fd_pr__pfet_01v8_7PK3FC_0 vdd vin vdd vout vdd vss sky130_fd_pr__pfet_01v8_7PK3FC
+C0 vout vin 0.13222f
+C1 vss vout -0.06331f
+C2 vss vin 0.011685f
+C3 vdd vout 0.069903f
+C4 vdd vin 0.07994f
+C5 vss vdd 0.005257f
+C6 vdd 0 0.815242f
+C7 vout 0 0.442391f
+C8 vss 0 0.026556f
+C9 vin 0 0.446699f
+.ends
+
+.subckt sky130_fd_pr__pfet_01v8_7P3MHC a_n15_n190# w_n140_n200# a_n73_n164# a_15_n164#
++ VSUBS
+X0 a_15_n164# a_n15_n190# a_n73_n164# w_n140_n200# sky130_fd_pr__pfet_01v8 ad=0.58 pd=4.58 as=0.58 ps=4.58 w=2 l=0.15
+C0 a_n73_n164# a_n15_n190# 0.009499f
+C1 a_15_n164# a_n73_n164# 0.321048f
+C2 a_15_n164# a_n15_n190# 0.009499f
+C3 a_n73_n164# w_n140_n200# 0.012364f
+C4 a_n15_n190# w_n140_n200# 0.022397f
+C5 a_15_n164# w_n140_n200# 0.012364f
+C6 a_15_n164# VSUBS 0.190579f
+C7 a_n73_n164# VSUBS 0.190579f
+C8 a_n15_n190# VSUBS 0.043644f
+C9 w_n140_n200# VSUBS 0.39984f
+.ends
+
+.subckt nor IN_A IN_B OUT vdd vss sky130_fd_pr__pfet_01v8_7P3MHC_1/a_15_n164#
+Xsky130_fd_pr__pfet_01v8_7P3MHC_1 IN_B vdd OUT sky130_fd_pr__pfet_01v8_7P3MHC_1/a_15_n164#
++ vss sky130_fd_pr__pfet_01v8_7P3MHC
+Xsky130_fd_pr__pfet_01v8_7P3MHC_2 IN_A vdd sky130_fd_pr__pfet_01v8_7P3MHC_1/a_15_n164#
++ vdd vss sky130_fd_pr__pfet_01v8_7P3MHC
+X0 OUT IN_B vss vss sky130_fd_pr__nfet_01v8 ad=0.29 pd=2.58 as=0.145 ps=1.29 w=1 l=0.15
+X1 vss IN_A OUT vss sky130_fd_pr__nfet_01v8 ad=0.145 pd=1.29 as=0.29 ps=2.58 w=1 l=0.15
+C0 OUT IN_A 0.036123f
+C1 vdd IN_B 0.049889f
+C2 IN_A IN_B 0.173494f
+C3 OUT IN_B 0.168273f
+C4 sky130_fd_pr__pfet_01v8_7P3MHC_1/a_15_n164# vdd 0.007569f
+C5 sky130_fd_pr__pfet_01v8_7P3MHC_1/a_15_n164# IN_A 0.011274f
+C6 sky130_fd_pr__pfet_01v8_7P3MHC_1/a_15_n164# OUT 2.13e-19
+C7 sky130_fd_pr__pfet_01v8_7P3MHC_1/a_15_n164# IN_B 0.010811f
+C8 vdd IN_A 0.108024f
+C9 OUT vdd 0.057649f
+C10 sky130_fd_pr__pfet_01v8_7P3MHC_1/a_15_n164# vss 0.018074f
+C11 IN_A vss 0.19475f
+C12 vdd vss 1.063912f
+C13 OUT vss 0.689035f
+C14 IN_B vss 0.229442f
+.ends
+
+.subckt sr_latch IN_S IN_R OUT_Q OUT_Q_B vdd X_NOR_BOTTOM/sky130_fd_pr__pfet_01v8_7P3MHC_1/a_15_n164#
++ X_NOR_TOP/sky130_fd_pr__pfet_01v8_7P3MHC_1/a_15_n164# vss
+XX_NOR_TOP OUT_Q IN_S OUT_Q_B vdd vss X_NOR_TOP/sky130_fd_pr__pfet_01v8_7P3MHC_1/a_15_n164#
++ nor
+XX_NOR_BOTTOM OUT_Q_B IN_R OUT_Q vdd vss X_NOR_BOTTOM/sky130_fd_pr__pfet_01v8_7P3MHC_1/a_15_n164#
++ nor
+C0 IN_R X_NOR_TOP/sky130_fd_pr__pfet_01v8_7P3MHC_1/a_15_n164# 2.3e-20
+C1 IN_S X_NOR_TOP/sky130_fd_pr__pfet_01v8_7P3MHC_1/a_15_n164# -4.38e-19
+C2 OUT_Q_B IN_R 0.175427f
+C3 OUT_Q_B IN_S 0.020999f
+C4 vdd IN_R 0.009089f
+C5 IN_S vdd 0.006283f
+C6 vdd X_NOR_TOP/sky130_fd_pr__pfet_01v8_7P3MHC_1/a_15_n164# -1.7e-20
+C7 OUT_Q_B vdd 0.175444f
+C8 OUT_Q_B X_NOR_BOTTOM/sky130_fd_pr__pfet_01v8_7P3MHC_1/a_15_n164# 3.52e-20
+C9 IN_R OUT_Q 0.121015f
+C10 IN_S OUT_Q 0.01954f
+C11 OUT_Q X_NOR_TOP/sky130_fd_pr__pfet_01v8_7P3MHC_1/a_15_n164# 0.012177f
+C12 OUT_Q_B OUT_Q 0.2957f
+C13 vdd OUT_Q 0.043893f
+C14 OUT_Q X_NOR_BOTTOM/sky130_fd_pr__pfet_01v8_7P3MHC_1/a_15_n164# 0.011021f
+C15 IN_S IN_R 0.036294f
+C16 X_NOR_BOTTOM/sky130_fd_pr__pfet_01v8_7P3MHC_1/a_15_n164# vss 0.015563f
+C17 IN_R vss 0.336894f
+C18 X_NOR_TOP/sky130_fd_pr__pfet_01v8_7P3MHC_1/a_15_n164# vss 0.015563f
+C19 OUT_Q vss 0.901255f
+C20 vdd vss 1.969449f
+C21 OUT_Q_B vss 0.75546f
+C22 IN_S vss 0.198981f
+.ends
+
+.subckt sky130_fd_pr__nfet_01v8_lvt_MMMA4V a_n260_n698# a_100_n500# a_n158_n500# a_n100_n588#
+X0 a_100_n500# a_n100_n588# a_n158_n500# a_n260_n698# sky130_fd_pr__nfet_01v8_lvt ad=1.45 pd=10.58 as=1.45 ps=10.58 w=5 l=1
+C0 a_n158_n500# a_n100_n588# 0.112293f
+C1 a_100_n500# a_n100_n588# 0.112293f
+C2 a_n158_n500# a_100_n500# 0.273876f
+C3 a_100_n500# a_n260_n698# 0.590504f
+C4 a_n158_n500# a_n260_n698# 0.590504f
+C5 a_n100_n588# a_n260_n698# 0.718303f
+.ends
+
+.subckt sky130_fd_pr__pfet_01v8_lvt_5VNMZ8 a_n100_n897# a_100_n800# w_n296_n1019#
++ a_n158_n800# VSUBS
+X0 a_100_n800# a_n100_n897# a_n158_n800# w_n296_n1019# sky130_fd_pr__pfet_01v8_lvt ad=2.32 pd=16.58 as=2.32 ps=16.58 w=8 l=1
+C0 a_n100_n897# w_n296_n1019# 0.434431f
+C1 a_n158_n800# w_n296_n1019# 0.512046f
+C2 a_100_n800# w_n296_n1019# 0.512046f
+C3 a_n100_n897# a_n158_n800# 0.176406f
+C4 a_n100_n897# a_100_n800# 0.176406f
+C5 a_100_n800# a_n158_n800# 0.437576f
+C6 a_100_n800# VSUBS 0.413693f
+C7 a_n158_n800# VSUBS 0.413693f
+C8 a_n100_n897# VSUBS 0.364183f
+C9 w_n296_n1019# VSUBS 4.82082f
+.ends
+
+.subckt sky130_fd_pr__nfet_01v8_lvt_AHMAL2 a_n260_n574# a_100_n400# a_n158_n400# a_n100_n488#
+X0 a_100_n400# a_n100_n488# a_n158_n400# a_n260_n574# sky130_fd_pr__nfet_01v8_lvt ad=1.16 pd=8.58 as=1.16 ps=8.58 w=4 l=1
+C0 a_n158_n400# a_n100_n488# 0.090922f
+C1 a_100_n400# a_n100_n488# 0.090922f
+C2 a_n158_n400# a_100_n400# 0.219309f
+C3 a_100_n400# a_n260_n574# 0.480566f
+C4 a_n158_n400# a_n260_n574# 0.480566f
+C5 a_n100_n488# a_n260_n574# 0.74751f
+.ends
+
+.subckt sky130_fd_pr__pfet_01v8_lvt_GUWLND a_n158_n1000# a_n100_n1097# w_n296_n1219#
++ a_100_n1000# VSUBS
+X0 a_100_n1000# a_n100_n1097# a_n158_n1000# w_n296_n1219# sky130_fd_pr__pfet_01v8_lvt ad=2.9 pd=20.58 as=2.9 ps=20.58 w=10 l=1
+C0 a_n100_n1097# w_n296_n1219# 0.434431f
+C1 a_n158_n1000# w_n296_n1219# 0.633996f
+C2 a_100_n1000# w_n296_n1219# 0.633996f
+C3 a_n100_n1097# a_n158_n1000# 0.219148f
+C4 a_n100_n1097# a_100_n1000# 0.219148f
+C5 a_100_n1000# a_n158_n1000# 0.54671f
+C6 a_100_n1000# VSUBS 0.514548f
+C7 a_n158_n1000# VSUBS 0.514548f
+C8 a_n100_n1097# VSUBS 0.364183f
+C9 w_n296_n1219# VSUBS 5.72384f
+.ends
+
+.subckt comp_p vinp vinn vbias_p vdd tail out_left vout latch_right latch_left vss
+XXMn_cs_left vss latch_right vss latch_left sky130_fd_pr__nfet_01v8_lvt_MMMA4V
+XXMp_out out_left vdd vdd vout vss sky130_fd_pr__pfet_01v8_lvt_5VNMZ8
+XXMn_diode_left1 vss latch_left vss latch_left sky130_fd_pr__nfet_01v8_lvt_AHMAL2
+XXMn_cs_right1 vss latch_left vss latch_right sky130_fd_pr__nfet_01v8_lvt_MMMA4V
+XXMn_diode_right vss latch_right vss latch_right sky130_fd_pr__nfet_01v8_lvt_AHMAL2
+Xsky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0 out_left vdd vdd out_left vss sky130_fd_pr__pfet_01v8_lvt_5VNMZ8
+XXMn_out_left vss out_left vss latch_left sky130_fd_pr__nfet_01v8_lvt_MMMA4V
+XXMn_out_right vss vout vss latch_right sky130_fd_pr__nfet_01v8_lvt_MMMA4V
+XXMp_tail tail vbias_p vdd vdd vss sky130_fd_pr__pfet_01v8_lvt_GUWLND
+X0 tail vinn latch_left vdd sky130_fd_pr__pfet_01v8_lvt ad=2.89855 pd=20.57 as=2.89855 ps=20.57 w=9.995 l=0.35
+X1 tail vinp latch_right vdd sky130_fd_pr__pfet_01v8_lvt ad=2.89855 pd=20.57 as=2.89855 ps=20.57 w=9.995 l=0.35
+X2 tail vinp latch_right vdd sky130_fd_pr__pfet_01v8_lvt ad=2.89855 pd=20.57 as=2.89855 ps=20.57 w=9.995 l=0.35
+X3 tail vinp latch_right vdd sky130_fd_pr__pfet_01v8_lvt ad=2.89855 pd=20.57 as=2.89855 ps=20.57 w=9.995 l=0.35
+X4 tail vinp latch_right vdd sky130_fd_pr__pfet_01v8_lvt ad=2.89855 pd=20.57 as=2.89855 ps=20.57 w=9.995 l=0.35
+X5 tail vinn latch_left vdd sky130_fd_pr__pfet_01v8_lvt ad=2.89855 pd=20.57 as=2.89855 ps=20.57 w=9.995 l=0.35
+X6 tail vinn latch_left vdd sky130_fd_pr__pfet_01v8_lvt ad=2.89855 pd=20.57 as=2.89855 ps=20.57 w=9.995 l=0.35
+X7 tail vinn latch_left vdd sky130_fd_pr__pfet_01v8_lvt ad=2.89855 pd=20.57 as=2.89855 ps=20.57 w=9.995 l=0.35
+C0 vbias_p latch_left 0.001028f
+C1 latch_left vdd 1.397101f
+C2 latch_left latch_right 5.157924f
+C3 latch_left out_left 0.73463f
+C4 latch_left vout 0.140137f
+C5 latch_left tail 8.829929f
+C6 vinp vinn 1.25697f
+C7 vbias_p vinp 0.030109f
+C8 vinp vdd 4.263518f
+C9 vbias_p vinn 0.002221f
+C10 vdd vinn 2.304739f
+C11 vinp latch_right 0.513108f
+C12 vinp out_left 0.225137f
+C13 latch_right vinn 3.535073f
+C14 out_left vinn 0.081834f
+C15 vbias_p vdd 2.119612f
+C16 vinp vout 0.03655f
+C17 vbias_p latch_right 0.001093f
+C18 vbias_p out_left 0.841523f
+C19 vout vinn 0.12978f
+C20 latch_right vdd 1.446106f
+C21 out_left vdd 2.997078f
+C22 vinp tail 2.917567f
+C23 latch_right out_left 0.143102f
+C24 tail vinn 0.826947f
+C25 vbias_p vout 0.144263f
+C26 vdd vout 1.629186f
+C27 vbias_p tail 0.651669f
+C28 latch_right vout 0.728353f
+C29 out_left vout 0.605798f
+C30 tail vdd 2.229149f
+C31 latch_right tail 8.894202f
+C32 tail out_left 0.006519f
+C33 tail vout 0.008029f
+C34 vinp latch_left 0.504304f
+C35 latch_left vinn 1.33911f
+C36 vinp vss 0.4258f
+C37 vinn vss 0.505665f
+C38 tail vss 1.097737f
+C39 vbias_p vss 0.829052f
+C40 vdd vss 43.54159f
+C41 vout vss 3.238105f
+C42 latch_right vss 4.747994f
+C43 latch_left vss 5.117222f
+C44 out_left vss 3.384084f
+.ends
+
+.subckt sky130_fd_pr__nfet_01v8_lvt_NVJ7JE a_221_n1088# a_n163_n1088# a_n451_n1174#
++ a_n221_n1000# a_35_n1000# a_291_n1000# a_n291_n1088# a_n349_n1000# a_n35_n1088#
++ a_93_n1088# a_163_n1000# a_n93_n1000#
+X0 a_163_n1000# a_93_n1088# a_35_n1000# a_n451_n1174# sky130_fd_pr__nfet_01v8_lvt ad=1.45 pd=10.29 as=1.45 ps=10.29 w=10 l=0.35
+X1 a_n93_n1000# a_n163_n1088# a_n221_n1000# a_n451_n1174# sky130_fd_pr__nfet_01v8_lvt ad=1.45 pd=10.29 as=1.45 ps=10.29 w=10 l=0.35
+X2 a_291_n1000# a_221_n1088# a_163_n1000# a_n451_n1174# sky130_fd_pr__nfet_01v8_lvt ad=2.9 pd=20.58 as=1.45 ps=10.29 w=10 l=0.35
+X3 a_n221_n1000# a_n291_n1088# a_n349_n1000# a_n451_n1174# sky130_fd_pr__nfet_01v8_lvt ad=1.45 pd=10.29 as=2.9 ps=20.58 w=10 l=0.35
+X4 a_35_n1000# a_n35_n1088# a_n93_n1000# a_n451_n1174# sky130_fd_pr__nfet_01v8_lvt ad=1.45 pd=10.29 as=1.45 ps=10.29 w=10 l=0.35
+C0 a_221_n1088# a_163_n1000# 0.092697f
+C1 a_n163_n1088# a_n35_n1088# 0.104496f
+C2 a_n163_n1088# a_n221_n1000# 0.092697f
+C3 a_n349_n1000# a_n221_n1000# 1.09724f
+C4 a_93_n1088# a_35_n1000# 0.092697f
+C5 a_n93_n1000# a_n35_n1088# 0.092697f
+C6 a_n93_n1000# a_n221_n1000# 1.09724f
+C7 a_291_n1000# a_163_n1000# 1.09724f
+C8 a_35_n1000# a_n35_n1088# 0.092697f
+C9 a_35_n1000# a_163_n1000# 1.09724f
+C10 a_291_n1000# a_221_n1088# 0.092697f
+C11 a_n93_n1000# a_n163_n1088# 0.092697f
+C12 a_n291_n1088# a_n221_n1000# 0.092697f
+C13 a_93_n1088# a_n35_n1088# 0.104496f
+C14 a_93_n1088# a_163_n1000# 0.092697f
+C15 a_n291_n1088# a_n163_n1088# 0.104496f
+C16 a_93_n1088# a_221_n1088# 0.104496f
+C17 a_n291_n1088# a_n349_n1000# 0.092697f
+C18 a_n93_n1000# a_35_n1000# 1.09724f
+C19 a_291_n1000# a_n451_n1174# 1.07603f
+C20 a_163_n1000# a_n451_n1174# 0.158299f
+C21 a_35_n1000# a_n451_n1174# 0.158299f
+C22 a_n93_n1000# a_n451_n1174# 0.158299f
+C23 a_n221_n1000# a_n451_n1174# 0.158299f
+C24 a_n349_n1000# a_n451_n1174# 1.07603f
+C25 a_221_n1088# a_n451_n1174# 0.308209f
+C26 a_93_n1088# a_n451_n1174# 0.243769f
+C27 a_n35_n1088# a_n451_n1174# 0.243694f
+C28 a_n163_n1088# a_n451_n1174# 0.243769f
+C29 a_n291_n1088# a_n451_n1174# 0.308209f
+.ends
+
+.subckt sky130_fd_pr__res_xhigh_po_1p41_5KDBRF a_n271_n1246# a_n141_684# a_n141_n1116#
+X0 a_n141_684# a_n141_n1116# a_n271_n1246# sky130_fd_pr__res_xhigh_po_1p41 l=7
+C0 a_n141_n1116# a_n141_684# 0.013247f
+C1 a_n141_n1116# a_n271_n1246# 0.823317f
+C2 a_n141_684# a_n271_n1246# 0.823317f
+.ends
+
+.subckt timer_core V_THRESH_I DO_OUT V_DISCH_O X_SR_LATCH/X_NOR_BOTTOM/sky130_fd_pr__pfet_01v8_7P3MHC_1/a_15_n164#
++ qb_sr q_sr out_inv3 bias_3 bias_1 X_COMP_P_TOP/out_left v1p2 v0p6 X_COMP_P_TOP/latch_right
++ X_COMP_P_BOTTOM/out_left bias_p V_TRIG_B_I X_COMP_P_TOP/latch_left X_SR_LATCH/X_NOR_TOP/sky130_fd_pr__pfet_01v8_7P3MHC_1/a_15_n164#
++ X_COMP_P_BOTTOM/latch_right X_COMP_P_TOP/tail sr_r X_COMP_P_BOTTOM/tail out_inv1
++ X_COMP_P_BOTTOM/latch_left VDD VSS sr_s
+XX_INV1 q_sr out_inv1 VSS VDD inv
+XX_INV2[1] out_inv1 DO_OUT VSS VDD inv
+XX_INV2[0] out_inv1 DO_OUT VSS VDD inv
+XX_SR_LATCH sr_s sr_r q_sr qb_sr VDD X_SR_LATCH/X_NOR_BOTTOM/sky130_fd_pr__pfet_01v8_7P3MHC_1/a_15_n164#
++ X_SR_LATCH/X_NOR_TOP/sky130_fd_pr__pfet_01v8_7P3MHC_1/a_15_n164# VSS sr_latch
+XX_COMP_P_BOTTOM v0p6 V_TRIG_B_I bias_p VDD X_COMP_P_BOTTOM/tail X_COMP_P_BOTTOM/out_left
++ sr_s X_COMP_P_BOTTOM/latch_right X_COMP_P_BOTTOM/latch_left VSS comp_p
+XX_COMP_P_TOP V_THRESH_I v1p2 bias_p VDD X_COMP_P_TOP/tail X_COMP_P_TOP/out_left sr_r
++ X_COMP_P_TOP/latch_right X_COMP_P_TOP/latch_left VSS comp_p
+XXMn_discharge out_inv3 out_inv3 VSS VSS VSS VSS out_inv3 V_DISCH_O out_inv3 out_inv3
++ V_DISCH_O V_DISCH_O sky130_fd_pr__nfet_01v8_lvt_NVJ7JE
+XX_INV3[3] DO_OUT out_inv3 VSS VDD inv
+XXR_bias_1 VSS bias_p bias_1 sky130_fd_pr__res_xhigh_po_1p41_5KDBRF
+XX_INV3[2] DO_OUT out_inv3 VSS VDD inv
+XXR_bias_2 VSS bias_2 bias_1 sky130_fd_pr__res_xhigh_po_1p41_5KDBRF
+XX_INV3[1] DO_OUT out_inv3 VSS VDD inv
+XXR_bias_3 VSS bias_2 bias_3 sky130_fd_pr__res_xhigh_po_1p41_5KDBRF
+XX_INV3[0] DO_OUT out_inv3 VSS VDD inv
+XXR_bias_4 VSS bias_n bias_3 sky130_fd_pr__res_xhigh_po_1p41_5KDBRF
+XXR_mid VSS v0p6 v1p2 sky130_fd_pr__res_xhigh_po_1p41_5KDBRF
+XXMn_bias VSS bias_n VSS bias_n sky130_fd_pr__nfet_01v8_lvt_MMMA4V
+XXR_bot VSS v0p6 VSS sky130_fd_pr__res_xhigh_po_1p41_5KDBRF
+XXR_top VSS VDD v1p2 sky130_fd_pr__res_xhigh_po_1p41_5KDBRF
+XXMp_bias bias_p bias_p VDD VDD VSS sky130_fd_pr__pfet_01v8_lvt_GUWLND
+C0 sr_s V_TRIG_B_I 0.009008f
+C1 sr_r X_COMP_P_BOTTOM/out_left 0.016095f
+C2 bias_p bias_1 0.043358f
+C3 q_sr V_DISCH_O 7.82e-19
+C4 v0p6 DO_OUT 0.431659f
+C5 out_inv3 V_TRIG_B_I 0.217319f
+C6 X_COMP_P_BOTTOM/tail X_COMP_P_BOTTOM/out_left -0.001708f
+C7 X_SR_LATCH/X_NOR_TOP/sky130_fd_pr__pfet_01v8_7P3MHC_1/a_15_n164# out_inv3 2.65e-20
+C8 v1p2 v0p6 0.158301f
+C9 X_COMP_P_TOP/latch_right v1p2 2.09e-20
+C10 bias_p sr_s -0.049709f
+C11 X_COMP_P_TOP/latch_left VDD 0.419421f
+C12 DO_OUT X_COMP_P_BOTTOM/latch_right 4.16e-19
+C13 sr_s V_DISCH_O 0.25997f
+C14 bias_2 v1p2 2.52e-19
+C15 X_COMP_P_TOP/tail V_THRESH_I 0.002877f
+C16 out_inv3 V_DISCH_O 0.326617f
+C17 sr_s X_COMP_P_TOP/out_left 0.016125f
+C18 q_sr out_inv1 0.160827f
+C19 V_THRESH_I V_TRIG_B_I 0.565173f
+C20 X_COMP_P_TOP/tail sr_r 0.002749f
+C21 VDD v0p6 1.676621f
+C22 X_COMP_P_TOP/latch_right VDD 0.212822f
+C23 q_sr DO_OUT 7.63e-20
+C24 sr_s out_inv1 0.046217f
+C25 q_sr v1p2 7.67e-21
+C26 X_COMP_P_TOP/latch_left bias_n 0.001099f
+C27 bias_p bias_3 6.09e-20
+C28 sr_r V_TRIG_B_I 0.084879f
+C29 sr_r X_SR_LATCH/X_NOR_TOP/sky130_fd_pr__pfet_01v8_7P3MHC_1/a_15_n164# 0.009493f
+C30 VDD X_COMP_P_BOTTOM/latch_right 0.248896f
+C31 bias_p V_THRESH_I 0.069459f
+C32 VDD bias_n 0.014926f
+C33 bias_2 VDD 0.165891f
+C34 bias_p X_COMP_P_BOTTOM/latch_left -4.71e-19
+C35 sr_s DO_OUT 0.109584f
+C36 sr_s v1p2 1.61e-19
+C37 X_COMP_P_BOTTOM/tail V_TRIG_B_I -4.88e-19
+C38 X_COMP_P_BOTTOM/latch_left V_DISCH_O 8.96e-20
+C39 X_COMP_P_TOP/tail X_COMP_P_BOTTOM/out_left 3.1e-21
+C40 bias_p sr_r -0.016603f
+C41 out_inv3 DO_OUT 0.667717f
+C42 v0p6 X_COMP_P_BOTTOM/latch_right -3.54e-19
+C43 sr_r V_DISCH_O 0.001053f
+C44 V_THRESH_I X_COMP_P_TOP/out_left 0.017536f
+C45 X_COMP_P_BOTTOM/out_left V_TRIG_B_I 0.300686f
+C46 bias_p X_COMP_P_BOTTOM/tail -0.001021f
+C47 VDD bias_1 0.397331f
+C48 q_sr VDD 0.272555f
+C49 sr_r X_COMP_P_TOP/out_left 0.396136f
+C50 qb_sr V_DISCH_O 9.74e-19
+C51 bias_2 bias_n 0.069293f
+C52 bias_p X_COMP_P_BOTTOM/out_left -0.048461f
+C53 sr_s VDD 0.470573f
+C54 X_COMP_P_BOTTOM/tail X_COMP_P_TOP/out_left 3.1e-21
+C55 sr_r out_inv1 0.002222f
+C56 X_COMP_P_BOTTOM/latch_left DO_OUT 2.39e-19
+C57 V_THRESH_I v1p2 0.193093f
+C58 VDD out_inv3 0.643842f
+C59 X_COMP_P_TOP/out_left X_COMP_P_BOTTOM/out_left 0.016634f
+C60 VDD X_SR_LATCH/X_NOR_BOTTOM/sky130_fd_pr__pfet_01v8_7P3MHC_1/a_15_n164# 0.018311f
+C61 sr_r DO_OUT 0.066298f
+C62 sr_s v0p6 0.002374f
+C63 bias_2 bias_1 6.55e-19
+C64 qb_sr out_inv1 0.002319f
+C65 sr_r v1p2 0.061049f
+C66 X_COMP_P_TOP/tail V_TRIG_B_I 7.62e-21
+C67 sr_s X_COMP_P_BOTTOM/latch_right 0.168326f
+C68 X_COMP_P_BOTTOM/out_left out_inv1 1.75e-19
+C69 out_inv3 v0p6 0.002838f
+C70 X_COMP_P_BOTTOM/tail DO_OUT 3.93e-19
+C71 qb_sr DO_OUT 8.63e-19
+C72 X_COMP_P_TOP/latch_left V_THRESH_I 0.02646f
+C73 bias_3 VDD 0.028705f
+C74 qb_sr v1p2 1.78e-19
+C75 out_inv3 X_COMP_P_BOTTOM/latch_right 0.003058f
+C76 V_THRESH_I VDD 0.935463f
+C77 X_COMP_P_BOTTOM/out_left DO_OUT 0.13262f
+C78 X_COMP_P_BOTTOM/latch_left VDD 0.442409f
+C79 v1p2 X_COMP_P_BOTTOM/out_left 0.008724f
+C80 sr_r X_COMP_P_TOP/latch_left 0.12645f
+C81 bias_p V_TRIG_B_I 0.187066f
+C82 sr_r VDD 2.115251f
+C83 q_sr sr_s 0.024396f
+C84 X_COMP_P_TOP/latch_right V_THRESH_I 0.002476f
+C85 X_COMP_P_BOTTOM/tail VDD 2.207731f
+C86 q_sr out_inv3 2.34e-20
+C87 X_COMP_P_TOP/out_left V_TRIG_B_I 0.144366f
+C88 qb_sr VDD 0.039505f
+C89 bias_3 bias_n 6.55e-19
+C90 bias_2 bias_3 6.55e-19
+C91 sr_r X_COMP_P_TOP/latch_right 0.128018f
+C92 V_THRESH_I bias_n 0.252991f
+C93 X_COMP_P_BOTTOM/latch_left X_COMP_P_BOTTOM/latch_right 1.14e-31
+C94 q_sr X_SR_LATCH/X_NOR_BOTTOM/sky130_fd_pr__pfet_01v8_7P3MHC_1/a_15_n164# 0.004463f
+C95 bias_2 V_THRESH_I 0.248813f
+C96 VDD X_COMP_P_BOTTOM/out_left 1.202145f
+C97 sr_s out_inv3 0.17741f
+C98 bias_p X_COMP_P_TOP/out_left 0.003913f
+C99 X_COMP_P_BOTTOM/tail v0p6 -0.242809f
+C100 sr_r bias_n 0.01961f
+C101 sr_r bias_2 4.01e-19
+C102 X_COMP_P_TOP/tail v1p2 6.78e-20
+C103 bias_3 bias_1 0.06887f
+C104 X_COMP_P_BOTTOM/tail X_COMP_P_BOTTOM/latch_right -0.001124f
+C105 DO_OUT V_TRIG_B_I 0.347624f
+C106 X_COMP_P_BOTTOM/out_left v0p6 0.008241f
+C107 v1p2 V_TRIG_B_I 1.116621f
+C108 V_DISCH_O out_inv1 5.71e-19
+C109 X_COMP_P_BOTTOM/out_left X_COMP_P_BOTTOM/latch_right -4.36e-19
+C110 sr_r bias_1 0.056546f
+C111 q_sr sr_r 0.101248f
+C112 bias_p DO_OUT 8.69e-20
+C113 bias_p v1p2 0.358806f
+C114 X_COMP_P_BOTTOM/latch_left sr_s 0.122409f
+C115 V_DISCH_O DO_OUT 8.56e-19
+C116 X_COMP_P_TOP/tail VDD 1.690043f
+C117 X_COMP_P_TOP/latch_left V_TRIG_B_I 2.85e-19
+C118 q_sr qb_sr 0.00437f
+C119 sr_r sr_s 0.207311f
+C120 X_COMP_P_BOTTOM/latch_left out_inv3 0.029394f
+C121 VDD V_TRIG_B_I 1.086987f
+C122 X_SR_LATCH/X_NOR_TOP/sky130_fd_pr__pfet_01v8_7P3MHC_1/a_15_n164# VDD 0.018281f
+C123 X_COMP_P_TOP/out_left v1p2 0.368388f
+C124 sr_r out_inv3 1.63e-19
+C125 X_COMP_P_BOTTOM/tail sr_s 0.002753f
+C126 sr_s qb_sr 0.217078f
+C127 sr_r X_SR_LATCH/X_NOR_BOTTOM/sky130_fd_pr__pfet_01v8_7P3MHC_1/a_15_n164# 0.001528f
+C128 DO_OUT out_inv1 0.35078f
+C129 bias_p VDD 4.977657f
+C130 sr_s X_COMP_P_BOTTOM/out_left 0.574679f
+C131 v1p2 out_inv1 1.53e-20
+C132 v0p6 V_TRIG_B_I 0.112639f
+C133 X_COMP_P_TOP/latch_right V_TRIG_B_I 4.9e-21
+C134 qb_sr out_inv3 5.91e-19
+C135 VDD V_DISCH_O 0.009048f
+C136 out_inv3 X_COMP_P_BOTTOM/out_left 0.013941f
+C137 sr_r bias_3 0.062623f
+C138 v1p2 DO_OUT 0.140619f
+C139 bias_n V_TRIG_B_I 0.065657f
+C140 X_COMP_P_TOP/out_left VDD 1.184775f
+C141 bias_2 V_TRIG_B_I 0.086205f
+C142 bias_p v0p6 -1.43e-20
+C143 sr_r V_THRESH_I 0.063976f
+C144 bias_p X_COMP_P_BOTTOM/latch_right -3.02e-19
+C145 VDD out_inv1 0.313812f
+C146 bias_p bias_2 0.069263f
+C147 X_COMP_P_BOTTOM/latch_left X_COMP_P_BOTTOM/tail -0.001942f
+C148 X_COMP_P_TOP/out_left v0p6 6.4e-22
+C149 q_sr X_SR_LATCH/X_NOR_TOP/sky130_fd_pr__pfet_01v8_7P3MHC_1/a_15_n164# 7.99e-19
+C150 X_COMP_P_TOP/latch_left v1p2 3.97e-20
+C151 V_THRESH_I X_COMP_P_BOTTOM/out_left 1e-20
+C152 VDD DO_OUT 1.373412f
+C153 sr_r qb_sr 0.008082f
+C154 X_COMP_P_BOTTOM/latch_left X_COMP_P_BOTTOM/out_left -9.54e-19
+C155 v1p2 VDD 1.577531f
+C156 out_inv3 VSS 3.443352f
+C157 v1p2 VSS 3.232294f
+C158 bias_n VSS 2.376645f
+C159 bias_3 VSS 1.654247f
+C160 bias_2 VSS 1.434531f
+C161 bias_1 VSS 1.576978f
+C162 DO_OUT VSS 2.477231f
+C163 V_DISCH_O VSS 5.766071f
+C164 V_THRESH_I VSS 1.483078f
+C165 X_COMP_P_TOP/tail VSS 1.140541f
+C166 sr_r VSS 11.646247f
+C167 X_COMP_P_TOP/latch_right VSS 4.224483f
+C168 X_COMP_P_TOP/latch_left VSS 3.91024f
+C169 X_COMP_P_TOP/out_left VSS 2.067412f
+C170 v0p6 VSS 2.244627f
+C171 V_TRIG_B_I VSS 1.415205f
+C172 X_COMP_P_BOTTOM/tail VSS 1.140396f
+C173 bias_p VSS 2.62307f
+C174 sr_s VSS 8.672091f
+C175 X_COMP_P_BOTTOM/latch_right VSS 4.31988f
+C176 X_COMP_P_BOTTOM/latch_left VSS 3.964322f
+C177 X_COMP_P_BOTTOM/out_left VSS 2.072469f
+C178 X_SR_LATCH/X_NOR_BOTTOM/sky130_fd_pr__pfet_01v8_7P3MHC_1/a_15_n164# VSS 0.015615f
+C179 X_SR_LATCH/X_NOR_TOP/sky130_fd_pr__pfet_01v8_7P3MHC_1/a_15_n164# VSS 0.015646f
+C180 q_sr VSS 0.892235f
+C181 VDD VSS 97.30438f
+C182 qb_sr VSS 0.601594f
+C183 out_inv1 VSS 0.672268f
+.ends
+
+.subckt tt_um_vaf_555_timer_pex clk ena rst_n ua[0] ua[1] ua[2] ua[3] ua[4] ua[5] ua[6]
++ ua[7] ui_in[0] ui_in[1] ui_in[2] ui_in[3] ui_in[4] ui_in[5] ui_in[6] ui_in[7] uio_in[0]
++ uio_in[1] uio_in[2] uio_in[3] uio_in[4] uio_in[5] uio_in[6] uio_in[7] uio_oe[0]
++ uio_oe[1] uio_oe[2] uio_oe[3] uio_oe[4] uio_oe[5] uio_oe[6] uio_oe[7] uio_out[0]
++ uio_out[1] uio_out[2] uio_out[3] uio_out[4] uio_out[5] uio_out[6] uio_out[7] uo_out[0]
++ uo_out[1] uo_out[2] uo_out[3] uo_out[4] uo_out[5] uo_out[6] uo_out[7] VPWR VGND
+XX_TIMER ua[5] uo_out[0] ua[7] X_TIMER/X_SR_LATCH/X_NOR_BOTTOM/sky130_fd_pr__pfet_01v8_7P3MHC_1/a_15_n164#
++ X_TIMER/qb_sr X_TIMER/q_sr X_TIMER/out_inv3 X_TIMER/bias_3 X_TIMER/bias_1 X_TIMER/X_COMP_P_TOP/out_left
++ X_TIMER/v1p2 X_TIMER/v0p6 X_TIMER/X_COMP_P_TOP/latch_right X_TIMER/X_COMP_P_BOTTOM/out_left
++ X_TIMER/bias_p ua[6] X_TIMER/X_COMP_P_TOP/latch_left X_TIMER/X_SR_LATCH/X_NOR_TOP/sky130_fd_pr__pfet_01v8_7P3MHC_1/a_15_n164#
++ X_TIMER/X_COMP_P_BOTTOM/latch_right X_TIMER/X_COMP_P_TOP/tail X_TIMER/sr_r X_TIMER/X_COMP_P_BOTTOM/tail
++ X_TIMER/out_inv1 X_TIMER/X_COMP_P_BOTTOM/latch_left VPWR VGND X_TIMER/sr_s timer_core
+C0 uo_out[0] uo_out[1] 0.024866f
+C1 ua[6] X_TIMER/X_COMP_P_BOTTOM/tail 7.51e-20
+C2 uo_out[7] uo_out[0] 0.001069f
+C3 uio_out[3] uio_out[4] 0.023797f
+C4 uio_oe[4] uio_oe[5] 0.023797f
+C5 uio_out[5] uio_out[4] 0.023797f
+C6 uio_oe[4] uo_out[0] 0.001069f
+C7 uio_out[3] uio_out[2] 0.023797f
+C8 ua[5] X_TIMER/X_COMP_P_TOP/latch_right 0.001288f
+C9 uio_in[6] uio_in[5] 0.023797f
+C10 ua[6] X_TIMER/X_COMP_P_TOP/latch_right 0.002821f
+C11 uio_oe[2] uio_oe[1] 0.023797f
+C12 uio_oe[6] uio_oe[7] 0.023797f
+C13 uio_oe[2] uo_out[0] 0.001069f
+C14 X_TIMER/sr_r uo_out[0] 0.559694f
+C15 uo_out[0] X_TIMER/bias_3 0.001361f
+C16 uo_out[0] uo_out[5] 0.001069f
+C17 X_TIMER/bias_1 VPWR 0.026096f
+C18 uio_out[6] uio_out[7] 0.023797f
+C19 uo_out[0] uo_out[4] 0.001069f
+C20 uio_in[7] uo_out[0] 0.023797f
+C21 uio_out[6] uio_out[5] 0.023797f
+C22 VPWR X_TIMER/X_SR_LATCH/X_NOR_TOP/sky130_fd_pr__pfet_01v8_7P3MHC_1/a_15_n164# 0.001651f
+C23 ua[7] X_TIMER/out_inv3 0.001819f
+C24 uo_out[4] uo_out[3] 0.023797f
+C25 ui_in[1] ui_in[0] 0.023797f
+C26 ua[5] X_TIMER/X_COMP_P_BOTTOM/out_left 1.13e-19
+C27 ui_in[5] ui_in[6] 0.023797f
+C28 ua[6] X_TIMER/X_COMP_P_BOTTOM/out_left 0.004319f
+C29 uo_out[0] uio_out[4] 0.001069f
+C30 uio_oe[0] uio_out[7] 0.023797f
+C31 uio_oe[6] uio_oe[5] 0.023797f
+C32 uio_in[1] uio_in[2] 0.023797f
+C33 uio_out[0] uo_out[0] 0.001069f
+C34 X_TIMER/qb_sr ua[7] 1.68e-20
+C35 X_TIMER/sr_r ua[7] 1.68e-20
+C36 uo_out[0] uio_out[2] 0.001069f
+C37 ua[5] VPWR 0.022208f
+C38 ui_in[3] ui_in[2] 0.023797f
+C39 uio_out[1] uo_out[0] 0.001069f
+C40 uio_oe[6] uo_out[0] 0.001069f
+C41 ua[6] VPWR 0.151521f
+C42 uio_out[6] uo_out[0] 0.001069f
+C43 uo_out[4] uo_out[5] 0.023797f
+C44 ua[5] ua[6] 2.954057f
+C45 VPWR X_TIMER/bias_p 0.016557f
+C46 uio_out[0] uo_out[7] 0.023797f
+C47 X_TIMER/X_COMP_P_TOP/out_left ua[5] 1.13e-19
+C48 X_TIMER/q_sr VPWR 0.008271f
+C49 X_TIMER/X_COMP_P_TOP/out_left ua[6] 0.004131f
+C50 uio_in[3] uio_in[2] 0.023797f
+C51 X_TIMER/bias_1 uo_out[0] 0.001361f
+C52 VPWR X_TIMER/v1p2 0.029128f
+C53 uo_out[0] uio_oe[3] 0.001069f
+C54 uio_in[7] uio_in[6] 0.023797f
+C55 ua[6] X_TIMER/bias_p 4.15e-20
+C56 uio_in[4] uio_in[5] 0.023797f
+C57 ua[5] X_TIMER/v0p6 0.001247f
+C58 ui_in[6] ui_in[7] 0.023797f
+C59 ua[5] X_TIMER/v1p2 3e-19
+C60 ua[6] X_TIMER/v0p6 0.002626f
+C61 uo_out[0] uo_out[6] 0.001069f
+C62 uio_oe[0] uio_oe[1] 0.023797f
+C63 uio_oe[0] uo_out[0] 0.001069f
+C64 ua[6] X_TIMER/v1p2 0.003259f
+C65 uio_in[0] ui_in[7] 0.023797f
+C66 VPWR X_TIMER/X_SR_LATCH/X_NOR_BOTTOM/sky130_fd_pr__pfet_01v8_7P3MHC_1/a_15_n164# 0.001027f
+C67 VPWR uo_out[0] 2.597705f
+C68 X_TIMER/out_inv1 VPWR 1.26e-20
+C69 uo_out[7] uo_out[6] 0.023797f
+C70 uio_out[3] uo_out[0] 0.001069f
+C71 uio_oe[4] uio_oe[3] 0.023797f
+C72 uo_out[0] uio_out[7] 0.001069f
+C73 ui_in[5] ui_in[4] 0.023797f
+C74 uio_out[5] uo_out[0] 0.001069f
+C75 uo_out[0] uio_oe[7] 0.002611f
+C76 ua[5] X_TIMER/X_COMP_P_TOP/latch_left 3.45e-19
+C77 VPWR X_TIMER/sr_s 0.008489f
+C78 ua[5] X_TIMER/X_COMP_P_TOP/tail 4.14e-20
+C79 VPWR X_TIMER/out_inv3 0.005072f
+C80 ua[6] X_TIMER/X_COMP_P_TOP/latch_left 5.48e-19
+C81 ua[6] X_TIMER/X_COMP_P_TOP/tail 7.54e-20
+C82 uio_oe[2] uio_oe[3] 0.023797f
+C83 uio_in[4] uio_in[3] 0.023797f
+C84 X_TIMER/bias_p uo_out[0] 6.72e-19
+C85 clk rst_n 0.023797f
+C86 ua[5] X_TIMER/X_COMP_P_BOTTOM/latch_left 7.21e-20
+C87 ua[6] X_TIMER/sr_s 0.623599f
+C88 uio_in[0] uio_in[1] 0.023797f
+C89 uio_out[0] uio_out[1] 0.023797f
+C90 ua[6] X_TIMER/X_COMP_P_BOTTOM/latch_left 5.74e-19
+C91 uio_out[1] uio_out[2] 0.023797f
+C92 uo_out[6] uo_out[5] 0.023797f
+C93 uo_out[0] X_TIMER/v1p2 0.016409f
+C94 VPWR ua[7] 0.041563f
+C95 uo_out[0] uo_out[2] 0.001069f
+C96 ui_in[1] ui_in[2] 0.023797f
+C97 VPWR X_TIMER/qb_sr 0.00551f
+C98 VPWR X_TIMER/sr_r 0.135259f
+C99 ui_in[3] ui_in[4] 0.023797f
+C100 VPWR X_TIMER/bias_3 0.024519f
+C101 uo_out[3] uo_out[2] 0.023797f
+C102 uo_out[0] uio_oe[5] 0.001069f
+C103 clk ena 0.023797f
+C104 ua[5] X_TIMER/sr_r 0.032181f
+C105 uo_out[1] uo_out[2] 0.023797f
+C106 uo_out[0] uio_oe[1] 0.001069f
+C107 ua[6] X_TIMER/sr_r 0.690261f
+C108 ua[5] X_TIMER/X_COMP_P_BOTTOM/latch_right 0.001012f
+C109 ua[6] X_TIMER/X_COMP_P_BOTTOM/latch_right 0.003293f
+C110 ui_in[0] rst_n 0.023797f
+C111 X_TIMER/q_sr ua[7] 1.17e-20
+C112 uo_out[0] uo_out[3] 0.001069f
+C113 ua[5] X_TIMER/X_COMP_P_BOTTOM/tail 4.13e-20
+C114 ua[0] VGND 0.122428f
+C115 ua[1] VGND 0.122428f
+C116 ua[2] VGND 0.122428f
+C117 ua[3] VGND 0.122428f
+C118 ua[4] VGND 0.122428f
+C119 ena VGND 0.073297f
+C120 clk VGND 0.0487f
+C121 rst_n VGND 0.0487f
+C122 ui_in[0] VGND 0.0487f
+C123 ui_in[1] VGND 0.0487f
+C124 ui_in[2] VGND 0.0487f
+C125 ui_in[3] VGND 0.0487f
+C126 ui_in[4] VGND 0.0487f
+C127 ui_in[5] VGND 0.0487f
+C128 ui_in[6] VGND 0.0487f
+C129 ui_in[7] VGND 0.0487f
+C130 uio_in[0] VGND 0.0487f
+C131 uio_in[1] VGND 0.0487f
+C132 uio_in[2] VGND 0.0487f
+C133 uio_in[3] VGND 0.0487f
+C134 uio_in[4] VGND 0.0487f
+C135 uio_in[5] VGND 0.0487f
+C136 uio_in[6] VGND 0.0487f
+C137 uio_in[7] VGND 0.0487f
+C138 uo_out[1] VGND 0.048449f
+C139 uo_out[2] VGND 0.048449f
+C140 uo_out[3] VGND 0.048449f
+C141 uo_out[4] VGND 0.048449f
+C142 uo_out[5] VGND 0.048449f
+C143 uo_out[6] VGND 0.048449f
+C144 uo_out[7] VGND 0.048449f
+C145 uio_out[0] VGND 0.048449f
+C146 uio_out[1] VGND 0.048449f
+C147 uio_out[2] VGND 0.048449f
+C148 uio_out[3] VGND 0.048449f
+C149 uio_out[4] VGND 0.048449f
+C150 uio_out[5] VGND 0.048449f
+C151 uio_out[6] VGND 0.048449f
+C152 uio_out[7] VGND 0.048449f
+C153 uio_oe[0] VGND 0.048449f
+C154 uio_oe[1] VGND 0.048449f
+C155 uio_oe[2] VGND 0.048449f
+C156 uio_oe[3] VGND 0.048449f
+C157 uio_oe[4] VGND 0.048449f
+C158 uio_oe[5] VGND 0.048449f
+C159 uio_oe[6] VGND 0.048449f
+C160 uio_oe[7] VGND 0.071603f
+C161 X_TIMER/out_inv3 VGND 2.186164f
+C162 X_TIMER/v1p2 VGND 2.631428f
+C163 X_TIMER/bias_n VGND 1.931379f
+C164 X_TIMER/bias_3 VGND 1.580737f
+C165 X_TIMER/bias_2 VGND 1.393845f
+C166 X_TIMER/bias_1 VGND 1.521669f
+C167 uo_out[0] VGND 22.869827f
+C168 ua[7] VGND 2.826854f
+C169 ua[5] VGND 7.686449f
+C170 X_TIMER/X_COMP_P_TOP/tail VGND 1.101179f
+C171 X_TIMER/sr_r VGND 3.189655f
+C172 X_TIMER/X_COMP_P_TOP/latch_right VGND 3.533172f
+C173 X_TIMER/X_COMP_P_TOP/latch_left VGND 3.693917f
+C174 X_TIMER/X_COMP_P_TOP/out_left VGND 2.068396f
+C175 X_TIMER/v0p6 VGND 2.030958f
+C176 ua[6] VGND 12.426363f
+C177 X_TIMER/X_COMP_P_BOTTOM/tail VGND 1.101164f
+C178 X_TIMER/bias_p VGND 2.54174f
+C179 X_TIMER/sr_s VGND 2.419552f
+C180 X_TIMER/X_COMP_P_BOTTOM/latch_right VGND 3.533485f
+C181 X_TIMER/X_COMP_P_BOTTOM/latch_left VGND 3.69427f
+C182 X_TIMER/X_COMP_P_BOTTOM/out_left VGND 2.068384f
+C183 X_TIMER/X_SR_LATCH/X_NOR_BOTTOM/sky130_fd_pr__pfet_01v8_7P3MHC_1/a_15_n164# VGND 0.015563f
+C184 X_TIMER/X_SR_LATCH/X_NOR_TOP/sky130_fd_pr__pfet_01v8_7P3MHC_1/a_15_n164# VGND 0.015563f
+C185 X_TIMER/q_sr VGND 0.773261f
+C186 VPWR VGND 0.110569p
+C187 X_TIMER/qb_sr VGND 0.56854f
+C188 X_TIMER/out_inv1 VGND 0.552325f
+.ends
+

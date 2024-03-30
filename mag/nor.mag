@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1711732688
+timestamp 1711828022
 << nwell >>
 rect -1199 964 -823 1620
 << pwell >>
@@ -126,11 +126,11 @@ box -140 -200 140 276
 flabel metal1 -1199 991 -1165 1025 3 FreeSans 160 0 0 0 IN_A
 port 0 e default input
 flabel metal1 -1199 885 -1165 919 3 FreeSans 160 0 0 0 IN_B
-port 4 e default input
+port 1 e default input
 flabel metal1 -857 991 -823 1025 7 FreeSans 160 0 0 0 OUT
-port 1 w default output
+port 2 w default output
 flabel metal1 -1130 1550 -892 1584 0 FreeSans 320 0 0 0 vdd
-port 2 nsew default bidirectional
-flabel metal1 -1138 540 -892 574 0 FreeSans 320 0 0 0 vss
 port 3 nsew default bidirectional
+flabel metal1 -1138 540 -892 574 0 FreeSans 320 0 0 0 vss
+port 4 nsew default bidirectional
 << end >>

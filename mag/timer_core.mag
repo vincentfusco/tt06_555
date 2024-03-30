@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1711753048
+timestamp 1711828404
 << nwell >>
 rect 20680 18281 23158 18315
 << pwell >>
@@ -240,6 +240,7 @@ rect 20568 17714 20662 17766
 rect 20610 17526 20662 17714
 rect 21300 17702 21390 17776
 rect 20578 17388 20630 17398
+rect 21310 17390 21362 17442
 rect 20578 17240 20630 17336
 rect 20578 17188 23384 17240
 rect 20940 17094 21506 17104
@@ -348,11 +349,11 @@ rect 28576 16180 28613 16236
 rect 20428 15894 28613 16180
 rect 20428 15831 28623 15894
 use comp_p  X_COMP_P_BOTTOM
-timestamp 1711732688
+timestamp 1711827779
 transform 1 0 26492 0 1 14702
 box -3002 1462 2120 5166
 use comp_p  X_COMP_P_TOP
-timestamp 1711732688
+timestamp 1711827779
 transform 1 0 26493 0 -1 25012
 box -3002 1462 2120 5166
 use inv  X_INV1
@@ -384,7 +385,7 @@ timestamp 1711746230
 transform 1 0 21169 0 1 16477
 box 978 788 1260 1874
 use sr_latch  X_SR_LATCH
-timestamp 1711732688
+timestamp 1711828404
 transform 1 0 26630 0 1 16911
 box -6020 354 -5267 1440
 use sky130_fd_pr__nfet_01v8_lvt_MMMA4V  XMn_bias
@@ -429,15 +430,28 @@ transform 0 1 21914 -1 0 19747
 box -307 -1282 307 1282
 << labels >>
 flabel metal1 23120 23832 23172 23884 3 FreeSans 960 270 0 0 V_THRESH_I
-port 1 e default input
+port 0 e default input
 flabel metal2 20940 15832 21506 15888 1 FreeSans 1280 0 0 0 V_DISCH_O
 port 3 n default output
 flabel metal1 20360 18964 20412 19016 3 FreeSans 960 0 0 0 DO_OUT
-port 4 e default output
+port 2 e default output
 flabel metal3 23524 15836 28576 15892 1 FreeSans 960 0 0 0 VSS
 port 5 n default bidirectional
 flabel metal3 20361 19116 20417 21458 3 FreeSans 960 0 0 0 VDD
-port 6 e default bidirectional
+port 4 e default bidirectional
 flabel metal1 23330 23832 23382 23884 7 FreeSans 960 90 0 0 V_TRIG_B_I
-port 7 w default input
+port 1 w default input
+flabel metal1 22828 18724 22828 18724 1 FreeSans 640 0 0 0 v0p6
+flabel metal1 21034 19270 21034 19270 1 FreeSans 960 0 0 0 v1p2
+flabel metal1 20600 17454 20602 17454 1 FreeSans 320 0 0 0 sr_s
+flabel metal2 20590 17790 20590 17790 1 FreeSans 320 0 0 0 sr_r
+flabel metal2 21346 17736 21346 17736 1 FreeSans 320 0 0 0 q_sr
+flabel metal1 21672 17852 21674 17852 1 FreeSans 320 0 0 0 out_inv1
+flabel metal1 23138 16992 23140 16992 1 FreeSans 320 0 0 0 out_inv3
+flabel metal1 22814 22574 22814 22574 1 FreeSans 640 0 0 0 bias_n
+flabel metal1 21010 22070 21010 22070 1 FreeSans 640 0 0 0 bias_3
+flabel metal1 22812 22072 22812 22072 1 FreeSans 640 0 0 0 bias_2
+flabel metal1 21014 21056 21014 21056 1 FreeSans 640 0 0 0 bias_1
+flabel metal1 22754 20966 22754 20966 1 FreeSans 640 0 0 0 bias_p
+flabel metal2 21338 17416 21338 17418 1 FreeSans 320 0 0 0 qb_sr
 << end >>

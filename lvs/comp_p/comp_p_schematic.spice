@@ -1,5 +1,5 @@
-** sch_path: /home/vincef/projects/tt06_555/xsch/ip/comparators/comp_p.sch
-.subckt comp_p vinp vout vdd vss vinn vbias_p
+** sch_path: /home/vincef/projects/tt06_555/xsch/ip/comparators/comp_p/comp_p.sch
+.subckt comp_p vinp vinn vbias_p vout vdd vss
 *.PININFO vdd:B vss:B vbias_p:I vinn:I vinp:I vout:O
 XMp_inn1 latch_left vinn tail vdd sky130_fd_pr__pfet_01v8_lvt L=0.35 W=10 nf=1 m=4
 XMp_inp1 latch_right vinp tail vdd sky130_fd_pr__pfet_01v8_lvt L=0.35 W=10 nf=1 m=4

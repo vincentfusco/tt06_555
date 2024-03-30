@@ -1,7 +1,7 @@
 v {xschem version=3.4.5 file_version=1.2
 }
 G {}
-K {type=subcircuit
+K {type=primitive
 format="@name @pinlist @symname"
 template="name=X1"
 }
@@ -34,3 +34,4 @@ B 5 -22.5 -52.5 -17.5 -47.5 {name=vbias_p dir=in}
 T {@symname} 38.5 14 0 0 0.3 0.3 {}
 T {@name} 25 -32 0 0 0.2 0.2 {}
 T {vbias_p} -10 -50 1 0 0.1 0.1 {}
+T {PEX} -30 -10 0 0 0.4 0.4 {}

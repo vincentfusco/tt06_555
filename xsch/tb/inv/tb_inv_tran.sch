@@ -16,7 +16,7 @@ lab=GND}
 N 0 -60 0 -40 {
 lab=VDD}
 N 80 -0 100 -0 {
-lab=vout}
+lab=out}
 N -80 100 -80 120 {
 lab=GND}
 N -300 20 -300 40 {
@@ -59,5 +59,5 @@ write $inputdir/outdc.out v(out)
 "}
 C {sky130_fd_pr/corner.sym} -540 -20 0 0 {name=CORNER only_toplevel=false corner=tt
 }
-C {ip/logic/inv.sym} 0 0 0 0 {name=X1}
 C {devices/noconn.sym} 100 0 2 0 {name=l6}
+C {ip/logic/inv/inv.sym} 0 0 0 0 {name=X1}

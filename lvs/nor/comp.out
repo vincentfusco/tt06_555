@@ -28,6 +28,7 @@ Circuit 1: sky130_fd_pr__nfet_01v8         |Circuit 2: sky130_fd_pr__nfet_01v8
 ---------------------------------------------------------------------------------------
 Cell pin lists are equivalent.
 Device classes sky130_fd_pr__nfet_01v8 and sky130_fd_pr__nfet_01v8 are equivalent.
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_7P3MHC in circuit nor (0)(2 instances)
 
 Subcircuit summary:
 Circuit 1: nor                             |Circuit 2: nor                             

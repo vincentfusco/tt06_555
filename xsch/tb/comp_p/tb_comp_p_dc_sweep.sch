@@ -49,7 +49,7 @@ lab=VSS}
 N -250 -310 -240 -310 {
 lab=VSS}
 N -240 -280 -240 -240 {
-lab=#net1}
+lab=GND}
 N -200 -310 -140 -310 {
 lab=bias_n}
 N -170 -360 -170 -310 {
@@ -161,7 +161,6 @@ rusage
 C {sky130_fd_pr/corner.sym} -540 -20 0 0 {name=CORNER only_toplevel=false corner=tt
 }
 C {devices/noconn.sym} 50 0 2 0 {name=l6}
-C {ip/comparators/comp_p.sym} -90 0 0 0 {name=X2}
 C {devices/lab_wire.sym} 20 0 0 0 {name=p1 sig_type=std_logic lab=out}
 C {devices/vsource.sym} -190 250 0 0 {name=VCOMP_N value=0.6 savecurrent=false}
 C {devices/gnd.sym} -190 300 0 0 {name=l7 lab=GND}
@@ -237,3 +236,4 @@ C {devices/lab_wire.sym} 40 290 0 0 {name=p9 sig_type=std_logic lab=vinn}
 C {devices/gnd.sym} 80 320 0 0 {name=l8 lab=GND}
 C {devices/lab_wire.sym} 80 220 0 0 {name=p10 sig_type=std_logic lab=vin_diff}
 C {devices/gnd.sym} -240 -240 0 0 {name=l9 lab=GND}
+C {ip/comparators/comp_p/comp_p.sym} -90 0 0 0 {name=X1}

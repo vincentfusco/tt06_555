@@ -283,6 +283,8 @@ set to_pdf {ps2pdf -dAutoRotatePages=/None}
 ###########################################################################
 #### default for linux: xterm
 # set terminal {xterm -geometry 100x35 -fn 9x15 -bg black -fg white -cr white -ms white }
+# VAF custom setting
+set terminal {xterm -fa monaco -fs 13 -bg black -fg green}
 #### lxterminal is not OK since it will not inherit env vars: 
 #### In order to reduce memory usage and increase the performance, all instances
 #### of the lxterminal are sharing a single process. LXTerminal is part of LXDE

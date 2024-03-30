@@ -17,21 +17,21 @@ Call to undefined subcircuit timer_core
 Creating placeholder cell definition.
 Call to undefined subcircuit sky130_fd_pr__res_xhigh_po_1p41
 Creating placeholder cell definition.
-Call to undefined subcircuit sr_latch
-Creating placeholder cell definition.
-Call to undefined subcircuit inv
-Creating placeholder cell definition.
 Call to undefined subcircuit sky130_fd_pr__nfet_01v8_lvt
 Creating placeholder cell definition.
 Call to undefined subcircuit sky130_fd_pr__pfet_01v8_lvt
 Creating placeholder cell definition.
-Call to undefined subcircuit comp_p
+Call to undefined subcircuit inv
 Creating placeholder cell definition.
-Call to undefined subcircuit nor
+Call to undefined subcircuit sr_latch
+Creating placeholder cell definition.
+Call to undefined subcircuit comp_p
 Creating placeholder cell definition.
 Call to undefined subcircuit sky130_fd_pr__nfet_01v8
 Creating placeholder cell definition.
 Call to undefined subcircuit sky130_fd_pr__pfet_01v8
+Creating placeholder cell definition.
+Call to undefined subcircuit nor
 Creating placeholder cell definition.
 
 Reading setup file /opt/pdk/share/pdk/sky130A/libs.tech/netgen/sky130A_setup.tcl
@@ -279,7 +279,7 @@ Circuit contains 6 nets, and 47 disconnected pins.
 Contents of circuit 2:  Circuit: 'tt_um_vaf_555_timer'
 Circuit tt_um_vaf_555_timer contains 1 device instances.
   Class: timer_core            instances:   1
-Circuit contains 6 nets, and 39 disconnected pins.
+Circuit contains 6 nets, and 47 disconnected pins.
 
 Circuit 1 contains 1 devices, Circuit 2 contains 1 devices.
 Circuit 1 contains 6 nets,    Circuit 2 contains 6 nets.

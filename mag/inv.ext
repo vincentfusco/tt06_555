@@ -16,22 +16,22 @@ node "vin" 166 383.438 978 1460 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 node "a_1104_1453#" 82 41.6536 1104 1453 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1530 162 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 node "w_978_1218#" 1223 188.121 978 1218 nw 0 0 0 0 61758 1002 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 substrate "vss" 0 0 1040 794 m1 0 0 0 0 0 0 0 0 0 0 7004 480 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6460 448 16396 928 0 0 0 0 0 0 0 0 0 0
-cap "vdd" "a_1104_1453#" 0.106256
-cap "vout" "w_978_1218#" 27.6745
-cap "vin" "w_978_1218#" 41.5113
-cap "vdd" "w_978_1218#" 2.28727
-cap "vout" "vin" 127.162
-cap "vdd" "vout" 118.97
-cap "vdd" "vin" 20.0565
 cap "w_978_1218#" "a_1104_1453#" 5.38996
 cap "vout" "a_1104_1453#" 0.378199
 cap "vin" "a_1104_1453#" 5.09601
-cap "XMn/a_n73_n131#" "sky130_fd_pr__pfet_01v8_7PK3FC_0/m1_n141_190#" 5.25737
-cap "sky130_fd_pr__pfet_01v8_7PK3FC_0/m1_n141_190#" "sky130_fd_pr__pfet_01v8_7PK3FC_0/a_15_n64#" -76.7416
-cap "sky130_fd_pr__pfet_01v8_7PK3FC_0/m1_n141_190#" "sky130_fd_pr__pfet_01v8_7PK3FC_0/a_n33_n161#" 12.8756
-cap "XMn/a_n73_n131#" "sky130_fd_pr__pfet_01v8_7PK3FC_0/a_15_n64#" -63.3102
+cap "vout" "w_978_1218#" 27.6745
+cap "vin" "w_978_1218#" 41.5113
+cap "vdd" "a_1104_1453#" 0.106256
+cap "vout" "vin" 127.162
+cap "vdd" "w_978_1218#" 2.28727
+cap "vout" "vdd" 118.97
+cap "vdd" "vin" 20.0565
 cap "XMn/a_n73_n131#" "sky130_fd_pr__pfet_01v8_7PK3FC_0/a_n33_n161#" 11.685
+cap "sky130_fd_pr__pfet_01v8_7PK3FC_0/m1_n141_190#" "sky130_fd_pr__pfet_01v8_7PK3FC_0/a_15_n64#" -76.7416
 cap "sky130_fd_pr__pfet_01v8_7PK3FC_0/a_n33_n161#" "sky130_fd_pr__pfet_01v8_7PK3FC_0/a_15_n64#" 4.67987
+cap "XMn/a_n73_n131#" "sky130_fd_pr__pfet_01v8_7PK3FC_0/a_15_n64#" -63.3102
+cap "sky130_fd_pr__pfet_01v8_7PK3FC_0/m1_n141_190#" "XMn/a_n73_n131#" 5.25737
+cap "sky130_fd_pr__pfet_01v8_7PK3FC_0/m1_n141_190#" "sky130_fd_pr__pfet_01v8_7PK3FC_0/a_n33_n161#" 12.8756
 merge "sky130_fd_pr__pfet_01v8_7PK3FC_0/VSUBS" "XMn/VSUBS" -91.6956 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -6392 -444 0 0 0 0 0 0 0 0 0 0
 merge "XMn/VSUBS" "XMn/a_n73_n131#"
 merge "XMn/a_n73_n131#" "vss"

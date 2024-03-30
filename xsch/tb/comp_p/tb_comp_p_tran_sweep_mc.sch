@@ -153,7 +153,6 @@ rusage
 C {sky130_fd_pr/corner.sym} -540 -20 0 0 {name=CORNER only_toplevel=false corner=tt_mm
 }
 C {devices/noconn.sym} 50 0 2 0 {name=l6}
-C {ip/comparators/comp_p.sym} -90 0 0 0 {name=X_COMP_P}
 C {devices/lab_wire.sym} 20 0 0 0 {name=p1 sig_type=std_logic lab=out}
 C {devices/vsource.sym} -190 250 0 0 {name=VCOMP_N value=0.6 savecurrent=false}
 C {devices/gnd.sym} -190 300 0 0 {name=l7 lab=GND}
@@ -229,3 +228,4 @@ C {devices/lab_pin.sym} -850 40 0 0 {name=p47 sig_type=std_logic lab=bias_2}
 C {devices/lab_pin.sym} -850 140 0 0 {name=p48 sig_type=std_logic lab=bias_3}
 C {devices/lab_wire.sym} -750 -210 0 1 {name=p13 sig_type=std_logic lab=bias_p}
 C {devices/gnd.sym} -850 360 0 0 {name=l10 lab=GND}
+C {ip/comparators/comp_p/comp_p.sym} -90 0 0 0 {name=X_COMP_P}

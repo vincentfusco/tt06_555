@@ -172,13 +172,9 @@ L=7
 model=res_xhigh_po_1p41
 spiceprefix=X
 mult=1}
-C {ip/logic/sr_latch.sym} 300 -30 0 0 {name=X_SR_LATCH}
 C {devices/lab_pin.sym} 300 70 3 0 {name=p1 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} -330 280 3 0 {name=p2 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 300 -130 1 0 {name=p3 sig_type=std_logic lab=VDD}
-C {ip/logic/inv.sym} 510 -70 0 0 {name=X_INV1}
-C {ip/logic/inv.sym} 690 -70 0 0 {name=X_INV2[1:0]}
-C {ip/logic/inv.sym} 870 -70 0 0 {name=X_INV3[3:0]}
 C {devices/lab_pin.sym} 510 -130 1 0 {name=p4 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} 690 -130 1 0 {name=p5 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} 870 -130 1 0 {name=p6 sig_type=std_logic lab=VDD}
@@ -197,8 +193,8 @@ C {devices/lab_pin.sym} -380 -20 0 0 {name=p19 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} -370 -230 0 0 {name=p20 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} -330 -300 1 0 {name=p21 sig_type=std_logic lab=VDD}
 C {devices/noconn.sym} 430 10 2 0 {name=l1}
-C {devices/ipin.sym} -550 -150 0 0 {name=p30 lab=V_THRESH_I}
-C {devices/ipin.sym} -550 170 0 0 {name=p31 lab=V_TRIG_B_I}
+C {devices/ipin.sym} -550 -150 0 0 {name=p33 lab=V_THRESH_I }
+C {devices/ipin.sym} -550 170 0 0 {name=p0 lab=V_TRIG_B_I}
 C {devices/opin.sym} 1300 -260 0 0 {name=p32 lab=DO_OUT}
 C {devices/iopin.sym} -1210 -630 0 0 {name=p7 lab=VDD}
 C {devices/iopin.sym} -1210 -600 0 0 {name=p11 lab=VSS}
@@ -212,7 +208,7 @@ mult=1}
 C {devices/lab_pin.sym} -1050 -180 0 0 {name=p36 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} -1020 220 2 1 {name=p38 sig_type=power lab=VSS}
 C {devices/lab_pin.sym} -1010 290 1 1 {name=p39 sig_type=std_logic lab=VSS}
-C {devices/opin.sym} 1300 -170 0 0 {name=p33 lab=V_DISCH_O}
+C {devices/opin.sym} 1300 -170 0 0 {name=p30 lab=V_DISCH_O}
 C {sky130_fd_pr/nfet_01v8_lvt.sym} -990 220 0 1 {name=Mn_bias
 L=1
 W=5
@@ -273,8 +269,6 @@ model=res_xhigh_po_1p41
 spiceprefix=X
 mult=1}
 C {devices/lab_pin.sym} -1050 120 0 0 {name=p45 sig_type=std_logic lab=VSS}
-C {ip/comparators/comp_p.sym} -50 150 0 0 {name=X_COMP_P_BOTTOM}
-C {ip/comparators/comp_p.sym} -50 -130 0 0 {name=X_COMP_P_TOP}
 C {devices/lab_wire.sym} 180 10 0 0 {name=p49 sig_type=std_logic lab=sr_s}
 C {devices/lab_wire.sym} 180 -70 0 0 {name=p50 sig_type=std_logic lab=sr_r}
 C {devices/lab_wire.sym} -170 130 0 0 {name=p28 sig_type=std_logic lab=v0p6}
@@ -290,4 +284,9 @@ C {devices/lab_wire.sym} -1010 -30 0 1 {name=p44 sig_type=std_logic lab=bias_2}
 C {devices/lab_wire.sym} -1010 -130 0 1 {name=p46 sig_type=std_logic lab=bias_1}
 C {devices/lab_wire.sym} -70 -190 3 1 {name=p34 sig_type=std_logic lab=bias_p}
 C {devices/lab_wire.sym} -70 90 3 1 {name=p37 sig_type=std_logic lab=bias_p}
-C {borders/border_xl.sym} -1550 660 0 0 {}
+C {ip/logic/inv/inv.sym} 870 -70 0 0 {name=X_INV3[3:0]}
+C {ip/logic/inv/inv.sym} 690 -70 0 0 {name=X_INV2[1:0]}
+C {ip/logic/inv/inv.sym} 510 -70 0 0 {name=X_INV1}
+C {ip/logic/sr_latch/sr_latch.sym} 300 -30 0 0 {name=X_SR_LATCH}
+C {ip/comparators/comp_p/comp_p.sym} -50 150 0 0 {name=X_COMP_P_BOTTOM}
+C {ip/comparators/comp_p/comp_p.sym} -50 -130 0 0 {name=X_COMP_P_TOP}

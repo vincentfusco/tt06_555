@@ -1,0 +1,110 @@
+* SPICE3 file created from timer_core.ext - technology: sky130A
+
+.subckt sky130_fd_pr__nfet_01v8_BXYDM4 a_15_n131# a_n15_n157# a_n73_n131# VSUBS
+X0 a_15_n131# a_n15_n157# a_n73_n131# VSUBS sky130_fd_pr__nfet_01v8 ad=0.29 pd=2.58 as=0.29 ps=2.58 w=1 l=0.15
+.ends
+
+.subckt sky130_fd_pr__pfet_01v8_7PK3FC a_n73_n64# a_n33_n161# m1_n141_190# a_15_n64#
++ w_n141_n178#
+X0 a_15_n64# a_n33_n161# a_n73_n64# w_n141_n178# sky130_fd_pr__pfet_01v8 ad=0.29 pd=2.58 as=0.29 ps=2.58 w=1 l=0.15
+.ends
+
+.subckt inv vin vout vss vdd
+XXMn vout vin vss vss sky130_fd_pr__nfet_01v8_BXYDM4
+Xsky130_fd_pr__pfet_01v8_7PK3FC_0 vdd vin vdd vout vdd sky130_fd_pr__pfet_01v8_7PK3FC
+.ends
+
+.subckt sky130_fd_pr__pfet_01v8_7P3MHC a_n15_n190# w_n140_n200# a_n73_n164# a_15_n164#
+X0 a_15_n164# a_n15_n190# a_n73_n164# w_n140_n200# sky130_fd_pr__pfet_01v8 ad=0.58 pd=4.58 as=0.58 ps=4.58 w=2 l=0.15
+.ends
+
+.subckt nor IN_A OUT vdd vss IN_B
+Xsky130_fd_pr__pfet_01v8_7P3MHC_1 IN_B vdd OUT sky130_fd_pr__pfet_01v8_7P3MHC_1/a_15_n164#
++ sky130_fd_pr__pfet_01v8_7P3MHC
+Xsky130_fd_pr__pfet_01v8_7P3MHC_2 IN_A vdd sky130_fd_pr__pfet_01v8_7P3MHC_1/a_15_n164#
++ vdd sky130_fd_pr__pfet_01v8_7P3MHC
+X0 OUT IN_B vss vss sky130_fd_pr__nfet_01v8 ad=0.29 pd=2.58 as=0.145 ps=1.29 w=1 l=0.15
+X1 vss IN_A OUT vss sky130_fd_pr__nfet_01v8 ad=0.145 pd=1.29 as=0.29 ps=2.58 w=1 l=0.15
+.ends
+
+.subckt sr_latch IN_S OUT_Q_B vdd IN_R OUT_Q vss
+XX_NOR_TOP OUT_Q OUT_Q_B vdd vss IN_S nor
+XX_NOR_BOTTOM OUT_Q_B OUT_Q vdd vss IN_R nor
+.ends
+
+.subckt sky130_fd_pr__nfet_01v8_lvt_MMMA4V a_n260_n698# a_100_n500# a_n158_n500# a_n100_n588#
+X0 a_100_n500# a_n100_n588# a_n158_n500# a_n260_n698# sky130_fd_pr__nfet_01v8_lvt ad=1.45 pd=10.58 as=1.45 ps=10.58 w=5 l=1
+.ends
+
+.subckt sky130_fd_pr__pfet_01v8_lvt_5VNMZ8 a_n100_n897# a_100_n800# w_n296_n1019#
++ a_n158_n800#
+X0 a_100_n800# a_n100_n897# a_n158_n800# w_n296_n1019# sky130_fd_pr__pfet_01v8_lvt ad=2.32 pd=16.58 as=2.32 ps=16.58 w=8 l=1
+.ends
+
+.subckt sky130_fd_pr__nfet_01v8_lvt_AHMAL2 a_n260_n574# a_100_n400# a_n158_n400# a_n100_n488#
+X0 a_100_n400# a_n100_n488# a_n158_n400# a_n260_n574# sky130_fd_pr__nfet_01v8_lvt ad=1.16 pd=8.58 as=1.16 ps=8.58 w=4 l=1
+.ends
+
+.subckt sky130_fd_pr__pfet_01v8_lvt_GUWLND a_n158_n1000# a_n100_n1097# w_n296_n1219#
++ a_100_n1000#
+X0 a_100_n1000# a_n100_n1097# a_n158_n1000# w_n296_n1219# sky130_fd_pr__pfet_01v8_lvt ad=2.9 pd=20.58 as=2.9 ps=20.58 w=10 l=1
+.ends
+
+.subckt comp_p vinp vout vdd vinn vbias_p vss
+XXMn_cs_left vss latch_right vss latch_left sky130_fd_pr__nfet_01v8_lvt_MMMA4V
+XXMp_out out_left vdd vdd vout sky130_fd_pr__pfet_01v8_lvt_5VNMZ8
+XXMn_diode_left1 vss latch_left vss latch_left sky130_fd_pr__nfet_01v8_lvt_AHMAL2
+XXMn_cs_right1 vss latch_left vss latch_right sky130_fd_pr__nfet_01v8_lvt_MMMA4V
+XXMn_diode_right vss latch_right vss latch_right sky130_fd_pr__nfet_01v8_lvt_AHMAL2
+Xsky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0 out_left vdd vdd out_left sky130_fd_pr__pfet_01v8_lvt_5VNMZ8
+XXMn_out_left vss out_left vss latch_left sky130_fd_pr__nfet_01v8_lvt_MMMA4V
+XXMn_out_right vss vout vss latch_right sky130_fd_pr__nfet_01v8_lvt_MMMA4V
+XXMp_tail tail vbias_p vdd vdd sky130_fd_pr__pfet_01v8_lvt_GUWLND
+X0 tail vinn latch_left vdd sky130_fd_pr__pfet_01v8_lvt ad=2.89855 pd=20.57 as=2.89855 ps=20.57 w=9.995 l=0.35
+X1 tail vinp latch_right vdd sky130_fd_pr__pfet_01v8_lvt ad=2.89855 pd=20.57 as=2.89855 ps=20.57 w=9.995 l=0.35
+X2 tail vinp latch_right vdd sky130_fd_pr__pfet_01v8_lvt ad=2.89855 pd=20.57 as=2.89855 ps=20.57 w=9.995 l=0.35
+X3 tail vinp latch_right vdd sky130_fd_pr__pfet_01v8_lvt ad=2.89855 pd=20.57 as=2.89855 ps=20.57 w=9.995 l=0.35
+X4 tail vinp latch_right vdd sky130_fd_pr__pfet_01v8_lvt ad=2.89855 pd=20.57 as=2.89855 ps=20.57 w=9.995 l=0.35
+X5 tail vinn latch_left vdd sky130_fd_pr__pfet_01v8_lvt ad=2.89855 pd=20.57 as=2.89855 ps=20.57 w=9.995 l=0.35
+X6 tail vinn latch_left vdd sky130_fd_pr__pfet_01v8_lvt ad=2.89855 pd=20.57 as=2.89855 ps=20.57 w=9.995 l=0.35
+X7 tail vinn latch_left vdd sky130_fd_pr__pfet_01v8_lvt ad=2.89855 pd=20.57 as=2.89855 ps=20.57 w=9.995 l=0.35
+.ends
+
+.subckt sky130_fd_pr__nfet_01v8_lvt_NVJ7JE a_221_n1088# a_n163_n1088# a_n451_n1174#
++ a_n221_n1000# a_35_n1000# a_291_n1000# a_n291_n1088# a_n349_n1000# a_n35_n1088#
++ a_93_n1088# a_163_n1000# a_n93_n1000#
+X0 a_163_n1000# a_93_n1088# a_35_n1000# a_n451_n1174# sky130_fd_pr__nfet_01v8_lvt ad=1.45 pd=10.29 as=1.45 ps=10.29 w=10 l=0.35
+X1 a_n93_n1000# a_n163_n1088# a_n221_n1000# a_n451_n1174# sky130_fd_pr__nfet_01v8_lvt ad=1.45 pd=10.29 as=1.45 ps=10.29 w=10 l=0.35
+X2 a_291_n1000# a_221_n1088# a_163_n1000# a_n451_n1174# sky130_fd_pr__nfet_01v8_lvt ad=2.9 pd=20.58 as=1.45 ps=10.29 w=10 l=0.35
+X3 a_n221_n1000# a_n291_n1088# a_n349_n1000# a_n451_n1174# sky130_fd_pr__nfet_01v8_lvt ad=1.45 pd=10.29 as=2.9 ps=20.58 w=10 l=0.35
+X4 a_35_n1000# a_n35_n1088# a_n93_n1000# a_n451_n1174# sky130_fd_pr__nfet_01v8_lvt ad=1.45 pd=10.29 as=1.45 ps=10.29 w=10 l=0.35
+.ends
+
+.subckt sky130_fd_pr__res_xhigh_po_1p41_5KDBRF a_n271_n1246# a_n141_684# a_n141_n1116#
+X0 a_n141_684# a_n141_n1116# a_n271_n1246# sky130_fd_pr__res_xhigh_po_1p41 l=7
+.ends
+
+.subckt timer_core_pex V_THRESH_I V_DISCH_O DO_OUT VSS VDD V_TRIG_B_I
+XX_INV1 q_sr out_inv1 VSS VDD inv
+XX_INV2[1] out_inv1 DO_OUT VSS VDD inv
+XX_INV2[0] out_inv1 DO_OUT VSS VDD inv
+XX_SR_LATCH sr_s qb_sr VDD sr_r q_sr VSS sr_latch
+XX_COMP_P_BOTTOM v0p6 sr_s VDD V_TRIG_B_I bias_p VSS comp_p
+XX_COMP_P_TOP V_THRESH_I sr_r VDD v1p2 bias_p VSS comp_p
+XXMn_discharge out_inv3 out_inv3 VSS VSS VSS VSS out_inv3 V_DISCH_O out_inv3 out_inv3
++ V_DISCH_O V_DISCH_O sky130_fd_pr__nfet_01v8_lvt_NVJ7JE
+XX_INV3[3] DO_OUT out_inv3 VSS VDD inv
+XXR_bias_1 VSS bias_p bias_1 sky130_fd_pr__res_xhigh_po_1p41_5KDBRF
+XX_INV3[2] DO_OUT out_inv3 VSS VDD inv
+XXR_bias_2 VSS bias_2 bias_1 sky130_fd_pr__res_xhigh_po_1p41_5KDBRF
+XX_INV3[1] DO_OUT out_inv3 VSS VDD inv
+XXR_bias_3 VSS bias_2 bias_3 sky130_fd_pr__res_xhigh_po_1p41_5KDBRF
+XX_INV3[0] DO_OUT out_inv3 VSS VDD inv
+XXR_bias_4 VSS bias_n bias_3 sky130_fd_pr__res_xhigh_po_1p41_5KDBRF
+XXR_mid VSS v0p6 v1p2 sky130_fd_pr__res_xhigh_po_1p41_5KDBRF
+XXMn_bias VSS bias_n VSS bias_n sky130_fd_pr__nfet_01v8_lvt_MMMA4V
+XXR_bot VSS v0p6 VSS sky130_fd_pr__res_xhigh_po_1p41_5KDBRF
+XXR_top VSS VDD v1p2 sky130_fd_pr__res_xhigh_po_1p41_5KDBRF
+XXMp_bias bias_p bias_p VDD VDD sky130_fd_pr__pfet_01v8_lvt_GUWLND
+.ends
+

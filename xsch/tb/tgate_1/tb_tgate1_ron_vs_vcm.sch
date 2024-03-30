@@ -101,4 +101,4 @@ C {devices/lab_pin.sym} -110 -440 1 0 {name=p4 sig_type=std_logic lab=vdd}
 C {devices/lab_pin.sym} -270 -360 0 0 {name=p1 sig_type=std_logic lab=vtest}
 C {sky130_fd_pr/corner.sym} -690 -320 0 0 {name=CORNER only_toplevel=false corner=TT
 }
-C {ip/tgates/tgate_1.sym} 30 -360 0 0 {name=x1}
+C {ip/tgates/tgate_1/tgate_1.sym} 30 -360 0 0 {name=x1}

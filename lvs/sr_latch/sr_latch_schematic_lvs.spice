@@ -1,14 +1,14 @@
-** sch_path: /home/vincef/projects/tt06_555/xsch/ip/logic/sr_latch.sch
-.subckt sr_latch IN_S OUT_Q_B vdd vss IN_R OUT_Q
+** sch_path: /home/vincef/projects/tt06_555/xsch/ip/logic/sr_latch/sr_latch.sch
+.subckt sr_latch IN_S IN_R OUT_Q OUT_Q_B vdd vss
 *.PININFO IN_R:I OUT_Q_B:O OUT_Q:O IN_S:I vdd:I vss:I
-X_NOR_TOP OUT_Q OUT_Q_B vdd vss IN_S nor
-X_NOR_BOTTOM OUT_Q_B OUT_Q vdd vss IN_R nor
+X_NOR_TOP OUT_Q IN_S OUT_Q_B vdd vss nor
+X_NOR_BOTTOM OUT_Q_B IN_R OUT_Q vdd vss nor
 .ends
 
-* expanding   symbol:  ip/logic/nor.sym # of pins=5
-** sym_path: /home/vincef/projects/tt06_555/xsch/ip/logic/nor.sym
-** sch_path: /home/vincef/projects/tt06_555/xsch/ip/logic/nor.sch
-.subckt nor IN_A OUT vdd vss IN_B
+* expanding   symbol:  ip/logic/nor/nor.sym # of pins=5
+** sym_path: /home/vincef/projects/tt06_555/xsch/ip/logic/nor/nor.sym
+** sch_path: /home/vincef/projects/tt06_555/xsch/ip/logic/nor/nor.sch
+.subckt nor IN_A IN_B OUT vdd vss
 *.PININFO IN_A:I OUT:O vss:B vdd:B IN_B:I
 XMn_a OUT IN_A vss vss sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 m=1
 XMp_a mpcon IN_A vdd vdd sky130_fd_pr__pfet_01v8 L=0.15 W=2 nf=1 m=1
