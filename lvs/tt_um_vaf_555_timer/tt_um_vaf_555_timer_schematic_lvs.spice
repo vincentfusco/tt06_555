@@ -1,7 +1,52 @@
 ** sch_path: /home/vincef/projects/tt06_555/xsch/ip/top/tt_um_vaf_555_timer.sch
-.subckt tt_um_vaf_555_timer VPWR VGND uo[0] ua[5] ua[6] ua[7]
-*.PININFO VPWR:B VGND:B uo[0]:O ua[5]:I ua[6]:I ua[7]:O
-X_TIMER VPWR uo[0] VGND ua[7] ua[5] ua[6] timer_core
+.subckt tt_um_vaf_555_timer VPWR VGND clk ena rst_n ua[0] ua[1] ua[2] ua[3] ua[4] ua[5] ua[6] ua[7] ui_in[0] ui_in[1] ui_in[2]
++ ui_in[3] ui_in[4] ui_in[5] ui_in[6] ui_in[7] uio_in[0] uio_in[1] uio_in[2] uio_in[3] uio_in[4] uio_in[5] uio_in[6] uio_in[7] uio_oe[0]
++ uio_oe[1] uio_oe[2] uio_oe[3] uio_oe[4] uio_oe[5] uio_oe[6] uio_oe[7] uo_out[0] uo_out[1] uo_out[2] uo_out[3] uo_out[4] uo_out[5] uo_out[6]
++ uo_out[7]
+*.PININFO VPWR:B VGND:B clk:I ena:I rst_n:I ua[0]:I ua[1]:I ua[2]:I ua[3]:I ua[4]:I ua[5]:I ua[6]:I ua[7]:I ui_in[0]:I ui_in[1]:I
+*+ ui_in[2]:I ui_in[3]:I ui_in[4]:I ui_in[5]:I ui_in[6]:I ui_in[7]:I uio_in[0]:I uio_in[1]:I uio_in[2]:I uio_in[3]:I uio_in[4]:I uio_in[5]:I
+*+ uio_in[6]:I uio_in[7]:I uio_oe[0]:O uio_oe[1]:O uio_oe[2]:O uio_oe[3]:O uio_oe[4]:O uio_oe[5]:O uio_oe[6]:O uio_oe[7]:O uo_out[0]:O
+*+ uo_out[1]:O uo_out[2]:O uo_out[3]:O uo_out[4]:O uo_out[5]:O uo_out[6]:O uo_out[7]:O
+X_TIMER VPWR uo_out[0] VGND ua[7] ua[5] ua[6] timer_core
+* noconn clk
+* noconn ena
+* noconn rst_n
+* noconn ua[0]
+* noconn ua[1]
+* noconn ua[2]
+* noconn ua[3]
+* noconn ua[4]
+* noconn ui_in[0]
+* noconn ui_in[1]
+* noconn ui_in[2]
+* noconn ui_in[3]
+* noconn ui_in[4]
+* noconn ui_in[5]
+* noconn ui_in[6]
+* noconn ui_in[7]
+* noconn uio_in[0]
+* noconn uio_in[1]
+* noconn uio_in[2]
+* noconn uio_in[3]
+* noconn uio_in[4]
+* noconn uio_in[5]
+* noconn uio_in[6]
+* noconn uio_in[7]
+* noconn uio_oe[0]
+* noconn uio_oe[1]
+* noconn uio_oe[2]
+* noconn uio_oe[3]
+* noconn uio_oe[4]
+* noconn uio_oe[5]
+* noconn uio_oe[6]
+* noconn uio_oe[7]
+* noconn uo_out[1]
+* noconn uo_out[2]
+* noconn uo_out[3]
+* noconn uo_out[4]
+* noconn uo_out[5]
+* noconn uo_out[6]
+* noconn uo_out[7]
 .ends
 
 * expanding   symbol:  ip/timers/timer_core.sym # of pins=6
