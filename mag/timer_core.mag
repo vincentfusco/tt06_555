@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1711855675
+timestamp 1711908466
 << nwell >>
 rect 20680 18281 23158 18315
 << pwell >>
@@ -176,7 +176,7 @@ rect 23524 16180 28576 16236
 << metal2 >>
 rect 19706 19332 19758 23886
 rect 19706 18954 19758 18964
-rect 19786 17356 19850 23886
+rect 19786 17356 19850 23889
 rect 23525 23534 28577 23544
 rect 23525 23468 28577 23478
 rect 19879 23388 28588 23440
@@ -364,37 +364,37 @@ timestamp 1711855675
 transform 1 0 26493 0 -1 25012
 box -3002 1462 2120 5166
 use inv  X_INV1
-timestamp 1711855675
+timestamp 1711908466
 transform 1 0 20381 0 1 16477
 box 978 788 1260 1874
 use inv  X_INV2[0]
-timestamp 1711855675
+timestamp 1711908466
 transform 1 0 20906 0 1 16477
 box 978 788 1260 1874
 use inv  X_INV2[1]
-timestamp 1711855675
+timestamp 1711908466
 transform 1 0 20643 0 1 16477
 box 978 788 1260 1874
 use inv  X_INV3[0]
-timestamp 1711855675
+timestamp 1711908466
 transform 1 0 21958 0 1 16477
 box 978 788 1260 1874
 use inv  X_INV3[1]
-timestamp 1711855675
+timestamp 1711908466
 transform 1 0 21695 0 1 16477
 box 978 788 1260 1874
 use inv  X_INV3[2]
-timestamp 1711855675
+timestamp 1711908466
 transform 1 0 21432 0 1 16477
 box 978 788 1260 1874
 use inv  X_INV3[3]
-timestamp 1711855675
+timestamp 1711908466
 transform 1 0 21169 0 1 16477
 box 978 788 1260 1874
 use sr_latch_rb  X_SR_LATCH
-timestamp 1711855675
+timestamp 1711908466
 transform 1 0 26627 0 1 16912
-box -6667 354 -5267 1440
+box -6666 354 -5267 1440
 use sky130_fd_pr__nfet_01v8_lvt_MMMA4V  XMn_bias
 timestamp 1711855675
 transform 0 1 22430 -1 0 23164

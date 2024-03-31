@@ -1,4 +1,4 @@
-* NGSPICE file created from tt_um_vaf_555_timer.ext - technology: sky130A
+* SPICE3 file created from tt_um_vaf_555_timer.ext - technology: sky130A
 
 .subckt sky130_fd_pr__nfet_01v8_BXYDM4 a_15_n131# a_n15_n157# a_n73_n131# VSUBS
 X0 a_15_n131# a_n15_n157# a_n73_n131# VSUBS sky130_fd_pr__nfet_01v8 ad=0.29 pd=2.58 as=0.29 ps=2.58 w=1 l=0.15
@@ -34,7 +34,7 @@ X0 OUT IN_B drain_mna vss sky130_fd_pr__nfet_01v8 ad=0.29 pd=2.58 as=0.145 ps=1.
 X1 drain_mna IN_A vss vss sky130_fd_pr__nfet_01v8 ad=0.145 pd=1.29 as=0.29 ps=2.58 w=1 l=0.15
 .ends
 
-.subckt sr_latch_rb IN_S IN_R IN_R_N OUT_Q vdd vss X_NOR_TOP/OUT inv_0/vout
+.subckt sr_latch_rb IN_S IN_R IN_R_N OUT_Q vdd vss inv_0/vout X_NOR_TOP/OUT
 Xinv_0 inv_0/vout vss vdd IN_R inv
 XX_NOR_TOP OUT_Q IN_S X_NOR_TOP/OUT vdd vss nor
 XX_NOR_BOTTOM X_NOR_TOP/OUT nand_0/OUT OUT_Q vdd vss nor
@@ -93,12 +93,12 @@ X4 a_35_n1000# a_n35_n1088# a_n93_n1000# a_n451_n1174# sky130_fd_pr__nfet_01v8_l
 X0 a_n141_684# a_n141_n1116# a_n271_n1246# sky130_fd_pr__res_xhigh_po_1p41 l=7
 .ends
 
-.subckt timer_core V_THRESH_I V_TRIG_B_I DO_OUT V_DISCH_O VDD VSS DI_RESET_N
+.subckt timer_core V_THRESH_I V_TRIG_B_I DO_OUT V_DISCH_O VSS DI_RESET_N VDD
 XX_INV1 out_inv1 VSS VDD q_sr inv
 XX_INV2[1] DO_OUT VSS VDD out_inv1 inv
 XX_INV2[0] DO_OUT VSS VDD out_inv1 inv
-XX_SR_LATCH X_SR_LATCH/IN_S X_SR_LATCH/IN_R DI_RESET_N q_sr VDD VSS qb_sr X_SR_LATCH/inv_0/vout
-+ sr_latch_rb
+XX_SR_LATCH X_SR_LATCH/IN_S X_SR_LATCH/IN_R DI_RESET_N q_sr VDD VSS X_SR_LATCH/inv_0/vout
++ qb_sr sr_latch_rb
 XX_COMP_P_BOTTOM v0p6 V_TRIG_B_I bias_p X_SR_LATCH/IN_S VDD VSS comp_p
 XX_COMP_P_TOP V_THRESH_I v1p2 bias_p X_SR_LATCH/IN_R VDD VSS comp_p
 XXMn_discharge out_inv3 out_inv3 VSS VSS VSS VSS out_inv3 V_DISCH_O out_inv3 out_inv3
@@ -124,6 +124,6 @@ XXMp_bias bias_p bias_p VDD VDD sky130_fd_pr__pfet_01v8_lvt_GUWLND
 + uio_oe[1] uio_oe[2] uio_oe[3] uio_oe[4] uio_oe[5] uio_oe[6] uio_oe[7] uio_out[0]
 + uio_out[1] uio_out[2] uio_out[3] uio_out[4] uio_out[5] uio_out[6] uio_out[7] uo_out[0]
 + uo_out[1] uo_out[2] uo_out[3] uo_out[4] uo_out[5] uo_out[6] uo_out[7] VPWR VGND
-XX_TIMER ua[0] ua[1] uo_out[0] ua[2] VPWR VGND ui_in[0] timer_core
+XX_TIMER ua[0] ua[1] uo_out[0] ua[2] VGND ui_in[0] VPWR timer_core
 .ends
 

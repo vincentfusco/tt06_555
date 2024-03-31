@@ -164,8 +164,8 @@ vss                                        |vss
 OUT_Q                                      |OUT_Q                                      
 X_NOR_TOP/OUT                              |(no matching pin)                          
 inv_0/vout                                 |(no matching pin)                          
-X_NOR_TOP/OUT                              |(no matching pin)                          
 inv_0/vout                                 |(no matching pin)                          
+X_NOR_TOP/OUT                              |(no matching pin)                          
 ---------------------------------------------------------------------------------------
 Cell pin lists for sr_latch_rb and sr_latch_rb altered to match.
 Device classes sr_latch_rb and sr_latch_rb are equivalent.
