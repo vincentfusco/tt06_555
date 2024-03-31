@@ -53,11 +53,6 @@ pinout:
   ua[0]: "V_THRESH_I"
   ua[1]: "V_TRIG_B_I"
   ua[2]: "V_DISCH_O"
-  ua[3]: ""
-  ua[4]: ""
-  ua[5]: ""
-  ua[6]: ""
-  ua[7]: ""
 
 # Do not change!
 yaml_version: 6
