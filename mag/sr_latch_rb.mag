@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1711845862
+timestamp 1711855675
 << nwell >>
 rect -6629 1370 -5316 1404
 << pwell >>
@@ -77,19 +77,19 @@ rect -5320 478 -5268 486
 rect -5774 468 -5722 478
 rect -6666 408 -6332 444
 use inv  inv_0
-timestamp 1711746230
+timestamp 1711855675
 transform 1 0 -7644 0 1 -434
 box 978 788 1260 1874
 use nand  nand_0
-timestamp 1711842990
+timestamp 1711855675
 transform 1 0 -5192 0 1 -180
 box -1200 534 -823 1620
 use nor  X_NOR_BOTTOM
-timestamp 1711842654
+timestamp 1711855675
 transform 1 0 -4445 0 1 -180
 box -1199 534 -823 1620
 use nor  X_NOR_TOP
-timestamp 1711842654
+timestamp 1711855675
 transform 1 0 -4821 0 1 -180
 box -1199 534 -823 1620
 << labels >>

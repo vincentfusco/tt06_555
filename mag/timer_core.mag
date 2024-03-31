@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1711851453
+timestamp 1711855675
 << nwell >>
 rect 20680 18281 23158 18315
 << pwell >>
@@ -145,8 +145,6 @@ rect 19698 16236 28614 16276
 rect 19698 16180 23524 16236
 rect 28576 16180 28623 16236
 rect 19698 15836 28623 16180
-rect 19698 15832 20700 15836
-rect 20360 15831 20700 15832
 << via1 >>
 rect 21942 23276 22918 23332
 rect 23525 23478 28577 23534
@@ -358,83 +356,83 @@ rect 19698 15894 28613 16180
 rect 19698 15832 28623 15894
 rect 19710 15831 28623 15832
 use comp_p  X_COMP_P_BOTTOM
-timestamp 1711827779
+timestamp 1711855675
 transform 1 0 26492 0 1 14702
 box -3002 1462 2120 5166
 use comp_p  X_COMP_P_TOP
-timestamp 1711827779
+timestamp 1711855675
 transform 1 0 26493 0 -1 25012
 box -3002 1462 2120 5166
 use inv  X_INV1
-timestamp 1711746230
+timestamp 1711855675
 transform 1 0 20381 0 1 16477
 box 978 788 1260 1874
 use inv  X_INV2[0]
-timestamp 1711746230
+timestamp 1711855675
 transform 1 0 20906 0 1 16477
 box 978 788 1260 1874
 use inv  X_INV2[1]
-timestamp 1711746230
+timestamp 1711855675
 transform 1 0 20643 0 1 16477
 box 978 788 1260 1874
 use inv  X_INV3[0]
-timestamp 1711746230
+timestamp 1711855675
 transform 1 0 21958 0 1 16477
 box 978 788 1260 1874
 use inv  X_INV3[1]
-timestamp 1711746230
+timestamp 1711855675
 transform 1 0 21695 0 1 16477
 box 978 788 1260 1874
 use inv  X_INV3[2]
-timestamp 1711746230
+timestamp 1711855675
 transform 1 0 21432 0 1 16477
 box 978 788 1260 1874
 use inv  X_INV3[3]
-timestamp 1711746230
+timestamp 1711855675
 transform 1 0 21169 0 1 16477
 box 978 788 1260 1874
 use sr_latch_rb  X_SR_LATCH
-timestamp 1711845862
+timestamp 1711855675
 transform 1 0 26627 0 1 16912
 box -6667 354 -5267 1440
 use sky130_fd_pr__nfet_01v8_lvt_MMMA4V  XMn_bias
-timestamp 1711732688
+timestamp 1711855675
 transform 0 1 22430 -1 0 23164
 box -296 -734 296 766
 use sky130_fd_pr__nfet_01v8_lvt_NVJ7JE  XMn_discharge
-timestamp 1711736161
+timestamp 1711855675
 transform 0 1 21888 -1 0 16739
 box -487 -1210 487 1210
 use sky130_fd_pr__pfet_01v8_lvt_GUWLND  XMp_bias
-timestamp 1711732688
+timestamp 1711855675
 transform 0 1 21897 -1 0 20400
 box -296 -1219 296 1219
 use sky130_fd_pr__res_xhigh_po_1p41_5KDBRF  XR_bias_1
-timestamp 1711732688
+timestamp 1711855675
 transform 0 1 21914 1 0 21055
 box -307 -1282 307 1282
 use sky130_fd_pr__res_xhigh_po_1p41_5KDBRF  XR_bias_2
-timestamp 1711732688
+timestamp 1711855675
 transform 0 1 21914 1 0 21563
 box -307 -1282 307 1282
 use sky130_fd_pr__res_xhigh_po_1p41_5KDBRF  XR_bias_3
-timestamp 1711732688
+timestamp 1711855675
 transform 0 1 21914 1 0 22071
 box -307 -1282 307 1282
 use sky130_fd_pr__res_xhigh_po_1p41_5KDBRF  XR_bias_4
-timestamp 1711732688
+timestamp 1711855675
 transform 0 1 21914 1 0 22579
 box -307 -1282 307 1282
 use sky130_fd_pr__res_xhigh_po_1p41_5KDBRF  XR_bot
-timestamp 1711732688
+timestamp 1711855675
 transform 0 1 21914 -1 0 18731
 box -307 -1282 307 1282
 use sky130_fd_pr__res_xhigh_po_1p41_5KDBRF  XR_mid
-timestamp 1711732688
+timestamp 1711855675
 transform 0 1 21914 -1 0 19239
 box -307 -1282 307 1282
 use sky130_fd_pr__res_xhigh_po_1p41_5KDBRF  XR_top
-timestamp 1711732688
+timestamp 1711855675
 transform 0 1 21914 -1 0 19747
 box -307 -1282 307 1282
 << labels >>
