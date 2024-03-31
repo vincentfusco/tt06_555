@@ -1,0 +1,52 @@
+timestamp 1711842990
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 4400000 2200000 950000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12800 125 125 47 47 29 5
+use sky130_fd_pr__pfet_01v8_7P3MHC sky130_fd_pr__pfet_01v8_7P3MHC_1 -1 0 -972 0 1 1236
+use sky130_fd_pr__pfet_01v8_7P3MHC sky130_fd_pr__pfet_01v8_7P3MHC_2 -1 0 -1060 0 1 1236
+parameters sky130_fd_pr__nfet_01v8 l=l w=w a1=as p1=ps a2=ad p2=pd
+port "OUT" 2 -857 803 -823 837 m1
+port "IN_B" 1 -1199 885 -1165 919 m1
+port "IN_A" 0 -1199 969 -1165 1003 m1
+port "vdd" 3 -1130 1550 -892 1584 m1
+port "vss" 4 -1138 540 -892 574 m1
+node "OUT" 827 603.603 -857 803 m1 0 0 0 0 0 0 0 0 11600 516 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 33446 2134 72274 2958 0 0 0 0 0 0 0 0 0 0
+node "drain_mna" 493 108.169 -1044 628 ndif 0 0 0 0 0 0 0 0 11600 516 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 7140 488 0 0 0 0 0 0 0 0 0 0 0 0
+node "IN_B" 773 243.27 -1199 885 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 16488 1072 0 0 2890 238 11288 664 0 0 0 0 0 0 0 0 0 0
+node "IN_A" 754 185.195 -1199 969 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 16608 1076 0 0 4356 264 7314 438 0 0 0 0 0 0 0 0 0 0
+node "vdd" 2806 920.818 -1130 1550 m1 0 0 0 0 246548 2064 0 0 9724 640 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12240 788 12052 616 0 0 0 0 0 0 0 0 0 0
+substrate "vss" 0 0 -1138 540 m1 0 0 0 0 0 0 0 0 11600 516 10030 658 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 16592 1112 23252 1152 0 0 0 0 0 0 0 0 0 0
+cap "IN_A" "vdd" 88.9249
+cap "drain_mna" "IN_B" 11.6958
+cap "OUT" "IN_B" 92.4855
+cap "drain_mna" "OUT" 80.5938
+cap "vdd" "IN_B" 63.9678
+cap "OUT" "vdd" 201.67
+cap "drain_mna" "vdd" 3.92582
+cap "IN_A" "IN_B" 169.619
+cap "IN_A" "drain_mna" 1.67531
+cap "IN_A" "OUT" 57.5449
+device msubckt sky130_fd_pr__nfet_01v8 -986 628 -985 629 l=30 w=200 "vss" "IN_B" 60 0 "drain_mna" 200 5800,258 "OUT" 200 11600,516
+device msubckt sky130_fd_pr__nfet_01v8 -1074 628 -1073 629 l=30 w=200 "vss" "IN_A" 60 0 "vss" 200 11600,516 "drain_mna" 200 5800,258
+cap "sky130_fd_pr__pfet_01v8_7P3MHC_1/a_n16_n190#" "sky130_fd_pr__pfet_01v8_7P3MHC_2/a_n16_n190#" 7.26823
+cap "sky130_fd_pr__pfet_01v8_7P3MHC_2/a_n74_n164#" "sky130_fd_pr__pfet_01v8_7P3MHC_2/a_n16_n190#" -18.2216
+cap "sky130_fd_pr__pfet_01v8_7P3MHC_2/a_14_n164#" "sky130_fd_pr__pfet_01v8_7P3MHC_1/a_n16_n190#" 20.1799
+cap "sky130_fd_pr__pfet_01v8_7P3MHC_2/a_n74_n164#" "sky130_fd_pr__pfet_01v8_7P3MHC_2/a_14_n164#" -11.4472
+cap "sky130_fd_pr__pfet_01v8_7P3MHC_2/a_n74_n164#" "vss" -0.0338063
+cap "sky130_fd_pr__pfet_01v8_7P3MHC_2/a_n74_n164#" "drain_mna" -0.00417493
+cap "sky130_fd_pr__pfet_01v8_7P3MHC_2/a_14_n164#" "sky130_fd_pr__pfet_01v8_7P3MHC_2/a_n16_n190#" 23.4037
+cap "sky130_fd_pr__pfet_01v8_7P3MHC_2/a_14_n164#" "vss" 0.0305324
+cap "sky130_fd_pr__pfet_01v8_7P3MHC_2/a_n74_n164#" "sky130_fd_pr__pfet_01v8_7P3MHC_1/a_n16_n190#" -12.4177
+cap "sky130_fd_pr__pfet_01v8_7P3MHC_2/a_14_n164#" "drain_mna" -0.16992
+merge "sky130_fd_pr__pfet_01v8_7P3MHC_2/VSUBS" "sky130_fd_pr__pfet_01v8_7P3MHC_1/VSUBS" -292.219 0 0 0 0 0 0 0 0 -11600 -516 -10030 -658 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -16592 -1112 -23252 -1152 0 0 0 0 0 0 0 0 0 0
+merge "sky130_fd_pr__pfet_01v8_7P3MHC_1/VSUBS" "vss"
+merge "sky130_fd_pr__pfet_01v8_7P3MHC_2/a_14_n164#" "sky130_fd_pr__pfet_01v8_7P3MHC_1/a_n74_n164#" -222.438 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -25568 -1640 0 0 0 0 0 0 0 0 0 0 0 0
+merge "sky130_fd_pr__pfet_01v8_7P3MHC_1/a_n74_n164#" "OUT"
+merge "sky130_fd_pr__pfet_01v8_7P3MHC_2/a_n74_n164#" "sky130_fd_pr__pfet_01v8_7P3MHC_2/w_n141_n200#" -1000.05 0 0 0 0 -265608 -3020 0 0 0 0 -23200 -916 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -14416 -984 0 0 0 0 0 0 0 0 0 0 0 0
+merge "sky130_fd_pr__pfet_01v8_7P3MHC_2/w_n141_n200#" "sky130_fd_pr__pfet_01v8_7P3MHC_1/a_14_n164#"
+merge "sky130_fd_pr__pfet_01v8_7P3MHC_1/a_14_n164#" "sky130_fd_pr__pfet_01v8_7P3MHC_1/w_n141_n200#"
+merge "sky130_fd_pr__pfet_01v8_7P3MHC_1/w_n141_n200#" "vdd"
+merge "sky130_fd_pr__pfet_01v8_7P3MHC_2/a_n16_n190#" "IN_A" -21.5718 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -780 -112 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "sky130_fd_pr__pfet_01v8_7P3MHC_1/a_n16_n190#" "IN_B" -21.7069 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -780 -112 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0

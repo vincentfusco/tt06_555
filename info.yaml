@@ -20,7 +20,7 @@ project:
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
   # Inputs
-  ui[0]: ""
+  ui[0]: "DI_RESET_N"
   ui[1]: ""
   ui[2]: ""
   ui[3]: ""
@@ -50,14 +50,14 @@ pinout:
   uio[7]: ""
 
   # Analog pins - you can add more if you use them, up to 8
-  ua[0]: ""
-  ua[1]: ""
-  ua[2]: ""
+  ua[0]: "V_THRESH_I"
+  ua[1]: "V_TRIG_B_I"
+  ua[2]: "V_DISCH_O"
   ua[3]: ""
   ua[4]: ""
-  ua[5]: "V_THRESH_I"
-  ua[6]: "V_TRIG_B_I"
-  ua[7]: "V_DISCH_O"
+  ua[5]: ""
+  ua[6]: ""
+  ua[7]: ""
 
 # Do not change!
 yaml_version: 6

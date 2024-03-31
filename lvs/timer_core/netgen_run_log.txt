@@ -21,15 +21,17 @@ Call to undefined subcircuit sky130_fd_pr__pfet_01v8_lvt
 Creating placeholder cell definition.
 Call to undefined subcircuit inv
 Creating placeholder cell definition.
-Call to undefined subcircuit sr_latch
-Creating placeholder cell definition.
 Call to undefined subcircuit comp_p
+Creating placeholder cell definition.
+Call to undefined subcircuit sr_latch_rb
 Creating placeholder cell definition.
 Call to undefined subcircuit sky130_fd_pr__nfet_01v8
 Creating placeholder cell definition.
 Call to undefined subcircuit sky130_fd_pr__pfet_01v8
 Creating placeholder cell definition.
 Call to undefined subcircuit nor
+Creating placeholder cell definition.
+Call to undefined subcircuit nand
 Creating placeholder cell definition.
 
 Reading setup file /opt/pdk/share/pdk/sky130A/libs.tech/netgen/sky130A_setup.tcl
@@ -147,26 +149,10 @@ No property perim found for device sky130_fd_pr__pfet_01v8_lvt
 No property topography found for device sky130_fd_pr__pfet_01v8_lvt
 Comparison output logged to file comp.out
 Logging to file "comp.out" enabled
-Circuit sky130_fd_pr__pfet_01v8 contains no devices.
 Circuit sky130_fd_pr__nfet_01v8 contains no devices.
+Circuit sky130_fd_pr__pfet_01v8 contains no devices.
 Circuit sky130_fd_pr__nfet_01v8_lvt contains no devices.
 Circuit sky130_fd_pr__pfet_01v8_lvt contains no devices.
-
-Contents of circuit 1:  Circuit: 'nor'
-Circuit nor contains 4 device instances.
-  Class: sky130_fd_pr__nfet_01v8 instances:   2
-  Class: sky130_fd_pr__pfet_01v8 instances:   2
-Circuit contains 6 nets.
-Contents of circuit 2:  Circuit: 'nor'
-Circuit nor contains 4 device instances.
-  Class: sky130_fd_pr__nfet_01v8 instances:   2
-  Class: sky130_fd_pr__pfet_01v8 instances:   2
-Circuit contains 6 nets.
-
-Circuit 1 contains 4 devices, Circuit 2 contains 4 devices.
-Circuit 1 contains 6 nets,    Circuit 2 contains 6 nets.
-
-Circuit sky130_fd_pr__res_xhigh_po_1p41 contains no devices.
 
 Contents of circuit 1:  Circuit: 'inv'
 Circuit inv contains 2 device instances.
@@ -183,18 +169,57 @@ Circuit 1 contains 2 devices, Circuit 2 contains 2 devices.
 Circuit 1 contains 4 nets,    Circuit 2 contains 4 nets.
 
 
-Contents of circuit 1:  Circuit: 'sr_latch'
-Circuit sr_latch contains 2 device instances.
-  Class: nor                   instances:   2
+Contents of circuit 1:  Circuit: 'nor'
+Circuit nor contains 4 device instances.
+  Class: sky130_fd_pr__nfet_01v8 instances:   2
+  Class: sky130_fd_pr__pfet_01v8 instances:   2
 Circuit contains 6 nets.
-Contents of circuit 2:  Circuit: 'sr_latch'
-Circuit sr_latch contains 2 device instances.
-  Class: nor                   instances:   2
+Contents of circuit 2:  Circuit: 'nor'
+Circuit nor contains 4 device instances.
+  Class: sky130_fd_pr__nfet_01v8 instances:   2
+  Class: sky130_fd_pr__pfet_01v8 instances:   2
 Circuit contains 6 nets.
 
-Circuit 1 contains 2 devices, Circuit 2 contains 2 devices.
+Circuit 1 contains 4 devices, Circuit 2 contains 4 devices.
 Circuit 1 contains 6 nets,    Circuit 2 contains 6 nets.
 
+
+Contents of circuit 1:  Circuit: 'nand'
+Circuit nand contains 4 device instances.
+  Class: sky130_fd_pr__nfet_01v8 instances:   2
+  Class: sky130_fd_pr__pfet_01v8 instances:   2
+Circuit contains 6 nets.
+Contents of circuit 2:  Circuit: 'nand'
+Circuit nand contains 4 device instances.
+  Class: sky130_fd_pr__nfet_01v8 instances:   2
+  Class: sky130_fd_pr__pfet_01v8 instances:   2
+Circuit contains 6 nets.
+
+Circuit 1 contains 4 devices, Circuit 2 contains 4 devices.
+Circuit 1 contains 6 nets,    Circuit 2 contains 6 nets.
+
+Circuit sky130_fd_pr__res_xhigh_po_1p41 contains no devices.
+
+Contents of circuit 1:  Circuit: 'sr_latch_rb'
+Circuit sr_latch_rb contains 4 device instances.
+  Class: nand                  instances:   1
+  Class: inv                   instances:   1
+  Class: nor                   instances:   2
+Circuit contains 9 nets.
+Contents of circuit 2:  Circuit: 'sr_latch_rb'
+Circuit sr_latch_rb contains 4 device instances.
+  Class: nand                  instances:   1
+  Class: inv                   instances:   1
+  Class: nor                   instances:   2
+Circuit contains 9 nets.
+
+Circuit 1 contains 4 devices, Circuit 2 contains 4 devices.
+Circuit 1 contains 9 nets,    Circuit 2 contains 9 nets.
+
+  Flattening non-matched subcircuits sr_latch_rb sr_latch_rb
+
+Flattening instances of sr_latch_rb in file timer_core_layout_lvs.spice
+Flattening instances of sr_latch_rb in file timer_core_schematic_lvs.spice
 
 Contents of circuit 1:  Circuit: 'comp_p'
 Circuit comp_p contains 17 device instances.
@@ -226,48 +251,52 @@ Circuit 1 contains 10 nets,    Circuit 2 contains 10 nets.
 
 
 Contents of circuit 1:  Circuit: 'timer_core'
-Circuit timer_core contains 24 device instances.
+Circuit timer_core contains 27 device instances.
+  Class: nand                  instances:   1
   Class: sky130_fd_pr__nfet_01v8_lvt instances:   6
   Class: comp_p                instances:   2
-  Class: inv                   instances:   7
+  Class: inv                   instances:   8
   Class: sky130_fd_pr__pfet_01v8_lvt instances:   1
   Class: sky130_fd_pr__res_xhigh_po_1p41 instances:   7
-  Class: sr_latch              instances:   1
-Circuit contains 19 nets.
+  Class: nor                   instances:   2
+Circuit contains 22 nets.
 Contents of circuit 2:  Circuit: 'timer_core'
-Circuit timer_core contains 20 device instances.
+Circuit timer_core contains 23 device instances.
+  Class: nand                  instances:   1
   Class: sky130_fd_pr__nfet_01v8_lvt instances:   2
   Class: comp_p                instances:   2
-  Class: inv                   instances:   7
+  Class: inv                   instances:   8
   Class: sky130_fd_pr__pfet_01v8_lvt instances:   1
   Class: sky130_fd_pr__res_xhigh_po_1p41 instances:   7
-  Class: sr_latch              instances:   1
-Circuit contains 19 nets.
+  Class: nor                   instances:   2
+Circuit contains 24 nets.
 
 Circuit was modified by parallel/series device merging.
 New circuit summary:
 
 Contents of circuit 1:  Circuit: 'timer_core'
-Circuit timer_core contains 17 device instances.
+Circuit timer_core contains 20 device instances.
+  Class: nand                  instances:   1
   Class: sky130_fd_pr__nfet_01v8_lvt instances:   2
   Class: comp_p                instances:   2
-  Class: inv                   instances:   7
+  Class: inv                   instances:   8
   Class: sky130_fd_pr__pfet_01v8_lvt instances:   1
   Class: sky130_fd_pr__res_xhigh_po_1p41 instances:   4
-  Class: sr_latch              instances:   1
-Circuit contains 16 nets.
+  Class: nor                   instances:   2
+Circuit contains 19 nets.
 Contents of circuit 2:  Circuit: 'timer_core'
-Circuit timer_core contains 17 device instances.
+Circuit timer_core contains 20 device instances.
+  Class: nand                  instances:   1
   Class: sky130_fd_pr__nfet_01v8_lvt instances:   2
   Class: comp_p                instances:   2
-  Class: inv                   instances:   7
+  Class: inv                   instances:   8
   Class: sky130_fd_pr__pfet_01v8_lvt instances:   1
   Class: sky130_fd_pr__res_xhigh_po_1p41 instances:   4
-  Class: sr_latch              instances:   1
-Circuit contains 16 nets.
+  Class: nor                   instances:   2
+Circuit contains 21 nets.
 
-Circuit 1 contains 17 devices, Circuit 2 contains 17 devices.
-Circuit 1 contains 16 nets,    Circuit 2 contains 16 nets.
+Circuit 1 contains 20 devices, Circuit 2 contains 20 devices.
+Circuit 1 contains 19 nets,    Circuit 2 contains 19 nets.
 
 
 Final result: 

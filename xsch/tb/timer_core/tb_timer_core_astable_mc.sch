@@ -51,6 +51,14 @@ N 640 180 640 240 {
 lab=cap2}
 N 640 300 640 360 {
 lab=GND}
+N -225 80 -200 80 {
+lab=VDD}
+N -225 80 -225 340 {
+lab=VDD}
+N -520 340 -225 340 {
+lab=VDD}
+N -520 320 -520 340 {
+lab=VDD}
 C {devices/vsource.sym} -580 60 0 0 {name=V1 value=1.8 savecurrent=false}
 C {devices/vdd.sym} -580 0 0 0 {name=l4 lab=VDD}
 C {devices/gnd.sym} -580 110 0 0 {name=l5 lab=GND}
@@ -146,3 +154,4 @@ C {devices/gnd.sym} 640 360 0 0 {name=l6 lab=GND}
 C {devices/lab_pin.sym} 640 -50 1 0 {name=p6 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} 640 210 0 0 {name=p7 sig_type=std_logic lab=cap2}
 C {ip/timers/timer_core/timer_core.sym} 0 10 0 0 {name=X_TIMER_CORE}
+C {devices/lab_pin.sym} -520 320 1 0 {name=p8 sig_type=std_logic lab=VDD}

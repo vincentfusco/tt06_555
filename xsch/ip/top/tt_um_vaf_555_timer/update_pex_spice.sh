@@ -11,7 +11,8 @@ cp ../../../../mag/tt_um_vaf_555_timer.spice ./tt_um_vaf_555_timer_pex.spice
 sed -i 's/comp_p/comp_p_pex/g' tt_um_vaf_555_timer_pex.spice
 sed -i 's/inv/inv_pex/g' tt_um_vaf_555_timer_pex.spice
 sed -i 's/nor/nor_pex/g' tt_um_vaf_555_timer_pex.spice
-sed -i 's/sr_latch/sr_latch_pex/g' tt_um_vaf_555_timer_pex.spice
+sed -i 's/nand/nand_pex/g' tt_um_vaf_555_timer_pex.spice
+sed -i 's/sr_latch_rb/sr_latch_rb_pex/g' tt_um_vaf_555_timer_pex.spice
 sed -i 's/tt_um_vaf_555_timer/tt_um_vaf_555_timer_pex/g' tt_um_vaf_555_timer_pex.spice
 sed -i 's/timer_core/timer_core_pex/g' tt_um_vaf_555_timer_pex.spice
 

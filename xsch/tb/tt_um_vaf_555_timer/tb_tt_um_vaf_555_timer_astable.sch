@@ -7,50 +7,8 @@ S {}
 E {}
 N -690 -740 -690 -720 {
 lab=GND}
-N 230 360 230 380 {
-lab=GND}
-N -340 -50 -340 30 {
-lab=discharge_pex}
-N -340 -140 -340 -110 {
-lab=VDD}
-N -340 90 -340 150 {
-lab=cap_pex}
-N -340 210 -340 270 {
-lab=GND}
-N -340 120 -240 120 {
-lab=cap_pex}
-N -450 -0 -450 380 {
-lab=discharge_pex}
-N -450 -0 -340 -0 {
-lab=discharge_pex}
-N 380 110 420 110 {
-lab=do_out_pex}
 N -690 -830 -690 -800 {
 lab=VDD}
-N 230 -270 230 -240 {
-lab=VDD}
-N 230 340 230 360 {
-lab=GND}
-N 420 110 480 110 {
-lab=do_out_pex}
-N -450 380 -150 380 {
-lab=discharge_pex}
-N -150 380 -80 380 {
-lab=discharge_pex}
-N 40 -50 80 -50 {
-lab=cap_pex}
-N 40 -50 40 -30 {
-lab=cap_pex}
-N 40 -30 80 -30 {
-lab=cap_pex}
-N -240 -50 -240 120 {
-lab=cap_pex}
-N -240 -50 40 -50 {
-lab=cap_pex}
-N -80 -10 80 -10 {
-lab=discharge_pex}
-N -80 -10 -80 380 {
-lab=discharge_pex}
 N 230 -450 230 -430 {
 lab=GND}
 N -340 -860 -340 -780 {
@@ -79,20 +37,86 @@ N -450 -430 -150 -430 {
 lab=discharge}
 N -150 -430 -80 -430 {
 lab=discharge}
-N 40 -860 80 -860 {
-lab=cap}
-N 40 -860 40 -840 {
-lab=cap}
-N 40 -840 80 -840 {
-lab=cap}
 N -240 -860 -240 -690 {
 lab=cap}
-N -240 -860 40 -860 {
+N -230 -940 50 -940 {
 lab=cap}
-N -80 -820 80 -820 {
-lab=discharge}
 N -80 -820 -80 -430 {
 lab=discharge}
+N 60 -940 80 -940 {
+lab=cap}
+N 60 -960 60 -940 {
+lab=cap}
+N 60 -960 80 -960 {
+lab=cap}
+N -240 -940 -240 -860 {
+lab=cap}
+N -240 -940 -230 -940 {
+lab=cap}
+N 50 -940 60 -940 {
+lab=cap}
+N 20 -820 20 -800 {
+lab=VDD}
+N 20 -800 80 -800 {
+lab=VDD}
+N -80 -920 -80 -820 {
+lab=discharge}
+N -80 -920 80 -920 {
+lab=discharge}
+N 230 350 230 370 {
+lab=GND}
+N -340 -60 -340 20 {
+lab=discharge_pex}
+N -340 -150 -340 -120 {
+lab=VDD}
+N -340 80 -340 140 {
+lab=cap_pex}
+N -340 200 -340 260 {
+lab=GND}
+N -340 110 -240 110 {
+lab=cap_pex}
+N -450 -10 -450 370 {
+lab=discharge_pex}
+N -450 -10 -340 -10 {
+lab=discharge_pex}
+N 380 100 420 100 {
+lab=do_out_pex}
+N 230 -280 230 -250 {
+lab=VDD}
+N 230 330 230 350 {
+lab=GND}
+N 420 100 480 100 {
+lab=do_out_pex}
+N -450 370 -150 370 {
+lab=discharge_pex}
+N -150 370 -80 370 {
+lab=discharge_pex}
+N -240 -60 -240 110 {
+lab=cap_pex}
+N -230 -140 50 -140 {
+lab=cap_pex}
+N -80 -20 -80 370 {
+lab=discharge_pex}
+N 60 -140 80 -140 {
+lab=cap_pex}
+N 60 -160 60 -140 {
+lab=cap_pex}
+N 60 -160 80 -160 {
+lab=cap_pex}
+N -240 -140 -240 -60 {
+lab=cap_pex}
+N -240 -140 -230 -140 {
+lab=cap_pex}
+N 50 -140 60 -140 {
+lab=cap_pex}
+N 20 -20 20 0 {
+lab=VDD}
+N 20 0 80 0 {
+lab=VDD}
+N -80 -120 -80 -20 {
+lab=discharge_pex}
+N -80 -120 80 -120 {
+lab=discharge_pex}
 C {devices/vsource.sym} -690 -770 0 0 {name=V1 value=1.8 savecurrent=true}
 C {devices/vdd.sym} -690 -830 0 0 {name=l4 lab=VDD}
 C {devices/gnd.sym} -690 -720 0 0 {name=l5 lab=GND}
@@ -112,23 +136,6 @@ C {devices/code.sym} -930 -1030 0 0 {name=SIMULATOR only_toplevel=false value=
 "}
 C {sky130_fd_pr/corner.sym} -930 -860 0 0 {name=CORNER only_toplevel=false corner=tt
 }
-C {devices/gnd.sym} 230 380 0 0 {name=l1 lab=GND}
-C {devices/res.sym} -340 -80 0 0 {name=R1
-value=100k
-footprint=1206
-device=resistor
-m=1}
-C {devices/res.sym} -340 60 0 0 {name=R2
-value=47k
-footprint=1206
-device=resistor
-m=1}
-C {devices/capa-2.sym} -340 180 0 0 {name=C1
-m=1
-value=10n
-footprint=1206
-device=polarized_capacitor}
-C {devices/gnd.sym} -340 270 0 0 {name=l2 lab=GND}
 C {devices/code.sym} -930 -700 0 0 {name=SAVES only_toplevel=false value=
 "
 .save v(do_out) v(discharge) v(cap) v(cap_pex)
@@ -136,60 +143,7 @@ C {devices/code.sym} -930 -700 0 0 {name=SAVES only_toplevel=false value=
 
 .savecurrents
 "}
-C {devices/lab_pin.sym} -340 -140 1 0 {name=p1 sig_type=std_logic lab=VDD}
-C {devices/lab_pin.sym} 230 -270 1 0 {name=p2 sig_type=std_logic lab=VDD}
-C {devices/noconn.sym} 480 110 0 1 {name=l3}
-C {devices/noconn.sym} 380 -210 0 1 {name=l6}
-C {devices/noconn.sym} 380 -190 0 1 {name=l7}
-C {devices/noconn.sym} 380 -170 0 1 {name=l8}
-C {devices/noconn.sym} 380 -150 0 1 {name=l9}
-C {devices/noconn.sym} 380 -130 0 1 {name=l10}
-C {devices/noconn.sym} 380 -110 0 1 {name=l11}
-C {devices/noconn.sym} 380 -90 0 1 {name=l12}
-C {devices/noconn.sym} 380 -70 0 1 {name=l13}
-C {devices/noconn.sym} 380 -50 0 1 {name=l14}
-C {devices/noconn.sym} 380 30 0 1 {name=l25}
-C {devices/noconn.sym} 380 10 0 1 {name=l29}
-C {devices/noconn.sym} 380 -10 0 1 {name=l30}
-C {devices/noconn.sym} 380 -30 0 1 {name=l31}
-C {devices/lab_wire.sym} -340 100 3 0 {name=p6 sig_type=std_logic lab=cap_pex}
-C {devices/lab_wire.sym} -230 380 0 0 {name=p3 sig_type=std_logic lab=discharge_pex}
-C {devices/lab_wire.sym} 460 110 0 0 {name=p4 sig_type=std_logic lab=do_out_pex}
-C {devices/noconn.sym} 380 90 0 1 {name=l45}
-C {devices/noconn.sym} 380 70 0 1 {name=l46}
-C {devices/noconn.sym} 380 50 0 1 {name=l47}
-C {devices/noconn.sym} 380 170 0 1 {name=l50}
-C {devices/noconn.sym} 380 150 0 1 {name=l51}
-C {devices/noconn.sym} 380 130 0 1 {name=l52}
-C {devices/noconn.sym} 380 230 0 1 {name=l53}
-C {devices/noconn.sym} 380 210 0 1 {name=l54}
-C {devices/noconn.sym} 380 190 0 1 {name=l55}
-C {devices/noconn.sym} 380 250 0 1 {name=l56}
-C {devices/noconn.sym} 80 230 0 0 {name=l57}
-C {devices/noconn.sym} 80 210 0 0 {name=l58}
-C {devices/noconn.sym} 80 190 0 0 {name=l59}
-C {devices/noconn.sym} 80 290 0 0 {name=l60}
-C {devices/noconn.sym} 80 270 0 0 {name=l61}
-C {devices/noconn.sym} 80 250 0 0 {name=l62}
-C {devices/noconn.sym} 80 310 0 0 {name=l63}
-C {devices/noconn.sym} 80 90 0 0 {name=l64}
-C {devices/noconn.sym} 80 70 0 0 {name=l65}
-C {devices/noconn.sym} 80 50 0 0 {name=l66}
-C {devices/noconn.sym} 80 150 0 0 {name=l67}
-C {devices/noconn.sym} 80 130 0 0 {name=l68}
-C {devices/noconn.sym} 80 110 0 0 {name=l69}
-C {devices/noconn.sym} 80 170 0 0 {name=l70}
-C {devices/noconn.sym} 80 -170 0 0 {name=l71}
-C {devices/noconn.sym} 80 -190 0 0 {name=l72}
-C {devices/noconn.sym} 80 -210 0 0 {name=l73}
-C {devices/noconn.sym} 80 -110 0 0 {name=l74}
-C {devices/noconn.sym} 80 -130 0 0 {name=l75}
-C {devices/noconn.sym} 80 -150 0 0 {name=l76}
-C {devices/noconn.sym} 80 -90 0 0 {name=l77}
-C {devices/noconn.sym} 80 -70 0 0 {name=l78}
-C {devices/noconn.sym} 80 30 0 0 {name=l79}
-C {devices/noconn.sym} 80 10 0 0 {name=l80}
-C {ip/top/tt_um_vaf_555_timer/tt_um_vaf_555_timer_pex.sym} 230 50 0 0 {name=x2}
+C {ip/top/tt_um_vaf_555_timer/tt_um_vaf_555_timer_pex.sym} 230 40 0 0 {name=x2}
 C {devices/code.sym} -930 -530 0 0 {name=INCLUDES only_toplevel=false value=
 "
 .include ~/projects/tt06_555/xsch/ip/top/tt_um_vaf_555_timer/tt_um_vaf_555_timer_pex.spice
@@ -257,11 +211,81 @@ C {devices/noconn.sym} 80 -640 0 0 {name=l92}
 C {devices/noconn.sym} 80 -980 0 0 {name=l93}
 C {devices/noconn.sym} 80 -1000 0 0 {name=l94}
 C {devices/noconn.sym} 80 -1020 0 0 {name=l95}
-C {devices/noconn.sym} 80 -920 0 0 {name=l96}
-C {devices/noconn.sym} 80 -940 0 0 {name=l97}
-C {devices/noconn.sym} 80 -960 0 0 {name=l98}
 C {devices/noconn.sym} 80 -900 0 0 {name=l99}
 C {devices/noconn.sym} 80 -880 0 0 {name=l100}
 C {devices/noconn.sym} 80 -780 0 0 {name=l101}
-C {devices/noconn.sym} 80 -800 0 0 {name=l102}
 C {ip/top/tt_um_vaf_555_timer/tt_um_vaf_555_timer.sym} 230 -760 0 0 {name=x1}
+C {devices/lab_pin.sym} 20 -820 1 0 {name=p11 sig_type=std_logic lab=VDD}
+C {devices/noconn.sym} 80 -860 0 0 {name=l96}
+C {devices/noconn.sym} 80 -840 0 0 {name=l97}
+C {devices/noconn.sym} 80 -820 0 0 {name=l98}
+C {devices/gnd.sym} 230 370 0 0 {name=l1 lab=GND}
+C {devices/res.sym} -340 -90 0 0 {name=R1
+value=100k
+footprint=1206
+device=resistor
+m=1}
+C {devices/res.sym} -340 50 0 0 {name=R2
+value=47k
+footprint=1206
+device=resistor
+m=1}
+C {devices/capa-2.sym} -340 170 0 0 {name=C1
+m=1
+value=10n
+footprint=1206
+device=polarized_capacitor}
+C {devices/gnd.sym} -340 260 0 0 {name=l2 lab=GND}
+C {devices/lab_pin.sym} -340 -150 1 0 {name=p1 sig_type=std_logic lab=VDD}
+C {devices/lab_pin.sym} 230 -280 1 0 {name=p2 sig_type=std_logic lab=VDD}
+C {devices/noconn.sym} 480 100 0 1 {name=l3}
+C {devices/noconn.sym} 380 -220 0 1 {name=l6}
+C {devices/noconn.sym} 380 -200 0 1 {name=l7}
+C {devices/noconn.sym} 380 -180 0 1 {name=l8}
+C {devices/noconn.sym} 380 -160 0 1 {name=l9}
+C {devices/noconn.sym} 380 -140 0 1 {name=l10}
+C {devices/noconn.sym} 380 -120 0 1 {name=l11}
+C {devices/noconn.sym} 380 -100 0 1 {name=l12}
+C {devices/noconn.sym} 380 -80 0 1 {name=l13}
+C {devices/noconn.sym} 380 -60 0 1 {name=l14}
+C {devices/noconn.sym} 380 20 0 1 {name=l25}
+C {devices/noconn.sym} 380 0 0 1 {name=l29}
+C {devices/noconn.sym} 380 -20 0 1 {name=l30}
+C {devices/noconn.sym} 380 -40 0 1 {name=l31}
+C {devices/lab_wire.sym} -280 110 0 0 {name=p3 sig_type=std_logic lab=cap_pex}
+C {devices/lab_wire.sym} -230 370 0 0 {name=p4 sig_type=std_logic lab=discharge_pex}
+C {devices/lab_wire.sym} 460 100 0 0 {name=p6 sig_type=std_logic lab=do_out_pex}
+C {devices/noconn.sym} 380 80 0 1 {name=l45}
+C {devices/noconn.sym} 380 60 0 1 {name=l46}
+C {devices/noconn.sym} 380 40 0 1 {name=l47}
+C {devices/noconn.sym} 380 160 0 1 {name=l50}
+C {devices/noconn.sym} 380 140 0 1 {name=l51}
+C {devices/noconn.sym} 380 120 0 1 {name=l52}
+C {devices/noconn.sym} 380 220 0 1 {name=l53}
+C {devices/noconn.sym} 380 200 0 1 {name=l54}
+C {devices/noconn.sym} 380 180 0 1 {name=l55}
+C {devices/noconn.sym} 380 240 0 1 {name=l56}
+C {devices/noconn.sym} 80 220 0 0 {name=l57}
+C {devices/noconn.sym} 80 200 0 0 {name=l58}
+C {devices/noconn.sym} 80 180 0 0 {name=l59}
+C {devices/noconn.sym} 80 280 0 0 {name=l60}
+C {devices/noconn.sym} 80 260 0 0 {name=l61}
+C {devices/noconn.sym} 80 240 0 0 {name=l62}
+C {devices/noconn.sym} 80 300 0 0 {name=l63}
+C {devices/noconn.sym} 80 80 0 0 {name=l64}
+C {devices/noconn.sym} 80 60 0 0 {name=l65}
+C {devices/noconn.sym} 80 40 0 0 {name=l66}
+C {devices/noconn.sym} 80 140 0 0 {name=l67}
+C {devices/noconn.sym} 80 120 0 0 {name=l68}
+C {devices/noconn.sym} 80 100 0 0 {name=l69}
+C {devices/noconn.sym} 80 160 0 0 {name=l70}
+C {devices/noconn.sym} 80 -180 0 0 {name=l71}
+C {devices/noconn.sym} 80 -200 0 0 {name=l72}
+C {devices/noconn.sym} 80 -220 0 0 {name=l73}
+C {devices/noconn.sym} 80 -100 0 0 {name=l74}
+C {devices/noconn.sym} 80 -80 0 0 {name=l75}
+C {devices/noconn.sym} 80 20 0 0 {name=l76}
+C {devices/lab_pin.sym} 20 -20 1 0 {name=p12 sig_type=std_logic lab=VDD}
+C {devices/noconn.sym} 80 -60 0 0 {name=l77}
+C {devices/noconn.sym} 80 -40 0 0 {name=l78}
+C {devices/noconn.sym} 80 -20 0 0 {name=l79}

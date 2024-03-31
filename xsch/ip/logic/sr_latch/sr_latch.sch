@@ -29,8 +29,6 @@ N -220 -120 -60 -120 {
 lab=IN_S}
 N -140 160 -60 160 {
 lab=IN_R}
-N -220 160 -60 160 {
-lab=IN_R}
 N -140 120 -60 120 {
 lab=OUT_Q_B}
 N -140 40 -140 120 {
@@ -39,6 +37,7 @@ N -140 -160 -140 -40 {
 lab=OUT_Q}
 N -140 -160 -60 -160 {
 lab=OUT_Q}
+N -220 160 -140 160 {}
 C {devices/ipin.sym} -220 160 0 0 {name=p1 lab=IN_R}
 C {devices/opin.sym} 220 -140 0 0 {name=p3 lab=OUT_Q_B}
 C {devices/lab_pin.sym} -20 -200 1 0 {name=p4 sig_type=std_logic lab=vdd}

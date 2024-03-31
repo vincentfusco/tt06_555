@@ -5,23 +5,21 @@ K {}
 V {}
 S {}
 E {}
-T {V_THRESH_I} -100 -110 0 0 0.4 0.4 {}
-T {V_TRIG_B_I} -100 -30 0 0 0.4 0.4 {}
-T {DO_OUT} 490 -110 0 0 0.4 0.4 {}
-T {V_DISCH_O} 490 -30 0 0 0.4 0.4 {}
 T {Top Level Cell for TinyTapeout06} -730 -600 0 0 1 1 {}
 N 230 -180 230 -150 {
 lab=VPWR}
 N 230 90 230 120 {
 lab=VGND}
 N 0 10 30 10 {
-lab=ua[6]}
+lab=ua[1]}
 N 0 -70 30 -70 {
-lab=ua[5]}
+lab=ua[0]}
 N 430 -70 460 -70 {
 lab=uo_out[0]}
 N 430 10 460 10 {
-lab=ua[7]}
+lab=ua[2]}
+N 0 40 30 40 {
+lab=ui_in[0]}
 C {devices/iopin.sym} 230 -180 3 0 {name=p43 lab=VPWR}
 C {devices/iopin.sym} 230 120 1 0 {name=p44 lab=VGND}
 C {borders/border_s.sym} 440 290 0 0 {
@@ -29,15 +27,14 @@ lab=uio_out[5]}
 C {devices/ipin.sym} -540 -380 0 0 {name=p0 lab=clk}
 C {devices/ipin.sym} -540 -360 0 0 {name=p1 lab=ena}
 C {devices/ipin.sym} -540 -340 0 0 {name=p2 lab=rst_n}
-C {devices/ipin.sym} -540 -320 0 0 {name=p3 lab=ua[0]}
-C {devices/ipin.sym} -540 -300 0 0 {name=p4 lab=ua[1]}
-C {devices/ipin.sym} -540 -280 0 0 {name=p5 lab=ua[2]}
+C {devices/ipin.sym} 0 -70 0 0 {name=p3 lab=ua[0]}
+C {devices/ipin.sym} 0 10 0 0 {name=p4 lab=ua[1]}
 C {devices/ipin.sym} -540 -260 0 0 {name=p6 lab=ua[3]}
 C {devices/ipin.sym} -540 -240 0 0 {name=p7 lab=ua[4]}
-C {devices/ipin.sym} 0 -70 0 0 {name=p14 lab=ua[5]}
-C {devices/ipin.sym} 0 10 0 0 {name=p9 lab=ua[6]}
-C {devices/ipin.sym} 460 10 0 1 {name=p10 lab=ua[7]}
-C {devices/ipin.sym} -540 -160 0 0 {name=p11 lab=ui_in[0]}
+C {devices/ipin.sym} -540 -220 0 0 {name=p14 lab=ua[5]}
+C {devices/ipin.sym} -540 -200 0 0 {name=p9 lab=ua[6]}
+C {devices/ipin.sym} -540 -180 0 0 {name=p10 lab=ua[7]}
+C {devices/ipin.sym} 0 40 0 0 {name=p11 lab=ui_in[0]}
 C {devices/ipin.sym} -540 -140 0 0 {name=p12 lab=ui_in[1]}
 C {devices/ipin.sym} -540 -120 0 0 {name=p13 lab=ui_in[2]}
 C {devices/ipin.sym} -540 -100 0 0 {name=p8 lab=ui_in[3]}
@@ -72,11 +69,8 @@ C {devices/opin.sym} -420 -80 0 0 {name=p42 lab=uo_out[7]}
 C {devices/noconn.sym} -540 -380 0 1 {name=l1}
 C {devices/noconn.sym} -540 -360 0 1 {name=l2}
 C {devices/noconn.sym} -540 -340 0 1 {name=l3}
-C {devices/noconn.sym} -540 -320 0 1 {name=l4}
-C {devices/noconn.sym} -540 -300 0 1 {name=l5}
-C {devices/noconn.sym} -540 -280 0 1 {name=l6}
 C {devices/noconn.sym} -540 -260 0 1 {name=l7}
-C {devices/noconn.sym} -540 -240 0 1 {name=l8}
+C {devices/noconn.sym} -540 -200 0 1 {name=l8}
 C {devices/noconn.sym} -540 -160 0 1 {name=l25}
 C {devices/noconn.sym} -540 -140 0 1 {name=l26}
 C {devices/noconn.sym} -540 -120 0 1 {name=l27}
@@ -133,3 +127,7 @@ name=VSS dir=inout sim_pinnumber=3
 name=VDD dir=inout sim_pinnumber=4
 name=V_TRIG_B_I dir=inout sim_pinnumber=5
 }
+C {devices/noconn.sym} -540 -220 0 1 {name=l17}
+C {devices/noconn.sym} -540 -240 0 1 {name=l18}
+C {devices/noconn.sym} -540 -180 0 1 {name=l4}
+C {devices/opin.sym} 460 10 0 0 {name=p5 lab=ua[2]}

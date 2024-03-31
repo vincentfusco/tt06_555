@@ -1,0 +1,9 @@
+** sch_path: /home/vincef/projects/tt06_555/xsch/ip/logic/nand/nand.sch
+.subckt nand IN_A IN_B OUT vdd vss
+*.PININFO IN_A:I OUT:O vdd:B IN_B:I vss:B
+XMn_a drain_mna IN_A vss vss sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 m=1
+XMp_a OUT IN_A vdd vdd sky130_fd_pr__pfet_01v8 L=0.15 W=2 nf=1 m=1
+XMp_b OUT IN_B vdd vdd sky130_fd_pr__pfet_01v8 L=0.15 W=2 nf=1 m=1
+XMn_b OUT IN_B drain_mna vss sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 m=1
+.ends
+.end

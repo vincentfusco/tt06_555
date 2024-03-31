@@ -1,0 +1,149 @@
+timestamp 1711845862
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 4400000 2200000 950000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12800 125 125 47 47 29 5
+use inv inv_0 1 0 -7644 0 1 -434
+use nand nand_0 1 0 -5192 0 1 -180
+use nor X_NOR_BOTTOM 1 0 -4445 0 1 -180
+use nor X_NOR_TOP 1 0 -4821 0 1 -180
+port "IN_R" 1 -6666 1026 -6614 1078 m2
+port "vss" 5 -5959 360 -5337 394 m1
+port "IN_S" 0 -6666 1312 -6632 1346 m2
+port "IN_R_N" 2 -6664 408 -6630 444 m2
+port "OUT_Q" 3 -5320 802 -5268 854 m2
+port "vdd" 4 -5951 1370 -5337 1404 m1
+node "IN_R" 0 20.422 -6666 1026 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2704 208 0 0 0 0 0 0 0 0
+node "vss" 4 360.032 -5959 360 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 34578 2102 0 0 0 0 0 0 0 0 0 0
+node "m1_n6604_360#" 1 73.6161 -6604 360 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5916 416 0 0 0 0 0 0 0 0 0 0
+node "m1_n5784_478#" 2 178.417 -5784 478 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3744 248 20116 1192 0 0 0 0 0 0 0 0
+node "m1_n6078_658#" 3 172.264 -6078 658 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 7712 552 21686 1242 0 0 0 0 0 0 0 0
+node "IN_S" 6 479.307 -6666 1312 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3744 248 55288 3280 0 0 0 0 0 0 0 0
+node "m1_n6020_705#" 0 6.41997 -6020 705 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1156 136 0 0 0 0 0 0 0 0 0 0
+node "IN_R_N" 2 243.408 -6664 408 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3888 252 25168 1392 0 0 0 0 0 0 0 0
+node "OUT_Q" 3 245.805 -5320 802 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 7488 496 25926 1502 0 0 0 0 0 0 0 0
+node "m1_n6020_811#" 0 11.9649 -6020 811 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1156 136 0 0 0 0 0 0 0 0 0 0
+node "m1_n6432_789#" 0 33.3872 -6432 789 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2516 216 0 0 0 0 0 0 0 0 0 0
+node "vdd" 4 480.576 -5951 1370 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 59892 2696 0 0 0 0 0 0 0 0 0 0
+node "w_n6629_1370#" 41321 133.926 -6629 1370 nw 0 0 0 0 44642 2694 0 0 44642 2694 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+substrate "a_n6628_360#" 0 0 -6628 360 ppd 0 0 0 0 0 0 0 0 0 0 44744 2700 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "vdd" "IN_R" 0.0116495
+cap "m1_n6020_811#" "m1_n6432_789#" 1.36082
+cap "vdd" "m1_n5784_478#" 2.65185
+cap "IN_R_N" "m1_n6432_789#" 10.4961
+cap "IN_S" "m1_n6432_789#" 15.8575
+cap "vdd" "w_n6629_1370#" 37.3316
+cap "IN_R_N" "m1_n6078_658#" 11.9646
+cap "m1_n6078_658#" "IN_S" 175.134
+cap "m1_n6078_658#" "vss" 28.9995
+cap "m1_n6604_360#" "m1_n6432_789#" 0.197753
+cap "OUT_Q" "m1_n6020_811#" 12.678
+cap "m1_n6020_811#" "vdd" 2.62917
+cap "OUT_Q" "IN_S" 76.0423
+cap "m1_n6020_705#" "m1_n6078_658#" 17.3563
+cap "IN_R_N" "IN_R" 4.04984
+cap "IN_S" "IN_R" 19.1504
+cap "IN_R_N" "vdd" 3.51322
+cap "OUT_Q" "vss" 8.25268
+cap "vdd" "IN_S" 46.6084
+cap "IN_R_N" "m1_n5784_478#" 5.91775
+cap "m1_n5784_478#" "IN_S" 4.51169
+cap "vdd" "vss" 25.8824
+cap "m1_n5784_478#" "vss" 46.9267
+cap "IN_S" "w_n6629_1370#" 0.114784
+cap "m1_n6604_360#" "vdd" 7.41961
+cap "OUT_Q" "m1_n6432_789#" 0.839242
+cap "vdd" "m1_n6432_789#" 5.50931
+cap "m1_n6020_811#" "IN_S" 5.151
+cap "IN_R_N" "IN_S" 56.6579
+cap "IN_R_N" "vss" 10.4913
+cap "vss" "IN_S" 8.83391
+cap "OUT_Q" "m1_n6078_658#" 53.3385
+cap "m1_n6078_658#" "vdd" 8.79056
+cap "m1_n6078_658#" "m1_n5784_478#" 55.8287
+cap "m1_n6020_705#" "m1_n6020_811#" 12.2623
+cap "IN_R_N" "m1_n6020_705#" 4.45238
+cap "m1_n6020_705#" "IN_S" 22.9855
+cap "IN_R_N" "m1_n6604_360#" 25.1263
+cap "m1_n6604_360#" "IN_S" 0.0763534
+cap "m1_n6604_360#" "vss" 11.5077
+cap "OUT_Q" "vdd" 9.87361
+cap "OUT_Q" "m1_n5784_478#" 48.1578
+cap "nand_0/IN_B" "inv_0/vin" 44.7431
+cap "X_NOR_BOTTOM/OUT" "nand_0/OUT" 58.4245
+cap "nand_0/IN_B" "X_NOR_TOP/IN_B" 39.8475
+cap "inv_0/vin" "X_NOR_TOP/sky130_fd_pr__pfet_01v8_7P3MHC_1/a_14_n164#" 0.0622782
+cap "inv_0/vout" "nand_0/OUT" 156.863
+cap "X_NOR_BOTTOM/IN_A" "nand_0/OUT" 220.574
+cap "X_NOR_TOP/IN_B" "X_NOR_TOP/sky130_fd_pr__pfet_01v8_7P3MHC_1/a_14_n164#" 2.51003
+cap "inv_0/vin" "X_NOR_TOP/IN_B" 118.426
+cap "X_NOR_BOTTOM/OUT" "nand_0/drain_mna" 0.00490574
+cap "inv_0/vss" "nand_0/OUT" 3.73291
+cap "inv_0/vout" "nand_0/drain_mna" 0.136581
+cap "X_NOR_BOTTOM/IN_A" "nand_0/drain_mna" 0.172743
+cap "inv_0/vss" "nand_0/drain_mna" 0.072464
+cap "nand_0/OUT" "nand_0/drain_mna" 0.191016
+cap "inv_0/vin" "X_NOR_BOTTOM/sky130_fd_pr__pfet_01v8_7P3MHC_1/a_14_n164#" 0.0257183
+cap "X_NOR_TOP/IN_B" "X_NOR_BOTTOM/sky130_fd_pr__pfet_01v8_7P3MHC_1/a_14_n164#" 1.11622
+cap "X_NOR_BOTTOM/OUT" "inv_0/vdd" 48.8002
+cap "inv_0/vout" "inv_0/vdd" 35.5531
+cap "nand_0/IN_B" "X_NOR_BOTTOM/OUT" 21.9161
+cap "X_NOR_BOTTOM/IN_A" "inv_0/vdd" 173.264
+cap "inv_0/vss" "inv_0/vdd" -33.1058
+cap "X_NOR_BOTTOM/OUT" "inv_0/vin" 0.0408491
+cap "X_NOR_BOTTOM/OUT" "X_NOR_TOP/sky130_fd_pr__pfet_01v8_7P3MHC_1/a_14_n164#" 7.08581
+cap "nand_0/IN_B" "inv_0/vout" 90.7197
+cap "nand_0/IN_B" "X_NOR_BOTTOM/IN_A" 1.58381
+cap "X_NOR_BOTTOM/OUT" "X_NOR_TOP/IN_B" 3.52214
+cap "inv_0/vin" "inv_0/vout" 12.4481
+cap "nand_0/IN_B" "inv_0/vss" 83.5807
+cap "inv_0/vin" "X_NOR_BOTTOM/IN_A" 0.071335
+cap "inv_0/vout" "X_NOR_TOP/IN_B" 178.677
+cap "inv_0/vin" "inv_0/vss" -0.228956
+cap "X_NOR_TOP/IN_B" "X_NOR_BOTTOM/IN_A" 20.3251
+cap "inv_0/vdd" "nand_0/OUT" 156.719
+cap "X_NOR_TOP/IN_B" "inv_0/vss" -4.40462
+cap "nand_0/IN_B" "nand_0/OUT" 4.86522
+cap "inv_0/vin" "nand_0/OUT" 6.12141
+cap "nand_0/OUT" "X_NOR_TOP/sky130_fd_pr__pfet_01v8_7P3MHC_1/a_14_n164#" 0.0592321
+cap "X_NOR_TOP/IN_B" "nand_0/OUT" 157.212
+cap "X_NOR_BOTTOM/OUT" "X_NOR_BOTTOM/sky130_fd_pr__pfet_01v8_7P3MHC_1/a_14_n164#" 6.61453
+cap "nand_0/IN_B" "nand_0/drain_mna" 4.49294
+cap "inv_0/vin" "nand_0/drain_mna" 0.00517094
+cap "X_NOR_TOP/IN_B" "nand_0/drain_mna" 3.08477
+cap "X_NOR_BOTTOM/IN_A" "X_NOR_BOTTOM/sky130_fd_pr__pfet_01v8_7P3MHC_1/a_14_n164#" 0.034943
+cap "X_NOR_BOTTOM/OUT" "inv_0/vout" 1.74602
+cap "X_NOR_BOTTOM/OUT" "inv_0/vss" -6.2881
+cap "X_NOR_BOTTOM/OUT" "X_NOR_BOTTOM/IN_A" 247.533
+cap "nand_0/IN_B" "inv_0/vdd" 8.17197
+cap "inv_0/vout" "X_NOR_BOTTOM/IN_A" 0.119192
+cap "inv_0/vdd" "X_NOR_TOP/sky130_fd_pr__pfet_01v8_7P3MHC_1/a_14_n164#" 0.0280819
+cap "inv_0/vout" "inv_0/vss" 90.5949
+cap "inv_0/vin" "inv_0/vdd" 9.423
+cap "X_NOR_BOTTOM/IN_A" "inv_0/vss" -5.44137
+cap "X_NOR_TOP/IN_B" "inv_0/vdd" 141.801
+merge "X_NOR_TOP/IN_B" "m1_n6020_705#" -326.029 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -4720 -384 0 0 0 0 0 0 0 0 0 0
+merge "m1_n6020_705#" "IN_S"
+merge "X_NOR_TOP/vss" "X_NOR_BOTTOM/vss" -546.87 0 0 0 0 0 0 0 0 0 0 -37094 -2454 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -33048 -2216 0 0 0 0 0 0 0 0 0 0
+merge "X_NOR_BOTTOM/vss" "nand_0/vss"
+merge "nand_0/vss" "vss"
+merge "vss" "inv_0/vss"
+merge "inv_0/vss" "m1_n6604_360#"
+merge "m1_n6604_360#" "a_n6628_360#"
+merge "X_NOR_TOP/vdd" "X_NOR_BOTTOM/vdd" -1002.26 0 0 0 0 -52406 -6654 0 0 -36142 -2398 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -46228 -2404 0 0 0 0 0 0 0 0 0 0
+merge "X_NOR_BOTTOM/vdd" "nand_0/vdd"
+merge "nand_0/vdd" "inv_0/vdd"
+merge "inv_0/vdd" "vdd"
+merge "vdd" "w_n6629_1370#"
+merge "X_NOR_TOP/IN_A" "m1_n6020_811#" -306.237 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -7532 -628 0 0 0 0 0 0 0 0 0 0
+merge "m1_n6020_811#" "X_NOR_BOTTOM/OUT"
+merge "X_NOR_BOTTOM/OUT" "OUT_Q"
+merge "X_NOR_BOTTOM/IN_B" "nand_0/OUT" -467.133 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -3168 -390 0 0 0 0 0 0 0 0 0 0
+merge "nand_0/OUT" "m1_n6078_658#"
+merge "X_NOR_TOP/OUT" "X_NOR_BOTTOM/IN_A" -432.618 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -2392 -264 0 0 0 0 0 0 0 0 0 0
+merge "X_NOR_BOTTOM/IN_A" "m1_n5784_478#"
+merge "inv_0/vin" "IN_R" -155.598 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -2704 -208 0 0 0 0 0 0 0 0
+merge "nand_0/IN_A" "inv_0/vout" -300.542 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1326 -214 0 0 0 0 0 0 0 0 0 0
+merge "inv_0/vout" "m1_n6432_789#"
+merge "nand_0/IN_B" "IN_R_N" -138.853 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -2448 -212 0 0 0 0 0 0 0 0 0 0

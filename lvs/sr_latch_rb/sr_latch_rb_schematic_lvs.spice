@@ -1,0 +1,43 @@
+** sch_path: /home/vincef/projects/tt06_555/xsch/ip/logic/sr_latch_rb/sr_latch_rb.sch
+.subckt sr_latch_rb IN_S IN_R IN_R_N OUT_Q vdd vss
+*.PININFO IN_R:I OUT_Q:O IN_S:I vdd:I vss:I IN_R_N:I
+X_NOR_TOP OUT_Q IN_S OUT_Qb vdd vss nor
+X_NOR_BOTTOM OUT_Qb out_nand OUT_Q vdd vss nor
+X_NAND in_nand IN_R_N out_nand vdd vss nand
+X_INV IN_R in_nand vdd vss inv
+.ends
+
+* expanding   symbol:  ip/logic/nor/nor.sym # of pins=5
+** sym_path: /home/vincef/projects/tt06_555/xsch/ip/logic/nor/nor.sym
+** sch_path: /home/vincef/projects/tt06_555/xsch/ip/logic/nor/nor.sch
+.subckt nor IN_A IN_B OUT vdd vss
+*.PININFO IN_A:I OUT:O vss:B vdd:B IN_B:I
+XMn_a OUT IN_A vss vss sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 m=1
+XMp_a mpcon IN_A vdd vdd sky130_fd_pr__pfet_01v8 L=0.15 W=2 nf=1 m=1
+XMp_b OUT IN_B mpcon vdd sky130_fd_pr__pfet_01v8 L=0.15 W=2 nf=1 m=1
+XMn_b OUT IN_B vss vss sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 m=1
+.ends
+
+
+* expanding   symbol:  ip/logic/nand/nand.sym # of pins=5
+** sym_path: /home/vincef/projects/tt06_555/xsch/ip/logic/nand/nand.sym
+** sch_path: /home/vincef/projects/tt06_555/xsch/ip/logic/nand/nand.sch
+.subckt nand IN_A IN_B OUT vdd vss
+*.PININFO IN_A:I OUT:O vdd:B IN_B:I vss:B
+XMn_a drain_mna IN_A vss vss sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 m=1
+XMp_a OUT IN_A vdd vdd sky130_fd_pr__pfet_01v8 L=0.15 W=2 nf=1 m=1
+XMp_b OUT IN_B vdd vdd sky130_fd_pr__pfet_01v8 L=0.15 W=2 nf=1 m=1
+XMn_b OUT IN_B drain_mna vss sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 m=1
+.ends
+
+
+* expanding   symbol:  ip/logic/inv/inv.sym # of pins=4
+** sym_path: /home/vincef/projects/tt06_555/xsch/ip/logic/inv/inv.sym
+** sch_path: /home/vincef/projects/tt06_555/xsch/ip/logic/inv/inv.sch
+.subckt inv vin vout vdd vss
+*.PININFO vin:I vout:O vdd:I vss:I
+XMn vout vin vss vss sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 m=1
+XMp vout vin vdd vdd sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 m=1
+.ends
+
+.end

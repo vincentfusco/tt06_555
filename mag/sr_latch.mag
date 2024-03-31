@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1711828404
+timestamp 1711842990
 << metal1 >>
 rect -5951 1370 -5333 1404
 rect -6020 811 -5986 845
@@ -41,11 +41,11 @@ rect -5722 486 -5268 520
 rect -5320 478 -5268 486
 rect -5774 468 -5722 478
 use nor  X_NOR_BOTTOM
-timestamp 1711828022
+timestamp 1711842654
 transform 1 0 -4445 0 1 -180
 box -1199 534 -823 1620
 use nor  X_NOR_TOP
-timestamp 1711828022
+timestamp 1711842654
 transform 1 0 -4821 0 1 -180
 box -1199 534 -823 1620
 << labels >>

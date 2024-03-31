@@ -3,20 +3,17 @@
 + ui_in[4] ui_in[5] ui_in[6] ui_in[7] uio_in[0] uio_in[1] uio_in[2] uio_in[3] uio_in[4] uio_in[5] uio_in[6] uio_in[7] uio_oe[0] uio_oe[1]
 + uio_oe[2] uio_oe[3] uio_oe[4] uio_oe[5] uio_oe[6] uio_oe[7] uio_out[0] uio_out[1] uio_out[2] uio_out[3] uio_out[4] uio_out[5] uio_out[6]
 + uio_out[7] uo_out[0] uo_out[1] uo_out[2] uo_out[3] uo_out[4] uo_out[5] uo_out[6] uo_out[7] VPWR VGND
-*.PININFO VPWR:B VGND:B clk:I ena:I rst_n:I ua[0]:I ua[1]:I ua[2]:I ua[3]:I ua[4]:I ua[5]:I ua[6]:I ua[7]:I ui_in[0]:I ui_in[1]:I
+*.PININFO VPWR:B VGND:B clk:I ena:I rst_n:I ua[0]:I ua[1]:I ua[3]:I ua[4]:I ua[5]:I ua[6]:I ua[7]:I ui_in[0]:I ui_in[1]:I
 *+ ui_in[2]:I ui_in[3]:I ui_in[4]:I ui_in[5]:I ui_in[6]:I ui_in[7]:I uio_in[0]:I uio_in[1]:I uio_in[2]:I uio_in[3]:I uio_in[4]:I uio_in[5]:I
 *+ uio_in[6]:I uio_in[7]:I uio_oe[0]:O uio_oe[1]:O uio_oe[2]:O uio_oe[3]:O uio_oe[4]:O uio_oe[5]:O uio_oe[6]:O uio_oe[7]:O uo_out[0]:O
 *+ uo_out[1]:O uo_out[2]:O uo_out[3]:O uo_out[4]:O uo_out[5]:O uo_out[6]:O uo_out[7]:O uio_out[0]:B uio_out[1]:B uio_out[2]:B uio_out[3]:B
-*+ uio_out[4]:B uio_out[5]:B uio_out[6]:B uio_out[7]:B
+*+ uio_out[4]:B uio_out[5]:B uio_out[6]:B uio_out[7]:B ua[2]:O
 * noconn clk
 * noconn ena
 * noconn rst_n
-* noconn ua[0]
-* noconn ua[1]
-* noconn ua[2]
 * noconn ua[3]
-* noconn ua[4]
-* noconn ui_in[0]
+* noconn ua[6]
+* noconn #net1
 * noconn ui_in[1]
 * noconn ui_in[2]
 * noconn ui_in[3]
@@ -55,18 +52,20 @@
 * noconn uio_out[5]
 * noconn uio_out[6]
 * noconn uio_out[7]
-X_TIMER_CORE ua[5] ua[6] uo_out[0] ua[7] VPWR VGND timer_core
+X_TIMER_CORE ua[0] ua[1] ui_in[0] uo_out[0] ua[2] VPWR VGND timer_core
+* noconn ua[5]
+* noconn ua[4]
+* noconn ua[7]
 .ends
 
-* expanding   symbol:  ip/timers/timer_core/timer_core.sym # of pins=6
+* expanding   symbol:  ip/timers/timer_core/timer_core.sym # of pins=7
 ** sym_path: /home/vincef/projects/tt06_555/xsch/ip/timers/timer_core/timer_core.sym
 ** sch_path: /home/vincef/projects/tt06_555/xsch/ip/timers/timer_core/timer_core.sch
-.subckt timer_core V_THRESH_I V_TRIG_B_I DO_OUT V_DISCH_O VDD VSS
-*.PININFO V_THRESH_I:I V_TRIG_B_I:I DO_OUT:O VDD:B VSS:B V_DISCH_O:O
+.subckt timer_core V_THRESH_I V_TRIG_B_I DI_RESET_N DO_OUT V_DISCH_O VDD VSS
+*.PININFO V_THRESH_I:I V_TRIG_B_I:I DO_OUT:O VDD:B VSS:B V_DISCH_O:O DI_RESET_N:I
 XR_top v1p2 VDD VSS sky130_fd_pr__res_xhigh_po_1p41 L=7 mult=1 m=1
 XR_mid v0p6 v1p2 VSS sky130_fd_pr__res_xhigh_po_1p41 L=7 mult=1 m=1
 XR_bot VSS v0p6 VSS sky130_fd_pr__res_xhigh_po_1p41 L=7 mult=1 m=1
-* noconn qb_sr
 XR_bias_1 bias_1 bias_p VSS sky130_fd_pr__res_xhigh_po_1p41 L=7 mult=1 m=1
 XMn_bias bias_n bias_n VSS VSS sky130_fd_pr__nfet_01v8_lvt L=1 W=5 nf=1 m=1
 XMp_bias bias_p bias_p VDD VDD sky130_fd_pr__pfet_01v8_lvt L=1 W=10 nf=1 m=1
@@ -81,9 +80,9 @@ X_INV3[0] DO_OUT out_inv3 VDD VSS inv
 X_INV2[1] out_inv1 DO_OUT VDD VSS inv
 X_INV2[0] out_inv1 DO_OUT VDD VSS inv
 X_INV1 q_sr out_inv1 VDD VSS inv
-X_SR_LATCH sr_s sr_r q_sr qb_sr VDD VSS sr_latch
 X_COMP_P_BOTTOM v0p6 V_TRIG_B_I bias_p sr_s VDD VSS comp_p
 X_COMP_P_TOP V_THRESH_I v1p2 bias_p sr_r VDD VSS comp_p
+X_SR_LATCH sr_s sr_r DI_RESET_N q_sr VDD VSS sr_latch_rb
 .ends
 
 
@@ -94,16 +93,6 @@ X_COMP_P_TOP V_THRESH_I v1p2 bias_p sr_r VDD VSS comp_p
 *.PININFO vin:I vout:O vdd:I vss:I
 XMn vout vin vss vss sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 m=1
 XMp vout vin vdd vdd sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 m=1
-.ends
-
-
-* expanding   symbol:  ip/logic/sr_latch/sr_latch.sym # of pins=6
-** sym_path: /home/vincef/projects/tt06_555/xsch/ip/logic/sr_latch/sr_latch.sym
-** sch_path: /home/vincef/projects/tt06_555/xsch/ip/logic/sr_latch/sr_latch.sch
-.subckt sr_latch IN_S IN_R OUT_Q OUT_Q_B vdd vss
-*.PININFO IN_R:I OUT_Q_B:O OUT_Q:O IN_S:I vdd:I vss:I
-X_NOR_TOP OUT_Q IN_S OUT_Q_B vdd vss nor
-X_NOR_BOTTOM OUT_Q_B IN_R OUT_Q vdd vss nor
 .ends
 
 
@@ -126,6 +115,18 @@ XMp_out vout out_left vdd vdd sky130_fd_pr__pfet_01v8_lvt L=1 W=8 nf=1 m=1
 .ends
 
 
+* expanding   symbol:  ip/logic/sr_latch_rb/sr_latch_rb.sym # of pins=6
+** sym_path: /home/vincef/projects/tt06_555/xsch/ip/logic/sr_latch_rb/sr_latch_rb.sym
+** sch_path: /home/vincef/projects/tt06_555/xsch/ip/logic/sr_latch_rb/sr_latch_rb.sch
+.subckt sr_latch_rb IN_S IN_R IN_R_N OUT_Q vdd vss
+*.PININFO IN_R:I OUT_Q:O IN_S:I vdd:I vss:I IN_R_N:I
+X_NOR_TOP OUT_Q IN_S OUT_Qb vdd vss nor
+X_NOR_BOTTOM OUT_Qb out_nand OUT_Q vdd vss nor
+X_NAND in_nand IN_R_N out_nand vdd vss nand
+X_INV IN_R in_nand vdd vss inv
+.ends
+
+
 * expanding   symbol:  ip/logic/nor/nor.sym # of pins=5
 ** sym_path: /home/vincef/projects/tt06_555/xsch/ip/logic/nor/nor.sym
 ** sch_path: /home/vincef/projects/tt06_555/xsch/ip/logic/nor/nor.sch
@@ -135,6 +136,18 @@ XMn_a OUT IN_A vss vss sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 m=1
 XMp_a mpcon IN_A vdd vdd sky130_fd_pr__pfet_01v8 L=0.15 W=2 nf=1 m=1
 XMp_b OUT IN_B mpcon vdd sky130_fd_pr__pfet_01v8 L=0.15 W=2 nf=1 m=1
 XMn_b OUT IN_B vss vss sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 m=1
+.ends
+
+
+* expanding   symbol:  ip/logic/nand/nand.sym # of pins=5
+** sym_path: /home/vincef/projects/tt06_555/xsch/ip/logic/nand/nand.sym
+** sch_path: /home/vincef/projects/tt06_555/xsch/ip/logic/nand/nand.sch
+.subckt nand IN_A IN_B OUT vdd vss
+*.PININFO IN_A:I OUT:O vdd:B IN_B:I vss:B
+XMn_a drain_mna IN_A vss vss sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 m=1
+XMp_a OUT IN_A vdd vdd sky130_fd_pr__pfet_01v8 L=0.15 W=2 nf=1 m=1
+XMp_b OUT IN_B vdd vdd sky130_fd_pr__pfet_01v8 L=0.15 W=2 nf=1 m=1
+XMn_b OUT IN_B drain_mna vss sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 m=1
 .ends
 
 .end

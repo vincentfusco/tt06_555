@@ -1,0 +1,43 @@
+* NGSPICE file created from sr_latch_rb.ext - technology: sky130A
+
+.subckt sky130_fd_pr__nfet_01v8_BXYDM4 a_15_n131# a_n15_n157# a_n73_n131# VSUBS
+X0 a_15_n131# a_n15_n157# a_n73_n131# VSUBS sky130_fd_pr__nfet_01v8 ad=0.29 pd=2.58 as=0.29 ps=2.58 w=1 l=0.15
+.ends
+
+.subckt sky130_fd_pr__pfet_01v8_7PK3FC a_n73_n64# a_n33_n161# m1_n141_190# a_15_n64#
++ w_n141_n178#
+X0 a_15_n64# a_n33_n161# a_n73_n64# w_n141_n178# sky130_fd_pr__pfet_01v8 ad=0.29 pd=2.58 as=0.29 ps=2.58 w=1 l=0.15
+.ends
+
+.subckt inv vin vout vdd vss
+XXMn vout vin vss vss sky130_fd_pr__nfet_01v8_BXYDM4
+Xsky130_fd_pr__pfet_01v8_7PK3FC_0 vdd vin vdd vout vdd sky130_fd_pr__pfet_01v8_7PK3FC
+.ends
+
+.subckt sky130_fd_pr__pfet_01v8_7P3MHC a_n16_n190# w_n141_n200# a_n74_n164# a_14_n164#
+X0 a_14_n164# a_n16_n190# a_n74_n164# w_n141_n200# sky130_fd_pr__pfet_01v8 ad=0.58 pd=4.58 as=0.58 ps=4.58 w=2 l=0.15
+.ends
+
+.subckt nor IN_A IN_B OUT vdd vss
+Xsky130_fd_pr__pfet_01v8_7P3MHC_1 IN_B vdd OUT sky130_fd_pr__pfet_01v8_7P3MHC_1/a_14_n164#
++ sky130_fd_pr__pfet_01v8_7P3MHC
+Xsky130_fd_pr__pfet_01v8_7P3MHC_2 IN_A vdd sky130_fd_pr__pfet_01v8_7P3MHC_1/a_14_n164#
++ vdd sky130_fd_pr__pfet_01v8_7P3MHC
+X0 OUT IN_B vss vss sky130_fd_pr__nfet_01v8 ad=0.29 pd=2.58 as=0.145 ps=1.29 w=1 l=0.15
+X1 vss IN_A OUT vss sky130_fd_pr__nfet_01v8 ad=0.145 pd=1.29 as=0.29 ps=2.58 w=1 l=0.15
+.ends
+
+.subckt nand IN_A IN_B OUT vdd vss
+Xsky130_fd_pr__pfet_01v8_7P3MHC_1 IN_B vdd OUT vdd sky130_fd_pr__pfet_01v8_7P3MHC
+Xsky130_fd_pr__pfet_01v8_7P3MHC_2 IN_A vdd vdd OUT sky130_fd_pr__pfet_01v8_7P3MHC
+X0 OUT IN_B drain_mna vss sky130_fd_pr__nfet_01v8 ad=0.29 pd=2.58 as=0.145 ps=1.29 w=1 l=0.15
+X1 drain_mna IN_A vss vss sky130_fd_pr__nfet_01v8 ad=0.145 pd=1.29 as=0.29 ps=2.58 w=1 l=0.15
+.ends
+
+.subckt sr_latch_rb IN_S IN_R IN_R_N OUT_Q vdd vss
+Xinv_0 IN_R inv_0/vout vdd vss inv
+XX_NOR_TOP OUT_Q IN_S X_NOR_TOP/OUT vdd vss nor
+XX_NOR_BOTTOM X_NOR_TOP/OUT nand_0/OUT OUT_Q vdd vss nor
+Xnand_0 inv_0/vout IN_R_N nand_0/OUT vdd vss nand
+.ends
+

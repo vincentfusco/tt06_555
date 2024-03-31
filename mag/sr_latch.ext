@@ -20,41 +20,41 @@ node "OUT_Q" 3 262.592 -5320 802 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 node "m1_n6020_811#" 0 16.1066 -6020 811 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1156 136 0 0 0 0 0 0 0 0 0 0
 node "vdd" 2 242.976 -5951 1370 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 21012 1304 0 0 0 0 0 0 0 0 0 0
 substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-cap "m1_n6020_811#" "IN_R" 0.589187
-cap "IN_R" "vdd" 4.93066
-cap "IN_R" "vss" 12.3401
-cap "OUT_Q_B" "IN_R" 55.8287
 cap "vss" "vdd" 16.9396
-cap "OUT_Q_B" "vdd" 3.72243
-cap "OUT_Q_B" "vss" 46.9267
-cap "IN_R" "IN_S" 8.27567
-cap "m1_n6020_811#" "IN_S" 12.2623
-cap "IN_R" "OUT_Q" 86.755
+cap "vdd" "OUT_Q" 7.87196
+cap "IN_R" "vss" 12.3401
+cap "vdd" "OUT_Q_B" 3.72243
 cap "m1_n6020_811#" "OUT_Q" 12.678
-cap "OUT_Q" "vdd" 7.87196
-cap "OUT_Q" "vss" 8.35327
-cap "OUT_Q_B" "OUT_Q" 48.1992
-cap "X_NOR_TOP/sky130_fd_pr__pfet_01v8_7P3MHC_2/a_n73_n164#" "X_NOR_TOP/vdd" -0.0170173
-cap "X_NOR_TOP/IN_B" "X_NOR_TOP/vss" -0.364728
-cap "X_NOR_BOTTOM/IN_B" "X_NOR_TOP/IN_B" 28.0183
-cap "X_NOR_TOP/OUT" "X_NOR_TOP/IN_A" 247.501
-cap "X_NOR_TOP/vdd" "X_NOR_TOP/IN_A" 36.0209
+cap "IN_R" "OUT_Q" 86.755
+cap "IN_R" "OUT_Q_B" 55.8287
+cap "m1_n6020_811#" "IN_S" 12.2623
+cap "IN_R" "IN_S" 8.27567
+cap "vss" "OUT_Q" 8.35327
+cap "IN_R" "vdd" 4.93066
+cap "vss" "OUT_Q_B" 46.9267
+cap "OUT_Q" "OUT_Q_B" 48.1992
+cap "m1_n6020_811#" "IN_R" 0.589187
+cap "X_NOR_TOP/OUT" "X_NOR_BOTTOM/IN_B" 119.598
+cap "X_NOR_TOP/sky130_fd_pr__pfet_01v8_7P3MHC_2/a_n73_n164#" "X_NOR_TOP/IN_A" 12.1772
 cap "X_NOR_BOTTOM/IN_B" "X_NOR_TOP/sky130_fd_pr__pfet_01v8_7P3MHC_2/a_n73_n164#" 0.0229611
 cap "X_NOR_TOP/OUT" "X_NOR_TOP/vdd" 171.722
-cap "X_NOR_TOP/vss" "X_NOR_TOP/IN_A" -6.4981
-cap "X_NOR_BOTTOM/IN_B" "X_NOR_TOP/IN_A" 33.6706
-cap "X_NOR_BOTTOM/sky130_fd_pr__pfet_01v8_7P3MHC_2/a_n73_n164#" "X_NOR_TOP/IN_A" 11.0212
-cap "X_NOR_TOP/sky130_fd_pr__pfet_01v8_7P3MHC_2/a_n73_n164#" "X_NOR_TOP/IN_B" -0.437852
-cap "X_NOR_TOP/OUT" "X_NOR_TOP/vss" -5.4385
-cap "X_NOR_TOP/vss" "X_NOR_TOP/vdd" -16.7808
-cap "X_NOR_BOTTOM/IN_B" "X_NOR_TOP/OUT" 119.598
-cap "X_NOR_BOTTOM/IN_B" "X_NOR_TOP/vdd" 4.15835
 cap "X_NOR_TOP/OUT" "X_NOR_BOTTOM/sky130_fd_pr__pfet_01v8_7P3MHC_2/a_n73_n164#" 0.035203
+cap "X_NOR_TOP/sky130_fd_pr__pfet_01v8_7P3MHC_2/a_n73_n164#" "X_NOR_TOP/vdd" -0.0170173
 cap "X_NOR_TOP/IN_B" "X_NOR_TOP/IN_A" 7.27804
-cap "X_NOR_BOTTOM/IN_B" "X_NOR_TOP/vss" 4.03656
-cap "X_NOR_TOP/OUT" "X_NOR_TOP/IN_B" 20.9994
-cap "X_NOR_TOP/sky130_fd_pr__pfet_01v8_7P3MHC_2/a_n73_n164#" "X_NOR_TOP/IN_A" 12.1772
+cap "X_NOR_BOTTOM/IN_B" "X_NOR_TOP/IN_B" 28.0183
+cap "X_NOR_TOP/OUT" "X_NOR_TOP/vss" -5.4385
+cap "X_NOR_BOTTOM/IN_B" "X_NOR_TOP/IN_A" 33.6706
 cap "X_NOR_TOP/IN_B" "X_NOR_TOP/vdd" 6.28308
+cap "X_NOR_TOP/vdd" "X_NOR_TOP/IN_A" 36.0209
+cap "X_NOR_BOTTOM/sky130_fd_pr__pfet_01v8_7P3MHC_2/a_n73_n164#" "X_NOR_TOP/IN_A" 11.0212
+cap "X_NOR_BOTTOM/IN_B" "X_NOR_TOP/vdd" 4.15835
+cap "X_NOR_TOP/IN_B" "X_NOR_TOP/vss" -0.364728
+cap "X_NOR_TOP/vss" "X_NOR_TOP/IN_A" -6.4981
+cap "X_NOR_BOTTOM/IN_B" "X_NOR_TOP/vss" 4.03656
+cap "X_NOR_TOP/vss" "X_NOR_TOP/vdd" -16.7808
+cap "X_NOR_TOP/OUT" "X_NOR_TOP/IN_B" 20.9994
+cap "X_NOR_TOP/OUT" "X_NOR_TOP/IN_A" 247.501
+cap "X_NOR_TOP/sky130_fd_pr__pfet_01v8_7P3MHC_2/a_n73_n164#" "X_NOR_TOP/IN_B" -0.437852
 merge "X_NOR_BOTTOM/vss" "X_NOR_TOP/vss" -237.796 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -17680 -1176 0 0 0 0 0 0 0 0 0 0
 merge "X_NOR_TOP/vss" "VSUBS"
 merge "VSUBS" "vss"

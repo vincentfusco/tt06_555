@@ -1,20 +1,10 @@
-timestamp 1711828404
+timestamp 1711851453
 version 8.3
 tech sky130A
 style ngspice()
 scale 1000 1 500000
 resistclasses 4400000 2200000 950000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12800 125 125 47 47 29 5
-use sky130_fd_pr__res_xhigh_po_1p41_5KDBRF XR_top 0 1 21914 -1 0 19747
-use sky130_fd_pr__res_xhigh_po_1p41_5KDBRF XR_mid 0 1 21914 -1 0 19239
-use sky130_fd_pr__res_xhigh_po_1p41_5KDBRF XR_bot 0 1 21914 -1 0 18731
-use sky130_fd_pr__res_xhigh_po_1p41_5KDBRF XR_bias_4 0 1 21914 1 0 22579
-use sky130_fd_pr__res_xhigh_po_1p41_5KDBRF XR_bias_3 0 1 21914 1 0 22071
-use sky130_fd_pr__res_xhigh_po_1p41_5KDBRF XR_bias_2 0 1 21914 1 0 21563
-use sky130_fd_pr__res_xhigh_po_1p41_5KDBRF XR_bias_1 0 1 21914 1 0 21055
-use sky130_fd_pr__pfet_01v8_lvt_GUWLND XMp_bias 0 1 21897 -1 0 20400
 use sky130_fd_pr__nfet_01v8_lvt_NVJ7JE XMn_discharge 0 1 21888 -1 0 16739
-use sky130_fd_pr__nfet_01v8_lvt_MMMA4V XMn_bias 0 1 22430 -1 0 23164
-use sr_latch X_SR_LATCH 1 0 26630 0 1 16911
 use inv X_INV3[3] 1 0 21169 0 1 16477
 use inv X_INV3[2] 1 0 21432 0 1 16477
 use inv X_INV3[1] 1 0 21695 0 1 16477
@@ -22,29 +12,44 @@ use inv X_INV3[0] 1 0 21958 0 1 16477
 use inv X_INV2[1] 1 0 20643 0 1 16477
 use inv X_INV2[0] 1 0 20906 0 1 16477
 use inv X_INV1 1 0 20381 0 1 16477
-use comp_p X_COMP_P_TOP 1 0 26493 0 -1 25012
+use sky130_fd_pr__res_xhigh_po_1p41_5KDBRF XR_bot 0 1 21914 -1 0 18731
+use sky130_fd_pr__res_xhigh_po_1p41_5KDBRF XR_top 0 1 21914 -1 0 19747
+use sky130_fd_pr__res_xhigh_po_1p41_5KDBRF XR_mid 0 1 21914 -1 0 19239
+use sky130_fd_pr__nfet_01v8_lvt_MMMA4V XMn_bias 0 1 22430 -1 0 23164
+use sky130_fd_pr__pfet_01v8_lvt_GUWLND XMp_bias 0 1 21897 -1 0 20400
+use sky130_fd_pr__res_xhigh_po_1p41_5KDBRF XR_bias_1 0 1 21914 1 0 21055
+use sky130_fd_pr__res_xhigh_po_1p41_5KDBRF XR_bias_2 0 1 21914 1 0 21563
+use sky130_fd_pr__res_xhigh_po_1p41_5KDBRF XR_bias_3 0 1 21914 1 0 22071
+use sky130_fd_pr__res_xhigh_po_1p41_5KDBRF XR_bias_4 0 1 21914 1 0 22579
 use comp_p X_COMP_P_BOTTOM 1 0 26492 0 1 14702
-port "V_DISCH_O" 3 20940 15832 21506 15888 m2
-port "DO_OUT" 2 20360 18964 20412 19016 m1
+use comp_p X_COMP_P_TOP 1 0 26493 0 -1 25012
+use sr_latch_rb X_SR_LATCH 1 0 26627 0 1 16912
+port "DI_RESET_N" 2 19792 23822 19848 23888 m2
+port "V_DISCH_O" 4 20940 15832 21506 15888 m2
+port "DO_OUT" 3 19706 23834 19758 23886 m2
 port "V_TRIG_B_I" 1 23330 23832 23382 23884 m1
 port "V_THRESH_I" 0 23120 23832 23172 23884 m1
-port "VSS" 5 23524 15836 28576 15892 m3
-port "VDD" 4 20361 19116 20417 21458 m3
-node "qb_sr" 0 23.1073 21310 17390 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2704 208 0 0 0 0 0 0 0 0
+port "VSS" 6 23524 15836 28576 15892 m3
+port "VDD" 5 19698 19116 19754 21458 m3
+node "qb_sr" 0 20.4415 21310 17390 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2704 208 0 0 0 0 0 0 0 0
+node "m2_20480_17188#" 18 1679.68 20480 17188 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 400054 15450 0 0 0 0 0 0 0 0
 node "m2_21621_17946#" 1 54.6836 21621 17946 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 10744 700 0 0 0 0 0 0 0 0
-node "q_sr" 1 94.4651 21300 17702 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 13902 754 0 0 0 0 0 0 0 0
-node "sr_r" 34 4180.99 20568 17714 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 737672 28476 0 0 0 0 0 0 0 0
+node "q_sr" 1 102.643 21300 17702 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 13902 754 0 0 0 0 0 0 0 0
+node "m2_19879_17938#" 35 3483.22 19879 17938 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 754374 29112 0 0 0 0 0 0 0 0
+node "DI_RESET_N" 14 686.217 19792 23822 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 430016 13804 0 0 0 0 0 0 0 0
 node "m1_20810_16448#" 2 127.361 20810 16448 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 26772 1256 0 0 0 0 0 0 0 0 0 0
-node "V_DISCH_O" 5 799.16 20940 15832 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 91416 3828 719952 3676 0 0 0 0 0 0 0 0
-node "sr_s" 19 1648.92 20568 17336 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 13502 822 374608 14512 0 0 0 0 0 0 0 0
+node "V_DISCH_O" 5 752.612 20940 15832 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 91416 3828 719952 3676 0 0 0 0 0 0 0 0
+node "m1_20193_17356#" 0 3.25861 20193 17356 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 64 32 0 0 0 0 0 0 0 0 0 0
+node "m1_20123_17356#" 0 2.75347 20123 17356 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 88 38 0 0 0 0 0 0 0 0 0 0
+node "m1_20228_17701#" 0 40.2876 20228 17701 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3774 290 0 0 0 0 0 0 0 0 0 0
 node "out_inv3" 6 558.144 22920 16448 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 67362 3574 0 0 0 0 0 0 0 0 0 0
 node "m1_22353_17833#" 3 215.134 22353 17833 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 29104 1780 0 0 0 0 0 0 0 0 0 0
 node "m1_21827_17833#" 1 69.817 21827 17833 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9384 620 0 0 0 0 0 0 0 0 0 0
 node "m1_22162_17833#" 1 74.4209 22162 17833 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9146 606 0 0 0 0 0 0 0 0 0 0
-node "out_inv1" 1 92.3638 21565 17833 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 11075 722 0 0 0 0 0 0 0 0 0 0
+node "out_inv1" 1 98.4878 21565 17833 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 11075 722 0 0 0 0 0 0 0 0 0 0
 node "v0p6" 1 703.037 22598 18590 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 355104 3348 0 0 0 0 0 0 0 0 0 0
-node "DO_OUT" 13 1068.89 20360 18964 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 37440 1544 213082 8926 0 0 0 0 0 0 0 0
-node "v1p2" 10 1809.11 20798 19100 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 453808 7252 151040 5880 0 0 0 0 0 0 0 0
+node "DO_OUT" 27 2459.39 19706 23834 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 94720 3504 469546 18894 0 0 0 0 0 0 0 0
+node "v1p2" 10 1798.32 20798 19100 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 453808 7252 151040 5880 0 0 0 0 0 0 0 0
 node "V_TRIG_B_I" 17 1777.28 23330 23832 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 103168 4176 267280 10384 0 0 0 0 0 0 0 0
 node "V_THRESH_I" 8 983.209 23120 23832 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 167440 6544 0 0 0 0 0 0 0 0 0 0
 node "bias_p" 3 911.685 22598 20514 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 336008 3480 43176 1748 0 0 0 0 0 0 0 0
@@ -52,836 +57,981 @@ node "bias_2" 0 442.197 22598 21422 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 node "bias_1" 0 607.297 20798 20914 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 341280 2444 0 0 0 0 0 0 0 0 0 0
 node "bias_3" 0 637.392 20798 21930 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 341280 2444 0 0 0 0 0 0 0 0 0 0
 node "bias_n" 0 347.111 22598 22438 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 270792 2148 0 0 0 0 0 0 0 0 0 0
-node "VSS" 362 25947.2 23524 15836 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 405993 6776 5805666 45040 1252996 25200 9863084 48736 0 0 0 0 0 0
-node "VDD" 848 17805.5 20361 19116 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 73916 4416 1398743 27598 835061 18528 10808459 49386 0 0 0 0 0 0
+node "VSS" 483 27993.3 23524 15836 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 429749 8138 6974928 47654 1252996 25200 10455038 51662 0 0 0 0 0 0
+node "VDD" 848 18509.7 19698 19116 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 73916 4416 1398743 27598 835061 18528 11705498 53364 0 0 0 0 0 0
 node "li_21852_22844#" 157 523.93 21852 22844 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 108664 2500 0 0 0 0 0 0 0 0 0 0 0 0
 node "li_21942_23276#" 93 487.406 21942 23276 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 130784 2220 0 0 0 0 0 0 0 0 0 0 0 0
 node "a_24103_19828#" 8065 0 24103 19828 nnd 0 0 0 0 0 0 0 0 226084 7912 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 node "w_20680_18281#" 77984 252.756 20680 18281 nw 0 0 0 0 84252 5024 0 0 84252 5024 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 substrate "a_20680_17271#" 0 0 20680 17271 ppd 0 0 0 0 0 0 0 0 0 0 84524 5040 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "VSS" "m2_21621_17946#" 1.10822
 cap "VDD" "V_TRIG_B_I" 661.569
-cap "V_THRESH_I" "VSS" 112.265
-cap "V_DISCH_O" "sr_s" 197.53
-cap "out_inv1" "sr_s" 0.401123
-cap "VSS" "li_21942_23276#" 250.575
-cap "q_sr" "VSS" 2.00345
-cap "out_inv3" "DO_OUT" 9.11749
-cap "v1p2" "sr_r" 55.5342
-cap "bias_3" "bias_1" 68.8696
-cap "m1_21827_17833#" "q_sr" 0.471065
-cap "out_inv3" "VSS" 265.599
-cap "q_sr" "m1_22162_17833#" 0.171456
-cap "m2_21621_17946#" "DO_OUT" 6.2963
-cap "qb_sr" "VSS" 5.46003
-cap "VSS" "m2_21621_17946#" 1.14502
-cap "sr_r" "bias_2" 0.401157
-cap "m1_21827_17833#" "m2_21621_17946#" 6.99325
-cap "VDD" "DO_OUT" 863.794
-cap "VDD" "m1_20810_16448#" 0.523014
-cap "bias_n" "bias_2" 68.8696
-cap "VDD" "VSS" 929.133
-cap "bias_n" "sr_r" 4.1979
-cap "m1_22162_17833#" "m2_21621_17946#" 0.363473
-cap "VDD" "m1_21827_17833#" 31.6932
-cap "out_inv3" "v0p6" 2.39604
-cap "V_THRESH_I" "bias_p" 69.4601
-cap "V_TRIG_B_I" "DO_OUT" 344.392
-cap "m1_22353_17833#" "sr_s" 1.29555
-cap "VDD" "m1_22162_17833#" 18.5589
-cap "V_TRIG_B_I" "VSS" 112.439
-cap "sr_r" "sr_s" 56.3324
-cap "q_sr" "out_inv1" 2.46479
-cap "V_DISCH_O" "out_inv3" 3.554
-cap "V_TRIG_B_I" "m1_22162_17833#" 5.11722
-cap "VDD" "v0p6" 297.897
-cap "bias_2" "li_21852_22844#" 3.44956
-cap "V_THRESH_I" "v1p2" 127.829
-cap "sr_r" "li_21852_22844#" 2.34781
-cap "bias_3" "bias_2" 8.75035
-cap "VDD" "bias_1" 407.891
-cap "V_TRIG_B_I" "v0p6" 108.15
-cap "bias_n" "li_21852_22844#" 243.59
-cap "m2_21621_17946#" "out_inv1" 30.1143
-cap "bias_3" "sr_r" 62.6232
-cap "bias_3" "bias_n" 8.75035
-cap "V_DISCH_O" "VDD" 4.32507
-cap "VDD" "out_inv1" 26.3714
-cap "VDD" "bias_p" 514.099
-cap "V_THRESH_I" "bias_2" 248.286
-cap "m1_20810_16448#" "VSS" 274.336
-cap "VSS" "DO_OUT" 254.384
-cap "V_THRESH_I" "sr_r" 61.6355
-cap "V_THRESH_I" "bias_n" 201.771
-cap "m1_21827_17833#" "VSS" 21.3509
-cap "V_TRIG_B_I" "bias_p" 162.179
-cap "m1_22162_17833#" "DO_OUT" 32.4715
-cap "sr_r" "li_21942_23276#" 56.6125
-cap "q_sr" "m1_22353_17833#" 0.223228
-cap "VSS" "m1_22162_17833#" 11.1304
-cap "bias_n" "li_21942_23276#" 4.76801
-cap "out_inv3" "m1_22353_17833#" 27.5331
-cap "sr_r" "q_sr" 18.6396
-cap "m1_21827_17833#" "m1_22162_17833#" 13.7248
-cap "v0p6" "DO_OUT" 428.362
-cap "v1p2" "VDD" 1223.78
-cap "VSS" "v0p6" 9.4242
-cap "v1p2" "V_TRIG_B_I" 1116.34
-cap "q_sr" "sr_s" 3.63985
-cap "V_THRESH_I" "li_21852_22844#" 1.79759
-cap "VDD" "m1_22353_17833#" 95.42
-cap "VDD" "bias_2" 165.891
-cap "out_inv3" "sr_s" 73.405
-cap "V_DISCH_O" "m1_20810_16448#" 102.755
-cap "VDD" "sr_r" 1540.73
-cap "li_21942_23276#" "li_21852_22844#" 68
-cap "out_inv1" "DO_OUT" 0.260231
-cap "DO_OUT" "bias_p" 0.0749667
-cap "VDD" "bias_n" 9.10653
-cap "V_DISCH_O" "VSS" 2710.28
-cap "qb_sr" "sr_s" 13.0289
-cap "VSS" "out_inv1" 21.9884
-cap "bias_2" "V_TRIG_B_I" 86.2051
-cap "m2_21621_17946#" "sr_s" 20.6266
-cap "m1_21827_17833#" "out_inv1" 15.1111
-cap "sr_r" "V_TRIG_B_I" 89.2993
-cap "bias_n" "V_TRIG_B_I" 57.708
-cap "VDD" "sr_s" 57.1336
-cap "m1_22162_17833#" "out_inv1" 9.18904
-cap "V_THRESH_I" "li_21942_23276#" 6.08687
-cap "w_20680_18281#" "VDD" 70.7717
-cap "V_TRIG_B_I" "sr_s" 5.80416
-cap "v1p2" "DO_OUT" 139.672
-cap "v0p6" "bias_p" 0.328231
-cap "v1p2" "VSS" 25.2629
-cap "VDD" "li_21852_22844#" 5.10596
-cap "VDD" "bias_3" 28.7052
 cap "bias_1" "bias_p" 8.75035
-cap "m1_22353_17833#" "DO_OUT" 57.4374
-cap "V_TRIG_B_I" "li_21852_22844#" 5.00342
-cap "bias_2" "VSS" 7.53459
-cap "VSS" "m1_22353_17833#" 63.172
-cap "sr_r" "DO_OUT" 65.1541
-cap "V_THRESH_I" "VDD" 111.977
-cap "sr_r" "VSS" 5258.23
-cap "v1p2" "v0p6" 145.213
-cap "bias_n" "VSS" 117.541
-cap "qb_sr" "q_sr" 8.125
-cap "m1_22353_17833#" "m1_22162_17833#" 15.1111
-cap "q_sr" "m2_21621_17946#" 5.84192
-cap "sr_s" "DO_OUT" 74.7976
-cap "V_THRESH_I" "V_TRIG_B_I" 565.145
-cap "m1_20810_16448#" "sr_s" 3.34823
-cap "VDD" "q_sr" 13.6255
-cap "VSS" "sr_s" 4481.59
-cap "m1_22353_17833#" "v0p6" 0.980198
-cap "m1_21827_17833#" "sr_s" 0.396436
-cap "out_inv3" "VDD" 4.42071
-cap "V_TRIG_B_I" "li_21942_23276#" 0.338874
-cap "v1p2" "bias_p" 357.015
-cap "w_20680_18281#" "VSS" 2.10621
-cap "m1_22162_17833#" "sr_s" 0.299496
-cap "bias_2" "bias_1" 8.75035
-cap "qb_sr" "VDD" 0.11342
+cap "DO_OUT" "v0p6" 428.362
+cap "bias_n" "V_TRIG_B_I" 57.708
+cap "m2_21621_17946#" "m1_21827_17833#" 6.99325
+cap "m1_22353_17833#" "m2_20480_17188#" 1.29555
+cap "m1_22162_17833#" "q_sr" 0.171456
+cap "VDD" "m1_20228_17701#" 2.86368
+cap "VSS" "V_TRIG_B_I" 112.439
+cap "bias_n" "VDD" 9.10653
+cap "v0p6" "m2_20480_17188#" 0.0521451
+cap "VSS" "VDD" 1066.32
+cap "li_21852_22844#" "V_THRESH_I" 1.79759
+cap "VSS" "m1_20228_17701#" 20.3145
+cap "VSS" "bias_n" 117.541
+cap "qb_sr" "m2_20480_17188#" 15.491
+cap "VDD" "m1_21827_17833#" 31.6932
+cap "m2_21621_17946#" "DO_OUT" 6.2963
+cap "v1p2" "V_TRIG_B_I" 1116.34
 cap "out_inv3" "V_TRIG_B_I" 141.522
-cap "VSS" "li_21852_22844#" 27.8118
-cap "VDD" "m2_21621_17946#" 54.6567
-cap "sr_r" "bias_1" 56.5459
-cap "v0p6" "sr_s" 0.0521451
-cap "bias_3" "VSS" 18.2009
-cap "a_24103_19828#" "VDD" 189.911
+cap "bias_2" "V_TRIG_B_I" 86.2051
+cap "v1p2" "VDD" 1110.19
+cap "m1_22353_17833#" "q_sr" 0.223228
+cap "m1_22162_17833#" "out_inv1" 9.18904
+cap "li_21852_22844#" "li_21942_23276#" 68
+cap "out_inv3" "VDD" 4.42071
+cap "VSS" "m1_21827_17833#" 21.3509
+cap "m2_21621_17946#" "m2_20480_17188#" 20.6266
+cap "bias_2" "VDD" 165.891
+cap "v0p6" "bias_p" 0.328231
+cap "DO_OUT" "V_TRIG_B_I" 344.392
+cap "VDD" "m1_20810_16448#" 0.523014
+cap "VSS" "v1p2" 25.2629
+cap "DO_OUT" "VDD" 1300.19
+cap "bias_2" "bias_n" 68.8696
+cap "VSS" "out_inv3" 265.599
+cap "VSS" "bias_2" 7.53459
+cap "m1_20123_17356#" "VDD" 0.10332
+cap "V_TRIG_B_I" "m2_20480_17188#" 5.80416
+cap "qb_sr" "q_sr" 8.125
+cap "VSS" "m1_20810_16448#" 274.336
+cap "VDD" "m2_20480_17188#" 59.459
+cap "VSS" "DO_OUT" 557.739
+cap "m1_20228_17701#" "m2_20480_17188#" 2.07712
+cap "bias_1" "bias_3" 68.8696
+cap "VSS" "m1_20123_17356#" 6.17772
+cap "m2_21621_17946#" "q_sr" 5.84192
+cap "m2_19879_17938#" "V_TRIG_B_I" 89.2993
+cap "VSS" "m2_20480_17188#" 4368.06
+cap "m2_19879_17938#" "VDD" 1132.32
+cap "DI_RESET_N" "VDD" 774.528
+cap "v1p2" "DO_OUT" 149.401
+cap "V_TRIG_B_I" "bias_p" 162.179
+cap "m1_21827_17833#" "m2_20480_17188#" 0.396436
+cap "out_inv3" "DO_OUT" 9.11749
+cap "DI_RESET_N" "m1_20228_17701#" 0.315786
+cap "VDD" "bias_p" 514.099
+cap "bias_n" "m2_19879_17938#" 4.1979
+cap "VDD" "q_sr" 13.6255
+cap "VSS" "m2_19879_17938#" 5248.07
+cap "VSS" "DI_RESET_N" 1071.36
+cap "out_inv3" "m2_20480_17188#" 73.405
+cap "q_sr" "m1_20228_17701#" 0.0335099
+cap "m2_21621_17946#" "out_inv1" 30.1143
+cap "m1_20810_16448#" "m2_20480_17188#" 3.34823
+cap "VSS" "q_sr" 1.87454
+cap "DO_OUT" "m2_20480_17188#" 74.8275
+cap "DI_RESET_N" "v1p2" 0.579117
+cap "m2_19879_17938#" "v1p2" 5.47935
+cap "V_TRIG_B_I" "V_THRESH_I" 565.145
+cap "m1_20123_17356#" "m2_20480_17188#" 0.0108674
+cap "q_sr" "m1_21827_17833#" 0.471065
+cap "bias_2" "m2_19879_17938#" 0.401157
+cap "VDD" "V_THRESH_I" 111.977
+cap "m1_20193_17356#" "VDD" 0.0751416
+cap "out_inv1" "VDD" 26.3714
+cap "m1_22162_17833#" "m1_22353_17833#" 15.1111
+cap "v1p2" "bias_p" 357.015
+cap "m2_19879_17938#" "DO_OUT" 60.1659
+cap "DI_RESET_N" "DO_OUT" 2882.29
 cap "bias_2" "bias_p" 68.8696
-cap "sr_r" "out_inv1" 0.0720132
-cap "X_SR_LATCH/IN_R" "X_SR_LATCH/vss" 1.17802
-cap "X_SR_LATCH/OUT_Q" "X_INV3[3]/vout" 0.0162235
-cap "X_SR_LATCH/vss" "X_SR_LATCH/vdd" 3.06322
-cap "X_SR_LATCH/vss" "XMn_discharge/a_163_n1000#" 709.029
-cap "X_SR_LATCH/OUT_Q_B" "X_SR_LATCH/vss" 1.88769
-cap "X_SR_LATCH/IN_S" "XMn_discharge/a_163_n1000#" 13.4086
-cap "X_SR_LATCH/X_NOR_TOP/sky130_fd_pr__pfet_01v8_7P3MHC_2/a_n73_n164#" "X_SR_LATCH/vss" 0.0522488
-cap "X_SR_LATCH/IN_S" "X_SR_LATCH/vss" 6.86706
-cap "X_SR_LATCH/IN_R" "X_INV3[3]/vout" 0.0111264
-cap "X_SR_LATCH/vdd" "X_INV3[3]/vout" 0.328059
-cap "X_INV3[3]/vout" "XMn_discharge/a_163_n1000#" 162.455
-cap "X_SR_LATCH/OUT_Q" "X_SR_LATCH/vss" 2.90615
-cap "X_SR_LATCH/OUT_Q_B" "X_INV3[3]/vout" 0.381458
-cap "X_SR_LATCH/vss" "X_INV3[3]/vout" 97.1396
-cap "X_SR_LATCH/X_NOR_BOTTOM/sky130_fd_pr__pfet_01v8_7P3MHC_2/a_n73_n164#" "X_SR_LATCH/vss" 0.0522488
-cap "X_INV2[1]/vin" "X_SR_LATCH/vss" 1.15347
-cap "X_SR_LATCH/X_NOR_TOP/sky130_fd_pr__pfet_01v8_7P3MHC_2/a_n73_n164#" "X_INV3[3]/vout" 0.026466
-cap "X_SR_LATCH/IN_S" "X_INV3[3]/vout" 20.6436
-cap "X_SR_LATCH/vss" "X_INV3[3]/vout" 254.094
-cap "X_COMP_P_BOTTOM/out_left" "X_INV3[3]/vout" 0.538112
-cap "X_INV3[3]/vout" "X_COMP_P_BOTTOM/latch_left" 5.62135
-cap "X_INV3[3]/vout" "XMn_discharge/a_163_n1000#" 54.3583
-cap "X_COMP_P_BOTTOM/vinp" "X_INV3[3]/vout" 0.011931
-cap "X_INV2[1]/vin" "X_SR_LATCH/vss" 1.27162
-cap "X_INV3[3]/vout" "X_SR_LATCH/vdd" 1.31641
-cap "X_SR_LATCH/vss" "X_COMP_P_BOTTOM/latch_left" 0.079738
-cap "X_COMP_P_BOTTOM/out_left" "X_SR_LATCH/vss" 0.187897
-cap "X_SR_LATCH/vss" "XMn_discharge/a_163_n1000#" 979.368
-cap "X_INV3[3]/vin" "X_INV3[3]/vout" 0.0400651
-cap "X_SR_LATCH/vss" "X_COMP_P_BOTTOM/latch_right" 0.016578
-cap "X_SR_LATCH/vss" "X_SR_LATCH/vdd" 6.25341
-cap "X_SR_LATCH/IN_S" "X_INV3[3]/vout" 42.4649
-cap "X_INV3[3]/vin" "X_SR_LATCH/vss" 5.20792
-cap "X_SR_LATCH/IN_S" "X_SR_LATCH/vss" 16.4382
-cap "X_SR_LATCH/IN_S" "XMn_discharge/a_163_n1000#" 46.6099
-cap "X_COMP_P_BOTTOM/latch_right" "X_INV3[3]/vss" 2.77168
-cap "X_COMP_P_BOTTOM/vinn" "X_INV3[3]/vss" 1.54374
-cap "X_INV3[3]/vout" "X_INV3[3]/vdd" 0.363663
-cap "X_INV3[3]/vdd" "X_COMP_P_BOTTOM/latch_left" 1.07561
-cap "sr_s" "X_COMP_P_BOTTOM/vinn" 0.0166986
-cap "X_INV3[3]/vdd" "X_COMP_P_BOTTOM/out_left" 0.0242634
-cap "XMn_discharge/a_n349_n1000#" "X_INV3[3]/vout" 3.49431
-cap "sr_s" "X_INV3[3]/vss" 313.659
-cap "XMn_discharge/a_n349_n1000#" "X_COMP_P_BOTTOM/latch_left" 0.0896217
-cap "X_COMP_P_BOTTOM/latch_right" "X_COMP_P_BOTTOM/vdd" -0.507811
-cap "X_INV3[3]/vss" "X_COMP_P_BOTTOM/vdd" 12.3372
-cap "X_COMP_P_BOTTOM/latch_right" "X_INV3[3]/vout" 0.247558
-cap "sr_s" "X_COMP_P_BOTTOM/vdd" 0.613428
-cap "X_INV3[3]/vout" "X_INV3[3]/vss" 19.7119
-cap "X_INV3[3]/vss" "X_COMP_P_BOTTOM/latch_left" 35.6913
-cap "X_INV3[3]/vss" "X_COMP_P_BOTTOM/out_left" -13.7225
-cap "X_INV3[3]/vss" "X_COMP_P_BOTTOM/tail" 0.499844
-cap "sr_s" "X_INV3[3]/vout" 7.34049
-cap "sr_s" "X_COMP_P_BOTTOM/latch_left" 3.29341
-cap "X_COMP_P_BOTTOM/latch_right" "X_COMP_P_BOTTOM/vinp" -0.0461673
-cap "sr_s" "X_COMP_P_BOTTOM/out_left" 348.507
-cap "X_COMP_P_BOTTOM/latch_right" "X_INV3[3]/vdd" 3.26143
-cap "X_INV3[3]/vss" "X_COMP_P_BOTTOM/vinp" 2.06623
-cap "X_INV3[3]/vss" "X_INV3[3]/vdd" 0.205855
-cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_BOTTOM/latch_left" -7.10543e-15
-cap "sr_s" "XMn_discharge/a_163_n1000#" 0.208891
-cap "X_INV3[3]/vout" "X_INV3[3]/vin" -0.00592236
-cap "X_INV3[3]/vout" "X_COMP_P_BOTTOM/latch_left" 19.7173
-cap "X_INV3[3]/vout" "X_COMP_P_BOTTOM/out_left" 1.82264
-cap "XMn_discharge/a_n93_n1000#" "sr_s" 0.208891
-cap "sr_s" "XMn_discharge/a_n349_n1000#" 2.00381
-cap "X_INV3[0]/vss" "X_COMP_P_BOTTOM/vinn" 2.3361
-cap "X_COMP_P_BOTTOM/XMn_out_right/a_100_n500#" "X_COMP_P_BOTTOM/vdd" 0.430132
-cap "X_INV3[0]/vss" "X_COMP_P_BOTTOM/out_left" -13.6638
-cap "X_COMP_P_BOTTOM/XMn_out_right/a_100_n500#" "X_COMP_P_BOTTOM/vinp" 0.250625
-cap "X_COMP_P_BOTTOM/XMn_out_right/a_100_n500#" "X_COMP_P_BOTTOM/tail" 0.688122
-cap "X_COMP_P_BOTTOM/latch_right" "X_INV3[0]/vdd" 19.5108
-cap "X_COMP_P_BOTTOM/XMn_out_right/a_100_n500#" "X_COMP_P_BOTTOM/latch_left" 118.412
-cap "X_INV3[0]/vss" "X_COMP_P_BOTTOM/XMn_out_right/a_100_n500#" 78.2644
-cap "X_COMP_P_BOTTOM/XMn_out_right/a_100_n500#" "X_COMP_P_BOTTOM/vinn" 0.0321127
-cap "X_COMP_P_BOTTOM/latch_right" "X_COMP_P_BOTTOM/vdd" -2.77549
-cap "X_COMP_P_BOTTOM/latch_right" "X_COMP_P_BOTTOM/vinp" -0.307624
-cap "X_COMP_P_BOTTOM/latch_right" "X_COMP_P_BOTTOM/tail" -3.55271e-15
-cap "X_COMP_P_BOTTOM/XMn_out_right/a_100_n500#" "X_COMP_P_BOTTOM/out_left" 223.828
-cap "X_COMP_P_BOTTOM/latch_right" "X_COMP_P_BOTTOM/latch_left" 1.13687e-13
-cap "X_INV3[0]/vss" "X_COMP_P_BOTTOM/latch_right" 8.1549
-cap "X_COMP_P_BOTTOM/latch_left" "X_INV3[0]/vdd" 0.318577
-cap "X_INV3[0]/vss" "X_COMP_P_BOTTOM/vdd" 15.8948
-cap "X_INV3[0]/vss" "X_COMP_P_BOTTOM/vinp" 7.09774
-cap "X_INV3[0]/vss" "X_COMP_P_BOTTOM/tail" 1.88067
-cap "X_COMP_P_BOTTOM/latch_right" "X_COMP_P_BOTTOM/XMn_out_right/a_100_n500#" 0.101879
-cap "X_INV3[0]/vss" "X_COMP_P_BOTTOM/latch_left" 180.097
-cap "X_COMP_P_BOTTOM/vss" "X_COMP_P_BOTTOM/latch_right" 221.546
-cap "VDD" "X_COMP_P_BOTTOM/XMn_out_right/a_100_n500#" -0.00876179
-cap "X_COMP_P_BOTTOM/vss" "X_COMP_P_BOTTOM/vinp" 0.11029
-cap "X_COMP_P_BOTTOM/tail" "X_COMP_P_BOTTOM/XMn_out_right/a_100_n500#" 0.68934
-cap "X_COMP_P_BOTTOM/vss" "X_COMP_P_BOTTOM/vinn" 8.71259
-cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_BOTTOM/XMn_out_right/a_100_n500#" 2.80117
-cap "X_COMP_P_BOTTOM/vss" "X_COMP_P_BOTTOM/XMn_out_right/a_100_n500#" 156.231
-cap "X_COMP_P_BOTTOM/XMn_out_right/a_100_n500#" "X_COMP_P_BOTTOM/latch_left" 0.295016
-cap "VDD" "X_COMP_P_BOTTOM/latch_left" 2.47236
-cap "X_COMP_P_BOTTOM/vss" "X_COMP_P_BOTTOM/tail" 1.62231
-cap "X_COMP_P_BOTTOM/XMn_diode_left1/a_n100_n488#" "X_COMP_P_BOTTOM/XMn_out_right/a_100_n500#" 0.408141
-cap "X_COMP_P_BOTTOM/vss" "X_COMP_P_BOTTOM/vdd" 15.9684
-cap "X_COMP_P_BOTTOM/vss" "X_COMP_P_BOTTOM/latch_left" 7.91673
-cap "X_COMP_P_BOTTOM/vinp" "X_COMP_P_BOTTOM/XMn_out_right/a_100_n500#" 0.955667
-cap "X_COMP_P_BOTTOM/latch_right" "X_COMP_P_BOTTOM/XMn_out_right/a_100_n500#" 168.224
-cap "VDD" "X_COMP_P_BOTTOM/latch_right" 0.0164659
-cap "X_COMP_P_BOTTOM/vinn" "X_COMP_P_BOTTOM/XMn_out_right/a_100_n500#" 1.69991
-cap "X_COMP_P_BOTTOM/vinn" "X_COMP_P_BOTTOM/vss" 3.80244
-cap "X_COMP_P_BOTTOM/latch_left" "X_COMP_P_BOTTOM/vss" 7.34406
-cap "X_COMP_P_BOTTOM/XMn_out_right/a_100_n500#" "X_COMP_P_BOTTOM/vss" 538.645
-cap "X_COMP_P_BOTTOM/tail" "X_COMP_P_BOTTOM/vss" 0.751308
-cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_BOTTOM/vss" 7.19263
-cap "X_COMP_P_BOTTOM/latch_right" "X_COMP_P_BOTTOM/vss" 323.942
-cap "X_SR_LATCH/vdd" "XR_mid/a_n141_n1116#" 0.204814
-cap "X_SR_LATCH/X_NOR_BOTTOM/sky130_fd_pr__pfet_01v8_7P3MHC_2/a_n73_n164#" "X_SR_LATCH/IN_R" 1.52754
-cap "X_SR_LATCH/vss" "X_SR_LATCH/IN_R" 12.1831
-cap "X_SR_LATCH/X_NOR_BOTTOM/sky130_fd_pr__pfet_01v8_7P3MHC_2/a_n73_n164#" "X_SR_LATCH/OUT_Q" 4.46307
-cap "XR_mid/a_n141_n1116#" "X_SR_LATCH/IN_S" 0.160867
-cap "X_SR_LATCH/vss" "X_SR_LATCH/OUT_Q" 114.064
-cap "X_SR_LATCH/vdd" "X_INV2[1]/vin" 167.636
-cap "X_SR_LATCH/vss" "X_INV3[3]/vin" 0.0253353
-cap "X_SR_LATCH/IN_S" "X_INV2[1]/vin" 9.53256
-cap "X_SR_LATCH/vdd" "X_SR_LATCH/OUT_Q_B" 39.3911
-cap "X_SR_LATCH/OUT_Q_B" "X_SR_LATCH/IN_S" 204.049
-cap "X_SR_LATCH/vdd" "X_INV3[3]/vout" 7.03427
-cap "X_SR_LATCH/vdd" "X_SR_LATCH/X_NOR_TOP/sky130_fd_pr__pfet_01v8_7P3MHC_2/a_n73_n164#" 18.2812
-cap "XR_mid/a_n141_n1116#" "X_SR_LATCH/IN_R" 0.149086
-cap "X_INV3[3]/vout" "X_SR_LATCH/IN_S" 1.29764
-cap "XR_mid/a_n141_n1116#" "X_SR_LATCH/OUT_Q" 0.00767264
-cap "X_SR_LATCH/IN_R" "X_INV2[1]/vin" 2.15038
-cap "X_SR_LATCH/OUT_Q" "X_INV2[1]/vin" 152.52
-cap "X_SR_LATCH/OUT_Q_B" "X_SR_LATCH/IN_R" 8.08165
-cap "X_SR_LATCH/OUT_Q_B" "X_SR_LATCH/OUT_Q" -3.75508
-cap "X_INV3[3]/vin" "X_INV2[1]/vin" 18.8326
-cap "X_INV3[3]/vout" "X_SR_LATCH/IN_R" 0.15199
-cap "X_INV3[3]/vin" "X_SR_LATCH/OUT_Q_B" 0.86329
-cap "X_SR_LATCH/X_NOR_TOP/sky130_fd_pr__pfet_01v8_7P3MHC_2/a_n73_n164#" "X_SR_LATCH/IN_R" 9.49286
-cap "X_SR_LATCH/vss" "XR_mid/a_n141_684#" -0.478944
-cap "X_INV3[3]/vout" "X_SR_LATCH/OUT_Q" -0.216026
-cap "X_SR_LATCH/X_NOR_TOP/sky130_fd_pr__pfet_01v8_7P3MHC_2/a_n73_n164#" "X_SR_LATCH/OUT_Q" 0.799378
-cap "XMn_discharge/a_163_n1000#" "X_INV2[1]/vin" 0.129505
-cap "XMn_discharge/a_163_n1000#" "X_SR_LATCH/OUT_Q_B" 0.973505
-cap "X_SR_LATCH/vss" "X_INV2[1]/vin" 92.0354
-cap "X_SR_LATCH/vdd" "X_SR_LATCH/IN_S" -18.4914
-cap "X_SR_LATCH/vss" "X_SR_LATCH/OUT_Q_B" 25.7064
-cap "X_SR_LATCH/vdd" "X_SR_LATCH/IN_R" 117.329
-cap "X_SR_LATCH/vss" "X_SR_LATCH/X_NOR_TOP/sky130_fd_pr__pfet_01v8_7P3MHC_2/a_n73_n164#" 0.030915
-cap "X_SR_LATCH/IN_S" "X_SR_LATCH/IN_R" 40.2465
-cap "XR_mid/a_n141_n1116#" "X_INV2[1]/vin" 0.00355618
-cap "X_SR_LATCH/vdd" "X_SR_LATCH/OUT_Q" 258.93
-cap "X_INV3[3]/vin" "X_SR_LATCH/vdd" 0.00543548
-cap "XR_mid/a_n141_n1116#" "X_SR_LATCH/OUT_Q_B" 0.177874
-cap "X_SR_LATCH/OUT_Q" "X_SR_LATCH/IN_S" 20.7561
-cap "X_SR_LATCH/OUT_Q_B" "X_INV2[1]/vin" 2.31912
-cap "X_INV3[3]/vin" "X_SR_LATCH/IN_S" 0.0141698
-cap "X_SR_LATCH/OUT_Q" "X_SR_LATCH/IN_R" 82.6079
-cap "X_INV3[3]/vin" "X_SR_LATCH/IN_R" 1.14412
-cap "XMn_discharge/a_163_n1000#" "X_SR_LATCH/vdd" 1.162
-cap "X_SR_LATCH/OUT_Q_B" "X_INV3[3]/vout" 0.20918
-cap "X_INV3[3]/vin" "X_SR_LATCH/OUT_Q" -0.561875
-cap "X_SR_LATCH/vss" "X_SR_LATCH/vdd" 284.95
-cap "X_SR_LATCH/vdd" "X_SR_LATCH/X_NOR_BOTTOM/sky130_fd_pr__pfet_01v8_7P3MHC_2/a_n73_n164#" 18.3106
-cap "XMn_discharge/a_163_n1000#" "X_SR_LATCH/IN_R" 1.05258
-cap "X_SR_LATCH/vss" "X_SR_LATCH/IN_S" 34.3681
-cap "XMn_discharge/a_163_n1000#" "X_SR_LATCH/OUT_Q" 0.782434
-cap "X_SR_LATCH/vss" "X_SR_LATCH/vdd" 265.236
-cap "X_INV3[3]/vout" "X_INV3[3]/vin" 532.756
-cap "X_SR_LATCH/vss" "X_INV2[1]/vin" 2.34957
-cap "X_COMP_P_BOTTOM/latch_left" "X_INV3[3]/vout" 0.341575
-cap "X_INV3[3]/vout" "X_SR_LATCH/vdd" 479.835
-cap "X_SR_LATCH/IN_S" "X_INV3[3]/vin" 34.0759
-cap "X_COMP_P_BOTTOM/tail" "X_INV3[3]/vin" 0.135465
-cap "X_COMP_P_BOTTOM/latch_right" "X_INV3[3]/vin" 0.416483
-cap "X_INV3[3]/vin" "X_COMP_P_BOTTOM/vinp" 1.17113
-cap "X_SR_LATCH/IN_S" "X_SR_LATCH/vdd" 16.018
-cap "X_SR_LATCH/vss" "X_COMP_P_BOTTOM/out_left" 0.174586
-cap "X_INV2[1]/vin" "X_SR_LATCH/IN_S" 15.6564
-cap "X_COMP_P_BOTTOM/vinp" "X_SR_LATCH/vdd" 3.28424
-cap "X_INV3[3]/vout" "X_COMP_P_BOTTOM/out_left" 0.480372
-cap "X_COMP_P_BOTTOM/latch_left" "X_INV3[3]/vin" 0.238979
-cap "X_SR_LATCH/OUT_Q" "X_INV3[3]/vin" -0.00432943
-cap "X_INV2[1]/vin" "X_INV3[3]/vin" 293.311
-cap "X_INV3[3]/vin" "X_SR_LATCH/vdd" 405.138
-cap "X_SR_LATCH/vss" "X_COMP_P_BOTTOM/vdd" 1.79461
-cap "X_COMP_P_BOTTOM/vinn" "X_INV3[3]/vout" 2.88972
-cap "X_COMP_P_BOTTOM/tail" "X_INV3[3]/vin" 0.257357
-cap "X_SR_LATCH/vss" "X_INV3[3]/vout" 274.015
-cap "X_COMP_P_BOTTOM/vinp" "X_COMP_P_BOTTOM/out_left" 0.0780895
-cap "X_INV3[3]/vin" "XMn_discharge/a_163_n1000#" 0.856156
-cap "X_INV2[1]/vin" "X_SR_LATCH/vdd" 65.0087
-cap "X_SR_LATCH/vss" "X_SR_LATCH/IN_S" 37.5105
-cap "X_INV3[3]/vout" "X_COMP_P_BOTTOM/vdd" 18.3843
-cap "XR_mid/a_n141_n1116#" "X_INV3[3]/vin" 0.0306906
-cap "X_SR_LATCH/vss" "X_COMP_P_BOTTOM/latch_right" 0.0288312
-cap "X_INV3[3]/vin" "X_COMP_P_BOTTOM/out_left" 18.0419
-cap "X_SR_LATCH/vdd" "XMn_discharge/a_163_n1000#" 3.56127
-cap "X_SR_LATCH/vss" "X_COMP_P_BOTTOM/vinp" 10.9357
-cap "X_INV2[1]/vin" "XMn_discharge/a_163_n1000#" 0.441266
-cap "X_INV3[3]/vout" "X_SR_LATCH/IN_S" 25.8328
-cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_BOTTOM/vinp" 0.958237
-cap "X_COMP_P_BOTTOM/vinn" "X_INV3[3]/vin" 2.19549
-cap "X_INV2[1]/vin" "XR_mid/a_n141_n1116#" 0.0117891
-cap "X_COMP_P_BOTTOM/latch_right" "X_INV3[3]/vout" 0.284202
-cap "X_SR_LATCH/vss" "X_INV3[3]/vin" 199.143
-cap "X_SR_LATCH/vss" "X_COMP_P_BOTTOM/latch_left" 0.138675
-cap "X_COMP_P_BOTTOM/vinn" "X_SR_LATCH/vdd" 2.79769
-cap "X_COMP_P_BOTTOM/vdd" "X_INV3[3]/vin" 12.7178
-cap "X_INV3[3]/vss" "sr_s" 0.796785
-cap "X_COMP_P_BOTTOM/out_left" "X_INV3[3]/vin" 114.578
-cap "X_INV3[3]/vss" "X_COMP_P_BOTTOM/vinn" 3.05212
-cap "X_INV3[3]/vdd" "X_INV3[3]/vin" 31.0903
-cap "X_INV3[3]/vdd" "X_COMP_P_BOTTOM/latch_right" 68.1824
-cap "X_INV3[3]/vout" "X_COMP_P_BOTTOM/latch_right" 2.52612
-cap "X_INV3[3]/vout" "X_INV3[3]/vin" 53.2607
-cap "X_COMP_P_BOTTOM/tail" "X_COMP_P_BOTTOM/vinn" 4.15882
-cap "X_COMP_P_BOTTOM/out_left" "X_COMP_P_BOTTOM/vinp" 1.00318
-cap "X_INV3[3]/vdd" "X_COMP_P_BOTTOM/vinp" 369.999
-cap "X_INV3[3]/vss" "X_COMP_P_BOTTOM/latch_right" 0.00370322
-cap "X_INV3[3]/vss" "X_INV3[3]/vin" 7.84186
-cap "v1p2" "X_INV3[3]/vdd" 0.0212366
-cap "X_INV3[3]/vout" "X_COMP_P_BOTTOM/vinp" -0.550607
-cap "X_INV3[3]/vss" "X_COMP_P_BOTTOM/vinp" 0.0529881
-cap "X_INV3[3]/vin" "X_COMP_P_BOTTOM/vinn" -4.08084
+cap "bias_n" "V_THRESH_I" 201.771
+cap "li_21942_23276#" "V_TRIG_B_I" 0.338874
+cap "VSS" "V_THRESH_I" 112.265
+cap "DI_RESET_N" "m1_20123_17356#" 0.0168805
+cap "VSS" "m1_20193_17356#" 3.59464
+cap "VSS" "out_inv1" 16.6439
+cap "DO_OUT" "bias_p" 0.0749667
+cap "DI_RESET_N" "m2_20480_17188#" 34.2338
+cap "VDD" "w_20680_18281#" 70.7717
+cap "bias_n" "li_21942_23276#" 4.76801
+cap "out_inv1" "m1_21827_17833#" 15.1111
+cap "VDD" "a_24103_19828#" 189.911
+cap "VSS" "li_21942_23276#" 250.575
+cap "q_sr" "m2_20480_17188#" 7.69554
+cap "v1p2" "V_THRESH_I" 127.829
+cap "VSS" "w_20680_18281#" 2.10726
+cap "V_DISCH_O" "VDD" 4.32507
+cap "m2_21621_17946#" "m1_22162_17833#" 0.363473
+cap "DI_RESET_N" "m2_19879_17938#" 3101.53
+cap "bias_2" "V_THRESH_I" 248.286
+cap "li_21852_22844#" "V_TRIG_B_I" 5.00342
+cap "VDD" "bias_3" 28.714
+cap "m1_22353_17833#" "v0p6" 0.980198
+cap "li_21852_22844#" "VDD" 5.10596
+cap "bias_n" "bias_3" 8.75035
+cap "out_inv1" "DO_OUT" 0.260231
+cap "VSS" "V_DISCH_O" 2733.93
+cap "m2_19879_17938#" "q_sr" 1.81883
+cap "DI_RESET_N" "q_sr" 5.4042
+cap "m1_22162_17833#" "V_TRIG_B_I" 5.11722
+cap "bias_1" "VDD" 374.89
+cap "VSS" "bias_3" 18.2009
+cap "li_21852_22844#" "bias_n" 243.59
+cap "m1_20123_17356#" "m1_20193_17356#" 3.22936
+cap "li_21852_22844#" "VSS" 27.8118
+cap "m1_22162_17833#" "VDD" 18.5589
+cap "m1_20193_17356#" "m2_20480_17188#" 0.0621471
+cap "out_inv1" "m2_20480_17188#" 0.401123
+cap "VSS" "m1_22162_17833#" 11.1304
+cap "V_DISCH_O" "out_inv3" 3.554
+cap "m2_19879_17938#" "V_THRESH_I" 61.6355
+cap "bias_2" "bias_3" 8.75035
+cap "DI_RESET_N" "m1_20193_17356#" 0.00809992
+cap "m1_22162_17833#" "m1_21827_17833#" 13.7248
+cap "V_DISCH_O" "m1_20810_16448#" 102.755
+cap "li_21852_22844#" "bias_2" 3.44956
+cap "V_THRESH_I" "bias_p" 69.4601
+cap "DO_OUT" "bias_3" 0.412465
+cap "VDD" "m1_22353_17833#" 95.42
+cap "V_TRIG_B_I" "v0p6" 108.15
+cap "bias_2" "bias_1" 8.75035
+cap "out_inv1" "q_sr" 2.46479
+cap "m2_19879_17938#" "li_21942_23276#" 56.3667
+cap "VDD" "v0p6" 297.897
+cap "V_DISCH_O" "m2_20480_17188#" 197.53
+cap "bias_1" "DO_OUT" 0.412465
+cap "VSS" "m1_22353_17833#" 63.172
+cap "m1_22162_17833#" "DO_OUT" 32.4715
+cap "VDD" "qb_sr" 0.11342
+cap "VSS" "v0p6" 9.4242
+cap "m2_19879_17938#" "bias_3" 11.4702
+cap "m1_22162_17833#" "m2_20480_17188#" 0.299496
+cap "DI_RESET_N" "bias_3" 0.600397
+cap "VSS" "qb_sr" 5.30848
+cap "m2_21621_17946#" "VDD" 54.6567
+cap "li_21852_22844#" "m2_19879_17938#" 1.62947
+cap "out_inv3" "m1_22353_17833#" 27.5331
+cap "v1p2" "v0p6" 145.213
+cap "m2_19879_17938#" "bias_1" 5.39289
+cap "DI_RESET_N" "bias_1" 0.600397
+cap "out_inv3" "v0p6" 2.39604
+cap "DO_OUT" "m1_22353_17833#" 57.4374
+cap "li_21942_23276#" "V_THRESH_I" 6.08687
+cap "X_SR_LATCH/nand_0/OUT" "X_INV3[3]/vss" 0.671129
+cap "XMn_discharge/a_221_n1088#" "X_SR_LATCH/nand_0/OUT" 0.0111001
+cap "X_INV3[3]/vss" "X_SR_LATCH/IN_R" 0.766583
+cap "X_INV3[3]/vss" "X_INV3[3]/vdd" 2.78045
+cap "XMn_discharge/a_221_n1088#" "X_INV3[3]/vdd" 0.327259
+cap "X_SR_LATCH/IN_S" "X_INV3[3]/vss" 2.12544
+cap "XMn_discharge/a_221_n1088#" "X_SR_LATCH/IN_S" 6.51864
+cap "XMn_discharge/a_163_n1000#" "X_INV3[3]/vss" 168.188
+cap "XMn_discharge/a_163_n1000#" "XMn_discharge/a_221_n1088#" 55.6772
+cap "XMn_discharge/a_221_n1088#" "X_SR_LATCH/X_NOR_TOP/sky130_fd_pr__pfet_01v8_7P3MHC_1/a_14_n164#" 0.0150914
+cap "X_SR_LATCH/X_NOR_TOP/sky130_fd_pr__pfet_01v8_7P3MHC_1/a_14_n164#" "X_INV3[3]/vss" 0.0646356
+cap "X_SR_LATCH/IN_R_N" "X_INV3[3]/vss" 1.32235
+cap "X_INV3[3]/vss" "X_SR_LATCH/inv_0/vout" 1.66443
+cap "XMn_discharge/a_221_n1088#" "X_SR_LATCH/X_NOR_BOTTOM/IN_A" 0.41994
+cap "X_SR_LATCH/X_NOR_BOTTOM/IN_A" "X_INV3[3]/vss" 1.01442
+cap "XMn_discharge/a_221_n1088#" "X_INV3[3]/vss" 82.0759
+cap "XMn_discharge/a_163_n1000#" "X_SR_LATCH/IN_S" 2.1014
+cap "XMn_discharge/a_221_n1088#" "X_INV1/vin" 0.0161891
+cap "X_INV1/vin" "X_INV3[3]/vss" 1.20364
+cap "X_SR_LATCH/nand_0/drain_mna" "X_INV3[3]/vss" 0.522431
+cap "X_SR_LATCH/IN_S" "X_INV3[3]/vss" 14.6846
+cap "X_SR_LATCH/X_NOR_BOTTOM/sky130_fd_pr__pfet_01v8_7P3MHC_1/a_14_n164#" "X_INV3[3]/vss" 0.0646356
+cap "X_INV2[1]/vin" "X_INV3[3]/vss" 2.42509
+cap "X_INV3[3]/vout" "XMn_discharge/a_163_n1000#" 105.29
+cap "X_SR_LATCH/IN_S" "X_INV3[3]/vout" 46.0835
+cap "X_SR_LATCH/X_NOR_BOTTOM/IN_A" "X_INV3[3]/vss" 0.868427
+cap "X_INV1/vin" "X_INV3[3]/vss" 1.73613
+cap "X_SR_LATCH/IN_S" "XMn_discharge/a_163_n1000#" 42.5827
+cap "X_INV3[3]/vout" "X_INV3[3]/vss" 135.532
+cap "X_INV3[3]/vin" "X_INV3[3]/vss" 2.46171
+cap "X_INV3[3]/vss" "X_INV3[3]/vdd" 4.98784
+cap "X_SR_LATCH/nand_0/OUT" "X_INV3[3]/vss" 0.867683
+cap "XMn_discharge/a_163_n1000#" "X_INV3[3]/vss" 1018.34
+cap "X_COMP_P_BOTTOM/XMn_out_left/a_n100_n588#" "m2_20480_17188#" 0.629317
+cap "X_INV3[3]/vss" "X_COMP_P_BOTTOM/latch_left" 9.61429
+cap "m2_20480_17188#" "X_COMP_P_BOTTOM/latch_left" 2.6641
+cap "X_INV3[3]/vss" "XMn_discharge/a_163_n1000#" 501.872
+cap "X_INV3[3]/vout" "X_COMP_P_BOTTOM/vinp" 0.011931
+cap "m2_20480_17188#" "XMn_discharge/a_163_n1000#" 17.756
+cap "X_INV3[3]/vdd" "X_INV3[3]/vout" 1.68008
+cap "X_INV3[3]/vss" "X_COMP_P_BOTTOM/vdd" 6.9654
+cap "m2_20480_17188#" "X_COMP_P_BOTTOM/vdd" 0.613428
+cap "X_INV3[3]/vout" "X_INV3[3]/vin" 0.0341427
+cap "X_INV3[3]/vout" "X_COMP_P_BOTTOM/latch_right" 0.247558
+cap "m2_20480_17188#" "X_INV3[3]/vss" 155.745
+cap "X_INV3[3]/vout" "X_COMP_P_BOTTOM/latch_left" 25.3386
+cap "X_INV3[3]/vdd" "X_COMP_P_BOTTOM/latch_left" 0.432867
+cap "X_COMP_P_BOTTOM/out_left" "X_INV3[3]/vss" -2.89346
+cap "X_INV3[3]/vout" "XMn_discharge/a_163_n1000#" 59.3406
+cap "X_COMP_P_BOTTOM/out_left" "m2_20480_17188#" 234.413
+cap "X_INV3[3]/vss" "X_COMP_P_BOTTOM/vinn" 0.889631
+cap "m2_20480_17188#" "X_COMP_P_BOTTOM/vinn" 0.0166986
+cap "X_INV3[3]/vss" "X_COMP_P_BOTTOM/vinp" 0.1315
+cap "X_INV3[3]/vss" "X_INV3[3]/vdd" 3.37903
+cap "X_INV3[3]/vss" "X_INV3[3]/vout" 158.318
+cap "X_COMP_P_BOTTOM/latch_left" "XMn_discharge/a_163_n1000#" 0.0896217
+cap "m2_20480_17188#" "X_INV3[3]/vout" 17.842
+cap "X_INV3[3]/vss" "X_INV3[3]/vin" 2.74621
+cap "X_INV3[3]/vss" "X_COMP_P_BOTTOM/latch_right" 0.016578
+cap "X_COMP_P_BOTTOM/out_left" "X_INV3[3]/vdd" 0.0242634
+cap "X_COMP_P_BOTTOM/out_left" "X_INV3[3]/vout" 2.36075
+cap "X_COMP_P_BOTTOM/latch_right" "X_COMP_P_BOTTOM/vdd" -2.97521
+cap "X_COMP_P_BOTTOM/latch_left" "X_COMP_P_BOTTOM/XMn_out_right/a_100_n500#" 42.1646
+cap "X_INV3[3]/vss" "X_COMP_P_BOTTOM/XMn_out_right/a_100_n500#" 212.494
+cap "X_COMP_P_BOTTOM/latch_right" "X_INV3[3]/vss" 7.03387
+cap "X_COMP_P_BOTTOM/latch_left" "X_INV3[3]/vdd" 0.859018
+cap "X_INV3[3]/vss" "X_COMP_P_BOTTOM/vinp" 5.6739
+cap "X_INV3[3]/vss" "X_COMP_P_BOTTOM/tail" 1.50014
+cap "X_COMP_P_BOTTOM/latch_right" "X_INV3[3]/vdd" 18.6422
+cap "X_INV3[3]/vss" "X_COMP_P_BOTTOM/vdd" 13.6123
+cap "X_COMP_P_BOTTOM/out_left" "X_INV3[3]/vss" -16.7033
+cap "X_COMP_P_BOTTOM/latch_right" "X_COMP_P_BOTTOM/vinp" -0.313568
+cap "X_COMP_P_BOTTOM/latch_right" "X_COMP_P_BOTTOM/tail" -8.88178e-16
+cap "X_COMP_P_BOTTOM/latch_left" "X_INV3[3]/vss" 105.487
+cap "X_INV3[3]/vss" "X_COMP_P_BOTTOM/vinn" 1.85553
+cap "X_COMP_P_BOTTOM/out_left" "X_COMP_P_BOTTOM/XMn_out_right/a_100_n500#" 237.389
+cap "X_COMP_P_BOTTOM/XMn_out_right/a_100_n500#" "X_COMP_P_BOTTOM/vinn" 1.73203
+cap "X_COMP_P_BOTTOM/XMn_out_right/a_100_n500#" "X_COMP_P_BOTTOM/out_left" 100.533
+cap "X_COMP_P_BOTTOM/XMn_out_right/a_100_n500#" "X_COMP_P_BOTTOM/vss" 90.7656
+cap "X_COMP_P_BOTTOM/XMn_out_right/a_100_n500#" "VDD" -0.00876179
+cap "X_COMP_P_BOTTOM/XMn_out_right/a_100_n500#" "X_COMP_P_BOTTOM/vinp" 0.0177157
+cap "X_COMP_P_BOTTOM/latch_left" "X_COMP_P_BOTTOM/vss" 104.251
+cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_BOTTOM/vss" 15.8399
+cap "X_COMP_P_BOTTOM/vinp" "X_COMP_P_BOTTOM/latch_right" -0.0402229
+cap "X_COMP_P_BOTTOM/XMn_out_right/a_100_n500#" "X_COMP_P_BOTTOM/tail" 1.37746
+cap "X_COMP_P_BOTTOM/vss" "X_COMP_P_BOTTOM/out_left" -7.60168
+cap "X_COMP_P_BOTTOM/vinn" "X_COMP_P_BOTTOM/vss" 5.18115
+cap "X_COMP_P_BOTTOM/latch_left" "VDD" 1.68754
+cap "X_COMP_P_BOTTOM/XMn_out_right/a_100_n500#" "X_COMP_P_BOTTOM/latch_right" 168.197
+cap "X_COMP_P_BOTTOM/XMn_out_right/a_100_n500#" "X_COMP_P_BOTTOM/vinp" 1.18858
+cap "X_COMP_P_BOTTOM/tail" "X_COMP_P_BOTTOM/vss" 1.55796
+cap "X_COMP_P_BOTTOM/latch_left" "X_COMP_P_BOTTOM/latch_right" 2.27374e-13
+cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_BOTTOM/latch_right" -0.308085
+cap "X_COMP_P_BOTTOM/vss" "X_COMP_P_BOTTOM/latch_right" 96.422
+cap "X_COMP_P_BOTTOM/vss" "X_COMP_P_BOTTOM/vinp" 3.46885
+cap "X_COMP_P_BOTTOM/XMn_out_right/a_100_n500#" "X_COMP_P_BOTTOM/latch_left" 76.9503
+cap "X_COMP_P_BOTTOM/latch_right" "VDD" 4.1465
+cap "X_COMP_P_BOTTOM/XMn_out_right/a_100_n500#" "X_COMP_P_BOTTOM/vdd" 3.23131
+cap "X_COMP_P_BOTTOM/XMn_out_right/a_100_n500#" "X_COMP_P_BOTTOM/vss" 192.164
+cap "X_COMP_P_BOTTOM/vinn" "X_COMP_P_BOTTOM/vss" 8.3304
+cap "X_COMP_P_BOTTOM/latch_right" "X_COMP_P_BOTTOM/XMn_out_right/a_100_n500#" 0.128858
+cap "X_COMP_P_BOTTOM/latch_left" "VDD" 0.887126
+cap "X_COMP_P_BOTTOM/latch_right" "X_COMP_P_BOTTOM/vss" 153.268
+cap "X_COMP_P_BOTTOM/latch_left" "X_COMP_P_BOTTOM/vss" 8.38484
+cap "X_COMP_P_BOTTOM/tail" "X_COMP_P_BOTTOM/vss" 1.68661
+cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_BOTTOM/vss" 14.3235
+cap "X_COMP_P_BOTTOM/tail" "X_COMP_P_BOTTOM/XMn_out_right/a_n158_n500#" 0.00942091
+cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_BOTTOM/XMn_out_right/a_n158_n500#" 0.651831
+cap "X_COMP_P_BOTTOM/XMn_out_right/a_n100_n588#" "X_COMP_P_BOTTOM/XMn_out_right/a_n158_n500#" 10.8443
+cap "X_COMP_P_BOTTOM/vinn" "X_COMP_P_BOTTOM/XMn_out_right/a_n158_n500#" 0.138159
+cap "X_COMP_P_BOTTOM/latch_right" "X_COMP_P_BOTTOM/XMn_out_right/a_n158_n500#" 288.847
+cap "X_COMP_P_BOTTOM/XMn_out_right/a_100_n500#" "X_COMP_P_BOTTOM/XMn_out_right/a_n158_n500#" 442.228
+cap "X_COMP_P_BOTTOM/XMn_cs_right1/a_100_n500#" "X_COMP_P_BOTTOM/XMn_out_right/a_n158_n500#" 3.39225
+cap "X_INV3[3]/vdd" "X_SR_LATCH/IN_R" 37.285
+cap "DO_OUT" "X_SR_LATCH/IN_R_N" 0.0418395
+cap "X_SR_LATCH/nand_0/OUT" "X_INV3[3]/vin" 0.264465
+cap "X_SR_LATCH/nand_0/OUT" "X_SR_LATCH/IN_S" 126.235
+cap "X_SR_LATCH/IN_R_N" "X_SR_LATCH/IN_S" 31.6868
+cap "X_INV3[3]/vss" "X_INV1/vin" 3.09145
+cap "X_SR_LATCH/X_NOR_TOP/sky130_fd_pr__pfet_01v8_7P3MHC_1/a_14_n164#" "X_INV3[3]/vdd" 11.9232
+cap "XR_mid/a_n141_n1116#" "X_SR_LATCH/IN_S" 0.161356
+cap "X_INV3[3]/vss" "X_SR_LATCH/nand_0/drain_mna" 0.00495324
+cap "DO_OUT" "X_SR_LATCH/IN_R" 0.00800876
+cap "XMn_discharge/a_221_n1088#" "X_INV3[3]/vdd" 1.54713
+cap "X_SR_LATCH/X_NOR_BOTTOM/IN_A" "X_INV2[1]/vin" 0.127672
+cap "X_INV3[3]/vss" "X_SR_LATCH/X_NOR_BOTTOM/IN_A" 5.14105
+cap "X_INV2[1]/vin" "X_SR_LATCH/inv_0/vout" 0.0104527
+cap "X_SR_LATCH/inv_0/vout" "X_INV1/vin" -0.0212194
+cap "X_SR_LATCH/X_NOR_BOTTOM/IN_A" "X_INV1/vin" 0.0617326
+cap "X_SR_LATCH/nand_0/OUT" "X_SR_LATCH/IN_R_N" -16.081
+cap "X_INV3[3]/vss" "X_SR_LATCH/inv_0/vout" 24.5522
+cap "X_SR_LATCH/IN_R" "X_SR_LATCH/IN_S" 52.9954
+cap "X_INV2[1]/vin" "X_INV3[3]/vdd" 0.0106662
+cap "X_INV3[3]/vdd" "X_INV1/vin" 45.571
+cap "X_INV3[3]/vss" "X_INV3[3]/vdd" 250.99
+cap "X_SR_LATCH/X_NOR_BOTTOM/IN_A" "X_SR_LATCH/nand_0/drain_mna" -0.172743
+cap "X_SR_LATCH/nand_0/OUT" "X_INV3[3]/vout" 0.0460168
+cap "X_SR_LATCH/X_NOR_TOP/sky130_fd_pr__pfet_01v8_7P3MHC_1/a_14_n164#" "X_SR_LATCH/IN_S" 3.55271e-15
+cap "X_SR_LATCH/X_NOR_BOTTOM/IN_A" "X_SR_LATCH/inv_0/vout" -0.081546
+cap "X_SR_LATCH/nand_0/drain_mna" "X_INV3[3]/vdd" 1.11213
+cap "X_SR_LATCH/IN_R" "X_SR_LATCH/IN_R_N" 56.6685
+cap "X_SR_LATCH/X_NOR_BOTTOM/IN_A" "X_INV3[3]/vdd" 23.3708
+cap "X_INV3[3]/vdd" "X_SR_LATCH/inv_0/vout" 22.9355
+cap "XMn_discharge/a_221_n1088#" "X_SR_LATCH/IN_S" 1.29415
+cap "DO_OUT" "X_INV1/vin" 0.0149354
+cap "X_INV3[3]/vss" "DO_OUT" 0.0104083
+cap "X_INV1/vin" "X_SR_LATCH/IN_S" 8.65825
+cap "X_INV2[1]/vin" "X_SR_LATCH/IN_S" 0.672191
+cap "X_INV3[3]/vss" "X_SR_LATCH/IN_S" 32.7196
+cap "X_SR_LATCH/nand_0/drain_mna" "X_SR_LATCH/IN_S" 5.04778
+cap "DO_OUT" "X_SR_LATCH/inv_0/vout" 0.0442931
+cap "X_SR_LATCH/IN_R_N" "X_INV1/vin" -3.85938
+cap "X_SR_LATCH/inv_0/vout" "X_SR_LATCH/IN_S" 2.2676
+cap "X_SR_LATCH/X_NOR_BOTTOM/IN_A" "X_INV3[3]/vin" 0.0747428
+cap "X_SR_LATCH/nand_0/OUT" "X_INV2[1]/vin" 0.462313
+cap "X_INV3[3]/vin" "X_SR_LATCH/inv_0/vout" 0.002941
+cap "X_INV3[3]/vss" "X_SR_LATCH/nand_0/OUT" 3.49056
+cap "DO_OUT" "X_INV3[3]/vdd" 0.178805
+cap "X_SR_LATCH/X_NOR_BOTTOM/IN_A" "X_SR_LATCH/IN_S" 71.1378
+cap "X_SR_LATCH/nand_0/OUT" "X_INV1/vin" 4.06912
+cap "X_INV3[3]/vss" "X_SR_LATCH/IN_R_N" 44.3392
+cap "X_INV3[3]/vdd" "X_SR_LATCH/IN_S" 123.467
+cap "X_SR_LATCH/X_NOR_BOTTOM/sky130_fd_pr__pfet_01v8_7P3MHC_1/a_14_n164#" "X_SR_LATCH/IN_S" 2.22045e-16
+cap "X_SR_LATCH/nand_0/OUT" "X_SR_LATCH/nand_0/drain_mna" -0.191016
+cap "X_SR_LATCH/nand_0/drain_mna" "X_SR_LATCH/IN_R_N" 0.004499
+cap "X_SR_LATCH/inv_0/vout" "X_SR_LATCH/IN_R_N" 2.6657
+cap "X_SR_LATCH/IN_R" "X_INV1/vin" -0.161923
+cap "XMn_discharge/a_163_n1000#" "X_INV3[3]/vdd" 0.1863
+cap "X_SR_LATCH/X_NOR_BOTTOM/IN_A" "X_SR_LATCH/nand_0/OUT" -0.148751
+cap "X_SR_LATCH/X_NOR_BOTTOM/IN_A" "X_SR_LATCH/IN_R_N" -7.45867
+cap "X_INV2[1]/vin" "X_SR_LATCH/IN_R" 0.000381911
+cap "X_SR_LATCH/nand_0/OUT" "X_SR_LATCH/inv_0/vout" -0.188271
+cap "X_INV3[3]/vss" "X_SR_LATCH/IN_R" 43.2151
+cap "X_SR_LATCH/nand_0/OUT" "X_INV3[3]/vdd" 34.4965
+cap "X_INV3[3]/vdd" "X_SR_LATCH/IN_R_N" 12.7609
+cap "X_INV3[3]/vdd" "XR_mid/a_n141_n1116#" 0.170259
+cap "DO_OUT" "X_SR_LATCH/IN_S" 0.631625
+cap "X_SR_LATCH/X_NOR_BOTTOM/IN_A" "X_INV3[3]/vout" 0.015231
+cap "X_INV3[3]/vin" "X_SR_LATCH/IN_S" 0.250253
+cap "X_SR_LATCH/IN_R" "X_SR_LATCH/inv_0/vout" 5.00514
+cap "X_SR_LATCH/X_NOR_BOTTOM/IN_A" "X_INV3[3]/vout" 0.19126
+cap "X_INV3[3]/vdd" "X_INV3[3]/vin" 334.12
+cap "X_INV2[1]/vin" "XMn_discharge/a_163_n1000#" 0.57077
+cap "X_INV3[3]/vss" "X_SR_LATCH/IN_S" 33.5092
+cap "X_SR_LATCH/IN_S" "X_INV2[1]/vin" 25.1834
+cap "X_INV1/vin" "X_INV3[3]/vin" -0.578822
+cap "X_INV3[3]/vdd" "X_INV1/vin" 216.049
+cap "X_INV3[3]/vin" "X_COMP_P_BOTTOM/vinn" -2.55861
+cap "X_INV3[3]/vss" "X_INV2[1]/vin" 99.835
+cap "X_SR_LATCH/nand_0/OUT" "X_INV3[3]/vin" 0.497118
+cap "X_INV3[3]/vdd" "X_SR_LATCH/nand_0/OUT" 25.6238
+cap "X_SR_LATCH/X_NOR_BOTTOM/IN_A" "XMn_discharge/a_163_n1000#" 0.970743
+cap "X_INV3[3]/vss" "X_SR_LATCH/nand_0/drain_mna" 0.00269595
+cap "X_INV3[3]/vss" "X_SR_LATCH/IN_R_N" 0.0248846
+cap "X_INV1/vin" "X_SR_LATCH/nand_0/OUT" 20.3991
+cap "X_SR_LATCH/IN_S" "X_SR_LATCH/X_NOR_BOTTOM/IN_A" 51.7863
+cap "X_INV3[3]/vdd" "X_INV3[3]/vout" 112.286
+cap "X_INV3[3]/vin" "X_INV3[3]/vout" 120.328
+cap "XR_mid/a_n141_n1116#" "X_INV2[1]/vin" 0.0153453
+cap "X_SR_LATCH/X_NOR_BOTTOM/IN_A" "X_INV2[1]/vin" 2.15732
+cap "X_SR_LATCH/inv_0/vout" "X_INV1/vin" 0.268456
+cap "X_INV3[3]/vss" "X_SR_LATCH/X_NOR_BOTTOM/IN_A" 12.6357
+cap "X_INV1/vin" "X_INV3[3]/vout" -0.215602
+cap "X_SR_LATCH/nand_0/OUT" "X_INV3[3]/vout" 0.103522
+cap "XR_mid/a_n141_n1116#" "X_SR_LATCH/X_NOR_BOTTOM/IN_A" 0.178358
+cap "X_INV3[3]/vdd" "XMn_discharge/a_163_n1000#" 3.51017
+cap "X_SR_LATCH/IN_S" "X_INV3[3]/vin" 19.0888
+cap "X_INV3[3]/vin" "XMn_discharge/a_163_n1000#" 0.285385
+cap "X_INV1/vin" "X_SR_LATCH/X_NOR_TOP/sky130_fd_pr__pfet_01v8_7P3MHC_1/a_14_n164#" 1.24367
+cap "X_INV3[3]/vdd" "X_SR_LATCH/IN_S" -3.96385
+cap "X_INV3[3]/vss" "X_COMP_P_BOTTOM/vinp" -0.478944
+cap "X_INV1/vin" "XMn_discharge/a_163_n1000#" 0.782434
+cap "X_INV2[1]/vin" "X_INV3[3]/vin" 312.147
+cap "X_INV3[3]/vss" "X_INV3[3]/vdd" 233.645
+cap "X_INV3[3]/vss" "X_INV3[3]/vin" 192.184
+cap "X_INV1/vin" "X_SR_LATCH/IN_S" 20.0065
+cap "X_INV3[3]/vdd" "X_INV2[1]/vin" 232.781
+cap "X_SR_LATCH/IN_S" "X_SR_LATCH/nand_0/OUT" 0.562796
+cap "X_SR_LATCH/nand_0/OUT" "XMn_discharge/a_163_n1000#" 1.04957
+cap "X_INV1/vin" "X_INV2[1]/vin" 152.072
+cap "X_INV3[3]/vdd" "X_SR_LATCH/IN_R_N" 0.00820162
+cap "X_INV3[3]/vss" "X_INV1/vin" 81.8926
+cap "X_INV3[3]/vdd" "XR_mid/a_n141_n1116#" 0.0439267
+cap "X_INV1/vin" "X_SR_LATCH/nand_0/drain_mna" 0.000252305
+cap "XR_mid/a_n141_n1116#" "X_INV3[3]/vin" 0.00767264
+cap "X_SR_LATCH/nand_0/OUT" "X_INV2[1]/vin" 0.94271
+cap "X_SR_LATCH/X_NOR_BOTTOM/IN_A" "X_INV3[3]/vin" 0.77848
+cap "X_SR_LATCH/IN_R_N" "X_INV1/vin" -2.41514
+cap "X_INV3[3]/vss" "X_SR_LATCH/nand_0/OUT" 2.64255
+cap "X_INV3[3]/vdd" "X_SR_LATCH/X_NOR_BOTTOM/IN_A" 16.6089
+cap "X_SR_LATCH/IN_S" "X_INV3[3]/vout" 6.91157
+cap "XR_mid/a_n141_n1116#" "X_INV1/vin" 0.00767264
+cap "X_INV1/vin" "X_SR_LATCH/X_NOR_BOTTOM/IN_A" -3.36333
+cap "X_INV3[3]/vss" "X_SR_LATCH/inv_0/vout" 0.0211011
+cap "X_INV3[3]/vss" "X_INV3[3]/vout" 49.7947
+cap "X_INV3[3]/vdd" "X_SR_LATCH/X_NOR_BOTTOM/sky130_fd_pr__pfet_01v8_7P3MHC_1/a_14_n164#" 11.9523
+cap "XR_mid/a_n141_n1116#" "X_SR_LATCH/nand_0/OUT" 0.151369
+cap "X_SR_LATCH/IN_R" "X_INV1/vin" -0.278696
+cap "X_INV1/vin" "X_SR_LATCH/X_NOR_BOTTOM/sky130_fd_pr__pfet_01v8_7P3MHC_1/a_14_n164#" 3.77917
 cap "X_COMP_P_BOTTOM/out_left" "X_INV2[1]/vin" 0.174812
-cap "X_INV3[3]/vdd" "X_INV2[1]/vin" 0.138996
-cap "X_COMP_P_BOTTOM/tail" "X_COMP_P_BOTTOM/vinp" -31.5884
-cap "sr_s" "X_COMP_P_BOTTOM/vinp" -0.00268699
-cap "X_INV3[3]/vdd" "X_COMP_P_BOTTOM/latch_left" 246.111
-cap "X_COMP_P_BOTTOM/vinp" "X_COMP_P_BOTTOM/vinn" 0.742032
-cap "X_INV3[3]/vout" "X_COMP_P_BOTTOM/latch_left" 3.71413
-cap "X_COMP_P_BOTTOM/out_left" "X_INV3[3]/vdd" 214.558
-cap "X_INV3[3]/vout" "X_COMP_P_BOTTOM/out_left" 11.0997
-cap "X_INV3[3]/vout" "X_INV3[3]/vdd" 36.2166
-cap "X_INV3[3]/vss" "X_COMP_P_BOTTOM/latch_left" 0.217094
-cap "X_INV3[3]/vin" "X_COMP_P_BOTTOM/vinp" 0.267025
-cap "X_INV3[3]/vss" "X_COMP_P_BOTTOM/out_left" 4.80961
-cap "X_INV3[3]/vss" "X_INV3[3]/vdd" 14.6058
-cap "X_INV3[3]/vout" "X_INV3[3]/vss" 9.12048
-cap "X_INV3[3]/vdd" "X_COMP_P_BOTTOM/tail" 173.954
-cap "X_COMP_P_BOTTOM/out_left" "sr_s" 2.34375
-cap "X_INV3[3]/vdd" "sr_s" 0.964329
+cap "X_INV2[1]/vin" "X_INV3[3]/vdd" 0.138996
+cap "X_INV3[3]/vss" "X_COMP_P_BOTTOM/latch_left" 0.355769
+cap "m2_20480_17188#" "X_COMP_P_BOTTOM/vinp" -0.00268699
 cap "X_COMP_P_BOTTOM/out_left" "X_COMP_P_BOTTOM/vinn" 109.628
-cap "X_INV3[3]/vdd" "X_COMP_P_BOTTOM/vinn" 180.739
-cap "X_INV3[3]/vin" "X_INV2[1]/vin" 0.422932
-cap "X_INV3[3]/vout" "sr_s" 1.7818
-cap "X_INV3[3]/vout" "X_COMP_P_BOTTOM/vinn" 72.9076
-cap "X_COMP_P_BOTTOM/tail" "X_COMP_P_BOTTOM/XMn_out_right/a_100_n500#" 0.686813
-cap "X_COMP_P_BOTTOM/tail" "X_INV3[0]/vss" -0.0240322
-cap "X_INV3[0]/vdd" "X_INV3[0]/vss" 8.35037
-cap "X_COMP_P_BOTTOM/XMn_out_right/a_100_n500#" "X_COMP_P_BOTTOM/vinp" 0.180375
-cap "X_INV3[0]/vdd" "X_COMP_P_BOTTOM/out_left" 33.0294
-cap "X_INV3[0]/vdd" "X_COMP_P_BOTTOM/latch_right" 77.4282
-cap "X_INV3[0]/vss" "X_COMP_P_BOTTOM/vinp" -0.00255561
-cap "X_INV3[0]/vdd" "X_COMP_P_BOTTOM/tail" 1022.36
-cap "X_INV3[0]/vdd" "X_COMP_P_BOTTOM/vinn" 95.5391
-cap "X_COMP_P_BOTTOM/tail" "X_COMP_P_BOTTOM/vinp" -208.533
-cap "X_INV3[0]/vdd" "X_COMP_P_BOTTOM/vbias_p" 35.2435
-cap "X_INV3[0]/vdd" "X_COMP_P_BOTTOM/latch_left" 166.658
-cap "X_INV3[0]/vdd" "X_COMP_P_BOTTOM/vinp" 633.355
-cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_BOTTOM/latch_left" 25.7301
+cap "X_INV3[3]/vin" "m2_20480_17188#" 14.9871
+cap "X_INV3[3]/vout" "X_COMP_P_BOTTOM/vinn" 75.7974
+cap "X_INV3[3]/vin" "X_COMP_P_BOTTOM/tail" 0.135465
+cap "X_INV2[1]/vin" "X_INV3[3]/vin" 0.420009
+cap "X_COMP_P_BOTTOM/vinn" "X_INV3[3]/vdd" 146.591
+cap "X_COMP_P_BOTTOM/out_left" "X_INV3[3]/vout" 11.5801
+cap "X_COMP_P_BOTTOM/out_left" "X_INV3[3]/vdd" 203.496
+cap "X_COMP_P_BOTTOM/vinn" "X_COMP_P_BOTTOM/vinp" 0.742032
+cap "X_INV3[3]/vin" "X_COMP_P_BOTTOM/vinn" 0.673251
+cap "X_INV3[3]/vout" "X_INV3[3]/vdd" 427.637
+cap "XR_bot/a_n141_n1116#" "X_COMP_P_BOTTOM/vinp" -0.478944
+cap "X_INV3[3]/vout" "X_COMP_P_BOTTOM/latch_right" 1.60102
+cap "X_COMP_P_BOTTOM/out_left" "X_COMP_P_BOTTOM/vinp" 1.08127
+cap "X_INV3[3]/vout" "X_COMP_P_BOTTOM/vinp" -0.550607
+cap "X_COMP_P_BOTTOM/out_left" "X_INV3[3]/vin" 132.62
+cap "X_INV3[3]/vss" "m2_20480_17188#" 22.5287
+cap "X_INV3[3]/vin" "X_INV3[3]/vout" 465.689
+cap "X_INV3[3]/vdd" "X_COMP_P_BOTTOM/vinp" 180.931
+cap "X_INV3[3]/vin" "X_INV3[3]/vdd" 114.825
+cap "X_COMP_P_BOTTOM/tail" "X_COMP_P_BOTTOM/vinn" 2.36563
+cap "X_INV3[3]/vout" "X_COMP_P_BOTTOM/latch_left" 2.43531
+cap "X_COMP_P_BOTTOM/latch_left" "X_INV3[3]/vdd" 3.78018
+cap "X_INV3[3]/vin" "X_COMP_P_BOTTOM/latch_right" 0.416483
+cap "X_INV3[3]/vin" "X_COMP_P_BOTTOM/vinp" 1.43816
+cap "X_INV3[3]/vss" "X_COMP_P_BOTTOM/vinn" 4.15165
+cap "XMn_discharge/a_163_n1000#" "X_INV3[3]/vdd" 1.02679
+cap "X_INV3[3]/vin" "X_COMP_P_BOTTOM/latch_left" 0.238979
+cap "X_INV3[3]/vdd" "XR_mid/a_n141_n1116#" 0.0212366
+cap "X_COMP_P_BOTTOM/out_left" "X_INV3[3]/vss" 5.05477
+cap "X_INV3[3]/vss" "X_INV3[3]/vout" 233.341
+cap "X_INV3[3]/vss" "X_INV3[3]/vdd" 156.504
+cap "X_INV3[3]/vin" "XMn_discharge/a_163_n1000#" 0.57077
+cap "X_INV3[3]/vin" "XR_mid/a_n141_n1116#" 0.0230179
+cap "X_COMP_P_BOTTOM/out_left" "m2_20480_17188#" 2.34375
+cap "X_INV3[3]/vss" "X_COMP_P_BOTTOM/latch_right" 0.0325344
+cap "X_INV3[3]/vss" "X_COMP_P_BOTTOM/vinp" 11.4486
+cap "X_INV3[3]/vout" "m2_20480_17188#" 20.703
+cap "X_INV3[3]/vss" "X_INV3[3]/vin" 15.9404
+cap "m2_20480_17188#" "X_INV3[3]/vdd" 10.7886
+cap "X_INV3[3]/vin" "X_COMP_P_BOTTOM/tail" 0.257357
+cap "X_COMP_P_BOTTOM/vinp" "X_INV3[3]/vss" 0.0191194
+cap "X_COMP_P_BOTTOM/vinn" "X_COMP_P_BOTTOM/tail" 1.79319
+cap "X_COMP_P_BOTTOM/vinp" "X_INV3[3]/vdd" 670.85
+cap "X_INV3[3]/vdd" "X_COMP_P_BOTTOM/tail" 698.278
+cap "X_INV3[3]/vdd" "X_COMP_P_BOTTOM/latch_right" 118.831
+cap "X_INV3[3]/vout" "X_COMP_P_BOTTOM/latch_left" 1.6204
+cap "X_COMP_P_BOTTOM/out_left" "X_INV3[3]/vdd" 38.4341
+cap "X_INV3[3]/vdd" "X_COMP_P_BOTTOM/vinn" 88.4062
+cap "X_INV3[3]/vdd" "X_INV3[3]/vss" 8.68815
+cap "X_COMP_P_BOTTOM/vinp" "X_COMP_P_BOTTOM/tail" -209.273
+cap "X_INV3[3]/vdd" "X_COMP_P_BOTTOM/vbias_p" 20.8405
+cap "X_INV3[3]/vout" "X_COMP_P_BOTTOM/latch_right" 1.2093
+cap "X_INV3[3]/vdd" "X_COMP_P_BOTTOM/latch_left" 342.868
+cap "X_COMP_P_BOTTOM/vinp" "X_COMP_P_BOTTOM/vdd" 26.908
+cap "X_COMP_P_BOTTOM/vinp" "X_COMP_P_BOTTOM/vdd" 313.291
+cap "X_COMP_P_BOTTOM/XMn_out_right/a_100_n500#" "X_COMP_P_BOTTOM/vdd" 0.143921
+cap "X_COMP_P_BOTTOM/vinp" "X_COMP_P_BOTTOM/XMn_out_right/a_100_n500#" 1.11833
+cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_BOTTOM/latch_right" 75.3583
+cap "X_COMP_P_BOTTOM/tail" "X_COMP_P_BOTTOM/vdd" 938.322
+cap "X_COMP_P_BOTTOM/vinp" "X_COMP_P_BOTTOM/tail" -30.848
+cap "X_COMP_P_TOP/vbias_p" "X_COMP_P_BOTTOM/vinn" 0.00890249
+cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_BOTTOM/out_left" 0.221921
+cap "X_COMP_P_BOTTOM/XMn_out_right/a_100_n500#" "X_COMP_P_BOTTOM/tail" 1.37552
+cap "X_COMP_P_BOTTOM/vss" "X_COMP_P_BOTTOM/vdd" 8.59967
+cap "X_COMP_P_BOTTOM/vinp" "X_COMP_P_BOTTOM/vss" 0.0305507
 cap "X_COMP_P_BOTTOM/vinn" "X_COMP_P_TOP/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" 0.00500626
-cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n158_n800#" 6.53742
-cap "X_COMP_P_BOTTOM/tail" "X_COMP_P_BOTTOM/vdd" 501.771
-cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_BOTTOM/vinn" 78.0381
-cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_BOTTOM/XMp_tail/a_n100_n1097#" 25.5889
-cap "X_COMP_P_BOTTOM/vinp" "X_COMP_P_BOTTOM/vdd" 231.004
-cap "X_COMP_P_BOTTOM/vinn" "X_COMP_P_BOTTOM/vdd" 3.24927
-cap "X_COMP_P_BOTTOM/tail" "X_COMP_P_BOTTOM/vss" -0.0241587
-cap "X_COMP_P_BOTTOM/vinn" "X_COMP_P_TOP/vbias_p" 0.00890249
+cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_BOTTOM/vinn" 105.91
+cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_BOTTOM/XMp_tail/a_n100_n1097#" 39.9918
+cap "X_COMP_P_BOTTOM/XMn_out_right/a_100_n500#" "X_COMP_P_BOTTOM/vinn" 1.45548
+cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_BOTTOM/XMp_out/a_n158_n800#" 0.672694
+cap "X_COMP_P_BOTTOM/vinp" "X_COMP_P_BOTTOM/vdd" 8.69261
+cap "X_COMP_P_BOTTOM/vss" "X_COMP_P_BOTTOM/tail" -0.0481909
+cap "X_COMP_P_BOTTOM/latch_left" "X_COMP_P_BOTTOM/vdd" 83.8789
+cap "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" "X_COMP_P_BOTTOM/vdd" 11.9729
 cap "X_COMP_P_BOTTOM/vss" "X_COMP_P_BOTTOM/vinn" 0.0876251
-cap "X_COMP_P_BOTTOM/vss" "X_COMP_P_BOTTOM/vdd" 5.69253
-cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_BOTTOM/latch_right" 82.8188
-cap "X_COMP_P_BOTTOM/vinp" "X_COMP_P_BOTTOM/vss" 0.0331064
-cap "X_COMP_P_BOTTOM/tail" "X_COMP_P_BOTTOM/vout" 0.688705
-cap "X_COMP_P_BOTTOM/vinn" "X_COMP_P_BOTTOM/vout" 1.45548
-cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_BOTTOM/vout" 0.883055
-cap "X_COMP_P_BOTTOM/vinp" "X_COMP_P_BOTTOM/vout" 0.937951
-cap "X_COMP_P_BOTTOM/vinn" "X_COMP_P_BOTTOM/vss" 310.472
-cap "X_COMP_P_BOTTOM/vss" "X_COMP_P_BOTTOM/vdd" 246.044
-cap "X_COMP_P_BOTTOM/vss" "X_COMP_P_BOTTOM/vinp" 144.368
-cap "X_COMP_P_BOTTOM/vss" "X_COMP_P_BOTTOM/vout" 434.919
-cap "X_COMP_P_BOTTOM/vinn" "X_COMP_P_BOTTOM/vdd" 0.062785
-cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_BOTTOM/vinp" 0.707543
-cap "X_COMP_P_BOTTOM/latch_left" "X_COMP_P_BOTTOM/vss" 47.3111
-cap "X_COMP_P_BOTTOM/latch_right" "X_COMP_P_BOTTOM/vss" 271.821
-cap "X_COMP_P_BOTTOM/tail" "X_COMP_P_BOTTOM/vss" 38.9678
-cap "X_COMP_P_BOTTOM/latch_right" "X_COMP_P_BOTTOM/vdd" 0.895095
-cap "XR_mid/a_n141_n1116#" "XR_mid/a_n141_684#" -3.75126
-cap "X_SR_LATCH/vss" "X_INV3[3]/vin" 104.767
-cap "X_INV3[3]/vin" "X_SR_LATCH/vdd" 2.46968
-cap "X_SR_LATCH/vss" "X_SR_LATCH/vdd" 160.678
-cap "X_SR_LATCH/IN_R" "X_SR_LATCH/vss" 30.9107
-cap "X_INV3[3]/vin" "XR_mid/a_n141_n1116#" 0.916782
-cap "X_SR_LATCH/vss" "XR_mid/a_n141_n1116#" 90.5256
-cap "XR_mid/a_n141_n1116#" "X_SR_LATCH/vdd" 14.2092
-cap "X_SR_LATCH/IN_R" "XR_mid/a_n141_n1116#" 2.14253
-cap "X_SR_LATCH/vss" "XR_mid/a_n141_684#" -3.56891
-cap "X_SR_LATCH/vdd" "X_SR_LATCH/vss" 147.04
-cap "XR_mid/a_n141_n1116#" "X_SR_LATCH/vdd" 39.9355
-cap "X_COMP_P_BOTTOM/vinn" "X_SR_LATCH/vdd" 10.2495
-cap "X_COMP_P_BOTTOM/vinp" "X_INV3[3]/vin" 1.85931
-cap "X_SR_LATCH/vss" "X_INV3[3]/vin" 47.5414
-cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_BOTTOM/vinp" 20.4222
-cap "X_SR_LATCH/vdd" "X_INV3[3]/vin" 4.29315
-cap "X_COMP_P_BOTTOM/vbias_p" "X_SR_LATCH/vss" 0.359138
-cap "X_COMP_P_BOTTOM/vdd" "X_SR_LATCH/vdd" 8.07792
-cap "X_SR_LATCH/vdd" "X_COMP_P_BOTTOM/vbias_p" 0.0203014
-cap "X_SR_LATCH/vdd" "XR_bias_2/a_n141_684#" 1.73472e-18
-cap "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" "X_COMP_P_BOTTOM/vinp" 1.32752
-cap "X_SR_LATCH/vss" "X_COMP_P_BOTTOM/vinp" 51.1167
-cap "XR_mid/a_n141_n1116#" "X_COMP_P_BOTTOM/vinp" 16.839
-cap "X_COMP_P_BOTTOM/vinn" "X_COMP_P_BOTTOM/vinp" 3.50772
-cap "XR_mid/a_n141_n1116#" "X_SR_LATCH/vss" 165.395
-cap "X_COMP_P_BOTTOM/vinn" "X_SR_LATCH/vss" 36.9444
-cap "X_SR_LATCH/vdd" "X_COMP_P_BOTTOM/vinp" 5.45715
-cap "X_INV3[3]/vdd" "X_COMP_P_BOTTOM/vinn" 14.6863
-cap "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" "X_INV3[3]/vss" 0.14324
-cap "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" "X_COMP_P_BOTTOM/tail" -0.373212
-cap "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" "X_INV3[3]/vdd" 108.376
-cap "X_COMP_P_BOTTOM/vinn" "X_COMP_P_BOTTOM/vinp" 0.239148
-cap "X_INV3[3]/vin" "X_INV3[3]/vss" 4.75275
-cap "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" "X_COMP_P_BOTTOM/vinp" 6.76194
-cap "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" "X_COMP_P_BOTTOM/latch_right" -0.095278
-cap "X_INV3[3]/vin" "X_INV3[3]/vdd" 3.65097
-cap "X_INV3[3]/vss" "X_INV3[3]/vdd" 47.6093
-cap "X_INV3[3]/vin" "X_COMP_P_BOTTOM/vinp" -7.10543e-15
-cap "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" "X_COMP_P_BOTTOM/vbias_p" 0.29477
-cap "X_INV3[3]/vdd" "X_COMP_P_BOTTOM/vinp" 12.0653
-cap "X_COMP_P_TOP/vinp" "X_INV3[3]/vdd" -0.395613
-cap "X_INV3[3]/vdd" "X_COMP_P_BOTTOM/vbias_p" 837.821
-cap "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" "v1p2" 8.7238
-cap "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" "X_COMP_P_TOP/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" 2.07712
-cap "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" "X_COMP_P_BOTTOM/latch_left" -0.208364
-cap "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" "X_COMP_P_BOTTOM/vinn" 193.09
+cap "X_COMP_P_BOTTOM/vss" "X_COMP_P_BOTTOM/vdd" 1.06239
+cap "X_COMP_P_BOTTOM/latch_left" "X_COMP_P_BOTTOM/vdd" 7.97249
+cap "X_COMP_P_BOTTOM/vout" "X_COMP_P_BOTTOM/vdd" 0.0664407
+cap "X_COMP_P_BOTTOM/vss" "X_COMP_P_BOTTOM/latch_left" 1.83526
+cap "X_COMP_P_BOTTOM/tail" "X_COMP_P_BOTTOM/vdd" 61.4878
+cap "X_COMP_P_BOTTOM/vinp" "X_COMP_P_BOTTOM/vdd" 37.9269
+cap "X_COMP_P_BOTTOM/vinn" "X_COMP_P_BOTTOM/vdd" 12.2369
+cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_BOTTOM/latch_right" 35.1354
+cap "X_COMP_P_BOTTOM/XMn_out_right/a_n158_n500#" "X_COMP_P_BOTTOM/XMn_cs_right1/a_100_n500#" 45.4759
+cap "X_COMP_P_BOTTOM/XMn_out_right/a_n158_n500#" "X_COMP_P_BOTTOM/vout" 434.919
+cap "X_COMP_P_BOTTOM/XMn_out_right/a_n158_n500#" "X_COMP_P_BOTTOM/tail" 9.62453
+cap "X_COMP_P_BOTTOM/tail" "X_COMP_P_BOTTOM/XMn_out_right/a_n158_n500#" 6.97385
+cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_BOTTOM/vinn" 0.062785
+cap "X_COMP_P_BOTTOM/XMn_out_right/a_n158_n500#" "X_COMP_P_BOTTOM/vinn" 310.472
+cap "X_COMP_P_BOTTOM/vinp" "X_COMP_P_BOTTOM/vdd" 0.707543
+cap "X_COMP_P_BOTTOM/XMn_out_right/a_n158_n500#" "X_COMP_P_BOTTOM/vinp" 144.368
+cap "X_COMP_P_BOTTOM/XMn_out_right/a_n158_n500#" "X_COMP_P_BOTTOM/latch_right" 271.821
+cap "X_COMP_P_BOTTOM/tail" "X_COMP_P_BOTTOM/XMn_out_right/a_n158_n500#" 8.91568
+cap "X_COMP_P_BOTTOM/XMn_out_right/a_n158_n500#" "X_COMP_P_BOTTOM/tail" 13.4537
+cap "X_COMP_P_BOTTOM/XMn_out_right/a_n158_n500#" "X_COMP_P_BOTTOM/vdd" 246.044
+cap "X_SR_LATCH/IN_R_N" "X_INV3[3]/vss" 0.535628
+cap "XR_mid/a_n141_n1116#" "X_INV3[3]/vss" 28.2827
+cap "XR_mid/a_n141_n1116#" "X_SR_LATCH/IN_R_N" 0.0120131
+cap "X_SR_LATCH/IN_R" "X_INV3[3]/vss" 3.82355
+cap "XR_mid/a_n141_n1116#" "X_SR_LATCH/IN_R" 0.281959
+cap "DO_OUT" "X_INV3[3]/vss" 71.0867
+cap "XR_mid/a_n141_n1116#" "DO_OUT" 0.657444
+cap "X_INV3[3]/vdd" "X_INV3[3]/vss" 75.3654
+cap "X_INV3[3]/vdd" "XR_mid/a_n141_n1116#" 9.51365
+cap "X_INV3[3]/vdd" "DO_OUT" 1.42157
+cap "X_INV3[3]/vdd" "X_INV3[3]/vin" 2.19785
+cap "XR_mid/a_n141_n1116#" "X_COMP_P_BOTTOM/vinp" -3.75126
+cap "X_INV3[3]/vdd" "XR_mid/a_n141_n1116#" 7.61171
+cap "XR_mid/a_n141_n1116#" "X_INV3[3]/vin" 0.277063
+cap "X_INV3[3]/vss" "X_COMP_P_BOTTOM/vinp" -3.56891
+cap "X_INV3[3]/vss" "X_INV3[3]/vdd" 143.74
+cap "X_INV3[3]/vss" "X_INV3[3]/vin" 52.5541
+cap "X_INV3[3]/vss" "XR_mid/a_n141_n1116#" 135.942
+cap "X_INV3[3]/vin" "X_INV3[3]/vdd" 6.82783
+cap "X_COMP_P_BOTTOM/vinp" "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" 8.34957
+cap "X_COMP_P_BOTTOM/vinp" "X_COMP_P_BOTTOM/vinn" 3.74687
+cap "X_INV3[3]/vdd" "XR_bias_2/a_n141_684#" 1.73472e-18
+cap "XR_mid/a_n141_n1116#" "X_INV3[3]/vss" 100.69
+cap "X_COMP_P_BOTTOM/vinp" "X_INV3[3]/vdd" 36.2165
+cap "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" "X_INV3[3]/vss" 0.11616
+cap "X_COMP_P_BOTTOM/vinn" "X_INV3[3]/vss" 41.062
 cap "X_COMP_P_BOTTOM/vbias_p" "X_COMP_P_BOTTOM/vinp" -0.00122704
-cap "X_INV3[3]/vss" "v1p2" 0.559168
-cap "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" "X_COMP_P_TOP/tail" 0.000173522
-cap "X_COMP_P_TOP/vinp" "X_COMP_P_BOTTOM/vbias_p" -0.000710427
-cap "X_INV3[3]/vdd" "v1p2" 42.5158
-cap "X_INV3[3]/vss" "X_COMP_P_BOTTOM/vinn" 1.76133
-cap "X_COMP_P_BOTTOM/tail" "X_COMP_P_BOTTOM/latch_right" -1.12449
-cap "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" "X_COMP_P_TOP/tail" 0.00165333
-cap "X_COMP_P_BOTTOM/tail" "X_COMP_P_BOTTOM/vinn" -4.64634
-cap "X_COMP_P_BOTTOM/tail" "X_COMP_P_BOTTOM/latch_left" -1.94184
-cap "X_COMP_P_BOTTOM/tail" "X_INV3[0]/vdd" 258.728
-cap "X_COMP_P_BOTTOM/vinp" "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" -0.930193
-cap "X_COMP_P_BOTTOM/vbias_p" "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" -49.5869
-cap "X_COMP_P_TOP/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" 1.60361
-cap "X_COMP_P_BOTTOM/vbias_p" "X_COMP_P_BOTTOM/latch_right" -0.302316
-cap "X_COMP_P_BOTTOM/vbias_p" "X_COMP_P_BOTTOM/vinn" -1.19161
-cap "X_COMP_P_BOTTOM/vinp" "X_INV3[0]/vdd" 51.1286
-cap "X_COMP_P_BOTTOM/vbias_p" "X_COMP_P_BOTTOM/latch_left" -0.470742
-cap "X_COMP_P_BOTTOM/vbias_p" "X_INV3[0]/vdd" 1471.19
-cap "X_COMP_P_BOTTOM/vbias_p" "X_COMP_P_BOTTOM/tail" -1.02077
-cap "X_COMP_P_BOTTOM/tail" "X_COMP_P_BOTTOM/vinp" -2.68743
-cap "X_COMP_P_BOTTOM/latch_right" "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" -0.34074
+cap "XR_mid/a_n141_n1116#" "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" 8.26335
+cap "X_COMP_P_TOP/vinp" "X_INV3[3]/vdd" -0.395613
+cap "X_COMP_P_BOTTOM/vinp" "X_INV3[3]/vin" 1.85931
+cap "X_COMP_P_BOTTOM/vbias_p" "X_COMP_P_TOP/vinp" -0.000710427
+cap "X_INV3[3]/vss" "X_INV3[3]/vdd" 168.819
+cap "X_COMP_P_BOTTOM/vinp" "XR_bot/a_n141_n1116#" -3.56891
+cap "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" "X_COMP_P_BOTTOM/vinn" 193.619
+cap "X_COMP_P_BOTTOM/vbias_p" "X_INV3[3]/vss" 1.56228
+cap "XR_mid/a_n141_n1116#" "X_INV3[3]/vdd" 79.9103
+cap "X_INV3[3]/vin" "X_INV3[3]/vss" 27.58
+cap "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" "X_INV3[3]/vdd" 22.7981
+cap "X_COMP_P_BOTTOM/vinn" "X_INV3[3]/vdd" 24.9358
+cap "X_COMP_P_BOTTOM/vinp" "X_INV3[3]/vss" 54.6856
+cap "XR_mid/a_n141_n1116#" "X_COMP_P_BOTTOM/vinp" 16.839
+cap "X_COMP_P_BOTTOM/vbias_p" "X_INV3[3]/vdd" 318.338
+cap "X_COMP_P_BOTTOM/vinn" "X_COMP_P_BOTTOM/vbias_p" -1.19161
 cap "X_COMP_P_BOTTOM/vbias_p" "X_COMP_P_BOTTOM/vinp" -0.736253
-cap "X_COMP_P_BOTTOM/vinn" "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" -2.03184
+cap "X_COMP_P_BOTTOM/vbias_p" "X_INV3[3]/vdd" 1092.4
+cap "X_COMP_P_BOTTOM/tail" "X_COMP_P_BOTTOM/vinn" -2.9227
+cap "X_COMP_P_BOTTOM/tail" "X_COMP_P_BOTTOM/vinp" -1.69048
+cap "X_COMP_P_BOTTOM/tail" "X_INV3[3]/vdd" 9.5078
+cap "X_COMP_P_TOP/tail" "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" 0.000173522
+cap "X_COMP_P_BOTTOM/latch_left" "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" -0.953529
+cap "X_COMP_P_BOTTOM/latch_right" "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" -0.436018
+cap "v1p2" "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" 0.460454
+cap "X_COMP_P_BOTTOM/latch_left" "X_COMP_P_BOTTOM/vbias_p" -0.470742
+cap "X_COMP_P_BOTTOM/vbias_p" "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" -0.21097
+cap "X_COMP_P_BOTTOM/tail" "X_COMP_P_BOTTOM/latch_left" -1.22148
+cap "X_INV3[3]/vdd" "X_COMP_P_BOTTOM/vinp" 3.52011
+cap "X_COMP_P_BOTTOM/vbias_p" "X_COMP_P_BOTTOM/latch_right" -0.302316
+cap "X_INV3[3]/vss" "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" 0.14324
+cap "X_COMP_P_BOTTOM/tail" "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" -1.70792
+cap "X_COMP_P_BOTTOM/tail" "X_COMP_P_BOTTOM/latch_right" -0.707341
+cap "X_COMP_P_TOP/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" 2.07712
+cap "X_COMP_P_BOTTOM/tail" "X_COMP_P_BOTTOM/vbias_p" -1.02077
 cap "X_COMP_P_BOTTOM/vbias_p" "X_COMP_P_TOP/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" 0.105808
-cap "X_COMP_P_BOTTOM/latch_left" "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" -0.745166
-cap "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" "X_INV3[0]/vdd" 579.269
-cap "X_COMP_P_BOTTOM/XMp_out/a_n158_n800#" "X_INV3[0]/vdd" 1.08987
-cap "X_COMP_P_BOTTOM/tail" "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" -1.33471
-cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_BOTTOM/latch_left" 0.0435013
-cap "X_COMP_P_BOTTOM/vout" "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n158_n800#" -1.13687e-13
-cap "X_COMP_P_BOTTOM/vout" "X_COMP_P_TOP/vout" 17.5079
-cap "X_COMP_P_TOP/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n158_n800#" 2.55886
-cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_BOTTOM/latch_right" 0.0656717
-cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_BOTTOM/vinn" 0.151982
-cap "X_COMP_P_BOTTOM/vout" "X_COMP_P_BOTTOM/XMp_tail/a_n100_n1097#" -49.8154
-cap "X_COMP_P_BOTTOM/vout" "X_COMP_P_BOTTOM/vdd" 387.256
-cap "X_COMP_P_TOP/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" "X_COMP_P_BOTTOM/XMp_tail/a_n100_n1097#" 0.626859
-cap "X_COMP_P_TOP/XMp_tail/a_n100_n1097#" "X_COMP_P_BOTTOM/vout" 0.0222561
-cap "X_COMP_P_TOP/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" "X_COMP_P_BOTTOM/vdd" 0.236262
-cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_TOP/vout" 0.0152238
-cap "X_COMP_P_BOTTOM/XMp_tail/a_n100_n1097#" "X_COMP_P_TOP/vout" 0.0638767
-cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n158_n800#" 254.925
-cap "X_COMP_P_BOTTOM/tail" "X_COMP_P_BOTTOM/vdd" 250.918
-cap "X_COMP_P_TOP/XMp_tail/a_n100_n1097#" "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n158_n800#" 0.0882949
-cap "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n158_n800#" "X_COMP_P_TOP/vinp" 0.00500626
-cap "X_COMP_P_TOP/tail" "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n158_n800#" 0.00109648
-cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_BOTTOM/XMp_tail/a_n100_n1097#" 478.87
-cap "X_COMP_P_TOP/XMp_tail/a_n100_n1097#" "X_COMP_P_BOTTOM/XMp_tail/a_n100_n1097#" 28.2048
-cap "X_COMP_P_TOP/XMp_tail/a_n100_n1097#" "X_COMP_P_BOTTOM/vdd" 83.2037
-cap "VSS" "X_COMP_P_BOTTOM/tail" 0.29786
-cap "X_COMP_P_TOP/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" "X_COMP_P_BOTTOM/vout" 8.32019
-cap "VSS" "X_COMP_P_BOTTOM/vdd" -0.33876
-cap "X_COMP_P_BOTTOM/vinp" "X_COMP_P_BOTTOM/vdd" 50.3286
+cap "X_COMP_P_BOTTOM/vinn" "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" -2.56089
+cap "X_COMP_P_BOTTOM/vinp" "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" -1.19029
+cap "X_INV3[3]/vdd" "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" 201.24
+cap "X_COMP_P_BOTTOM/latch_right" "X_COMP_P_BOTTOM/tail" -0.41715
+cap "X_COMP_P_BOTTOM/tail" "X_COMP_P_BOTTOM/latch_left" -0.72036
+cap "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" "X_COMP_P_TOP/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" 4.16246
+cap "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" "X_COMP_P_TOP/tail" 0.00274982
+cap "X_COMP_P_BOTTOM/XMp_out/a_n158_n800#" "X_COMP_P_TOP/XMp_tail/a_n100_n1097#" 0.0222561
+cap "X_COMP_P_BOTTOM/tail" "X_COMP_P_BOTTOM/vdd" 406.115
+cap "X_COMP_P_TOP/XMp_tail/a_n100_n1097#" "X_COMP_P_BOTTOM/vdd" 370.892
+cap "X_COMP_P_BOTTOM/XMp_tail/a_n100_n1097#" "X_COMP_P_TOP/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" 0.57417
+cap "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" "X_COMP_P_BOTTOM/XMp_tail/a_n100_n1097#" -49.3097
+cap "X_COMP_P_BOTTOM/XMp_out/a_n158_n800#" "X_COMP_P_TOP/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" 0.0151483
+cap "X_COMP_P_BOTTOM/vinp" "X_COMP_P_BOTTOM/vdd" 73.1904
+cap "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" "X_COMP_P_BOTTOM/XMp_out/a_n158_n800#" 2.84217e-14
+cap "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" "X_COMP_P_BOTTOM/vdd" 634.162
+cap "X_COMP_P_BOTTOM/tail" "X_COMP_P_BOTTOM/vinn" -1.72364
+cap "X_COMP_P_BOTTOM/vinp" "X_COMP_P_BOTTOM/tail" -0.99695
+cap "X_COMP_P_BOTTOM/XMp_tail/a_n100_n1097#" "X_COMP_P_TOP/XMp_out/a_n158_n800#" 0.0107582
+cap "X_COMP_P_BOTTOM/XMp_out/a_n158_n800#" "X_COMP_P_BOTTOM/XMp_tail/a_n100_n1097#" -25.7927
+cap "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" "X_COMP_P_TOP/XMp_tail/a_n100_n1097#" 0.316811
+cap "X_COMP_P_BOTTOM/XMp_tail/a_n100_n1097#" "X_COMP_P_BOTTOM/vdd" 942.636
+cap "X_COMP_P_BOTTOM/XMp_out/a_n158_n800#" "X_COMP_P_TOP/XMp_out/a_n158_n800#" 0.00173568
+cap "X_COMP_P_BOTTOM/XMp_tail/a_n100_n1097#" "X_COMP_P_TOP/XMp_tail/a_n100_n1097#" 189.604
+cap "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" "X_COMP_P_TOP/vinp" 0.00500626
+cap "X_COMP_P_BOTTOM/XMp_out/a_n158_n800#" "X_COMP_P_BOTTOM/vdd" 223.888
+cap "VSS" "X_COMP_P_BOTTOM/vout" 0.357461
+cap "X_COMP_P_TOP/vout" "X_COMP_P_BOTTOM/vdd" 0.0152238
+cap "X_COMP_P_BOTTOM/XMp_tail/a_n100_n1097#" "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n158_n800#" -2.77556e-17
+cap "X_COMP_P_TOP/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" "X_COMP_P_BOTTOM/XMp_tail/a_n100_n1097#" 0.0526895
+cap "X_COMP_P_BOTTOM/tail" "X_COMP_P_BOTTOM/vdd" 94.0235
+cap "VSS" "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n158_n800#" 0.00415577
+cap "X_COMP_P_BOTTOM/vout" "X_COMP_P_TOP/vout" 39.4181
+cap "X_COMP_P_BOTTOM/vout" "X_COMP_P_BOTTOM/vdd" 176.185
+cap "X_COMP_P_BOTTOM/latch_right" "X_COMP_P_BOTTOM/vdd" 0.0656717
 cap "VSS" "X_COMP_P_BOTTOM/XMp_tail/a_n100_n1097#" 1.17817
-cap "X_COMP_P_BOTTOM/vout" "X_COMP_P_BOTTOM/vdd" 21.8684
-cap "X_COMP_P_BOTTOM/vout" "X_COMP_P_TOP/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" 7.80215
-cap "X_COMP_P_BOTTOM/vdd" "VSS" 478.813
-cap "X_COMP_P_BOTTOM/vinp" "VSS" 32.1978
+cap "X_COMP_P_TOP/vout" "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n158_n800#" 0.00129972
 cap "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n158_n800#" "X_COMP_P_TOP/tail" 0.000173522
-cap "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n158_n800#" "X_COMP_P_TOP/vout" 0.00129972
-cap "VSS" "X_COMP_P_BOTTOM/tail" 0.269329
-cap "X_COMP_P_BOTTOM/vout" "X_COMP_P_TOP/vout" 37.8592
-cap "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n158_n800#" "X_COMP_P_BOTTOM/vout" 2.84217e-14
+cap "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n158_n800#" "X_COMP_P_BOTTOM/vdd" 89.5741
+cap "X_COMP_P_BOTTOM/vinp" "X_COMP_P_BOTTOM/vdd" 26.4747
+cap "X_COMP_P_TOP/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" "X_COMP_P_BOTTOM/vdd" 0.236262
+cap "X_COMP_P_BOTTOM/latch_left" "X_COMP_P_BOTTOM/vdd" 0.0435013
+cap "X_COMP_P_TOP/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" "X_COMP_P_BOTTOM/vout" 16.1072
+cap "X_COMP_P_BOTTOM/XMp_tail/a_n100_n1097#" "X_COMP_P_TOP/vout" 0.0531185
+cap "X_COMP_P_TOP/XMp_tail/a_n100_n1097#" "X_COMP_P_BOTTOM/XMp_tail/a_n100_n1097#" 0.505972
+cap "X_COMP_P_BOTTOM/XMp_tail/a_n100_n1097#" "X_COMP_P_BOTTOM/vdd" 146.843
+cap "X_COMP_P_BOTTOM/vinn" "X_COMP_P_BOTTOM/vdd" 0.151982
+cap "VSS" "X_COMP_P_BOTTOM/vdd" -0.33876
+cap "VSS" "X_COMP_P_BOTTOM/tail" 0.29786
+cap "X_COMP_P_TOP/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n158_n800#" 2.07797
+cap "X_COMP_P_BOTTOM/vout" "X_COMP_P_BOTTOM/XMp_tail/a_n100_n1097#" -24.0227
+cap "VSS" "X_COMP_P_BOTTOM/vinp" 32.1978
+cap "X_COMP_P_BOTTOM/vdd" "VSS" 478.813
+cap "X_COMP_P_BOTTOM/XMp_out/a_n100_n897#" "VSS" 30.1567
+cap "X_COMP_P_BOTTOM/XMp_tail/a_n158_n1000#" "VSS" 0.269329
+cap "X_COMP_P_BOTTOM/vout" "VSS" 466.21
+cap "X_COMP_P_BOTTOM/vout" "X_COMP_P_BOTTOM/vdd" 10.1416
 cap "X_COMP_P_BOTTOM/XMp_tail/a_n100_n1097#" "VSS" 3.59373
-cap "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n158_n800#" "VSS" 30.1609
-cap "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n158_n800#" "X_COMP_P_BOTTOM/vdd" 5.20496
-cap "X_COMP_P_BOTTOM/vout" "VSS" 466.567
-cap "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n158_n800#" "X_COMP_P_TOP/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" 2.07797
-cap "XR_bias_1/a_n141_684#" "XR_mid/a_n141_n1116#" 1.30871
-cap "XMp_bias/a_100_n1000#" "XR_mid/a_n141_n1116#" 5.3043
-cap "XR_bot/a_n141_n1116#" "XR_bias_1/a_n141_684#" 0.0617504
-cap "XR_bias_1/a_n141_684#" "XR_bias_2/a_n141_n1116#" 38.6556
-cap "XMp_bias/a_100_n1000#" "XR_bias_2/a_n141_n1116#" -10.5604
-cap "XR_bias_1/a_n141_684#" "DO_OUT" 0.0118942
-cap "sr_r" "XR_bias_1/a_n141_684#" 30.8723
-cap "XMp_bias/a_100_n1000#" "sr_r" 44.4068
-cap "XMp_bias/a_100_n1000#" "XR_bias_1/a_n141_684#" 300.222
-cap "XR_bias_4/a_n271_n1246#" "XR_bias_2/a_n141_n1116#" 63.5077
-cap "sr_r" "XR_bias_4/a_n271_n1246#" 22.8909
-cap "XR_bias_1/a_n141_684#" "XR_bias_4/a_n271_n1246#" 8.6398
-cap "XMp_bias/a_100_n1000#" "XR_bias_4/a_n271_n1246#" 369.551
-cap "XR_bias_1/a_n141_684#" "XR_bias_4/a_n141_n1116#" 0.0609474
-cap "X_COMP_P_TOP/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" "X_COMP_P_BOTTOM/vbias_p" 1.35182
-cap "XMp_bias/a_100_n1000#" "X_COMP_P_TOP/vinn" 1.66853
-cap "X_COMP_P_BOTTOM/vdd" "XMp_bias/a_100_n1000#" 27.7305
-cap "V_TRIG_B_I" "XMp_bias/a_100_n1000#" 32.8937
-cap "X_COMP_P_BOTTOM/vinp" "XMp_bias/a_100_n1000#" 0.0138543
-cap "X_COMP_P_BOTTOM/vbias_p" "XR_bias_2/a_n141_n1116#" -4.04785
-cap "XR_bias_4/a_n271_n1246#" "XMp_bias/a_100_n1000#" 433.133
-cap "XR_bias_4/a_n271_n1246#" "XR_bias_3/a_n141_684#" 12.0031
-cap "XR_bias_4/a_n271_n1246#" "V_TRIG_B_I" 20.5988
-cap "XR_bias_4/a_n271_n1246#" "X_COMP_P_TOP/vinp" 59.5144
-cap "X_COMP_P_TOP/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" "XMp_bias/a_100_n1000#" 2.75956
-cap "X_COMP_P_BOTTOM/vbias_p" "X_COMP_P_TOP/vinn" 0.473464
-cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_BOTTOM/vbias_p" 25.7713
-cap "X_COMP_P_BOTTOM/vbias_p" "XR_bias_3/a_n141_684#" 0.392954
-cap "XMp_bias/a_100_n1000#" "X_COMP_P_BOTTOM/vbias_p" 334.028
-cap "V_TRIG_B_I" "X_COMP_P_BOTTOM/vbias_p" 26.0693
-cap "X_COMP_P_BOTTOM/vinp" "X_COMP_P_BOTTOM/vbias_p" 0.394916
-cap "XR_bias_4/a_n271_n1246#" "X_COMP_P_BOTTOM/vbias_p" 63.6904
-cap "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" "X_COMP_P_TOP/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" 2.07928
-cap "X_COMP_P_TOP/tail" "V_TRIG_B_I" 0.00762317
-cap "X_COMP_P_TOP/tail" "X_COMP_P_BOTTOM/vdd" 64.3094
-cap "V_TRIG_B_I" "X_COMP_P_BOTTOM/vdd" 5.66473
-cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_BOTTOM/vbias_p" 85.6024
-cap "X_COMP_P_BOTTOM/tail" "X_COMP_P_TOP/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" 0.000173522
-cap "X_COMP_P_TOP/vinn" "X_COMP_P_TOP/tail" 0.0677885
+cap "X_COMP_P_BOTTOM/vout" "X_COMP_P_TOP/vout" 15.9472
+cap "XR_bias_1/a_n141_684#" "XMp_bias/a_100_n1000#" 8.05873
+cap "XMp_bias/a_n100_n1097#" "XR_bias_4/a_n271_n1246#" 0.929691
+cap "m2_19879_17938#" "XMp_bias/a_100_n1000#" 10.4528
+cap "XR_bias_2/a_n141_n1116#" "XMp_bias/a_100_n1000#" -4.79791
+cap "m2_19879_17938#" "XR_bias_1/a_n141_684#" 0.589308
+cap "DI_RESET_N" "XMp_bias/a_n100_n1097#" 0.306795
+cap "XR_bias_2/a_n141_n1116#" "XR_bias_1/a_n141_684#" 19.7643
+cap "DO_OUT" "XMp_bias/a_100_n1000#" 0.180768
+cap "DI_RESET_N" "XR_bias_4/a_n271_n1246#" 0.377916
+cap "DO_OUT" "XR_bias_1/a_n141_684#" 0.0201226
+cap "XR_bias_2/a_n141_n1116#" "m2_19879_17938#" 4.44089e-16
+cap "XMp_bias/a_n100_n1097#" "XR_bot/a_n141_n1116#" 0.0617504
+cap "XMp_bias/a_n100_n1097#" "XR_mid/a_n141_n1116#" 1.30871
+cap "XMp_bias/a_n100_n1097#" "XMp_bias/a_100_n1000#" 81.5452
+cap "XR_bias_2/a_n141_n1116#" "DO_OUT" -5.55112e-17
+cap "XR_bias_4/a_n271_n1246#" "XMp_bias/a_100_n1000#" 143.84
+cap "XR_bias_1/a_n141_684#" "XR_bias_4/a_n271_n1246#" 1.48634
+cap "m2_19879_17938#" "XMp_bias/a_n100_n1097#" 4.94965
+cap "XMp_bias/a_n100_n1097#" "XR_bias_4/a_n141_n1116#" 0.0609474
+cap "XR_bias_2/a_n141_n1116#" "XMp_bias/a_n100_n1097#" 6.75071
+cap "DI_RESET_N" "XMp_bias/a_100_n1000#" 0.263696
+cap "m2_19879_17938#" "XR_bias_4/a_n271_n1246#" 2.92199
+cap "XR_bias_2/a_n141_n1116#" "XR_bias_4/a_n271_n1246#" 42.2399
+cap "DI_RESET_N" "XR_bias_1/a_n141_684#" 0.0288628
+cap "DO_OUT" "XMp_bias/a_n100_n1097#" 0.225432
+cap "XR_mid/a_n141_n1116#" "XMp_bias/a_100_n1000#" 3.43207
+cap "DO_OUT" "XR_bias_4/a_n271_n1246#" 0.257126
+cap "X_COMP_P_TOP/vinn" "XMp_bias/a_100_n1000#" 1.87222
+cap "XMp_bias/a_100_n1000#" "XR_bias_2/a_n141_n1116#" -5.39293
+cap "X_COMP_P_BOTTOM/vbias_p" "XMp_bias/a_100_n1000#" 286.658
+cap "XR_bias_4/a_n271_n1246#" "XMp_bias/a_100_n1000#" 450.36
+cap "X_COMP_P_BOTTOM/vbias_p" "XR_bias_2/a_n141_n1116#" 12.1406
+cap "XR_bias_4/a_n271_n1246#" "XR_bias_2/a_n141_n1116#" 21.2678
+cap "X_COMP_P_BOTTOM/vbias_p" "XR_bias_4/a_n271_n1246#" 13.0236
+cap "X_COMP_P_BOTTOM/vinp" "X_COMP_P_BOTTOM/vdd" 0.0138543
+cap "V_TRIG_B_I" "XR_bias_3/a_n271_n1246#" 21.4242
+cap "X_COMP_P_TOP/vinp" "X_COMP_P_BOTTOM/vdd" 131.371
+cap "X_COMP_P_TOP/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" "X_COMP_P_BOTTOM/vdd" 173.33
+cap "X_COMP_P_TOP/tail" "X_COMP_P_TOP/vinp" 1.60228
+cap "X_COMP_P_TOP/vinn" "X_COMP_P_BOTTOM/vdd" 30.422
+cap "XR_bias_3/a_n141_684#" "X_COMP_P_BOTTOM/vbias_p" 0.392954
 cap "X_COMP_P_TOP/vinn" "V_TRIG_B_I" 0.0555908
-cap "X_COMP_P_TOP/vinn" "X_COMP_P_BOTTOM/vdd" 53.1166
-cap "X_COMP_P_TOP/tail" "X_COMP_P_TOP/vinp" 2.87684
-cap "V_TRIG_B_I" "X_COMP_P_TOP/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" 0.121981
-cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_TOP/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" 264.371
-cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_TOP/vinp" 226.897
-cap "X_COMP_P_TOP/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" "X_COMP_P_BOTTOM/vbias_p" 49.0722
-cap "X_COMP_P_TOP/vinp" "X_COMP_P_BOTTOM/vbias_p" -0.000510596
-cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_TOP/latch_left" 124.051
-cap "XR_bias_3/a_n271_n1246#" "X_COMP_P_BOTTOM/vdd" 20.9905
-cap "X_COMP_P_TOP/vinn" "X_COMP_P_TOP/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" 197.344
-cap "X_COMP_P_TOP/vinp" "X_COMP_P_TOP/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" 11.3053
+cap "X_COMP_P_BOTTOM/vbias_p" "XR_bias_3/a_n271_n1246#" 56.8905
+cap "X_COMP_P_BOTTOM/vinp" "X_COMP_P_BOTTOM/vbias_p" 0.394916
+cap "V_TRIG_B_I" "X_COMP_P_BOTTOM/vdd" 38.5584
+cap "X_COMP_P_BOTTOM/vbias_p" "X_COMP_P_TOP/vinp" -0.000510596
+cap "X_COMP_P_TOP/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" "X_COMP_P_BOTTOM/vbias_p" 49.6759
+cap "XR_bias_3/a_n141_684#" "XR_bias_3/a_n271_n1246#" 12.0031
+cap "X_COMP_P_TOP/vinn" "X_COMP_P_BOTTOM/vbias_p" 0.473464
+cap "XR_bias_1/a_n141_n1116#" "X_COMP_P_BOTTOM/vbias_p" -4.04785
+cap "X_COMP_P_TOP/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" "XR_bias_3/a_n271_n1246#" 0.186069
+cap "X_COMP_P_TOP/vinp" "XR_bias_3/a_n271_n1246#" 61.8911
+cap "V_TRIG_B_I" "X_COMP_P_BOTTOM/vbias_p" 26.0693
+cap "X_COMP_P_BOTTOM/vbias_p" "X_COMP_P_BOTTOM/vdd" 296.801
+cap "X_COMP_P_TOP/vinn" "XR_bias_3/a_n271_n1246#" 3.09545
+cap "X_COMP_P_TOP/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" "X_COMP_P_TOP/vinp" 11.3053
+cap "X_COMP_P_TOP/vinn" "X_COMP_P_TOP/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" 197.191
 cap "X_COMP_P_TOP/vinn" "X_COMP_P_TOP/vinp" 10.4282
-cap "X_COMP_P_TOP/vinn" "XR_bias_3/a_n271_n1246#" 0.276623
-cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_TOP/latch_left" 107.144
+cap "XR_bias_3/a_n271_n1246#" "X_COMP_P_BOTTOM/vdd" 247.374
+cap "X_COMP_P_TOP/tail" "X_COMP_P_TOP/vinn" 0.0677885
+cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_TOP/vinn" 42.2552
+cap "X_COMP_P_TOP/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" "V_TRIG_B_I" 0.121981
+cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_TOP/vinp" 137.329
+cap "X_COMP_P_TOP/vinp" "X_COMP_P_TOP/tail" 1.27456
+cap "X_COMP_P_TOP/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" 2.07928
+cap "V_TRIG_B_I" "X_COMP_P_TOP/tail" 0.00762317
+cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_TOP/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" 219.884
+cap "X_COMP_P_TOP/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" "X_COMP_P_BOTTOM/vbias_p" 0.748042
+cap "X_COMP_P_TOP/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" "X_COMP_P_BOTTOM/tail" 0.000173522
+cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_TOP/tail" 144.445
+cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_TOP/latch_left" 186.297
 cap "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" "X_COMP_P_BOTTOM/vbias_p" 0.105808
-cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_TOP/vinp" 140.506
-cap "X_COMP_P_BOTTOM/vbias_p" "X_COMP_P_TOP/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" -47.3147
-cap "X_COMP_P_TOP/tail" "X_COMP_P_TOP/vinn" -1.42109e-14
-cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_TOP/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" 592.749
-cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_TOP/tail" 606.59
-cap "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" "X_COMP_P_TOP/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" 1.6
-cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_BOTTOM/vbias_p" 367.2
-cap "X_COMP_P_TOP/XMp_out/a_n158_n800#" "X_COMP_P_BOTTOM/vdd" 1.08408
-cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_TOP/vinn" 36.1895
-cap "X_COMP_P_BOTTOM/vout" "X_COMP_P_BOTTOM/vdd" 0.0152238
-cap "X_COMP_P_TOP/vinn" "X_COMP_P_BOTTOM/vdd" 3.24929
-cap "X_COMP_P_TOP/vout" "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n158_n800#" 8.30505
-cap "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n158_n800#" "X_COMP_P_BOTTOM/vdd" 0.220858
-cap "X_COMP_P_TOP/XMp_tail/a_n100_n1097#" "VSS" 1.17885
-cap "X_COMP_P_TOP/XMp_tail/a_n100_n1097#" "X_COMP_P_BOTTOM/vout" 0.0842951
-cap "X_COMP_P_TOP/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" "X_COMP_P_BOTTOM/vdd" 262.486
-cap "X_COMP_P_TOP/vinp" "X_COMP_P_BOTTOM/vdd" 229.985
-cap "X_COMP_P_BOTTOM/tail" "X_COMP_P_TOP/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" 0.0027563
-cap "X_COMP_P_BOTTOM/XMp_tail/a_n100_n1097#" "X_COMP_P_TOP/vinn" 0.00890249
-cap "X_COMP_P_TOP/XMp_tail/a_n100_n1097#" "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n158_n800#" 0.637046
-cap "X_COMP_P_TOP/tail" "X_COMP_P_BOTTOM/vdd" 582.038
-cap "X_COMP_P_TOP/latch_right" "X_COMP_P_BOTTOM/vdd" 62.3678
-cap "X_COMP_P_TOP/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" "X_COMP_P_BOTTOM/XMp_tail/a_n100_n1097#" 0.0710955
-cap "X_COMP_P_TOP/vout" "X_COMP_P_BOTTOM/vdd" 385.705
-cap "X_COMP_P_TOP/vinn" "X_COMP_P_BOTTOM/vdd" 0.151982
-cap "X_COMP_P_TOP/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" "X_COMP_P_BOTTOM/vout" 0.00113039
+cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_BOTTOM/vbias_p" 32.6778
+cap "X_COMP_P_TOP/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" "X_COMP_P_TOP/vinn" 0.153207
+cap "X_COMP_P_BOTTOM/XMp_out/a_n158_n800#" "X_COMP_P_TOP/XMp_tail/a_n100_n1097#" 0.0311765
+cap "X_COMP_P_TOP/XMp_tail/a_n100_n1097#" "X_COMP_P_BOTTOM/XMp_tail/a_n100_n1097#" 0.0238379
+cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_TOP/latch_left" 44.8979
 cap "X_COMP_P_BOTTOM/vinn" "X_COMP_P_TOP/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" 0.00500626
-cap "X_COMP_P_TOP/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n158_n800#" 2.56115
-cap "X_COMP_P_TOP/XMp_tail/a_n100_n1097#" "X_COMP_P_TOP/vout" -47.5396
-cap "VSS" "X_COMP_P_TOP/tail" 0.29846
-cap "X_COMP_P_TOP/vinp" "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n158_n800#" 0.00500626
-cap "X_COMP_P_TOP/XMp_tail/a_n100_n1097#" "X_COMP_P_BOTTOM/vdd" 418.797
-cap "X_COMP_P_TOP/latch_left" "X_COMP_P_BOTTOM/vdd" 0.0435013
+cap "X_COMP_P_TOP/vinn" "X_COMP_P_BOTTOM/XMp_tail/a_n100_n1097#" 0.00890249
+cap "X_COMP_P_TOP/vinp" "X_COMP_P_BOTTOM/vdd" 26.8703
+cap "X_COMP_P_TOP/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" "X_COMP_P_BOTTOM/tail" 0.0027563
+cap "X_COMP_P_TOP/XMp_tail/a_n100_n1097#" "X_COMP_P_TOP/XMp_out/a_n158_n800#" -24.6548
+cap "X_COMP_P_TOP/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" 4.16115
+cap "X_COMP_P_TOP/XMp_out/a_n158_n800#" "X_COMP_P_BOTTOM/vdd" 223.593
+cap "X_COMP_P_TOP/vinp" "X_COMP_P_BOTTOM/vdd" 241.68
+cap "X_COMP_P_TOP/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" "X_COMP_P_TOP/XMp_tail/a_n100_n1097#" -47.5396
+cap "X_COMP_P_TOP/latch_right" "X_COMP_P_BOTTOM/vdd" 34.0802
 cap "X_COMP_P_BOTTOM/vinp" "X_COMP_P_TOP/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" 0.000639516
-cap "X_COMP_P_TOP/vout" "X_COMP_P_BOTTOM/vout" 17.5061
+cap "X_COMP_P_TOP/XMp_tail/a_n100_n1097#" "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" 0.584356
+cap "X_COMP_P_TOP/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" "X_COMP_P_BOTTOM/vdd" 644.607
+cap "X_COMP_P_TOP/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" "X_COMP_P_BOTTOM/XMp_out/a_n158_n800#" 0.00113039
+cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_TOP/tail" 983.058
+cap "X_COMP_P_TOP/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" "X_COMP_P_BOTTOM/XMp_tail/a_n100_n1097#" 0.295972
+cap "X_COMP_P_TOP/XMp_tail/a_n100_n1097#" "X_COMP_P_BOTTOM/vdd" 608.524
+cap "X_COMP_P_TOP/vinp" "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" 0.00500626
+cap "X_COMP_P_TOP/vinn" "X_COMP_P_BOTTOM/vdd" 21.5468
+cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_TOP/latch_left" 0.0435013
+cap "X_COMP_P_TOP/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" "X_COMP_P_TOP/vout" -1.13687e-13
+cap "X_COMP_P_BOTTOM/vout" "X_COMP_P_BOTTOM/vdd" 0.0152238
+cap "X_COMP_P_TOP/vinp" "X_COMP_P_BOTTOM/vdd" 60.1366
+cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_TOP/XMp_tail/a_n100_n1097#" 144.796
+cap "X_COMP_P_BOTTOM/XMp_tail/a_n100_n1097#" "X_COMP_P_TOP/XMp_tail/a_n100_n1097#" 0.506241
+cap "VSS" "X_COMP_P_TOP/tail" 0.29846
+cap "X_COMP_P_TOP/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" "X_COMP_P_TOP/XMp_tail/a_n100_n1097#" -2.77556e-17
+cap "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n158_n800#" "X_COMP_P_TOP/vout" 16.0933
+cap "X_COMP_P_BOTTOM/vout" "X_COMP_P_TOP/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" 0.00144063
+cap "VSS" "X_COMP_P_TOP/vout" 0.359035
+cap "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n158_n800#" "X_COMP_P_TOP/XMp_tail/a_n100_n1097#" 0.0526895
+cap "X_COMP_P_TOP/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" "X_COMP_P_BOTTOM/vdd" 89.7463
+cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_TOP/tail" 125.434
+cap "VSS" "X_COMP_P_TOP/XMp_tail/a_n100_n1097#" 1.17885
+cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_TOP/vinn" 0.151982
+cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_TOP/latch_right" 28.8509
+cap "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n158_n800#" "X_COMP_P_BOTTOM/vdd" 0.220858
+cap "X_COMP_P_BOTTOM/vout" "X_COMP_P_TOP/vout" 39.4182
+cap "X_COMP_P_TOP/vout" "X_COMP_P_TOP/XMp_tail/a_n100_n1097#" -22.8847
 cap "VSS" "X_COMP_P_BOTTOM/vdd" 0.106656
-cap "X_COMP_P_TOP/XMp_tail/a_n100_n1097#" "X_COMP_P_BOTTOM/XMp_tail/a_n100_n1097#" 0.530079
-cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_TOP/latch_right" 0.563233
-cap "X_COMP_P_TOP/vout" "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n158_n800#" 7.78826
+cap "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n158_n800#" "X_COMP_P_TOP/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" 2.07568
+cap "X_COMP_P_TOP/vout" "X_COMP_P_BOTTOM/vdd" 174.93
+cap "X_COMP_P_BOTTOM/vout" "X_COMP_P_TOP/XMp_tail/a_n100_n1097#" 0.0531185
+cap "X_COMP_P_TOP/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" "X_COMP_P_BOTTOM/tail" 0.000173522
 cap "VSS" "X_COMP_P_BOTTOM/vdd" 506.603
-cap "VSS" "X_COMP_P_TOP/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" 30.2248
-cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_TOP/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" 5.20128
-cap "VSS" "X_COMP_P_TOP/XMp_tail/a_n100_n1097#" 3.6106
+cap "X_COMP_P_TOP/tail" "VSS" 13.4986
+cap "VSS" "X_COMP_P_TOP/XMp_tail/a_n158_n1000#" 0.270767
+cap "X_COMP_P_TOP/vout" "X_COMP_P_BOTTOM/vout" 15.9472
 cap "VSS" "X_COMP_P_TOP/vinp" 114.24
-cap "X_COMP_P_TOP/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" "X_COMP_P_BOTTOM/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n158_n800#" 2.07568
+cap "X_COMP_P_TOP/vout" "VSS" 576.011
 cap "X_COMP_P_TOP/vinp" "X_COMP_P_BOTTOM/vdd" 0.660684
-cap "X_COMP_P_BOTTOM/vout" "X_COMP_P_TOP/vout" 37.8593
-cap "X_COMP_P_TOP/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" "X_COMP_P_BOTTOM/vout" 0.00144063
-cap "VSS" "X_COMP_P_TOP/tail" 13.7694
-cap "X_COMP_P_BOTTOM/tail" "X_COMP_P_TOP/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" 0.000173522
-cap "VSS" "X_COMP_P_TOP/vout" 576.37
-cap "VSS" "X_COMP_P_TOP/latch_right" 39.3753
-cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_TOP/vout" 21.8757
-cap "X_COMP_P_TOP/sky130_fd_pr__pfet_01v8_lvt_5VNMZ8_0/a_n100_n897#" "X_COMP_P_TOP/vout" 2.84217e-14
-cap "XR_bias_2/a_n141_n1116#" "sr_r" -3.55271e-15
-cap "sr_r" "XR_bias_4/a_n271_n1246#" 40.4329
+cap "VSS" "X_COMP_P_TOP/XMp_tail/a_n100_n1097#" 3.6106
+cap "X_COMP_P_TOP/vout" "X_COMP_P_BOTTOM/vdd" 10.1416
+cap "X_COMP_P_TOP/latch_right" "VSS" 39.3753
+cap "X_COMP_P_TOP/XMp_out/a_n100_n897#" "VSS" 30.2248
+cap "XR_bias_4/a_n271_n1246#" "DI_RESET_N" 0.584728
+cap "XR_bias_2/a_n141_n1116#" "XMp_bias/a_100_n1000#" 7.10543e-15
+cap "XR_bias_2/a_n141_n1116#" "m2_19879_17938#" -2.22045e-16
+cap "XR_bias_4/a_n271_n1246#" "XMp_bias/a_100_n1000#" 12.2001
+cap "XR_bias_4/a_n141_n1116#" "XR_bias_4/a_n271_n1246#" 37.0966
+cap "XR_bias_4/a_n271_n1246#" "m2_19879_17938#" 5.06743
+cap "XR_bias_4/a_n141_n1116#" "DI_RESET_N" -1.11022e-16
+cap "XR_bias_2/a_n141_n1116#" "XR_bias_4/a_n271_n1246#" -5.14332
+cap "DO_OUT" "XR_bias_4/a_n271_n1246#" 0.397837
+cap "XMp_bias/a_100_n1000#" "X_COMP_P_TOP/vss" 16.1138
+cap "X_COMP_P_TOP/vss" "XR_bias_4/a_n141_n1116#" 18.2126
+cap "X_COMP_P_TOP/vss" "XR_bias_2/a_n141_n1116#" -3.05528
+cap "XMp_bias/a_100_n1000#" "XR_bias_4/a_n141_684#" 3.00482
 cap "XR_bias_4/a_n141_684#" "XR_bias_4/a_n141_n1116#" -4.04785
-cap "XR_bias_4/a_n141_n1116#" "XR_bias_4/a_n271_n1246#" 55.3091
 cap "XR_bias_3/a_n141_684#" "XR_bias_4/a_n141_n1116#" -4.04785
-cap "XR_bias_2/a_n141_n1116#" "XR_bias_4/a_n271_n1246#" -8.1986
-cap "XR_bias_2/a_n141_n1116#" "XR_bias_3/a_n141_684#" -4.04785
-cap "XMp_bias/a_100_n1000#" "XR_bias_4/a_n271_n1246#" 19.8909
-cap "XR_bias_4/a_n141_684#" "X_COMP_P_TOP/vss" 13.2322
-cap "XR_bias_3/a_n141_684#" "X_COMP_P_TOP/vinp" -2.84217e-14
-cap "XR_bias_4/a_n141_684#" "X_COMP_P_TOP/vinp" -1.42109e-14
-cap "XR_bias_4/a_n141_684#" "XMp_bias/a_100_n1000#" 5.02313
-cap "XR_bias_4/a_n141_684#" "V_TRIG_B_I" 7.10543e-15
-cap "X_COMP_P_TOP/vss" "X_COMP_P_TOP/vinp" 161.44
-cap "X_COMP_P_TOP/vss" "XMp_bias/a_100_n1000#" 12.801
-cap "X_COMP_P_TOP/vss" "V_TRIG_B_I" 11.39
-cap "XR_bias_4/a_n141_n1116#" "XR_bias_3/a_n141_684#" -4.04785
-cap "XR_bias_2/a_n141_n1116#" "XR_bias_3/a_n141_684#" -4.04785
-cap "XR_bias_4/a_n141_684#" "XR_bias_4/a_n141_n1116#" -4.04785
+cap "XMp_bias/a_100_n1000#" "XR_bias_4/a_n141_n1116#" 1.77636e-15
+cap "XR_bias_3/a_n141_684#" "XR_bias_2/a_n141_n1116#" -4.04785
+cap "X_COMP_P_TOP/latch_right" "X_COMP_P_TOP/vinp" 1.37282
+cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_TOP/latch_left" 4.20233
+cap "X_COMP_P_TOP/vss" "V_TRIG_B_I" 12.2771
 cap "X_COMP_P_TOP/vss" "XR_bias_3/a_n141_684#" 21.1486
-cap "V_TRIG_B_I" "X_COMP_P_TOP/vss" 0.0729051
-cap "X_COMP_P_TOP/vinn" "XR_bias_3/a_n141_684#" 0.25199
-cap "X_COMP_P_TOP/vinp" "X_COMP_P_TOP/vss" 2.5871
-cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_TOP/latch_left" 120.634
-cap "X_COMP_P_TOP/latch_right" "X_COMP_P_TOP/vinn" 0.0209364
-cap "X_COMP_P_TOP/vinn" "X_COMP_P_BOTTOM/vdd" 42.8513
-cap "X_COMP_P_TOP/vinn" "X_COMP_P_TOP/latch_left" 0.0396678
-cap "X_COMP_P_TOP/vinp" "V_TRIG_B_I" 0.0280212
-cap "XR_bias_4/a_n141_684#" "X_COMP_P_TOP/latch_left" 1.08882
-cap "X_COMP_P_TOP/out_left" "V_TRIG_B_I" 68.3879
 cap "X_COMP_P_TOP/vinp" "X_COMP_P_TOP/out_left" 5.55822
-cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_TOP/vss" 31.7234
-cap "X_COMP_P_TOP/vss" "X_COMP_P_TOP/latch_left" 0.383747
-cap "X_COMP_P_TOP/vinn" "X_COMP_P_TOP/vss" 0.145782
-cap "X_COMP_P_TOP/tail" "X_COMP_P_BOTTOM/vdd" 46.4288
-cap "X_COMP_P_TOP/vinp" "XR_bias_3/a_n141_684#" 0.526962
-cap "X_COMP_P_TOP/latch_right" "V_TRIG_B_I" 0.00490496
-cap "V_TRIG_B_I" "X_COMP_P_BOTTOM/vdd" 1.34599
-cap "X_COMP_P_TOP/latch_right" "X_COMP_P_TOP/vinp" 2.476
-cap "X_COMP_P_TOP/vinp" "X_COMP_P_BOTTOM/vdd" 104.294
-cap "sr_r" "X_COMP_P_TOP/vinn" -0.00322553
-cap "V_TRIG_B_I" "X_COMP_P_TOP/latch_left" 0.160768
-cap "X_COMP_P_TOP/vinp" "X_COMP_P_TOP/latch_left" 23.4708
-cap "X_COMP_P_TOP/out_left" "X_COMP_P_BOTTOM/vdd" 56.4775
+cap "X_COMP_P_TOP/vss" "X_COMP_P_TOP/latch_left" 0.880292
+cap "XR_bias_3/a_n141_684#" "XR_bias_1/a_n141_n1116#" -4.04785
+cap "XR_bias_4/a_n141_684#" "X_COMP_P_TOP/vinp" -1.42109e-14
 cap "X_COMP_P_TOP/vinp" "X_COMP_P_TOP/vinn" 54.8361
+cap "X_COMP_P_TOP/out_left" "V_TRIG_B_I" 68.3879
+cap "X_COMP_P_TOP/vss" "X_COMP_P_BOTTOM/vdd" 68.5576
+cap "XR_bias_3/a_n141_684#" "X_COMP_P_TOP/vinn" 0.25199
+cap "XR_bias_4/a_n141_684#" "V_TRIG_B_I" 7.10543e-15
+cap "XR_bias_4/a_n141_684#" "XR_bias_3/a_n141_n1116#" -4.04785
 cap "X_COMP_P_TOP/vinn" "V_TRIG_B_I" 0.2257
+cap "X_COMP_P_TOP/latch_left" "X_COMP_P_TOP/vinn" 0.0396678
+cap "XR_bias_4/a_n141_684#" "X_COMP_P_TOP/latch_left" 1.08882
+cap "X_COMP_P_TOP/vss" "X_COMP_P_TOP/latch_right" 0.289797
+cap "XR_bias_3/a_n141_684#" "X_COMP_P_TOP/vinp" 0.526962
+cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_TOP/out_left" 56.2903
+cap "X_COMP_P_TOP/vinp" "V_TRIG_B_I" 0.0280212
+cap "X_COMP_P_TOP/latch_left" "X_COMP_P_TOP/vinp" 22.0354
+cap "X_COMP_P_BOTTOM/vdd" "XR_bias_4/a_n141_684#" 2.0183
+cap "X_COMP_P_TOP/vss" "X_COMP_P_TOP/out_left" 0.74178
+cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_TOP/vinn" 31.9524
+cap "XR_bias_3/a_n141_684#" "XR_bias_3/a_n141_n1116#" -4.04785
+cap "X_COMP_P_TOP/vss" "X_COMP_P_TOP/vinn" 4.87062
+cap "X_COMP_P_TOP/vss" "XR_bias_4/a_n141_684#" 13.2322
+cap "X_COMP_P_TOP/latch_left" "V_TRIG_B_I" 0.152219
+cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_TOP/vinp" 75.9972
+cap "X_COMP_P_TOP/vinn" "m2_19879_17938#" -0.00322553
+cap "X_COMP_P_TOP/latch_right" "X_COMP_P_TOP/vinn" 0.0209364
+cap "X_COMP_P_TOP/vss" "X_COMP_P_TOP/vinp" 169.912
+cap "X_COMP_P_BOTTOM/vdd" "V_TRIG_B_I" 1.34599
 cap "X_COMP_P_TOP/vinn" "X_COMP_P_TOP/out_left" 171.044
-cap "X_COMP_P_TOP/latch_right" "X_COMP_P_BOTTOM/vdd" 66.7871
+cap "X_COMP_P_TOP/latch_left" "V_TRIG_B_I" 0.00854875
+cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_TOP/latch_right" 102.527
+cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_TOP/vinp" 60.4565
+cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_TOP/out_left" 0.427558
+cap "X_COMP_P_TOP/latch_right" "V_TRIG_B_I" 0.00490496
+cap "X_COMP_P_TOP/vinn" "X_COMP_P_TOP/latch_left" -5.68434e-14
 cap "X_COMP_P_TOP/vss" "X_COMP_P_TOP/vinn" -2.22045e-16
-cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_TOP/tail" 219.732
-cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_TOP/vss" 7.95267
-cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_TOP/vinn" 35.5782
-cap "sr_r" "X_COMP_P_TOP/tail" 0.685871
-cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_TOP/latch_right" 62.209
-cap "X_COMP_P_TOP/vss" "X_COMP_P_TOP/vinp" -0.00441383
-cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_TOP/vinp" 68.921
-cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_TOP/latch_left" 39.1507
-cap "sr_r" "X_COMP_P_TOP/vinp" 0.162481
-cap "X_COMP_P_TOP/out_left" "X_COMP_P_BOTTOM/vdd" 0.469089
-cap "X_COMP_P_TOP/vss" "X_COMP_P_TOP/tail" -0.0252
-cap "X_COMP_P_TOP/vinn" "X_COMP_P_TOP/tail" 1.42109e-14
-cap "X_COMP_P_TOP/tail" "X_COMP_P_TOP/vout" 0.687758
-cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_TOP/vinn" 78.6875
-cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_TOP/XMn_diode_left1/a_100_n400#" 0.00523061
-cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_TOP/vout" 0.230607
-cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_TOP/vinp" 52.5713
-cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_TOP/latch_right" 20.5595
-cap "X_COMP_P_TOP/vinn" "X_COMP_P_TOP/vout" 1.48545
-cap "X_COMP_P_TOP/tail" "X_COMP_P_TOP/vss" -0.0253334
-cap "X_COMP_P_TOP/vout" "X_COMP_P_TOP/vinp" 0.974238
-cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_TOP/vss" 5.70573
-cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_TOP/latch_left" 28.3925
-cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_TOP/tail" 170.945
+cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_TOP/tail" 118.203
+cap "X_COMP_P_TOP/vinp" "X_COMP_P_TOP/latch_left" 1.43538
+cap "X_COMP_P_TOP/latch_right" "X_COMP_P_TOP/vinn" -2.27374e-13
+cap "X_COMP_P_TOP/vss" "X_COMP_P_TOP/vinp" 0.0264921
+cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_TOP/latch_left" 136.983
+cap "X_COMP_P_TOP/latch_right" "X_COMP_P_TOP/vinp" 1.10318
+cap "X_COMP_P_TOP/vss" "X_COMP_P_BOTTOM/vdd" 8.32268
+cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_TOP/vinn" 31.1338
+cap "X_COMP_P_TOP/tail" "X_COMP_P_BOTTOM/vdd" 288.51
+cap "X_COMP_P_TOP/vss" "X_COMP_P_TOP/vinp" 0.00476859
+cap "X_COMP_P_TOP/vinn" "m2_19879_17938#" 1.48545
+cap "X_COMP_P_TOP/tail" "m2_19879_17938#" 1.37363
+cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_TOP/latch_right" 40.8994
 cap "X_COMP_P_TOP/vinn" "X_COMP_P_TOP/vss" 0.0528652
-cap "X_COMP_P_TOP/vss" "X_COMP_P_TOP/vinp" 0.00918243
-cap "X_COMP_P_TOP/tail" "X_COMP_P_TOP/vss" 25.6141
-cap "X_COMP_P_TOP/latch_right" "X_COMP_P_BOTTOM/vdd" 0.335509
-cap "X_COMP_P_TOP/vinn" "X_COMP_P_TOP/vss" 311.764
+cap "X_COMP_P_TOP/tail" "X_COMP_P_TOP/vss" -0.0505334
+cap "X_COMP_P_TOP/XMn_out_right/a_100_n500#" "X_COMP_P_BOTTOM/vdd" 0.161898
+cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_TOP/vss" 8.53012
+cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_TOP/vinp" 8.67692
+cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_TOP/vinp" 76.3427
+cap "X_COMP_P_TOP/vinn" "X_COMP_P_BOTTOM/vdd" 81.4921
+cap "X_COMP_P_TOP/out_left" "X_COMP_P_BOTTOM/vdd" 0.228709
+cap "m2_19879_17938#" "X_COMP_P_TOP/vinp" 1.13672
+cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_TOP/latch_left" 38.0349
+cap "X_COMP_P_TOP/latch_left" "X_COMP_P_BOTTOM/vdd" 8.96199
+cap "X_COMP_P_TOP/tail" "X_COMP_P_BOTTOM/vdd" 30.3924
+cap "X_COMP_P_TOP/vss" "X_COMP_P_BOTTOM/vdd" 1.06876
+cap "X_COMP_P_TOP/latch_right" "X_COMP_P_BOTTOM/vdd" 6.46507
+cap "X_COMP_P_TOP/vinp" "X_COMP_P_BOTTOM/vdd" 4.31346
+cap "X_COMP_P_TOP/vinn" "X_COMP_P_BOTTOM/vdd" 12.5387
+cap "X_COMP_P_TOP/latch_left" "X_COMP_P_TOP/vss" 1.84261
+cap "X_COMP_P_TOP/vout" "X_COMP_P_BOTTOM/vdd" 0.0687093
+cap "X_COMP_P_TOP/latch_right" "X_COMP_P_TOP/vss" 0.997121
+cap "X_COMP_P_TOP/vss" "X_COMP_P_TOP/latch_left" 49.0794
+cap "X_COMP_P_TOP/vss" "X_COMP_P_TOP/tail" 9.66216
 cap "X_COMP_P_TOP/vinp" "X_COMP_P_TOP/vss" 62.7273
-cap "X_COMP_P_TOP/latch_left" "X_COMP_P_TOP/vss" 50.922
 cap "X_COMP_P_TOP/vss" "X_COMP_P_BOTTOM/vdd" 172.428
-cap "X_COMP_P_TOP/vss" "X_COMP_P_TOP/latch_right" 500.664
-cap "X_COMP_P_TOP/vout" "X_COMP_P_TOP/vss" 430.069
+cap "X_COMP_P_TOP/vss" "X_COMP_P_TOP/vout" 430.069
+cap "X_COMP_P_TOP/vss" "X_COMP_P_TOP/tail" 8.94475
+cap "X_COMP_P_TOP/vss" "X_COMP_P_TOP/vinn" 311.764
 cap "X_COMP_P_TOP/vinp" "X_COMP_P_BOTTOM/vdd" 0.0468595
-cap "X_COMP_P_TOP/vinn" "X_COMP_P_BOTTOM/vdd" 0.0675777
-cap "sr_r" "XR_bias_4/a_n271_n1246#" 19.8285
-cap "sr_r" "XR_bias_4/a_n141_684#" 1.91489
-cap "X_COMP_P_TOP/vss" "sr_r" 18.0759
-cap "XR_bias_4/a_n141_684#" "VDD" 0.796611
-cap "X_COMP_P_TOP/vss" "XR_bias_3/a_n141_684#" -3.44956
-cap "V_TRIG_B_I" "XR_bias_4/a_n141_684#" 0.756032
-cap "V_THRESH_I" "XR_bias_4/a_n141_684#" 51.22
-cap "X_COMP_P_TOP/vss" "X_COMP_P_TOP/out_left" 0.029692
-cap "X_COMP_P_TOP/vss" "VDD" -2.71895
-cap "XR_bias_4/a_n141_684#" "sr_r" 13.4973
-cap "X_COMP_P_TOP/vss" "XR_bias_4/a_n141_684#" 66.1347
-cap "X_COMP_P_TOP/vss" "V_TRIG_B_I" 1.65439
-cap "XR_bias_3/a_n141_684#" "XR_bias_4/a_n141_684#" 0.423692
-cap "X_COMP_P_TOP/vss" "V_THRESH_I" 83.8473
-cap "X_COMP_P_TOP/latch_left" "V_TRIG_B_I" 0.0619108
-cap "X_COMP_P_TOP/out_left" "X_COMP_P_TOP/vinn" 2.77556e-17
-cap "V_TRIG_B_I" "X_COMP_P_TOP/vss" 117.017
+cap "X_COMP_P_TOP/vss" "X_COMP_P_TOP/latch_right" 499.667
+cap "X_COMP_P_BOTTOM/vdd" "X_COMP_P_TOP/vinn" 0.0675777
+cap "X_COMP_P_TOP/vss" "X_COMP_P_TOP/tail" 7.00719
+cap "m2_19879_17938#" "XR_bias_4/a_n271_n1246#" 3.88535
+cap "XR_bias_4/a_n271_n1246#" "DO_OUT" 0.0192338
+cap "XR_bias_4/a_n141_n1116#" "XR_bias_4/a_n271_n1246#" 1.77636e-15
+cap "DI_RESET_N" "XR_bias_4/a_n271_n1246#" 0.0282693
+cap "XR_bias_4/a_n141_684#" "VDD" 0.666039
+cap "XR_bias_4/a_n141_n1116#" "m2_19879_17938#" 2.22045e-16
+cap "X_COMP_P_TOP/vss" "m2_19879_17938#" 21.7464
+cap "X_COMP_P_TOP/vss" "V_THRESH_I" 0.00194572
+cap "X_COMP_P_TOP/vss" "XR_bias_4/a_n141_684#" 130.647
+cap "X_COMP_P_TOP/vss" "VDD" -1.72321
+cap "XR_bias_4/a_n141_684#" "m2_19879_17938#" 6.91947
+cap "V_THRESH_I" "X_COMP_P_TOP/latch_left" 2.98953
+cap "X_COMP_P_TOP/vinn" "m2_19879_17938#" 0.0122425
+cap "VDD" "X_COMP_P_TOP/vss" -0.995743
+cap "V_TRIG_B_I" "m2_19879_17938#" -4.42026
+cap "X_COMP_P_TOP/vinn" "X_COMP_P_TOP/vss" 0.876762
 cap "X_COMP_P_TOP/out_left" "VDD" 0.0252125
-cap "V_TRIG_B_I" "sr_r" -4.42026
-cap "sr_r" "X_COMP_P_TOP/vss" 571.435
-cap "X_COMP_P_TOP/out_left" "V_THRESH_I" 0.672837
-cap "X_COMP_P_TOP/vinn" "X_COMP_P_TOP/vss" 1.53087
-cap "X_COMP_P_TOP/vinn" "sr_r" 0.0122425
-cap "X_COMP_P_TOP/latch_left" "V_THRESH_I" 2.98953
-cap "X_COMP_P_TOP/vss" "V_THRESH_I" 27.9083
-cap "V_TRIG_B_I" "V_THRESH_I" -2.84217e-14
-cap "X_COMP_P_TOP/vss" "X_COMP_P_TOP/vdd" 12.3248
-cap "X_COMP_P_TOP/vss" "X_COMP_P_TOP/vinp" 2.06103
-cap "X_COMP_P_TOP/latch_right" "X_COMP_P_TOP/vss" 2.76663
-cap "sr_r" "X_COMP_P_TOP/vdd" 0.610222
-cap "X_COMP_P_TOP/out_left" "X_COMP_P_TOP/vss" -13.1764
+cap "XR_bias_4/a_n141_684#" "XR_bias_3/a_n141_684#" 0.423692
+cap "m2_19879_17938#" "XR_bias_4/a_n141_684#" 6.40286
+cap "X_COMP_P_TOP/out_left" "X_COMP_P_TOP/vinn" 2.77556e-17
+cap "V_TRIG_B_I" "X_COMP_P_TOP/vss" 121.482
+cap "X_COMP_P_TOP/vinp" "X_COMP_P_TOP/vss" 0.129379
+cap "X_COMP_P_TOP/vss" "XR_bias_4/a_n141_684#" -64.5128
 cap "X_COMP_P_TOP/out_left" "V_TRIG_B_I" 75.6848
-cap "XR_bias_4/a_n141_684#" "X_COMP_P_TOP/latch_left" 0.010367
-cap "X_COMP_P_TOP/vss" "X_COMP_P_TOP/tail" 0.498455
-cap "XR_bias_4/a_n141_684#" "V_TRIG_B_I" 7.19286
-cap "X_COMP_P_TOP/out_left" "sr_r" 173.833
-cap "X_COMP_P_TOP/latch_left" "X_COMP_P_TOP/vss" 35.1959
-cap "X_COMP_P_TOP/vdd" "X_COMP_P_TOP/vss" 15.8942
-cap "X_COMP_P_TOP/vss" "sr_r" 445.921
-cap "X_COMP_P_TOP/tail" "X_COMP_P_TOP/vss" 1.88206
+cap "X_COMP_P_TOP/vss" "X_COMP_P_TOP/latch_left" 9.01906
+cap "m2_19879_17938#" "X_COMP_P_TOP/vdd" 0.610222
+cap "V_THRESH_I" "X_COMP_P_TOP/vss" 114.928
+cap "X_COMP_P_TOP/out_left" "V_THRESH_I" 0.672837
+cap "X_COMP_P_TOP/vdd" "X_COMP_P_TOP/vss" 6.94663
+cap "VDD" "XR_bias_4/a_n141_684#" 0.130572
+cap "X_COMP_P_TOP/vss" "XR_bias_3/a_n141_684#" -3.44956
+cap "m2_19879_17938#" "X_COMP_P_TOP/vss" 227.366
+cap "X_COMP_P_TOP/out_left" "m2_19879_17938#" 60.5
+cap "V_TRIG_B_I" "XR_bias_4/a_n141_684#" 7.94889
+cap "V_TRIG_B_I" "X_COMP_P_TOP/latch_left" 0.0252012
+cap "X_COMP_P_TOP/latch_left" "XR_bias_4/a_n141_684#" 0.010367
+cap "X_COMP_P_TOP/out_left" "X_COMP_P_TOP/vss" -2.76853
+cap "V_TRIG_B_I" "X_COMP_P_TOP/XMn_out_left/a_n100_n588#" 0.0367096
+cap "V_TRIG_B_I" "V_THRESH_I" -2.84217e-14
+cap "V_THRESH_I" "XR_bias_4/a_n141_684#" 51.22
+cap "X_COMP_P_TOP/vss" "X_COMP_P_TOP/vinp" 5.67083
+cap "X_COMP_P_TOP/latch_left" "m2_19879_17938#" 45.8536
+cap "X_COMP_P_TOP/out_left" "V_TRIG_B_I" 0.160864
+cap "X_COMP_P_TOP/vinn" "X_COMP_P_TOP/vss" 1.85553
+cap "X_COMP_P_TOP/latch_left" "X_COMP_P_TOP/vss" 81.4303
+cap "X_COMP_P_TOP/vss" "X_COMP_P_TOP/vdd" 13.6187
+cap "X_COMP_P_TOP/vss" "m2_19879_17938#" 585.52
+cap "X_COMP_P_TOP/out_left" "m2_19879_17938#" 235.625
 cap "V_TRIG_B_I" "X_COMP_P_TOP/latch_left" 0.0627636
-cap "sr_r" "X_COMP_P_TOP/latch_left" 125.961
-cap "sr_r" "X_COMP_P_TOP/vinp" 0.232164
-cap "X_COMP_P_TOP/vss" "X_COMP_P_TOP/latch_right" 8.15806
-cap "X_COMP_P_TOP/vdd" "sr_r" 0.418725
-cap "X_COMP_P_TOP/tail" "sr_r" 0.687176
-cap "X_COMP_P_TOP/vinn" "X_COMP_P_TOP/vss" 2.3361
-cap "X_COMP_P_TOP/latch_right" "sr_r" 0.10075
-cap "X_COMP_P_TOP/vss" "X_COMP_P_TOP/out_left" -14.0457
-cap "X_COMP_P_TOP/vinn" "sr_r" 0.0313602
-cap "V_TRIG_B_I" "X_COMP_P_TOP/out_left" 0.160864
-cap "X_COMP_P_TOP/vss" "X_COMP_P_TOP/vinp" 7.10081
-cap "sr_r" "X_COMP_P_TOP/out_left" 222.303
-cap "X_COMP_P_TOP/vss" "X_COMP_P_TOP/latch_left" 126.249
-cap "X_COMP_P_TOP/tail" "X_COMP_P_TOP/XMn_out_right/a_100_n500#" 0.688391
-cap "X_COMP_P_TOP/XMn_out_right/a_100_n500#" "X_COMP_P_TOP/vinp" 0.954611
-cap "X_COMP_P_TOP/vinn" "X_COMP_P_TOP/vss" 8.7074
-cap "X_COMP_P_TOP/latch_right" "X_COMP_P_TOP/vss" 122.429
-cap "X_COMP_P_TOP/latch_left" "X_COMP_P_TOP/vss" 7.91357
-cap "X_COMP_P_TOP/XMn_diode_left1/a_100_n400#" "X_COMP_P_TOP/vss" 0.0810842
-cap "X_COMP_P_TOP/tail" "X_COMP_P_TOP/vss" 1.62092
-cap "X_COMP_P_TOP/XMn_out_right/a_100_n500#" "X_COMP_P_TOP/vss" 384.702
-cap "X_COMP_P_TOP/vinp" "X_COMP_P_TOP/vss" 0.112411
-cap "X_COMP_P_TOP/vdd" "X_COMP_P_TOP/XMn_out_right/a_100_n500#" 2.80038
-cap "X_COMP_P_TOP/vinn" "X_COMP_P_TOP/XMn_out_right/a_100_n500#" 1.6973
-cap "X_COMP_P_TOP/latch_right" "X_COMP_P_TOP/XMn_out_right/a_100_n500#" 126.31
-cap "X_COMP_P_TOP/XMn_out_right/a_100_n500#" "X_COMP_P_TOP/latch_left" 0.294695
-cap "X_COMP_P_TOP/XMn_diode_left1/a_100_n400#" "X_COMP_P_TOP/XMn_out_right/a_100_n500#" 0.194667
-cap "X_COMP_P_TOP/XMn_out_right/a_100_n500#" "X_COMP_P_TOP/vinp" 0.0166537
-cap "X_COMP_P_TOP/vdd" "X_COMP_P_TOP/vss" 15.9689
-cap "X_COMP_P_TOP/vss" "X_COMP_P_TOP/vinn" 3.8052
-cap "X_COMP_P_TOP/vss" "X_COMP_P_TOP/latch_left" 3.96821
-cap "X_COMP_P_TOP/XMn_out_right/a_100_n500#" "X_COMP_P_TOP/latch_right" 1.60682
+cap "X_COMP_P_TOP/tail" "X_COMP_P_TOP/vss" 1.49875
+cap "X_COMP_P_TOP/out_left" "X_COMP_P_TOP/vss" -17.0441
+cap "X_COMP_P_TOP/latch_right" "X_COMP_P_TOP/vss" 7.02774
+cap "X_COMP_P_TOP/vss" "X_COMP_P_TOP/latch_left" 74.5561
+cap "X_COMP_P_TOP/vinp" "m2_19879_17938#" 0.0166537
+cap "X_COMP_P_TOP/vss" "X_COMP_P_TOP/vdd" 15.8399
+cap "X_COMP_P_TOP/XMn_out_right/a_100_n500#" "m2_19879_17938#" 69.6666
+cap "X_COMP_P_TOP/out_left" "m2_19879_17938#" 100.011
+cap "X_COMP_P_TOP/vss" "X_COMP_P_TOP/latch_right" 56.8944
+cap "X_COMP_P_TOP/vinp" "X_COMP_P_TOP/vss" 3.47405
+cap "X_COMP_P_TOP/vss" "X_COMP_P_TOP/tail" 0.88176
+cap "X_COMP_P_TOP/vss" "X_COMP_P_TOP/tail" 0.6762
+cap "X_COMP_P_TOP/vss" "X_COMP_P_TOP/vinn" 5.17596
+cap "X_COMP_P_TOP/latch_left" "m2_19879_17938#" 80.5968
+cap "m2_19879_17938#" "X_COMP_P_TOP/vdd" 3.21911
+cap "X_COMP_P_TOP/latch_right" "m2_19879_17938#" 67.337
+cap "X_COMP_P_TOP/vinp" "m2_19879_17938#" 1.18678
+cap "X_COMP_P_TOP/vss" "X_COMP_P_TOP/out_left" -7.29696
+cap "X_COMP_P_TOP/tail" "m2_19879_17938#" 0.687176
+cap "X_COMP_P_TOP/vss" "X_COMP_P_TOP/XMn_out_right/a_100_n500#" -5.02111
+cap "X_COMP_P_TOP/vss" "m2_19879_17938#" 401.265
+cap "m2_19879_17938#" "X_COMP_P_TOP/tail" 0.688391
+cap "X_COMP_P_TOP/vinn" "m2_19879_17938#" 1.72866
+cap "X_COMP_P_TOP/latch_left" "X_COMP_P_TOP/vss" 8.39125
+cap "X_COMP_P_TOP/tail" "X_COMP_P_TOP/vss" 1.688
+cap "X_COMP_P_TOP/vinn" "X_COMP_P_TOP/vss" 8.33726
+cap "X_COMP_P_TOP/latch_right" "X_COMP_P_TOP/XMn_out_right/a_100_n500#" 59.0737
+cap "X_COMP_P_TOP/vdd" "X_COMP_P_TOP/vss" 14.335
+cap "X_COMP_P_TOP/latch_right" "X_COMP_P_TOP/vss" 92.6827
+cap "X_COMP_P_TOP/XMn_out_right/a_100_n500#" "X_COMP_P_TOP/vss" 548.409
+cap "X_COMP_P_TOP/XMn_out_right/a_n100_n588#" "X_COMP_P_TOP/vss" 10.8685
 cap "X_COMP_P_TOP/XMn_out_right/a_100_n500#" "X_COMP_P_TOP/vdd" 0.0449008
-cap "X_COMP_P_TOP/vss" "X_COMP_P_TOP/tail" 0.752697
-cap "X_COMP_P_TOP/vss" "X_COMP_P_TOP/latch_right" 59.4936
-cap "X_COMP_P_TOP/vss" "X_COMP_P_TOP/vdd" 7.18212
-cap "X_COMP_P_TOP/vss" "X_COMP_P_TOP/XMn_out_right/a_100_n500#" 933.462
-merge "X_COMP_P_BOTTOM/vout" "X_SR_LATCH/IN_S" -1672.35 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1224 -140 -232128 -8980 0 0 0 0 0 0 0 0
-merge "X_SR_LATCH/IN_S" "sr_s"
-merge "XMp_bias/a_100_n1000#" "X_COMP_P_TOP/vdd" -25909.1 0 0 0 0 -274322 -24730 0 0 -98500 -20178 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -77826 -5054 -1159719 -35686 0 0 0 0 0 0 0 0 0 0
-merge "X_COMP_P_TOP/vdd" "X_COMP_P_BOTTOM/vdd"
-merge "X_COMP_P_BOTTOM/vdd" "a_24103_19828#"
-merge "a_24103_19828#" "XMp_bias/w_n296_n1219#"
+cap "X_COMP_P_TOP/XMn_out_right/a_100_n500#" "X_COMP_P_TOP/vss" 588.456
+cap "X_COMP_P_TOP/vinn" "X_COMP_P_TOP/vss" 0.134059
+cap "X_COMP_P_TOP/XMn_out_right/a_100_n500#" "X_COMP_P_TOP/XMn_out_right/a_n100_n588#" 1.60682
+cap "X_COMP_P_TOP/latch_left" "X_COMP_P_TOP/vss" 0.011067
+cap "X_COMP_P_TOP/latch_right" "X_COMP_P_TOP/vss" 25.374
+cap "X_COMP_P_TOP/tail" "X_COMP_P_TOP/vss" 0.00942091
+cap "X_COMP_P_TOP/vdd" "X_COMP_P_TOP/vss" 0.62987
+merge "X_COMP_P_BOTTOM/vout" "X_SR_LATCH/IN_S" -1831.42 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -274046 -10822 0 0 0 0 0 0 0 0
+merge "X_SR_LATCH/IN_S" "m2_20480_17188#"
+merge "X_INV3[3]/sky130_fd_pr__pfet_01v8_7PK3FC_0/a_n33_n161#" "X_INV3[0]/vin" -3607.72 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -100092 -4092 -285744 -11900 0 0 0 0 0 0 0 0
+merge "X_INV3[0]/vin" "X_INV2[0]/vout"
+merge "X_INV2[0]/vout" "X_INV2[1]/vout"
+merge "X_INV2[1]/vout" "m1_21827_17833#"
+merge "m1_21827_17833#" "X_INV3[1]/vin"
+merge "X_INV3[1]/vin" "X_INV3[2]/vin"
+merge "X_INV3[2]/vin" "X_INV3[3]/vin"
+merge "X_INV3[3]/vin" "DO_OUT"
+merge "DO_OUT" "m1_22162_17833#"
+merge "XMp_bias/a_100_n1000#" "X_COMP_P_TOP/vdd" -26052.4 0 0 0 0 -272354 -24722 0 0 -100824 -20282 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -77826 -5054 -1162230 -35734 0 0 0 0 0 0 0 0 0 0
+merge "X_COMP_P_TOP/vdd" "a_24103_19828#"
+merge "a_24103_19828#" "X_COMP_P_BOTTOM/vdd"
+merge "X_COMP_P_BOTTOM/vdd" "XMp_bias/w_n296_n1219#"
 merge "XMp_bias/w_n296_n1219#" "XR_top/a_n141_684#"
-merge "XR_top/a_n141_684#" "X_INV1/w_978_1218#"
-merge "X_INV1/w_978_1218#" "X_INV1/vdd"
+merge "XR_top/a_n141_684#" "X_INV3[0]/vdd"
+merge "X_INV3[0]/vdd" "X_INV3[1]/vdd"
+merge "X_INV3[1]/vdd" "X_SR_LATCH/vdd"
+merge "X_SR_LATCH/vdd" "X_INV1/vdd"
 merge "X_INV1/vdd" "X_INV2[0]/vdd"
 merge "X_INV2[0]/vdd" "X_INV2[1]/vdd"
-merge "X_INV2[1]/vdd" "X_INV3[0]/vdd"
-merge "X_INV3[0]/vdd" "X_INV3[1]/vdd"
-merge "X_INV3[1]/vdd" "X_INV3[2]/vdd"
+merge "X_INV2[1]/vdd" "X_INV3[1]/sky130_fd_pr__pfet_01v8_7PK3FC_0/m1_n141_190#"
+merge "X_INV3[1]/sky130_fd_pr__pfet_01v8_7PK3FC_0/m1_n141_190#" "X_INV3[1]/sky130_fd_pr__pfet_01v8_7PK3FC_0/w_n141_n178#"
+merge "X_INV3[1]/sky130_fd_pr__pfet_01v8_7PK3FC_0/w_n141_n178#" "X_INV3[1]/w_978_1218#"
+merge "X_INV3[1]/w_978_1218#" "X_INV3[2]/vdd"
 merge "X_INV3[2]/vdd" "X_INV3[3]/vdd"
-merge "X_INV3[3]/vdd" "X_SR_LATCH/vdd"
-merge "X_SR_LATCH/vdd" "VDD"
+merge "X_INV3[3]/vdd" "VDD"
 merge "VDD" "w_20680_18281#"
-merge "X_COMP_P_TOP/vss" "XMn_bias/a_n158_n500#" -24298.5 0 0 0 0 0 0 0 0 0 0 -491096 -30010 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -689388 -44706 -1388098 -33202 0 0 -1120000 -5600 0 0 0 0 0 0
+merge "X_COMP_P_TOP/vss" "XMn_bias/a_n158_n500#" -25200.3 0 0 0 0 0 0 0 0 0 0 -493147 -29928 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -706252 -45664 -1402712 -34394 0 0 -1120000 -5600 0 0 0 0 0 0
 merge "XMn_bias/a_n158_n500#" "XR_bias_4/a_n271_n1246#"
 merge "XR_bias_4/a_n271_n1246#" "li_21942_23276#"
 merge "li_21942_23276#" "XR_bias_3/a_n271_n1246#"
@@ -893,42 +1043,39 @@ merge "XR_bias_1/a_n271_n1246#" "X_COMP_P_TOP/VSUBS"
 merge "X_COMP_P_TOP/VSUBS" "XMp_bias/VSUBS"
 merge "XMp_bias/VSUBS" "XR_mid/a_n271_n1246#"
 merge "XR_mid/a_n271_n1246#" "XR_top/a_n271_n1246#"
-merge "XR_top/a_n271_n1246#" "X_COMP_P_BOTTOM/VSUBS"
+merge "XR_top/a_n271_n1246#" "X_COMP_P_BOTTOM/XMn_out_right/a_n158_n500#"
+merge "X_COMP_P_BOTTOM/XMn_out_right/a_n158_n500#" "X_COMP_P_BOTTOM/XMn_out_left/a_n158_n500#"
+merge "X_COMP_P_BOTTOM/XMn_out_left/a_n158_n500#" "X_COMP_P_BOTTOM/VSUBS"
 merge "X_COMP_P_BOTTOM/VSUBS" "X_COMP_P_BOTTOM/vss"
-merge "X_COMP_P_BOTTOM/vss" "XR_bot/a_n271_n1246#"
+merge "X_COMP_P_BOTTOM/vss" "X_INV3[0]/vss"
+merge "X_INV3[0]/vss" "X_SR_LATCH/a_n6628_360#"
+merge "X_SR_LATCH/a_n6628_360#" "X_SR_LATCH/vss"
+merge "X_SR_LATCH/vss" "XR_bot/a_n271_n1246#"
 merge "XR_bot/a_n271_n1246#" "XR_bot/a_n141_n1116#"
 merge "XR_bot/a_n141_n1116#" "X_INV1/vss"
 merge "X_INV1/vss" "X_INV2[0]/vss"
 merge "X_INV2[0]/vss" "X_INV2[1]/vss"
-merge "X_INV2[1]/vss" "X_INV3[0]/vss"
-merge "X_INV3[0]/vss" "X_INV3[1]/vss"
+merge "X_INV2[1]/vss" "X_INV3[1]/vss"
 merge "X_INV3[1]/vss" "X_INV3[2]/vss"
 merge "X_INV3[2]/vss" "X_INV3[3]/vss"
-merge "X_INV3[3]/vss" "X_SR_LATCH/VSUBS"
-merge "X_SR_LATCH/VSUBS" "X_SR_LATCH/vss"
-merge "X_SR_LATCH/vss" "XMn_discharge/a_291_n1000#"
+merge "X_INV3[3]/vss" "XMn_discharge/a_291_n1000#"
 merge "XMn_discharge/a_291_n1000#" "a_20680_17271#"
 merge "a_20680_17271#" "XMn_discharge/a_35_n1000#"
 merge "XMn_discharge/a_35_n1000#" "XMn_discharge/a_n221_n1000#"
 merge "XMn_discharge/a_n221_n1000#" "XMn_discharge/a_n451_n1174#"
 merge "XMn_discharge/a_n451_n1174#" "VSS"
-merge "X_INV2[0]/vout" "X_INV2[1]/vout" -2063.62 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -5372 -588 -25016 -1716 0 0 0 0 0 0 0 0
-merge "X_INV2[1]/vout" "m1_21827_17833#"
-merge "m1_21827_17833#" "X_INV3[0]/vin"
-merge "X_INV3[0]/vin" "X_INV3[1]/vin"
-merge "X_INV3[1]/vin" "X_INV3[2]/vin"
-merge "X_INV3[2]/vin" "X_INV3[3]/vin"
-merge "X_INV3[3]/vin" "DO_OUT"
-merge "DO_OUT" "m1_22162_17833#"
+merge "X_SR_LATCH/inv_0/vout" "m1_20193_17356#" -91.0795 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -3908 -360 0 0 0 0 0 0 0 0 0 0
+merge "m1_20193_17356#" "m1_20123_17356#"
+merge "m1_20123_17356#" "m1_20228_17701#"
 merge "XMn_bias/a_n100_n588#" "XR_bias_4/a_n141_684#" -547.856 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -126126 -2238 0 0 0 0 0 0 0 0 0 0
 merge "XR_bias_4/a_n141_684#" "XMn_bias/a_100_n500#"
 merge "XMn_bias/a_100_n500#" "bias_n"
 merge "XR_bias_4/a_n141_n1116#" "XR_bias_3/a_n141_n1116#" -703.289 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -220604 -2732 0 0 0 0 0 0 0 0 0 0
 merge "XR_bias_3/a_n141_n1116#" "bias_3"
-merge "X_COMP_P_TOP/vinn" "XR_mid/a_n141_n1116#" -1320.13 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -224017 -3228 -31996 -1266 0 0 0 0 0 0 0 0
+merge "X_COMP_P_TOP/vinn" "XR_mid/a_n141_n1116#" -1411.22 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -259377 -4588 -31996 -1266 0 0 0 0 0 0 0 0
 merge "XR_mid/a_n141_n1116#" "XR_top/a_n141_n1116#"
 merge "XR_top/a_n141_n1116#" "v1p2"
-merge "XR_mid/a_n141_684#" "X_COMP_P_BOTTOM/vinp" -782.394 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -214066 -2840 0 0 0 0 0 0 0 0 0 0
+merge "XR_mid/a_n141_684#" "X_COMP_P_BOTTOM/vinp" -781.923 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -214066 -2840 0 0 0 0 0 0 0 0 0 0
 merge "X_COMP_P_BOTTOM/vinp" "XR_bot/a_n141_684#"
 merge "XR_bot/a_n141_684#" "v0p6"
 merge "X_INV3[0]/vout" "X_INV3[1]/vout" -1831.69 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -38550 -3090 0 0 0 0 0 0 0 0 0 0
@@ -936,21 +1083,22 @@ merge "X_INV3[1]/vout" "X_INV3[2]/vout"
 merge "X_INV3[2]/vout" "X_INV3[3]/vout"
 merge "X_INV3[3]/vout" "m1_22353_17833#"
 merge "m1_22353_17833#" "XMn_discharge/a_221_n1088#"
-merge "XMn_discharge/a_221_n1088#" "XMn_discharge/a_93_n1088#"
+merge "XMn_discharge/a_221_n1088#" "out_inv3"
+merge "out_inv3" "XMn_discharge/a_93_n1088#"
 merge "XMn_discharge/a_93_n1088#" "XMn_discharge/a_n35_n1088#"
 merge "XMn_discharge/a_n35_n1088#" "XMn_discharge/a_n163_n1088#"
 merge "XMn_discharge/a_n163_n1088#" "XMn_discharge/a_n291_n1088#"
-merge "XMn_discharge/a_n291_n1088#" "out_inv3"
-merge "out_inv3" "m1_20810_16448#"
-merge "X_INV1/vout" "X_INV2[0]/vin" -930.512 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -4318 -390 -7786 -594 0 0 0 0 0 0 0 0
+merge "XMn_discharge/a_n291_n1088#" "m1_20810_16448#"
+merge "X_INV1/vout" "X_INV2[0]/vin" -936.561 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -4318 -390 -7786 -594 0 0 0 0 0 0 0 0
 merge "X_INV2[0]/vin" "X_INV2[1]/vin"
 merge "X_INV2[1]/vin" "m2_21621_17946#"
 merge "m2_21621_17946#" "out_inv1"
-merge "X_COMP_P_TOP/vout" "X_SR_LATCH/IN_R" -3590.23 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -607932 -23538 0 0 0 0 0 0 0 0
-merge "X_SR_LATCH/IN_R" "sr_r"
-merge "X_COMP_P_TOP/vinp" "V_THRESH_I" -565.821 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -57512 -2368 0 0 0 0 0 0 0 0 0 0
-merge "XR_bias_1/a_n141_684#" "XMp_bias/a_n100_n1097#" -1731.08 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -130496 -2516 -52 -210 0 0 0 0 0 0 0 0
-merge "XMp_bias/a_n100_n1097#" "XMp_bias/a_n158_n1000#"
+merge "X_COMP_P_TOP/vout" "X_SR_LATCH/IN_R" -3263.09 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -643794 -24918 0 0 0 0 0 0 0 0
+merge "X_SR_LATCH/IN_R" "m2_19879_17938#"
+merge "X_COMP_P_TOP/vinp" "V_THRESH_I" -565.401 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -57512 -2368 0 0 0 0 0 0 0 0 0 0
+merge "X_SR_LATCH/IN_R_N" "DI_RESET_N" -431.617 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -252516 -8168 0 0 0 0 0 0 0 0
+merge "XMp_bias/a_n100_n1097#" "XR_bias_1/a_n141_684#" -1487.46 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -130496 -2516 -52 -210 0 0 0 0 0 0 0 0
+merge "XR_bias_1/a_n141_684#" "XMp_bias/a_n158_n1000#"
 merge "XMp_bias/a_n158_n1000#" "X_COMP_P_TOP/vbias_p"
 merge "X_COMP_P_TOP/vbias_p" "X_COMP_P_BOTTOM/vbias_p"
 merge "X_COMP_P_BOTTOM/vbias_p" "bias_p"
@@ -962,6 +1110,6 @@ merge "XMn_discharge/a_n349_n1000#" "V_DISCH_O"
 merge "X_COMP_P_BOTTOM/vinn" "V_TRIG_B_I" -1485.62 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -40144 -1752 -174980 -6782 0 0 0 0 0 0 0 0
 merge "XR_bias_2/a_n141_n1116#" "XR_bias_1/a_n141_n1116#" -732.262 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -220604 -2732 0 0 0 0 0 0 0 0 0 0
 merge "XR_bias_1/a_n141_n1116#" "bias_1"
-merge "X_INV1/vin" "X_SR_LATCH/OUT_Q" -667.303 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -5910 -436 0 0 0 0 0 0 0 0
-merge "X_SR_LATCH/OUT_Q" "q_sr"
-merge "X_SR_LATCH/OUT_Q_B" "qb_sr" -168.539 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -2652 -206 0 0 0 0 0 0 0 0
+merge "X_SR_LATCH/OUT_Q" "X_INV1/vin" -648.251 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -5694 -430 0 0 0 0 0 0 0 0
+merge "X_INV1/vin" "q_sr"
+merge "X_SR_LATCH/X_NOR_BOTTOM/IN_A" "qb_sr" -115.149 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -2548 -202 0 0 0 0 0 0 0 0
