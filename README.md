@@ -69,13 +69,13 @@ The tt06_555 implementation is shown below:
 
 Below is a top-level testbench with the tt06_555 configured in the oscillator mode described earlier. This testbench compares the outputs of the schematic vs. the full RC extracted netlists.
 
-![Simulation Schematic](./docs/tb_tt_um_vaf_555_timer_astable_schematic.PNG){width=75%}
+![Simulation Schematic](./docs/tb_tt_um_vaf_555_timer_astable_schematic.PNG)
 
 $$R_A = 1.78k\Omega$$
 $$R_B = 4.12k\Omega$$
 $$C = 0.01\mu F$$
 
-![Simulation Results](./docs/tb_tt_um_vaf_555_timer_astable_results.png){width=75%}
+![Simulation Results](./docs/tb_tt_um_vaf_555_timer_astable_results.png)
 
 From the earlier analysis with the values chosen above, we expect:
 
@@ -106,15 +106,15 @@ The comparator could also be used stand-alone in another application. Below a Mo
 
 The predecessor was the NE566 Voltage-Controlled Oscillator:
 
-![566 Oscillator](./docs/566_oscillator.PNG){width=50%}
+![566 Oscillator](./docs/566_oscillator.PNG)
 
 The voltage-to-current source wasn't actually needed. The 555 was born:
 
-![555 Original](./docs/555_original.PNG){width=50%}
+![555 Original](./docs/555_original.PNG)
 
 A 5V-CMOS verion was later created.
 
-![555 CMOS](./docs/555_cmos.PNG){width=50%}
+![555 CMOS](./docs/555_cmos.PNG)
 
 The free e-book written by original inventor, Hans Camenzind, can be found at [2].
 
