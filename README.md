@@ -38,6 +38,10 @@ The amount of time that OUTPUT is high is given by:
 t_1 = 0.693(R_A+R_B)C
 \end{equation}
 
+$$\left
+t_1 = 0.693(R_A+R_B)C
+\right$$
+
 The amount of time OUTPUT is low:
 
 $`t_2 = 0.693(R_B)C`$
