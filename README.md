@@ -135,6 +135,7 @@ And a 5V-CMOS verion was later created.
 The free e-book written by Camenzind can be found at [2].
 
 [1] https://computerhistory.org/blog/hans-camenzind-remembering-a-wizard-of-analog/
+
 [2] http://www.designinganalogchips.com/.
 
-![Comparator](./docs/gibson.PNG)
+![Hack The Planet](./docs/gibson.PNG)
