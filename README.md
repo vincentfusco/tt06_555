@@ -11,21 +11,19 @@ Blinking an LED with a 555-Timer has represented the 'Hello World' for beginner 
 ![Layout](./docs/555_layout.png)
 
 ## Schematics
-The transistor-level-implementation of this circuit is different than what is actually inside of a 555 Timer.
-
-See section, "History" to see schematics of the original.
-
-Below is my version:
-
 ![Schematic](./docs/timer_core_schematic.PNG)
 
-Inside of the comparators is a classic CMOS comparator topology which can be found in many texts:
+Inside of the comparators is a comparator topology which can be found in many texts:
 
 ![Comparator](./docs/comp_p_schem_vs_layout.PNG)
 
+(See Allen Holbert - CMOS Analog Circuit Design, or Baker - CMOS Circuit Design, Layout, and Simulation for descriptions of how this circuit works)
+
+Note: The transistor-level-implementation of my 555 circuit is different than what is actually inside of a 555 Timer. See section, "History" to see schematics of the original.
+
 ## Operation
 
-A 555-Timer is nothing more than a couple of comparators, an internal voltage divider (5kOhm x 3 in the original, which is where the marketing guys got their inspiration for its name), an SR latch and an open-drain transistor.
+A 555-Timer is nothing more than a couple of comparators, an internal voltage divider, an SR latch, and an open-drain transistor.
 
 This collection of components has been used to cleverly implement all different kinds of functions. See the datasheet for the CMOS version here: https://www.ti.com/lit/gpn/LMC555.
 
