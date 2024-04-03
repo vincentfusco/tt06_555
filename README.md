@@ -5,13 +5,13 @@
   
  ## Why
  
-Blinking an LED with a 555-Timer has represented the 'Hello World' for beginner electronics enthusiasts for a long time. Tiny Tapeout 6 is a milestone in hobbyist IC design. See "History" for some schematics of the original!
+Blinking an LED with a 555-Timer has represented the 'Hello World' for beginner electronics enthusiasts for a long time. Tiny Tapeout 6 is a milestone in hobbyist IC design. 
 
   ## Layout
 ![Layout](./docs/555_layout.png)
 
 ## Schematics
-The transistor-level-implementation of this circuit is much different than what is actually inside of a 555 Timer.
+The transistor-level-implementation of this circuit is different than what is actually inside of a 555 Timer.
 
 See the section below "History" to see the original.
 
