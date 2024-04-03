@@ -34,7 +34,7 @@ In this configuration, the frequency of oscillation and duty cycle are a functio
 
 The amount of time that OUTPUT is high is given by:
 
-$$`t_1 = 0.693(R_A+R_B)C`$$
+$$t_1 = 0.693(R_A+R_B)C$$
 
 The amount of time OUTPUT is low:
 
