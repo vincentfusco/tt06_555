@@ -5,7 +5,7 @@
   
  ## Why
  
-Blinking an LED with a 555-Timer has represented the 'Hello World' for beginner electronics enthusiasts for a long time. Tiny Tapeout 6 marks the beginning of analog chip design becoming, in my opinion, accessible to hobbyists, hackers, and other free men in the way that PCB design was made accessible in previous decades. LEDs must be blinked.
+Blinking an LED with a 555-Timer has represented the 'Hello World' for beginner electronics enthusiasts for a long time. Tiny Tapeout 6 marks the beginning of analog chip design becoming accessible to hobbyists, hackers, and other free individuals.
 
   ## Layout
 ![Layout](./docs/555_layout.png)
