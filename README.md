@@ -26,15 +26,13 @@ Comparator:
 
 ## Operation
 
-A 555-Timer is nothing more than a couple of comparators, an internal voltage divider, an SR latch, and an open-drain transistor.
+The 555-Timer has been used to cleverly implement all different kinds of functions. See the datasheet for the CMOS version here: https://www.ti.com/lit/gpn/LMC555.
 
-This collection of components has been used to cleverly implement all different kinds of functions. See the datasheet for the CMOS version here: https://www.ti.com/lit/gpn/LMC555.
-
-Figure 7-5 from the above datasheet shows the 555 timer connected as an "astable multivibrator" meaning it runs as an oscillator.
+Figure 7-5 from the above datasheet shows just one possible application. The 555 timer is connected as an "astable multivibrator" meaning it runs as an oscillator whose output frequency and duty-cycle are set by the external components.
 
 ![Texas Instruments Datasheet Figure](./docs/555_datasheet_fig7p5.PNG)
 
-In this configuration, the frequency of oscillation and duty cycle are a function of Ra, Rb, and C, independent of supply:
+In this configuration, the frequency of oscillation and duty cycle are a function of the board designer's choice of Ra, Rb, and C, given by:
 
 The amount of time that OUTPUT is high:
 
