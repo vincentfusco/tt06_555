@@ -5,7 +5,7 @@
   
  ## Why
  
-Blinking an LED using a 555-Timer has long served as the 'Hello World' for novice electronics enthusiasts. With Tiny Tapeout, analog chip design is now within reach for hobbyists, hackers, and other free individuals. In light of this, I decided to take on the challenge of building my own 555 on an IC to blink an LED the hard way.
+Blinking an LED using a 555-Timer has long served as the 'Hello World' for novice electronics enthusiasts. With Tiny Tapeout, analog chip design is now within reach for hobbyists, hackers, and other free individuals. In light of this, I decided to take on the challenge of building my own 555 on an IC and to blink an LED the hard way.
  
   ## Layout
 ![Layout](./docs/555_layout.png)
