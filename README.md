@@ -55,7 +55,7 @@ $`R_A = 1.78k\Omega`$
 
 $`R_B = 4.12k\Omega`$
 
-$`C = 0.01\muF`$
+$`C = 0.01\mu F`$
 
 With these values,
 
