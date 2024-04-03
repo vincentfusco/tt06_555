@@ -134,3 +134,7 @@ And a 5V-CMOS verion was later created.
 
 Hans Camenzind was a legendary analog IC designer. His book is free for download and is available at:
 http://www.designinganalogchips.com/.
+
+## Contact
+Message me at fusco_vincent on the Tiny Tapeout discord or add me on LinkedIn at https://www.linkedin.com/in/vincentfusco/
+
