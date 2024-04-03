@@ -58,7 +58,7 @@ $`R_B = 4.12k\Omega`$
 
 $`C = 0.01\mu F`$
 
-With these values,
+With these values we get:
 
 $` t_1 = 40.89\mu s`$
 
@@ -72,9 +72,13 @@ The x2 instance is the RC extracted netlist.
 
 ![Simulation Schematic](./docs/tb_tt_um_vaf_555_timer_astable_schematic.PNG)
 
-The above Ngspice output shows that the measured frequency between the schematic and RC extracted netlist are close and are in close agreement with the predicted value.
+The below Ngspice output shows the resulting waveforms.
 
 ![Simulation Results](./docs/tb_tt_um_vaf_555_timer_astable_results.png)
+
+The Ngspice output above shows that the measured frequency between the schematic and RC extracted netlist are close and are in close agreement with each other.
+
+They are close to the analytically-predicted value.
 
 ## Comparator 
 
