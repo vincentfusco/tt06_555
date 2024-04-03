@@ -17,16 +17,15 @@ Timer Top:
 ![Schematic](./docs/timer_core_schematic.PNG)
 
 Conceptually, a 555-Timer is nothing more than a couple of comparators, an internal voltage divider, an SR latch, and an open-drain transistor. These basic functions could be implemented in
-numerous ways. My implementation is shown below. See [History](#history) for the original BJT version, and its later CMOS counterpart.
+numerous ways. My implementation is shown below. See [History](#history) for an original BJT version and its later CMOS counterpart.
 
 Comparator:
 
 ![Comparator](./docs/comp_p_schem_vs_layout.PNG)
-(See Allen Holbert - CMOS Analog Circuit Design, or Baker - CMOS Circuit Design, Layout, and Simulation for descriptions of how this circuit works)
 
 ## Operation
 
-The 555-Timer has been used to cleverly implement all different kinds of functions. See the datasheet for the CMOS version here: https://www.ti.com/lit/gpn/LMC555.
+The 555-Timer has been used to cleverly implement all different kinds of functions. See the datasheet for the CMOS version here: https://www.ti.com/lit/gpn/LMC555 for some ideas.
 
 Figure 7-5 from the above datasheet shows just one possible application. The 555 timer is connected as an "astable multivibrator" meaning it runs as an oscillator whose output frequency and duty-cycle are set by the external components.
 
@@ -49,7 +48,7 @@ $`f = 1.44/(R_A+2R_B)C`$
 
 ## Simulation and Post-Layout Verification
 
-Below I show my testbench which replicates the above circuit, shown in Fig. 7-5 with:
+Below I show a top-level testbench which replicates the circuit above.
 
 $`R_A = 1.78k\Omega`$
 
@@ -57,7 +56,7 @@ $`R_B = 4.12k\Omega`$
 
 $`C = 0.01\mu F`$
 
-With these values we get:
+With these values we expect:
 
 $` t_1 = 40.89\mu s`$
 
@@ -71,13 +70,12 @@ The x2 instance is the RC extracted netlist.
 
 ![Simulation Schematic](./docs/tb_tt_um_vaf_555_timer_astable_schematic.PNG)
 
-The below Ngspice output shows the resulting waveforms.
+The below Ngspice output shows the resulting waveforms:
 
 ![Simulation Results](./docs/tb_tt_um_vaf_555_timer_astable_results.png)
 
-The Ngspice output above shows that the measured frequency between the schematic and RC extracted netlist are close and are in close agreement with each other.
-
-They are close to the analytically-predicted value.
+Shown above, the measured frequency between the schematic and RC extracted netlist are close and are in close agreement with each other. The frequency is somewhat lower than the analytically
+predicted value, but quite close. 
 
 ## Comparator 
 
