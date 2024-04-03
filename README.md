@@ -11,13 +11,16 @@ Blinking an LED with a 555-Timer has represented the 'Hello World' for beginner 
 ![Layout](./docs/555_layout.png)
 
 ## Schematics
+Timer Top:
+
 ![Schematic](./docs/timer_core_schematic.PNG)
 
-![Comparator](./docs/comp_p_schem_vs_layout.PNG)
-
-(See Allen Holbert - CMOS Analog Circuit Design, or Baker - CMOS Circuit Design, Layout, and Simulation for descriptions of how this circuit works)
-
 Note: The transistor-level-implementation of my 555 circuit is different than what is actually inside of a 555 Timer. See section, "History" for schematics of the original.
+
+Comparator:
+
+![Comparator](./docs/comp_p_schem_vs_layout.PNG)
+(See Allen Holbert - CMOS Analog Circuit Design, or Baker - CMOS Circuit Design, Layout, and Simulation for descriptions of how this circuit works)
 
 ## Operation
 
