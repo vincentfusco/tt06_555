@@ -32,7 +32,13 @@ Figure 7-5 from the above datasheet shows the 555 timer connected as an "astable
 
 ![Texas Instruments Datasheet Figure](./docs/555_datasheet_fig7p5.PNG)
 
-The frequency of oscillation as well as the duty cycle are a function of Ra, Rb, and C -- independent of supply voltage!
+In this configuration, the frequency of oscillation as well as the duty cycle are a function of Ra, Rb, and C:
+
+$`t_1 = 0.693(R_A+R_B)`$
+$`t_2 = 0.693(R_B)C`$
+$`t_2 = 0.693(R_B)C`$
+
+
 
 
 ## Simulation and Post-Layout Verification
