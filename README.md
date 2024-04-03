@@ -74,8 +74,8 @@ The below Ngspice output shows the resulting waveforms:
 
 ![Simulation Results](./docs/tb_tt_um_vaf_555_timer_astable_results.png)
 
-Shown above, the measured frequency between the schematic and RC extracted netlist are close and are in close agreement with each other. The frequency is somewhat lower than the analytically
-predicted value, but quite close. 
+Shown above, the measured frequency between the schematic and RC extracted netlist are in close agreement with each other. The frequency is somewhat lower than the analytically
+predicted value, but also quite close. 
 
 ## Comparator 
 
