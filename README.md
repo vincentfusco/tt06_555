@@ -12,12 +12,11 @@ Blinking an LED using a 555-Timer has long served as the 'Hello World' for novic
 ![Layout](./docs/555_layout.png)
 
 ## Schematics
-Timer Top:
-
-![Schematic](./docs/timer_core_schematic.PNG)
 
 Conceptually, a 555-Timer is nothing more than a couple of comparators, an internal voltage divider, an SR latch, and an open-drain transistor. These basic functions could be implemented in
 numerous ways. My implementation is shown below. See [History](#history) for an original BJT version and its later CMOS counterpart.
+
+![Schematic](./docs/timer_core_schematic.PNG)
 
 Comparator:
 
@@ -25,9 +24,9 @@ Comparator:
 
 ## Operation
 
-The 555-Timer has been used to cleverly implement all different kinds of functions. See the datasheet for the CMOS version here: https://www.ti.com/lit/gpn/LMC555 for some ideas.
+The 555-Timer has been used to cleverly implement all different kinds of functions. 
 
-Figure 7-5 from the above datasheet shows just one possible application. The 555 timer is connected as an "astable multivibrator" meaning it runs as an oscillator whose output frequency and duty-cycle are set by the external components.
+Figure 7-5 from the TI datasheet (https://www.ti.com/lit/gpn/LMC555) provides one. The 555 timer is connected as an "astable multivibrator" meaning it runs as an oscillator whose output frequency and duty-cycle are set by the external components.
 
 ![Texas Instruments Datasheet Figure](./docs/555_datasheet_fig7p5.PNG)
 
@@ -79,7 +78,7 @@ predicted value, but also quite close.
 
 ## Comparator 
 
-The comparator could also be used as a piece of stand-alone IP. Below are some Monte-Carlo results where I measured
+The comparator could also be used stand-alone in another application. Below are some Monte-Carlo results where I measured
 the offset and hysteresis at TT around a 0.6V threshold:
 
 ![Comparator simulations](./docs/comp_p_simulations.PNG)
@@ -99,29 +98,34 @@ xschem ./tb/tt_um_vaf_555_timer/tb_tt_um_vaf_555_timer_astable.Schematic
 
 ## History
 
-The inventor of the original 555 Timer was Hans Camenzind. The idea came from work he did on PLLs while at Signetics (Phillips) in the era when circuit layout was done by hand by cutting Rubylith. 
+The inventor of the original 555 Timer was Hans Camenzind. The idea for the 555 came from work he did on PLLs while at Signetics (Phillips) in the era when circuit layout was done by hand by cutting Rubylith. 
 
-At Signetics, Hans needed an oscillator whose frequency could
-be set by an external resistor and capacitor which was not affected by changes in supply voltage or temperature. 
+At Signetics, Hans had needed an oscillator whose frequency could
+be set by an external resistor and capacitor, whose frequency was not dependent on supply voltage.
 
 He quit Signetics and decided to try to make this product a reality.
 
-His original design was the NE566 Voltage-Controlled Oscillator:
+His first design was the NE566 Voltage-Controlled Oscillator:
 
 ![566 Oscillator](./docs/566_oscillator.PNG)
 
-In short, this circuit works by charging a capacitor Cext, with a constant-current I = (1/6)Vcc.
+The circuit works by charging Cext with a constant-current I = (1/6)Vcc.
 
 Charging a capacitor with a constant current gives a linear ramp.
 
-The capacitor charges between the two thresholds set by Comp. 1 and Comp. 2.
+This linear ramp can go as high as 2/3 Vcc until the top comparator switches the current to sinking.
 
-As the capacitor voltage crosses the threshold for each capacitor, set by the 5k Ohm resistor string (which is where the timer gets its name)
-the current is steered to either charge or discharge the capacitor Cext.
+This downward linear ramp gets to 1/3 Vcc until the bottom comparator switches the current back to sourcing.
 
-Thus, the resulting capacitor waveform is a triangle wave which bounces between 1/3 Vcc and 2/3 Vcc.
+Thus, the resulting capacitor waveform is a triangle wave which continually bounces between 1/3 Vcc and 2/3 Vcc.
 
-The Vcc term in the current and the Vcc terms in the thresholds cancel, giving an expression for frequency ultimately independent of supply.
+Then, by writing the equation for a constant current into a capacitor:
+
+$`1/3 Vcc = \Delta t C (1/6) Vcc/R`$
+
+$`f = 1/(2 \Delta t)`$
+
+$`f = 1/(4RC)`$
 
 Hans later realized that he had made an incorrect assumption early on about needing the V-to-I converter. He had assumed that only a linear relationship between charge-current and end-voltage would cause Vcc-dependence cancellation, but this was wrong. 
 
