@@ -17,12 +17,25 @@ of timer, delay, pulse generation, and oscillator applications.
 
 In the figure below, the 555 Timer is configured as an astable multivibrator - a square-wave oscillator.
 
-Suppose the capacitor starts out at 0V. S=H. R=L.
+Suppose at startup the capacitor is at an initial voltage of 0V. S=H, R=L, Q=H, Qb=L. 
 
-The capacitor will begin to charge through a time constant given by $(R_A+R_B)C$
+The capacitor will begin to charge through a time constant given by $\tau_h = (R_A+R_B)C$.
 
-The frequency of oscillation and duty cycle are a function of the board designer's choice of RA, RB, and C.
+When the capacitor crosses the $(1/3)Vcc$ mark, the bottom comparator will fire and: S=L, R=L, Q=Hold (H), Qb=Hold (L).
 
+The capacitor continues to charge until it gets to $(2/3)Vcc$. The top comparator will fire and we get: S=L, R=H, Q=L, Qb=H.
+
+The NFET is turned on, so the capacitor will immediately start discharging through a time constant $\tau_h = R_BC$.
+
+As the capacitor voltage goes back below $(2/3)Vcc$, the top comparator will go low again. We have: S=L, R=L, Q=Hold (L), Qb=Hold (H).
+
+The capacitor continues to discharge until it gets back down to $(1/3)Vcc$. The bottom capacitor will fire and we have: S=H, R=L, Q=H, Qb=L.
+
+Now the NFET is off and the capacitor will begin charging again. As the capacitor begins charging we get: S=L, R=L, Q=Hold (H), Qb=Hold (L).
+
+And the cycle continues.
+
+Therefore, the frequency of oscillation and duty cycle are a function of the board designer's choice of RA, RB, and C.
 
 ![555 Block Diagram](./docs/555_system_diagram.PNG)
 
@@ -38,18 +51,14 @@ And the overall frequency:
 
 $$f = \frac{\sqrt{2}}{(R_A+2R_B)C}$$
 
-If you are learning to do analog design, then it should bother you if you haven't derived the above for yourself, so give it a try. 
-
-For a hint, see the [History](#history) section for a derivation for the original 556.
-
 ## Schematics
 
-The basic functions described above can and have beeen implemented in
-numerous ways. 
+The basic functions described above can and have beeen implemented in different ways. 
 
 Schematics of the original BJT version and later CMOS counterpart (with actual sizing given by the creator himself) are given in [History](#history).
 
 ### Timer Top
+
 My implementation is shown below:
 
 ![Schematic](./docs/timer_core_schematic.PNG)
@@ -58,10 +67,9 @@ My implementation is shown below:
 
 ![Comparator](./docs/comp_p_schem_vs_layout.PNG)
 
-
 ## Simulation and Post-Layout Verification
 
-Below I show a top-level testbench with the tt06_555 configured in the oscillator mode described earlier. This testbench compares the outputs of the schematic vs. the full RC extracted netlists.
+Below is a top-level testbench with the tt06_555 configured in the oscillator mode described earlier. This testbench compares the outputs of the schematic vs. the full RC extracted netlists.
 
 $$R_A = 1.78k\Omega$$
 $$R_B = 4.12k\Omega$$
