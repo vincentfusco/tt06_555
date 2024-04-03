@@ -69,19 +69,19 @@ The tt06_555 implementation is shown below:
 
 Below is a top-level testbench with the tt06_555 configured in the oscillator mode described earlier. This testbench compares the outputs of the schematic vs. the full RC extracted netlists.
 
-![Simulation Schematic](./docs/tb_tt_um_vaf_555_timer_astable_schematic.PNG)
-
 $$R_A = 1.78k\Omega$$
 $$R_B = 4.12k\Omega$$
 $$C = 0.01\mu F$$
-
-![Simulation Results](./docs/tb_tt_um_vaf_555_timer_astable_results.png)
 
 From the earlier analysis with the values chosen above, we expect:
 
 $$t_1 = 40.89\mu s$$
 $$t_2 = 28.55\mu s$$
 $$ f = 14.37kHz$$
+
+![Simulation Schematic](./docs/tb_tt_um_vaf_555_timer_astable_schematic.PNG)
+
+![Simulation Results](./docs/tb_tt_um_vaf_555_timer_astable_results.png)
 
 The frequency measurement between the simulated schematic and the simulated extracted RC netlist match closely, as shown above.
 
