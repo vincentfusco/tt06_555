@@ -98,24 +98,21 @@ xschem ./tb/tt_um_vaf_555_timer/tb_tt_um_vaf_555_timer_astable.Schematic
 
 ## History
 
-The inventor of the original 555 Timer was Hans Camenzind. The idea for the 555 came from work he did on PLLs while at Signetics (Phillips) in the era when circuit layout was done by hand by cutting Rubylith. 
+The 555 Timer is the most widely used analog IC ever made [1]. It was invented in the era of IC design when layout was still done by hand by cutting Rubylith.
 
-At Signetics, Hans had needed an oscillator whose frequency could
-be set by an external resistor and capacitor, whose frequency was not dependent on supply voltage.
-
-He quit Signetics and decided to try to make this product a reality.
+Its inventor was Hans Camenzind, who got the idea for the product when working on PLLs at Signetics (now Phillips). At Signetics, Hans had needed an oscillator whose frequency could be set by an external resistor and capacitor independent of supply voltage.
 
 His first design was the NE566 Voltage-Controlled Oscillator:
 
 ![566 Oscillator](./docs/566_oscillator.PNG)
 
-The circuit works by charging Cext with a constant-current I = (1/6)Vcc.
+The circuit works by charging Cext with a constant-current I = (1/6)Vcc/Rext.
 
 Charging a capacitor with a constant current gives a linear ramp.
 
-This linear ramp can go as high as 2/3 Vcc until the top comparator switches the current to sinking.
+This linear ramp rises upwards and can go as high as 2/3 Vcc until the top comparator fires and switches the current to sinking.
 
-This downward linear ramp gets to 1/3 Vcc until the bottom comparator switches the current back to sourcing.
+This downward linear ramp continues until it gets to 1/3 Vcc when the bottom comparator switches the current back to sourcing.
 
 Thus, the resulting capacitor waveform is a triangle wave which continually bounces between 1/3 Vcc and 2/3 Vcc.
 
@@ -127,9 +124,7 @@ $`f = 1/(2 \Delta t)`$
 
 $`f = 1/(4RC)`$
 
-Hans later realized that he had made an incorrect assumption early on about needing the V-to-I converter. He had assumed that only a linear relationship between charge-current and end-voltage would cause Vcc-dependence cancellation, but this was wrong. 
-
-He modified the 556, removing the V-to-I, and the 555 was born. The original schematic circuit is shown below:
+Hans later realized that he had made an incorrect assumption early on about needing the V-to-I converter. He had assumed that only a linear relationship between charge-current and end-voltage would cause Vcc-dependence cancellation, but this was wrong, so he modified the 556, removing the V-to-I, and the 555 was born. The original schematic circuit published by Camenzind himself is shown below [1]:
 
 ![555 Original](./docs/555_original.PNG)
 
@@ -137,7 +132,9 @@ And a 5V-CMOS verion was later created.
 
 ![555 CMOS](./docs/555_cmos.PNG)
 
-Hans Camenzind was a legendary analog IC designer. His book is free for download and is available at:
-http://www.designinganalogchips.com/.
+The free e-book written by Camenzind can be found at [2].
+
+[1] https://computerhistory.org/blog/hans-camenzind-remembering-a-wizard-of-analog/
+[2] http://www.designinganalogchips.com/.
 
 ![Comparator](./docs/gibson.PNG)
