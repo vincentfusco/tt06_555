@@ -1,14 +1,13 @@
 # 555 Timer for Tiny Tapeout 6
  
-  ## About
+## About
  This project emulates the functionality of the classic 555 Timer IC. 
   
- ## Why
+## Why
  
 Blinking an LED using a 555-Timer has long served as the 'Hello World' for novice electronics enthusiasts. With the ongoing improvement in open-source tools and the emergence of communities like Tiny Tapeout, analog chip design is now within reach for hobbyists, hackers, and other free individuals. In light of this, I decided to take on the challenge of building my own 555 on an IC to blink an LED the hard way.
-
  
-  ## Layout
+## Layout
 ![Layout](./docs/555_layout.png)
 
 ## Schematics
@@ -38,30 +37,30 @@ $$t_1 = 0.693(R_A+R_B)C$$
 
 The amount of time OUTPUT is low:
 
-$`t_2 = 0.693(R_B)C`$
+$$t_2 = 0.693(R_B)C$$
 
 And the overall frequency:
 
-$`f = 1.44/(R_A+2R_B)C`$
+$$f = 1.44/(R_A+2R_B)C$$
 
 
 ## Simulation and Post-Layout Verification
 
 Below I show a top-level testbench which replicates the circuit above.
 
-$`R_A = 1.78k\Omega`$
+$$R_A = 1.78k\Omega$$
 
-$`R_B = 4.12k\Omega`$
+$$R_B = 4.12k\Omega$$
 
-$`C = 0.01\mu F`$
+$$C = 0.01\mu F$$
 
 With these values we expect:
 
-$` t_1 = 40.89\mu s`$
+$$ t_1 = 40.89\mu s$$
 
-$`t_2 = 28.55\mu s`$
+$$t_2 = 28.55\mu s$$
 
-$` f = 14.37kHz`$
+$$ f = 14.37kHz$$
 
 The x1 instance is the schematic.
 
@@ -76,7 +75,7 @@ The below Ngspice output shows the resulting waveforms:
 Shown above, the measured frequency between the schematic and RC extracted netlist are in close agreement with each other. The frequency is somewhat lower than the analytically
 predicted value, but also quite close. 
 
-## Comparator 
+##Comparator 
 
 The comparator could also be used stand-alone in another application. Below are some Monte-Carlo results where I measured
 the offset and hysteresis at TT around a 0.6V threshold:
@@ -96,7 +95,7 @@ cd tt06_555/xsch
 xschem ./tb/tt_um_vaf_555_timer/tb_tt_um_vaf_555_timer_astable.Schematic
 ```
 
-## History
+##History
 
 The 555 Timer is the most widely used analog IC ever made [1]. It was invented in the era of IC design when layout was still done by hand by cutting Rubylith.
 
@@ -118,11 +117,11 @@ Thus, the resulting capacitor waveform is a triangle wave which continually boun
 
 Then, by writing the equation for a constant current into a capacitor:
 
-$`1/3 Vcc = \Delta t C (1/6) Vcc/R`$
+$$1/3 Vcc = \Delta t C (1/6) Vcc/R$$
 
-$`f = 1/(2 \Delta t)`$
+$$f = 1/(2 \Delta t)$$
 
-$`f = 1/(4RC)`$
+$$f = 1/(4RC)$$
 
 Hans later realized that he had made an incorrect assumption early on about needing the V-to-I converter. He had assumed that only a linear relationship between charge-current and end-voltage would cause Vcc-dependence cancellation, but this was wrong, so he modified the 556, removing the V-to-I, and the 555 was born. The original schematic circuit published by Camenzind himself is shown below [1]:
 
