@@ -13,7 +13,7 @@ Blinking an LED with a 555-Timer has represented the 'Hello World' for beginner 
 ## Schematics
 The transistor-level-implementation of this circuit is different than what is actually inside of a 555 Timer.
 
-See section, "History" to see schematics of the original!
+See section, "History" to see schematics of the original.
 
 Below is my version:
 
