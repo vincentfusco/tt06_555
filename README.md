@@ -75,8 +75,10 @@ The above Ngspice output shows that the measured frequency between the schematic
 
 ![Simulation Results](./docs/tb_tt_um_vaf_555_timer_astable_results.png)
 
-This comparator could also potentially be used as a piece of stand-alone IP. Below are some Monte-Carlo results where I measured
-the offset and hysteresis at TYP.
+## Comparator 
+
+The comparator could also be used as a piece of stand-alone IP. Below are some Monte-Carlo results where I measured
+the offset and hysteresis at TT around a 0.6V threshold:
 
 ![Comparator simulations](./docs/comp_p_simulations.PNG)
 
