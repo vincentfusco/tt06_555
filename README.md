@@ -32,11 +32,11 @@ Figure 7-5 from the above datasheet shows the 555 timer connected as an "astable
 
 ![Texas Instruments Datasheet Figure](./docs/555_datasheet_fig7p5.PNG)
 
-In this configuration, the frequency of oscillation as well as the duty cycle are a function of Ra, Rb, and C:
+In this configuration, the frequency of oscillation and duty cycle are a function of Ra, Rb, and C, independent of supply:
 
-Aount of time OUTPUT is high:
+The amount of time that OUTPUT is high:
 
-$`t_1 = 0.693(R_A+R_B)`$
+$`t_1 = 0.693(R_A+R_B)C`$
 
 Amount of time OUTPUT is low:
 
@@ -44,18 +44,34 @@ $`t_2 = 0.693(R_B)C`$
 
 Overall frequency:
 
-$`f = 1.44/(R_A+R_B)C`$
-
+$`f = 1.44/(R_A+2R_B)C`$
 
 
 ## Simulation and Post-Layout Verification
 
-Below I show my testbench which replicates the above circuit shown in Fig. 7-5.
+Below I show my testbench which replicates the above circuit, shown in Fig. 7-5 with:
 
-X1 is the schematic version of the design. X2 is the full RC extracted netlist.
+$`R_A = 1.78k\Omega`$
+
+$`R_B = 4.12k\Omega`$
+
+$`C = 0.01\muF`$
+
+With these values,
+
+$` t_1 = 40.89\mus`$
+
+$`t_2 = 28.55\mus`$
+
+$` f = 14.37kHz`$
+
+The x1 instance is the schematic.
+
+The x2 instance is the RC extracted netlist.
 
 ![Simulation Schematic](./docs/tb_tt_um_vaf_555_timer_astable_schematic.PNG)
 
+The above Ngspice output shows that the measured frequency between the schematic and RC extracted netlist are close and are in close agreement with the predicted value.
 
 ![Simulation Results](./docs/tb_tt_um_vaf_555_timer_astable_results.png)
 
