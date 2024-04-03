@@ -30,17 +30,19 @@ Figure 7-5 from the TI datasheet (https://www.ti.com/lit/gpn/LMC555) provides on
 
 ![Texas Instruments Datasheet Figure](./docs/555_datasheet_fig7p5.PNG)
 
-In this configuration, the frequency of oscillation and duty cycle are a function of the board designer's choice of Ra, Rb, and C, given by:
+In this configuration, the frequency of oscillation and duty cycle are a function of the board designer's choice of Ra, Rb, and C.
 
-The amount of time that OUTPUT is high:
+The amount of time that OUTPUT is high is given by:
 
-$`t_1 = 0.693(R_A+R_B)C`$
+\begin{equation}
+t_1 = 0.693(R_A+R_B)C
+\end{equation}
 
-Amount of time OUTPUT is low:
+The amount of time OUTPUT is low:
 
 $`t_2 = 0.693(R_B)C`$
 
-Overall frequency:
+And the overall frequency:
 
 $`f = 1.44/(R_A+2R_B)C`$
 
