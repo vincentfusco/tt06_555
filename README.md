@@ -34,11 +34,17 @@ Figure 7-5 from the above datasheet shows the 555 timer connected as an "astable
 
 In this configuration, the frequency of oscillation as well as the duty cycle are a function of Ra, Rb, and C:
 
+Aount of time OUTPUT is high:
+
 $`t_1 = 0.693(R_A+R_B)`$
 
-$`t_2 = 0.693(R_B)C`$
+Amount of time OUTPUT is low:
 
 $`t_2 = 0.693(R_B)C`$
+
+Overall frequency:
+
+$`f = 1.44/(R_A+R_B)C`$
 
 
 
