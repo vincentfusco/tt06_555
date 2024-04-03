@@ -16,7 +16,8 @@ Timer Top:
 
 ![Schematic](./docs/timer_core_schematic.PNG)
 
-Note: The transistor-level-implementation of my 555 circuit is different than what is actually inside of a 555 Timer. See [History](#history) for schematics of the original.
+Conceptually, a 555-Timer is nothing more than a couple of comparators, an internal voltage divider, an SR latch, and an open-drain transistor. These basic functions could be implemented in
+numerous ways. My implementation is shown below. See [History](#history) for the original BJT version, and its later CMOS counterpart.
 
 Comparator:
 
