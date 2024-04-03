@@ -13,8 +13,6 @@ Blinking an LED with a 555-Timer has represented the 'Hello World' for beginner 
 ## Schematics
 ![Schematic](./docs/timer_core_schematic.PNG)
 
-Inside of the comparators is a comparator topology which can be found in many texts:
-
 ![Comparator](./docs/comp_p_schem_vs_layout.PNG)
 
 (See Allen Holbert - CMOS Analog Circuit Design, or Baker - CMOS Circuit Design, Layout, and Simulation for descriptions of how this circuit works)
