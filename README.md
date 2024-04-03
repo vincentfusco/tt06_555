@@ -16,7 +16,7 @@ Timer Top:
 
 ![Schematic](./docs/timer_core_schematic.PNG)
 
-Note: The transistor-level-implementation of my 555 circuit is different than what is actually inside of a 555 Timer. See section, "History" for schematics of the original.
+Note: The transistor-level-implementation of my 555 circuit is different than what is actually inside of a 555 Timer. See [History](#history) for schematics of the original.
 
 Comparator:
 
