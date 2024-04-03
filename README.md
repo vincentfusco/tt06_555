@@ -19,7 +19,7 @@ Inside of the comparators is a comparator topology which can be found in many te
 
 (See Allen Holbert - CMOS Analog Circuit Design, or Baker - CMOS Circuit Design, Layout, and Simulation for descriptions of how this circuit works)
 
-Note: The transistor-level-implementation of my 555 circuit is different than what is actually inside of a 555 Timer. See section, "History" to see schematics of the original.
+Note: The transistor-level-implementation of my 555 circuit is different than what is actually inside of a 555 Timer. See section, "History" for schematics of the original.
 
 ## Operation
 
