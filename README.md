@@ -55,7 +55,7 @@ $$f = \frac{\sqrt{2}}{(R_A+2R_B)C}$$
 
 ## Schematics ##
 
-The architecture described above has been implemented in different ways throughout the 555-Timer's [history.](#history). 
+The architecture described above has been implemented in different ways throughout the 555-Timer's [history](#history).
 
 This project's implementation is shown below:
 
