@@ -89,7 +89,7 @@ $$ f = 14.37kHz$$
 
 The frequency measurement between the simulated schematic and the simulated extracted RC netlist match closely, as shown above.
 
-If you'd like to run the top-level simulation, simply do the following:
+If you'd like to run the top-level simulation for yourself, simply do the following:
 
 ``` bash
 cd ~
@@ -97,7 +97,7 @@ mkdir projects
 cd projects
 git clone git@github.com:vincentfusco/tt06_555
 cd tt06_555/xsch
-xschem ./tb/tt_um_vaf_555_timer/tb_tt_um_vaf_555_timer_astable.Schematic
+xschem ./tb/tt_um_vaf_555_timer/tb_tt_um_vaf_555_timer_astable.sch
 ```
 
 ## Comparator ##
