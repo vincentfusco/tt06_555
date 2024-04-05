@@ -88,6 +88,7 @@ $$ f = 14.37kHz$$
 ![Simulation Results](./docs/tb_tt_um_vaf_555_timer_astable_results.png)
 
 The frequency measurement of the simulated schematic and extracted RC netlists match closely, as highlighted above. However, there is some deviation from the analytically predicted expression given earlier, likely due to the systematic offset in the comparator and/or the added resistance of the discharge FET.
+## How ##
 
 If you'd like to run the top-level simulation for yourself, first [install xschem, ngspice, and the Skywater 130 PDK](https://www.youtube.com/watch?v=jXmmxO8WG8s) then type the following:
 
@@ -99,12 +100,7 @@ git clone git@github.com:vincentfusco/tt06_555
 cd tt06_555/xsch
 xschem ./tb/tt_um_vaf_555_timer/tb_tt_um_vaf_555_timer_astable.sch
 ```
-
-## Comparator ##
-
-The comparator could also be used stand-alone in another application. Below a Monte Carlo simulation is run and the offset and hysteresis at TT around a 0.6V threshold are measured, showcasing some of the nice open-source toolflow and PDK capabilities now available:
-
-![Comparator simulations](./docs/comp_p_simulations.PNG)
+Once Xschem opens, click the "Netlist" button, then click the "Simulate" button.
 
 ## History ##
 
