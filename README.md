@@ -55,7 +55,7 @@ $$f = \frac{\sqrt{2}}{(R_A+2R_B)C}$$
 
 The architecture described above has been implemented in different ways throughout the 555-Timer's history. 
 
-Schematics of the original BJT version and later CMOS version are given in [History](#history).
+Schematics of the original BJT version and later CMOS version can be found [below](#history).
 
 This project's implementation is shown below:
 
