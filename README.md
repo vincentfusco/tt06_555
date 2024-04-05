@@ -39,7 +39,7 @@ In the figure above, the 555-Timer is configured as an astable multivibrator - a
 
 9. And the cycle continues.
 
-Therefore, the frequency of oscillation and duty cycle are a function of the board designer's choice of RA, RB, and C. 
+Therefore, the frequency of oscillation and duty cycle are a function of the [board mule's](./docs/braying_board_mule.png) choice of RA, RB, and C. 
 
 The amount of time that OUT is high is given by:
 
