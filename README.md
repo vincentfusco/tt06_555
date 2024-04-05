@@ -108,7 +108,7 @@ Once Xschem opens, click the "Netlist" button, then click the "Simulate" button.
 
 The 555 Timer is the most widely used analog IC ever made [1]. It was invented by Hans Camenzind in an era of IC design when layout was still done by cutting [Rubylith](https://en.wikipedia.org/wiki/Rubylith) by hand.
 
-The predecessor was the NE566 Voltage-Controlled Oscillator:
+Its predecessor was the NE566 Voltage-Controlled Oscillator:
 
 ![566 Oscillator](./docs/566_oscillator.PNG)
 
