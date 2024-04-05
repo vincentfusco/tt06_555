@@ -1,8 +1,8 @@
-# An Open-Source 555 Timer in Skywater 130nm #
- 
+# An Open-Source 555 Timer #
+
 ## About ##
-This project is a custom analog chip design done entirely using open-source tools and taped out through TinyTapeout. The circuit emulates the functionality of the classic 555 Timer IC. 
-  
+This circuit emulates the functionality of the classic 555-Timer IC. It was designed using entirely open-source tools and taped-out in the Skywater 130nm CMOS process for less than $250.00.
+ 
 ## Why ##
  
 Blinking an LED using a 555-Timer has long served as the 'Hello World' for novice electronics enthusiasts. With the ongoing improvement in open-source tools and the emergence of communities like Tiny Tapeout, analog chip design is now within reach for hobbyists, hackers, and other free individuals. In light of this, I decided to take on the challenge of building my own 555 on an IC to blink an LED the hard way.
