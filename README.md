@@ -5,7 +5,7 @@ This circuit emulates the functionality of the classic 555-Timer IC. It was desi
  
 ## Why ##
  
-Blinking an LED using a 555-Timer has long served as the 'Hello World' for novice electronics enthusiasts. With the ongoing improvement in open-source tools and the emergence of communities like Tiny Tapeout, analog chip design is now within reach for hobbyists, hackers, and other free individuals. In light of this, I decided to take on the challenge of building my own 555 on an IC to learn the flow and to blink an LED the hard way.
+Blinking an LED using a 555-Timer has long served as the 'Hello World' for novice electronics enthusiasts. With the ongoing improvement in open-source tools and the emergence of communities like TinyTapeout, analog chip design is now within reach for hobbyists, hackers, and other free individuals. In light of this, I decided to take on the challenge of building my own 555 on an IC to learn the flow, to see if I really could get custom silicon for less than $250.00, and just to blink an LED the hard way.
  
 ## Layout ##
 ![Layout](./docs/555_layout.png)
