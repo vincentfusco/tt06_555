@@ -61,6 +61,8 @@ The tt06_555 implementation is shown below:
 
 ![Schematic](./docs/timer_core_schematic.PNG)
 
+The schematic and layout for the comparator is shown below:
+
 ![Comparator](./docs/comp_p_schem_vs_layout.PNG)
 
 ## Simulation and Post-Layout Verification ##
@@ -78,8 +80,6 @@ $$t_2 = 28.55\mu s$$
 $$ f = 14.37kHz$$
 
 ![Simulation Schematic](./docs/tb_tt_um_vaf_555_timer_astable_schematic.PNG)
-
-The schematic and layout for the comparator is shown below:
 
 ![Simulation Results](./docs/tb_tt_um_vaf_555_timer_astable_results.png)
 
