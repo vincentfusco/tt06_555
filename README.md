@@ -12,8 +12,6 @@ Blinking an LED using a 555-Timer has long served as the 'Hello World' for novic
 
 ## Operation ##
 
-The 555 Timer is the most widely used analog IC ever made [1]. It was invented in the era of IC design when layout was still done by hand by cutting Rubylith.
-
 Conceptually, a 555-Timer is nothing more than a couple of comparators, an internal voltage divider to set thresholds, an SR latch, and an open-drain transistor. It can be configured to be used in a variety
 of timer, delay, pulse generation, and oscillator applications.
 
@@ -104,11 +102,15 @@ The comparator could also be used stand-alone in another application. Below a Mo
 
 ## History ##
 
+The 555 Timer is the most widely used analog IC ever made [1]. It was invented in the era of IC design when layout was still done by hand by cutting Rubylith by Hans Camenzind.
+
 The predecessor was the NE566 Voltage-Controlled Oscillator:
 
 ![566 Oscillator](./docs/566_oscillator.PNG)
 
-The voltage-to-current source wasn't actually needed. The 555 was born:
+The inventor, Hans, later realized that the voltage-to-current source wasn't actually needed. Charging and discharging of the capacitor could be done entirely with resistors and a supply-independent frequency could still be achieved. 
+
+This led to the 555-Timer architecture which was shown above. The full schematic for the original 555 timer is shown below:
 
 ![555 Original](./docs/555_original.PNG)
 
