@@ -53,11 +53,11 @@ $$f = \frac{\sqrt{2}}{(R_A+2R_B)C}$$
 
 ## Schematics ##
 
-The basic architecture described above -- that comprised of two comparators, an SR latch, etc., can and has beeen implemented in different ways. 
+The the implementation of the basic architecture described above -- two comparators, an SR latch, and an open-drain transistor -- can and has beeen implemented in different ways. 
 
 Schematics of the original BJT version and later CMOS version are given in [History](#history).
 
-The tt06_555 implementation is shown below:
+This project's implementation is shown below:
 
 ![Schematic](./docs/timer_core_schematic.PNG)
 
