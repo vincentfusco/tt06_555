@@ -112,7 +112,7 @@ Its predecessor was the NE566 Voltage-Controlled Oscillator:
 
 ![566 Oscillator](./docs/566_oscillator.PNG)
 
-The inventor, Hans, later realized that the voltage-to-current converter wasn't actually needed. He realized that charging and discharging of the capacitor could be done entirely with resistors and a supply-independent frequency could still be achieved. 
+Camenzind later realized that the voltage-to-current converter wasn't actually needed. Charging and discharging of the capacitor could be done entirely with resistors and a supply-independent frequency could still be achieved. 
 
 This led to the 555-Timer architecture which was shown above. The full schematic for the original 555 timer is shown below:
 
