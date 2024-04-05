@@ -61,7 +61,7 @@ This project's implementation is shown below:
 
 ![Schematic](./docs/timer_core_schematic.PNG)
 
-The schematic and layout for the comparator is shown below:
+And the schematic and layout for the comparator:
 
 ![Comparator](./docs/comp_p_schem_vs_layout.PNG)
 
