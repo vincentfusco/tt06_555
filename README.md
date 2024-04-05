@@ -79,6 +79,8 @@ $$ f = 14.37kHz$$
 
 ![Simulation Schematic](./docs/tb_tt_um_vaf_555_timer_astable_schematic.PNG)
 
+The schematic and layout for the comparator is shown below:
+
 ![Simulation Results](./docs/tb_tt_um_vaf_555_timer_astable_results.png)
 
 The frequency measurement between the simulated schematic and the simulated extracted RC netlist match closely, as shown above.
