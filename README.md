@@ -78,7 +78,9 @@ $$C = 0.01\mu F$$
 From the earlier analysis with the values chosen above, we expect:
 
 $$t_1 = 40.89\mu s$$
+
 $$t_2 = 28.55\mu s$$
+
 $$ f = 14.37kHz$$
 
 ![Simulation Schematic](./docs/tb_tt_um_vaf_555_timer_astable_schematic.PNG)
