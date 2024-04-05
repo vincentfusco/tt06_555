@@ -53,7 +53,7 @@ $$f = \frac{\sqrt{2}}{(R_A+2R_B)C}$$
 
 ## Schematics ##
 
-The the implementation of the basic architecture described above -- two comparators, an SR latch, and an open-drain transistor -- can and has beeen implemented in different ways. 
+The architecture described above -- two comparators, an SR latch, and an open-drain transistor -- can and has been implemented in different ways through the 555-Timer's history. 
 
 Schematics of the original BJT version and later CMOS version are given in [History](#history).
 
