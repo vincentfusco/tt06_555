@@ -1,4 +1,4 @@
-#An Open-Source 555 Timer in Skywater 130nm#
+# An Open-Source 555 Timer in Skywater 130nm #
  
 ## About ##
  This project emulates the functionality of the classic 555 Timer IC. 
