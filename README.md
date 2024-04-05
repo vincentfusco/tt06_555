@@ -70,7 +70,9 @@ The schematic and layout for the comparator is shown below:
 Below is a top-level testbench with the tt06_555 configured in the oscillator mode described earlier. This testbench compares the outputs of the schematic vs. the full RC extracted netlists.
 
 $$R_A = 1.78k\Omega$$
+
 $$R_B = 4.12k\Omega$$
+
 $$C = 0.01\mu F$$
 
 From the earlier analysis with the values chosen above, we expect:
