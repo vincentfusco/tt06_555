@@ -19,7 +19,7 @@ of timer, delay, pulse generation, and oscillator applications.
 
 ![555 Block Diagram](./docs/555_system_diagram.PNG)
 
-In the figure above, the 555 Timer is configured as an astable multivibrator - a square-wave oscillator.
+In the figure above, the 555-Timer is configured as an astable multivibrator - a square-wave oscillator.
 
 1. Suppose at startup the capacitor is at an initial voltage of 0V. S=H, R=L, Q=H, Qb=L. 
 
