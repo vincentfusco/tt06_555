@@ -55,7 +55,7 @@ $$f = \frac{\sqrt{2}}{(R_A+2R_B)C}$$
 
 The basic functions described above can and have beeen implemented in different ways. 
 
-The original BJT version and later CMOS counterpart with actual sizing given by the creator himself are given in [History](#history).
+Schematics of the original BJT version and later CMOS version are given in [History](#history).
 
 The tt06_555 implementation is shown below:
 
