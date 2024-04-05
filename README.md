@@ -1,7 +1,7 @@
 # An Open-Source 555 Timer in Skywater 130nm #
  
 ## About ##
- This project emulates the functionality of the classic 555 Timer IC. 
+This project is a custom analog chip design done entirely using open-source tools and taped out through TinyTapeout. The circuit emulates the functionality of the classic 555 Timer IC. 
   
 ## Why ##
  
