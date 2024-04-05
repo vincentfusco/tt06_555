@@ -87,9 +87,9 @@ $$ f = 14.37kHz$$
 
 ![Simulation Results](./docs/tb_tt_um_vaf_555_timer_astable_results.png)
 
-The frequency measurement between the simulated schematic and the simulated extracted RC netlist match closely, as shown above.
+The frequency measurement of the simulated schematic and extracted RC netlists match closely, as highlighted above. However, there is some deviation from the analytically predicted expression given earlier, likely due to the systematic offset in the comparator and/or the added resistance of the discharge FET.
 
-If you'd like to run the top-level simulation for yourself, simply do the following:
+If you'd like to run the top-level simulation for yourself, first [install xschem, ngspice, and the Skywater 130 PDK](https://www.youtube.com/watch?v=jXmmxO8WG8s) then type the following:
 
 ``` bash
 cd ~
