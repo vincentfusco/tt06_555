@@ -114,7 +114,7 @@ The predecessor was the NE566 Voltage-Controlled Oscillator:
 
 ![566 Oscillator](./docs/566_oscillator.PNG)
 
-The inventor, Hans, later realized that the voltage-to-current source wasn't actually needed. Charging and discharging of the capacitor could be done entirely with resistors and a supply-independent frequency could still be achieved. 
+The inventor, Hans, later realized that the voltage-to-current converter wasn't actually needed. He realized that charging and discharging of the capacitor could be done entirely with resistors and a supply-independent frequency could still be achieved. 
 
 This led to the 555-Timer architecture which was shown above. The full schematic for the original 555 timer is shown below:
 
@@ -124,7 +124,7 @@ A 5V-CMOS verion was later created.
 
 ![555 CMOS](./docs/555_cmos.PNG)
 
-The free e-book written by original inventor, Hans Camenzind, can be found at [2].
+Read the full story of the chip's invention in the free e-book written by original inventor himself in [2].
 
 ## References ##
 
