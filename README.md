@@ -53,7 +53,7 @@ $$f = \frac{\sqrt{2}}{(R_A+2R_B)C}$$
 
 ## Schematics ##
 
-The basic functions described above can and have beeen implemented in different ways. 
+The basic architecture described above -- that comprised of two comparators, an SR latch, etc., can and has beeen implemented in different ways. 
 
 Schematics of the original BJT version and later CMOS version are given in [History](#history).
 
