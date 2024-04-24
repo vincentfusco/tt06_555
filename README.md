@@ -1,7 +1,7 @@
 # An Open-Source 555 Timer #
 
 ## About ##
-This circuit emulates the functionality of the classic 555-Timer IC. It was designed using open-source tools and will be taped-out in the Skywater 130nm CMOS process through [TinyTapeout](https://app.tinytapeout.com/shuttles/tt06) on April 19th 2024.
+This circuit emulates the functionality of the classic 555-Timer IC. It was designed using open-source tools and was taped-out in the Skywater 130nm CMOS process through [TinyTapeout](https://app.tinytapeout.com/shuttles/tt06) on April 19th 2024.
  
 ## Why ##
  
